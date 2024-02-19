@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniProjact-Login</title>
+    <link rel="stylesheet" href="CSS/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="Assets/MiniProjactBackground.png" alt="" id="background">
+    <div class="Loginmaincondiner ContainerView" id="LoginmaincondinerCall">
+        <p class="Welcome">Welcome to <span id="logonamespan">DCKAP Agrikart</span></p>
+        <p class="Login">Login</p>
+        <form action="">
+        <div class="User-InputMail">
+            <label for="mailDetailes" class="lablename">Enter your email address</label><br>
+            <input type="email" id="mailDetailes" placeholder="exple@gmail.com"  class="mailBoredr"><br>
+            <span id="verifyEmail" class="verifyemailview"> Please Fill valid email</span>
+        </div>
+        <div class="User-InputPassword">
+            <label for="pwordDetailes"  class="lablename">Enter your Password</label><br>
+            <input type="text" id="pwordDetailes" placeholder="Enter your Password" class="PwordBorder"><br>
+            <span id="VerifyPword" class="verifypwordview">Please fill valid Password</span>
+        </div>
+        <div class="userConform">
+            <p id="ForgetNav">forget password</p>
+            <p>No Account ?<span id="singnamespan"><a href="http://127.0.0.1:5501/RegisterPage/index.html" id="SignupPageNav">Sign up</a></span></p>
+        </div>
+        <button id="singinBTn" type="submit">Sign in</button>
+    </form>
+    </div>
+
+    <!----------------------------------------------- FORGET PAGE --------------------------------------------------------------->
+
+<div class="forgetloginContainer" id="forgetloginContainerCall"> 
+
+    <p id="forgetText">Forgot Password</p>
+    <p id="forgetDescription">Enter your account email below, and we'll a resert link.</p>
+    <div class="forgetinputlabels">
+        <label for="forgetlabel">Enter your email address</label><br>
+        <input type="email" placeholder="" id="forgetinput">
+    </div>
+    <p id="forgetbackpageLink">Back to login</p>
+    <button type="button" id="forgetBtn">Continue</button>
+</div>
+
+
+<!-- ----------------------------------------RESERT PASSWORD------------------------------------------>
+
+<div class="confarmpasswordConntainer" id="confarmpasswordConntainerCall">
+<p id="resetpasswordText">Resert Password</p>
+<div class="passwordinpuetcontainer">
+<label for="newpasswordinput"  id="paaswordlable">Enter new Password</label><br>
+<input type="text" id="newpasswordinput" class="conformFirstPword">
+</div>
+<div class="conformNewcondiner">
+<label for="conformpwordinput" id="confarmpasword">Conform new password</label><br>
+<input type="text" id="conformpwordinput" class="conformSecondPword">
+<span id="conformPwordAlert" class="conformPwordAlert">Invalid Password</span>
+</div><br>
+
+<button  id="reesertBtn">Resert password</button>
+</div>
+
+
+<!-- ----------------------------------------OTP MODULE ---------------------------------------------->
+
+<div class="OTPmaincondainer " id="OTPmaincondainerCall">
+    <div id="verifytext">Verify your <span id="OTPsapn">OTP</span></div>
+    <div class="OTPdetailes">
+    <p id="OTPPara">please check your email of the One-Time password(OTP) to complete the verification process</p>
+    <div id="yourOTP">Enter your OTP </div>
+    <div id="OTPBox">
+        <p class="cercul"></p>
+        <p class="cercul"></p>
+        <p class="cercul"></p>
+        <p class="cercul"></p>
+        <p class="cercul"></p>
+        <p class="cercul"></p>
+    </div>
+</div>
+    <div id="resentOTP">Resent OTP</div>
+
+    <button id="verifyBtn">Verifiy</button>
+  
+</div>
+    <script src="JS/miniprojact-login.js">
+    </script>
+</body>
+
+</htm

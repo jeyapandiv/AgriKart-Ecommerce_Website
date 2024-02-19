@@ -1,0 +1,235 @@
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+body{
+    width: 0px;
+    margin: 0px;
+    padding: 0px;
+    height: 0px;
+    font-family: "Poppins", sans-serif;
+   
+}
+#bakgroundImage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.Registermaincondainer{
+position: absolute;
+background-color: rgba(255, 255, 255,0.7);
+height: 595px;
+width: 572px;
+border-radius: 15px;
+left: 370px;
+top: 30px;
+}
+#loginNavlink{
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: #779341;
+}
+
+#hi{
+    font-size: 12px;
+}
+#ResgisterWelcome{
+font-size: 25px;
+margin: 20px 0px 10px 140px;
+height: 0px;
+}
+#RegisterText{
+font-size:35px;
+margin: 30px 0px 0px 210px;
+color: #008000;
+}
+.nameDetailes{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+#fisrstName{
+    width: 200.7px;
+    height: 37px;
+    border-radius: 9px;
+    margin-top: 5px;
+  
+}
+#lastname{
+    width: 200.7px;
+    height: 37px;
+    border-radius: 9px;
+    margin-top: 5px;
+  
+}
+#Continfo{
+    width: 430px;
+    height: 37px;
+    border-radius: 9px;
+    margin-top: 8px;
+  
+}
+#emailinfo{
+
+    width: 430px;
+    height: 37px;
+    border-radius: 9px;
+    margin-top: 8px;
+   
+}
+#pwordinfo{
+    width: 430px;
+    height: 37px;
+    border-radius: 9px;
+    margin-top: 8px;
+}
+#RegisterBtn{
+    width: 236px;
+    height: 47px;
+    border: 15px;
+    background-color: #008000;
+    color: white;
+    border-radius: 15px;
+}
+.contactDetailes{
+    margin-top: 0px;
+}
+.emailDetailes{
+    margin-top: 0px;
+}
+.pworDetailes{
+    margin-top: 0px;
+}
+.inputDetailes{
+    margin-left: 60px;
+}
+#alredyaccount{
+  
+    height: 0px;
+    margin: 10px 0px 0px 335px;
+}
+#RegisterBtn{
+    margin: 35px 0px 0px 175px;
+    width: 190px;
+    height: 40px;
+    border-radius: 15px;
+    text-align: center;
+   
+}
+#companyname{
+    color: #779341;
+}
+.label{
+
+    font-size: 16px;
+}
+#loginspan{
+    color: #008000;
+}
+input::placeholder{
+   padding-left: 10px;
+}
+
+.RegTOLoginNav{
+    text-decoration: none;
+    color:white;
+}
+
+/* ------------------FIRSET NAME ALERT CLASSLIST-------------------------------------- */
+
+.RegfnamNoView{
+visibility: hidden;
+}
+.FirstnameBorder{
+    border: 1px solid gray;
+}
+.RegborderAlert{
+    border: 1px solid red;
+}
+.RegfnameView{
+  visibility: visible;
+  color: red;
+}
+
+/* --------------------SECOND NAME ALERT MESSAGE  CLASSLIST------------------------------------------------ */
+
+.SecondNameNoView{
+ visibility: hidden;
+}
+.LastNameInput{
+    border: 1px solid  grey;
+}
+.secondnameAlert{
+    border: 1px solid red;
+}
+.SecondNameView{
+    visibility: visible;
+    color: red;
+}
+
+.LatRegInput{
+    border: 1px solid gray;
+}
+
+/* --------------------------CONTACT ALERT MESSAGE CLASSLIST------------------------ */
+
+.RegAlertNoView{
+    visibility: hidden;
+}
+.contBorder{
+    border: 1px solid grey;
+}
+
+.RegAlertView{
+    visibility: visible; 
+    color: red;
+}
+.contAlertBorder{
+    border: 1px solid red;
+}
+
+/* ------------------------------EMAIL VALIDITION CLASSLIST------------------------------- */
+
+.emailAlertNoView{
+    visibility: hidden;
+}
+.emailBorder{
+    border: 1px solid grey;
+}
+
+.emailAlertView{
+    visibility: visible; 
+    color: red;
+}
+.emaillBoderAlert{
+    border: 1px solid red;
+}
+
+
+/* --------------------------PASSWORD VAILD CLASSLIST------------------------------------------------ */
+
+
+.PWordBorder{
+    border: 1px solid grey;
+}
+.RegPWordNoView{
+visibility: hidden;
+}
+
+.RegPWordView{
+    visibility: visible;
+    color: red;
+}
+
+.PWordBorderAlertMessage{
+    border: 1px solid red;
+}

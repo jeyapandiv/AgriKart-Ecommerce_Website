@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MniprrojactRegister</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="Assets/MiniProjactBackground.png" alt="" id="bakgroundImage">
+    
+    <div class="Registermaincondainer">
+        <p id="ResgisterWelcome">Welcome to <span id="companyname"> DCKAP Agrikart</span></p>
+        <p id="RegisterText">SignUp</p>
+        <div class="inputDetailes">
+
+        <div class="nameDetailes">  
+         
+            <div class="userFirstName">
+                <form action="">
+                <label for="fisrstName"  class="label">fisrst name</label><br>
+                <input type="text" id="fisrstName" placeholder="User name" class="FirstnameBorder"><br>
+                <span id="RegNameAlert" class="RegfnamNoView ">Number not allowed</span>
+            </div>
+            <div class="userLastnumer">
+                <label for="othername"  class="label">last name</label><br>
+                <input type="text" id="lastname"  placeholder="last name" class="LastNameInput" ><br>
+                <span id="RegLastAlert" class="SecondNameNoView">Number not allowed</span>
+            </div>
+        </div>
+        <div class="contactDetailes">
+            <label for="Continfo"  class="label">contact number</label><br>
+            <input type="text"  id="Continfo" placeholder="contact number" class="contBorder"><br>
+            <span id="RegContAlert" class="RegAlertNoView">must 10 numbers</span>
+        </div>
+        <div class="emailDetailes">
+            <label for="emailinfo"   class="label">Enter your email address</label><br>
+            <input type="email" id="emailinfo" placeholder="example@gmail.com" class="emailBorder"><br>
+            <span id="RegEmailAlert" class="emailAlertNoView">char" @ "and number must</span>
+        </div>
+        <div class="pworDetailes">
+            <label for="pwordinfo"  class="label">Enter your Password</label><br>
+            <input type="password" id="pwordinfo" placeholder="Enter your Password" class="PWordBorder"><br>
+            <span id="RegPwordAlert" class="RegPWordNoView">password must spacial char & number & letters </span>
+        </div>
+    </div>
+
+        <p id="alredyaccount">Have an account ? <span id="loginspan"><a id="loginNavlink" href="file:///home/dckap/Documents/AgriKart_Ecommerce/AgriKart-Ecommerce_Website/Login.html">login</a></span></p>
+        <button id="RegisterBtn" type="submit">Singup</input>
+       
+    </div>
+</form>
+    <script src="JS/MiniprojactRegister.js"></script>
+</body>
+
+</html>
