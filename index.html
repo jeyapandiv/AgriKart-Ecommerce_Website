@@ -3,11 +3,596 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+    <link rel="stylesheet" href="CSS/style.css">
+    <title> AGRI KART E-COMMERCE SITE </title>
 </head>
 <body>
+   
+    <div class="plaAgriKart">
+        
+        <div class="plaMain">
+            <div class="plaHome">
+                <div class="plaTopNavbar">
+                    <i  id="plaSidebarIcon" class="fa-solid fa-bars" ></i>
+                    <img id="plaNavLogoImg" src="Assets/agri.png" alt="">
+                    <div class="plaSearchbar">
+                        <input id="planav_search_input" type="text" placeholder=" search products here... "/>
+                        <div id="plaSearchIcon"><i id="pla_search_icon" class="fa-solid fa-magnifying-glass""></i></div>
+                    </div>
+                    <button class="planav_btn">Login / SignUp</button>
+                    <i id="plaNavIcon" class="fa-regular fa-circle-user"></i>
+                    <i id="plaNavIcon" class="fa-solid fa-cart-shopping"></i>                    
+                </div>
+                <div class="plaSidediv" id="plaSidediv">
+                    <div class="plaSideNavMain" id="plaSideNavMain">
+                        <div class="plaSideNavigation" id="plaSideNavigation">
+            
+                            <div id="plaSideClose">
+                                <h3 id="plaSideExit"><i class="fa-solid fa-circle-xmark"></i></h3>
+                            </div>
+
+                            <div class="plaSideNav" id="plaSideNav">
+                                    <div class="plasidenavhead">
+                                        <h3 id="plaSideStart"> Start Buying! </h3>
+                                    </div>
+                                    <h4 id="plaSideNavList"> <i class="fa-solid fa-house"> </i> Home </h4>
+                                    
+                                      <h4 id="plaSideNavList1" > <i class="fa-solid fa-list"> </i>  Shop By Category </h4> 
+                                 
+                                    <div class="plaSideNavcategory plaSidenavhide" id="plaNavcatlog" >
+                                       <h4 id="plaCategoryList">Ornamental Crops</h4>
+                                       <h4 id="plaCategoryList">Harvesting Crops</h4>
+                                       <h4 id="plaCategoryList">Industrial Crops</h4>
+                                       <h4 id="plaCategoryList">Fiber Crops</h4>
+                                       <h4 id="plaCategoryList">Feed Crops </h>
+                                       <h4 id="plaCategoryList">Food crops</h4>
+                                       <h4 id="plaCategoryList">Oil Crops</h4>
+                                    </div>   
+                                    <h3 class="plaSideNavAccount"> My Account </h3>    
+                                    <h4 id="plaSideNavList"> <i class="fa-solid fa-box-open"></i> My Orders </h4>    
+                                    <h4 id="plaSideNavList"> <i class="fa-solid fa-bag-shopping"></i> My Cart List </h4>    
+                                    <h4 id="plaSideNavList"> <i class="fa-solid fa-hand-holding-heart"></i> My Wish List </h4>    
+                                    <h4 id="plaSideNavList"> <i class="fa-solid fa-square-phone"></i> Customer support </h4>    
+                                    <h4 id="plaSideNavList"> <i class="fa-solid fa-users"></i> About Us </h4>
+                                    <h4 id="plaSideNavList"> <i class="fa-solid fa-address-book"></i> connect with Us </h4> 
+                                    <div class="plaSideSignin">
+                                        <button id="plaSideBtn"> <i class="fa-solid fa-right-to-bracket"></i> SignIn</button>    
+                                    </div>   
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="plaSlideShowDiv">
+                    
+                        <button id="plaSlideBtn1" class="plaSlideScrollBtn"><</button>
+
+                        <div class="plaSlideInner1">
+                          <h1 id="plaSlideTxt">Buy Natural Products</h1>
+                          <button id="plaSlideShopBtn" class="plaSlideScrollBtn">
+                            Shop Now &nbsp;&nbsp; <i class="fa-solid fa-arrow-right"></i>
+                          </button>
+                        </div>
+            
+                        <div class="plaSlideInner2">
+                          <img id="plaSlideImg1" src="Assets/topback_ground.jpeg" alt=""/>
+                        </div>
+                        <button id="plaSlideBtn2" class="plaSlideScrollBtn">></button> 
+                </div>
+
+               
+            
+            
+                <div class="pla4_offer1_products_list">
+                          <!-- pla4_offer1_products_list -->
+                          <div class="pla_offer1_header">
+                            <div class="pla_offer_heading">
+                              <h2>Up to 60% off | Farm Fruits & more</h2>
+                            </div>
+                            <!-- <div class="pla_offer_icon_arrow">
+                              <i class="fa-solid fa-circle-arrow-right"></i>
+                              <i class="fa-solid fa-circle-arrow-left"></i>
+                            </div> -->
+                          </div>
+              
+                          <div class="pla_offer_card_group">
+                            <div class="pla_offer_card">
+                              <img
+                                id="pla_card_img"
+                                src="Assets/apple5.jpeg"
+                                alt=""
+                              />
+                              <h4 id="pla_card_name">Apple</h4>
+                            </div>
+                            <div class="pla_offer_card">
+                              <img
+                                id="pla_card_img"
+                                src="Assets/banana.jpeg"
+                                alt=""
+                              />
+                              <h4 id="pla_card_name">Banana</h4>
+                            </div>
+                            <div class="pla_offer_card">
+                              <img
+                                id="pla_card_img"
+                                src="Assets/orange2.jpeg"
+                                alt=""
+                              />
+                              <h4 id="pla_card_name">Orange</h4>
+                            </div>
+                            <div class="pla_offer_card">
+                              <img
+                                id="pla_card_img"
+                                src="Assets/papaya.jpg"
+                                alt=""
+                              />
+                              <h4 id="pla_card_name"> Papaya </h4>
+                            </div>
+                          
+                            <div class="pla_offer_card">
+                              <img id="pla_card_img" src="Assets/watermelon.jpg" alt="" />
+                              <h4 id="pla_card_name">Watermelon</h4>
+                            </div>
+                            <div class="pla_offer_card">
+                              <img id="pla_card_img" src="Assets/pine3.jpeg" alt="" />
+                              <h4 id="pla_card_name">Pine Apple</h4>
+                            </div>
+                            <div class="pla_offer_card">
+                              <img
+                                id="pla_card_img"
+                                src="Assets/strabery.jpg"
+                                alt=""/>
+                              <h4 id="pla_card_name"> Strawberry </h4>
+                            </div>
+                          </div>
+                    </div>
+
+
+
+                    <div class="pla4_offer1_products_list">
+                      <!-- pla4_offer1_products_list -->
+                      <div class="pla_offer1_header">
+                        <div class="pla_offer_heading">
+                          <h2>Today’s Deal | Most Selling Products</h2>
+                        </div>
+                        <!-- <div class="pla_offer_icon_arrow">
+                          <i class="fa-solid fa-circle-arrow-right"></i>
+                          <i class="fa-solid fa-circle-arrow-left"></i>
+                        </div> -->
+                      </div>
+          
+                      <div class="pla_offer_card_group">
+                        <div class="plaOffercard">
+                          <img
+                            id="pla_card_img"
+                            src="Assets/wheat1.jpeg"
+                            alt=""
+                          />
+                          <h4 id="pla_card_name"> Wheat </h4>
+                        </div>
+                        <div class="plaOffercard">
+                          <img
+                            id="pla_card_img"
+                            src="Assets/mong1.jpeg"
+                            alt=""
+                          />
+                          <h4 id="pla_card_name">Moong Dal</h4>
+                        </div>
+                        <div class="plaOffercard">
+                          <img
+                            id="pla_card_img"
+                            src="Assets/blackurad.jpeg"
+                            alt=""
+                          />
+                          <h4 id="pla_card_name">Urad Dal</h4>
+                        </div>
+                        <div class="plaOffercard">
+                          <img
+                            id="pla_card_img"
+                            src="Assets/poni.jpeg"
+                            alt=""
+                          />
+                          <h4 id="pla_card_name"> Poni Rice </h4>
+                        </div>
+                      
+                        <div class="plaOffercard">
+                          <img id="pla_card_img" src="Assets/doordal.jpeg" alt="" />
+                          <h4 id="pla_card_name">Door Dal</h4>
+                        </div>
+                        <div class="plaOffercard">
+                          <img id="pla_card_img" src="Assets/chana1.jpeg" alt="" />
+                          <h4 id="pla_card_name">Channa</h4>
+                        </div>
+                        <div class="plaOffercard">
+                          <img
+                            id="pla_card_img"
+                            src="Assets/mysoredal.jpeg"
+                            alt=""/>
+                          <h4 id="pla_card_name"> Mysore Dal </h4>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="pla4_offer1_products_list">
+                  <!-- pla4_offer1_products_list -->
+                  <div class="pla_offer1_header">
+                    <div class="pla_offer_heading">
+                      <h2>Related to items you've viewed</h2>
+                    </div>
+                    <!-- <div class="pla_offer_icon_arrow">
+                      <i class="fa-solid fa-circle-arrow-right"></i>
+                      <i class="fa-solid fa-circle-arrow-left"></i>
+                    </div> -->
+                  </div>
+
+                  <div class="pla_offer_card_group">
+                    <div class="pla_offer_card">
+                      <img
+                        id="pla_card_img"
+                        src="Assets/wheatflour.jpeg"
+                        alt=""
+                      />
+                      <h4 id="pla_card_name">Wheat Flour</h4>
+                    </div>
+                    <div class="pla_offer_card">
+                      <img
+                        id="pla_card_img"
+                        src="Assets/blackchana.jpeg"
+                        alt=""
+                      />
+                      <h4 id="pla_card_name">Channa</h4>
+                    </div>
+                    <div class="pla_offer_card">
+                      <img
+                        id="pla_card_img"
+                        src="Assets/greenmong.jpeg"
+                        alt=""
+                      />
+                      <h4 id="pla_card_name">Moong Dal</h4>
+                    </div>
+                    <div class="pla_offer_card">
+                      <img
+                        id="pla_card_img"
+                        src="Assets/peanut.jpeg"
+                        alt=""
+                      />
+                      <h4 id="pla_card_name"> Peanuts </h4>
+                    </div>
+                  
+                    <div class="pla_offer_card">
+                      <img id="pla_card_img" src="Assets/cashew1.jpeg" alt="" />
+                      <h4 id="pla_card_name">Cashew</h4>
+                    </div>
+                    <div class="pla_offer_card">
+                      <img id="pla_card_img" src="Assets/dates1.jpeg" alt="" />
+                      <h4 id="pla_card_name">Dates</h4>
+                    </div>
+                    <div class="pla_offer_card">
+                      <img
+                        id="pla_card_img"
+                        src="Assets/drygrape1.jpeg"
+                        alt=""/>
+                      <h4 id="pla_card_name">Dry Grape</h4>
+                    </div>
+                  </div>
+            </div>
+
+              
+            <div class="pla4_offer1_products_list">
+              <!-- pla4_offer1_products_list -->
+              <div class="pla_offer1_header">
+                <div class="pla_offer_heading">
+                  <h2>More items to consider</h2>
+                </div>
+                <!-- <div class="pla_offer_icon_arrow">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <i class="fa-solid fa-circle-arrow-left"></i>
+                </div> -->
+              </div>
+
+              <div class="pla_offer_card_group">
+                <div class="plaOffercard">
+                  <img
+                    id="pla_card_img"
+                    src="Assets/grapes1.jpeg"
+                    alt=""
+                  />
+                  <h4 id="pla_card_name">Grapes</h4>
+                </div>
+                <div class="plaOffercard">
+                  <img
+                    id="pla_card_img"
+                    src="Assets/rajma.webp"
+                    alt=""
+                  />
+                  <h4 id="pla_card_name">Rajma</h4>
+                </div>
+                <div class="plaOffercard">
+                  <img
+                    id="pla_card_img"
+                    src="Assets/soyabean.webp"
+                    alt=""
+                  />
+                  <h4 id="pla_card_name">Soya Bean</h4>
+                </div>
+                <div class="plaOffercard">
+                  <img
+                    id="pla_card_img"
+                    src="Assets/soyachunks.jpeg"
+                    alt=""
+                  />
+                  <h4 id="pla_card_name">Meal Maker</h4>
+                </div>
+              
+                <div class="plaOffercard">
+                  <img id="pla_card_img" src="Assets/pohq.webp" alt="" />
+                  <h4 id="pla_card_name">Fibre Poha</h4>
+                </div>
+                <div class="plaOffercard">
+                  <img id="pla_card_img" src="Assets/raisin.webp" alt="" />
+                  <h4 id="pla_card_name">Raisin</h4>
+                </div>
+                <div class="plaOffercard">
+                  <img
+                    id="pla_card_img"
+                    src="Assets/besan flour.webp"
+                    alt=""/>
+                  <h4 id="pla_card_name">Besan Flour</h4>
+                </div>
+              </div>
+        </div>
+
+        
+        <div class="pla4_offer1_products_list">
+          <!-- pla4_offer1_products_list -->
+          <div class="pla_offer1_header">
+            <div class="pla_offer_heading">
+              <h2>Inspired by your Wish List</h2>
+            </div>
+            <!-- <div class="pla_offer_icon_arrow">
+              <i class="fa-solid fa-circle-arrow-right"></i>
+              <i class="fa-solid fa-circle-arrow-left"></i>
+            </div> -->
+          </div>
+
+          <div class="pla_offer_card_group">
+            <div class="pla_offer_card">
+              <img
+                id="pla_card_img"
+                src="Assets/sandal.webp"
+                alt=""
+              />
+              <h4 id="pla_card_name">Sandal</h4>
+            </div>
+            <div class="pla_offer_card">
+              <img
+                id="pla_card_img"
+                src="Assets/tamarind.jpg"
+                alt=""
+              />
+              <h4 id="pla_card_name">Tamarind</h4>
+            </div>
+            <div class="pla_offer_card">
+              <img
+                id="pla_card_img"
+                src="Assets/turmeric.webp"
+                alt=""
+              />
+              <h4 id="pla_card_name">Turmeric</h4>
+            </div>
+            <div class="pla_offer_card">
+              <img
+                id="pla_card_img"
+                src="Assets/pista.webp"
+                alt=""
+              />
+              <h4 id="pla_card_name"> Pistha </h4>
+            </div>
+          
+            <div class="pla_offer_card">
+              <img id="pla_card_img" src="Assets/grape.jpg" alt="" />
+              <h4 id="pla_card_name">Grape</h4>
+            </div>
+            <div class="pla_offer_card">
+              <img id="pla_card_img" src="Assets/orange.jpg" alt="" />
+              <h4 id="pla_card_name">Orange</h4>
+            </div>
+            <div class="pla_offer_card">
+              <img
+                id="pla_card_img"
+                src="Assets/guva2.jpeg"
+                alt=""/>
+              <h4 id="pla_card_name"> Guva </h4>
+            </div>
+          </div>
+      </div>
+
+      <div class="pla4_offer1_products_list">
+        <!-- pla4_offer1_products_list -->
+        <div class="pla_offer1_header">
+          <div class="pla_offer_heading">
+            <h2>Up to 30% off | Fresh Vegetables & more</h2>
+          </div>
+          <!-- <div class="pla_offer_icon_arrow">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </div> -->
+        </div>
+
+        <div class="pla_offer_card_group">
+          <div class="plaOffercard">
+            <img
+              id="pla_card_img"
+              src="Assets/garlic2.jpeg"
+              alt=""
+            />
+            <h4 id="pla_card_name">Garlic</h4>
+          </div>
+          <div class="plaOffercard">
+            <img
+              id="pla_card_img"
+              src="Assets/cabbage.jpg"
+              alt=""
+            />
+            <h4 id="pla_card_name">Cabbage</h4>
+          </div>
+          <div class="plaOffercard">
+            <img
+              id="pla_card_img"
+              src="Assets/lettuce.jpg"
+              alt=""
+            />
+            <h4 id="pla_card_name">Lettuces</h4>
+          </div>
+          <div class="plaOffercard">
+            <img
+              id="pla_card_img"
+              src="Assets/raddiesh.jpeg"
+              alt=""
+            />
+            <h4 id="pla_card_name">Radiesh</h4>
+          </div>
+        
+          <div class="plaOffercard">
+            <img id="pla_card_img" src="Assets/onion.jpg" alt="" />
+            <h4 id="pla_card_name">Onion</h4>
+          </div>
+          <div class="plaOffercard">
+            <img id="pla_card_img" src="Assets/soyabean1.webp" alt="" />
+            <h4 id="pla_card_name">SoyaBeans</h4>
+          </div>
+          <div class="plaOffercard">
+            <img
+              id="pla_card_img"
+              src="Assets/tomato6.jpg"
+              alt=""/>
+            <h4 id="pla_card_name">Tomato</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="pla4_offer1_products_list">
+        <!-- pla4_offer1_products_list -->
+        <div class="pla_offer1_header">
+          <div class="pla_offer_heading">
+            <h2>Inspired by your browsing history</h2>
+          </div>
+          <!-- <div class="pla_offer_icon_arrow">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </div> -->
+        </div>
+
+        <div class="pla_offer_card_group">
+          <div class="pla_offer_card">
+            <img
+              id="pla_card_img"
+              src="Assets/whiterose.jpeg"
+              alt=""
+            />
+            <h4 id="pla_card_name">White rose</h4>
+          </div>
+          <div class="pla_offer_card">
+            <img
+              id="pla_card_img"
+              src="Assets/red1.jpeg"
+              alt=""
+            />
+            <h4 id="pla_card_name">Red Roses</h4>
+          </div>
+          <div class="pla_offer_card">
+            <img
+              id="pla_card_img"
+              src="Assets/jasmine.jpeg"
+              alt=""
+            />
+            <h4 id="pla_card_name">Jasmine</h4>
+          </div>
+          <div class="pla_offer_card">
+            <img
+              id="pla_card_img"
+              src="Assets/pinkroses.jpeg"
+              alt=""
+            />
+            <h4 id="pla_card_name">Pink Roses</h4>
+          </div>
+        
+          <div class="pla_offer_card">
+            <img id="pla_card_img" src="Assets/badam4.jpeg" alt="" />
+            <h4 id="pla_card_name">Badam</h4>
+          </div>
+          <div class="pla_offer_card">
+            <img id="pla_card_img" src="Assets/sunseeds.jpeg" alt="" />
+            <h4 id="pla_card_name">Sun Seeds</h4>
+          </div>
+          <div class="pla_offer_card">
+            <img
+              id="pla_card_img"
+              src="Assets/walnut2.jpeg"
+              alt=""/>
+            <h4 id="pla_card_name">Walnuts</h4>
+          </div>
+        </div>
+      </div>
+
+
+            </div>
+        </div>
+    </div>
     
-    <script src="/JS/script.js"></script>
+<div class="plaFooter">
+  <div class="plaFooterBackTop"><a id="plafootAtag" href="index.html">Back To Top</a></div>
+  <div class="plaFooterMain">
+   <div class="plafooterlist">
+       <div class="plafooterheading">
+        <h3 class="plafooterhead">ABOUT AGRI CART</h3>
+       </div>
+       <li class="plafooterListitems">Home</li>
+       <li class="plafooterListitems">About</li>   
+       <li class="plafooterListitems">Contact</li>   
+       <li class="plafooterListitems">Terms</li>   
+       <li class="plafooterListitems">Cancellation</li>   
+
+   </div>
+
+   <div class="plafooterlist">
+    <div class="plafooterheading">
+      <h3 class="plafooterhead">CATEGORY</h3>
+     </div>   
+    <li class="plafooterListitems">Oil Crops </li>
+    <li class="plafooterListitems">Food Crop </li>   
+    <li class="plafooterListitems">Feed Crop </li>   
+    <li class="plafooterListitems">Fibre Crop</li>   
+    <li class="plafooterListitems">Industrial</li>   
+
+</div>
+<div class="plafooterlist">
+  <div class="plafooterheading">
+    <h3 class="plafooterhead">OFFERS</h3>
+   </div>     
+  <li class="plafooterListitems">Weekend Offers</li>
+  <li class="plafooterListitems">Big Discounts</li>   
+  <li class="plafooterListitems">User Login</li>   
+  <li class="plafooterListitems">Seller Login</li>   
+  <li class="plafooterListitems">Today’s Deal</li>   
+
+</div>
+
+<div class="plafooterlist">
+  <div class="plafooterheading">
+    <h3 class="plafooterhead">CONNECT WITH US</h3>
+   </div>    
+  <li class="plafooterListitems">Instagram</li>
+  <li class="plafooterListitems">FaceBook</li>   
+  <li class="plafooterListitems">Twitter</li>   
+  <li class="plafooterListitems">Email-ID</li>   
+  <li class="plafooterListitems">LinkedIn</li>   
+
+</div>
+
+  </div>
+</div>
+    <script src="JS/script.js"></script>
 </body>
 </html>

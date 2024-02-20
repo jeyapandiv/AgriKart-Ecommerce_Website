@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Caveat+Brush&family=Caveat:wght@400;600&family=Fraunces:opsz,wght@9..144,100&family=Inter&family=Literata:opsz,wght@7..72,200;7..72,600&family=Montserrat:ital,wght@0,100;0,400;0,500;1,300&family=Open+Sans&family=Outfit:wght@400;700&family=Pacifico&family=Raleway:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 0px;
+    cursor: pointer;
+}
+body{
+    width: 99%;
+    margin-top: 2%;
+    line-height: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.plaAgriKart{
+    width: 97%;
+}
+.plaHome{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* 1. Top Navigation bar-------------------- */
+
+.plaTopNavbar{  
+    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:#5BD3A0;
+    flex-wrap: wrap;
+    height: 70px;
+    width: 100%;
+    border-radius: 6px;
+}
+.plaTopNavbar:hover{
+  cursor: pointer;
+}
+#plaNavLogoImg{
+    width: 15%;
+    height: 60%;
+    border:1px solid #5BD3A0;  
+}
+
+
+#plaNavLogoImg:hover{
+    width: 14.5%;
+    height: 59.5%;
+}
+
+#plaNavLogoImg:active{
+    border-radius: 6px;
+    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+
+}
+
+.planav_btn{
+    width: 10%;
+    height: 50%;
+    color: white;
+    background-color: black;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+}
+.planav_btn:hover{
+    color:black;
+    background-color:white;
+}
+
+.planav_btn:active{
+    box-shadow: none;  
+  }
+#plaSidebarIcon{
+  font-size:xx-large;
+}
+#plaSidebarIcon:hover{
+    color: white;
+  }
+  
+#plaNavIcon{
+  font-size:xx-large;
+}
+
+#plaNavIcon:hover{
+    color: white;
+   
+    }
+    
+.plaSearchbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 42%;
+    height: 28px
+}
+#plaSearchIcon{
+    
+    padding: 3px;
+    width: 10%;
+    text-align: center;
+    font-size: large;
+    color: #757575;
+    height: 107%;
+    background-color: white;
+    border-radius: 0px  10px 10px 0px;
+    box-shadow: 4px 4px 10px rgba(73, 72, 72, 0.461);
+
+}
+#pla_search_icon{
+    margin-top: 10px;
+}
+
+#plaSearchIcon:active{
+box-shadow: none;
+}
+
+#planav_search_input{
+    padding: 4px;
+    width: 75%;
+    height: 100%;
+    text-align: justify;
+    font-size: small;
+    outline: none;
+    border: none;
+    border-radius: 10px  0px 0px 10px;
+    box-shadow: 4px 4px 10px rgba(73, 72, 72, 0.461);;
+}
+
+#planav_search_input:active{
+    box-shadow: none;  
+  }
+
+
+/* 2. pla Side Navigation bar-------------------- */
+
+.plaSidediv{
+    position: fixed;
+    top:0px;
+    background-color: #fcfcfd71;
+    border-radius: 6px;
+    height: 660px;
+    width: 96%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.plaSideNavMain{
+    padding: 0px 0px 15px 15px;
+    background-color:rgb(255, 255, 255);
+    height: 660px;  
+    overflow-y:scroll; 
+}
+
+.plaSideNav{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;    
+}
+#plaSideNavList1{
+    padding: 15px 0px 15px 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid black;
+}
+#plaSideNavList1:hover{
+    background-color:#06FFB4;
+    width: 70%;
+    border-radius: 8px;
+    border-bottom:none;
+}
+#plaSideNavList:hover{
+    background-color:#06FFB4;
+    width: 70%;
+    border-radius: 8px;
+    border-bottom:1px solid #06ffb4;
+
+}
+#plaSideNavList{
+    padding: 15px 0px 15px 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid black;
+}
+a{
+    text-decoration: none;
+}
+
+#plaSideClose{
+    position: sticky;
+    top: 30px;
+    right: 5px;
+    margin-left: 280px;
+}
+
+.plasidebdy{
+    display: flex;
+}
+
+.plasidenavhead{
+    max-width: 90%;
+    margin-top: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background-color:#06FFB4;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.plasidenavhead:hover{
+    background-color:#03FF86;
+
+}
+.plaSideSignin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+}
+#plaSideBtn:hover{
+    color: black;
+    background-color: white;
+}
+#plaSideBtn{
+    font-size: large; 
+    width: 50%;
+    word-spacing: 2px;
+    height: 50px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+}
+
+#plaSideBtn:active{
+    box-shadow: none;  
+  } 
+
+  #plaCategoryList:hover{
+    background-color: #f79204b8;
+  }
+  #plaCategoryList{
+    background-color: #06FFB4;
+    padding: 0px 0px 15px 15px;
+    width: 90%;
+    border-bottom: 1px solid black;
+  }
+  .plaSidenavhide{
+    display: none;
+  }
+  .plaSideblock{
+    display: block;
+  }
+  
+
+ /* pla slide show top  -------------------------------*/
+
+ .plaSlideShowDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 250px;
+    background-color:#03FF86;
+    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+    border-radius: 10px;
+}
+
+.plaSlideShowDiv:hover{
+    background-color:#78f5c99c;
+}
+.plaSlideScrollBtn{
+    font-size: xx-large;
+    font-weight: 600;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 10%;
+    height: 30%;
+    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+}
+.plaSlideScrollBtn:hover{
+    color: black;
+    background-color: white;
+}
+.plaSlideScrollBtn:active{
+    box-shadow: none;  
+  }
+
+.plaSlideInner1{
+    width: 40%;
+    text-align: center;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+ }
+ .plaSlideInner2{
+   width: 40%;
+ }
+ #plaSlideShopBtn{
+    padding: 15px;
+    font-size: larger;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+}
+#plaSlideShopBtn:active{
+    box-shadow: none;
+
+}
+#plaSlideShopBtn:hover{
+    color:black;
+    background-color: white;
+}
+
+ #plaSlideImg1{
+    height: 200px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+
+}
+#plaSlideImg1:hover{
+    height: 203px;
+    width: 503px;
+}
+#plaSlideImg1:active{
+    box-shadow:none;
+}
+
+/* -------------pla scard list  */
+
+.pla4_offer1_products_list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+    
+   .pla_offer1_header{
+    color: black;
+    font-size: 19px;
+    font-weight: 600;
+   }
+   .pla_offer1_header:hover{
+    color:black;
+    background-color: #e0f5b9a4;
+    padding: 0px 1px;
+    border-radius: 6px;
+    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+
+   }
+    .pla_offer_icon_arrow{
+        font-size: 33px;
+     } 
+
+
+    .pla_offer_card_group{
+    margin-top: 20px;
+     width: 100%;
+     height: 220px;
+     display: flex;
+     align-items:center;
+     text-align: center;
+     justify-content: space-between;
+    }
+
+    .plaOffercard{
+       background-color:#5DC7A1;
+
+       color: black;
+       font-weight: 600px;
+       height: 200px;
+       width: 12%;
+       border-radius: 50px 5px;
+       box-shadow: 4px 4px 10px rgb(90, 88, 88);
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       gap: 5px;
+       font-size: 20px;
+
+    }
+    .plaOffercard:hover{
+        background-color:#03FF86;
+    }
+    .plaOffercard:active{
+        box-shadow: none;
+    }
+     .pla_offer_card{
+       background-color:#03FF86;
+       color: black;
+       font-weight: 600px;
+       height: 200px;
+       width: 12%;
+       border-radius: 50px 5px;
+       box-shadow: 4px 4px 10px rgb(90, 88, 88);
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       gap: 5px;
+       font-size: 20px;
+
+     }
+     .pla_offer_card:hover{
+        background-color:#5BD3A0;
+     }
+     .pla_offer_card:active{
+       box-shadow: none;
+
+     }
+       #pla_card_img{
+           height:60%;
+           width: 80%;
+           border-radius: 50px 5px;
+           box-shadow: 4px 4px 10px rgb(90, 88, 88);
+           
+       }
+       #pla_card_img:active{
+        box-shadow: none;
+       }
+
+    #pla_card_name{
+        /* height:10%; */
+        width: 80%;
+    }
+
+/*pla footer------------------- */
+
+.plaFooter {
+    margin-top: 30px;
+    height: 350px;
+    width: 100vw;
+    background:black;
+  }
+  
+.plaFooterBackTop{
+    background:rgb(102, 100, 100);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+#plafootAtag{
+    color: white;
+    font-size: large;
+}
+#plafootAtag:hover{
+    color: black;
+    font-size: larger;
+}
+.plaFooterMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.plafooterlist{
+    padding: 40px 0px 0px 70px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    gap: 25px;
+    align-items:flex-start;
+    justify-content:space-around;
+    flex-direction: column;
+}
+
+
+.plafooterListitems{
+    padding: 0px 3px 8px 3px;
+    border-bottom: 2px solid black;
+
+}
+
+.plafooterListitems:hover{
+    border-bottom: 2px solid white;
+
+}
+
+/* .image-slideshow {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  img {
+    width: 100%
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  } */
