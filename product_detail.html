@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product detail page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- css -->
-    <link rel="stylesheet" href="./CSS/product_detail.css">
+
+   <link rel="stylesheet" href="CSS/product_detail.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
                 <div class="navCheckoutInner">
                     <div class="navCheckoutLeft">
                         <i id="navMenuIcon" class="fa-solid fa-bars"></i>
-                        <img id="mainLogo" src="logo-full-palli-tamil-color.png" alt="">
+                        <img id="mainLogo" src="Assets/logo-full-palli-tamil-color.png" alt="">
                     </div>
                     <div class="navCheckoutRight">
                         <div class="navSearch">
@@ -45,20 +45,27 @@
 
             <!-- left side -->
             <div class="img-card">
-                <img src="./Assets/71Gj0XPTYFL._SL1500_.jpg" alt="" id="featured-image">
-                <!-- small img -->
-                <div class="small-Card">
-                    <img src="./Assets/71Gj0XPTYFL._SL1500_.jpg" alt="" class="small-Img">
-                    <img src="./Assets/61nIOLjJpCL._SL1080_.jpg" alt="" class="small-Img">
-                    <img src="./Assets/615cXOL6wXL._SL1091_.jpg" alt="" class="small-Img">
-                    <img src="./Assets/61LvHRmknDL._SL1500_.jpg" alt="" class="small-Img">
+                <div class="main-img">
+                    <img src="Assets/71Gj0XPTYFL._SL1500_.jpg" alt="" id="featured-image">
                 </div>
                 
+                <!-- small img -->
+                <div class="small-Card">
+                    <img src="Assets/71Gj0XPTYFL._SL1500_.jpg" alt="" class="small-Img">
+                    <img src="Assets/61nIOLjJpCL._SL1080_.jpg" alt="" class="small-Img">
+                    <img src="Assets/615cXOL6wXL._SL1091_.jpg" alt="" class="small-Img">
+                    <img src="Assets/61LvHRmknDL._SL1500_.jpg" alt="" class="small-Img">
+                </div>
+                <!-- <div class="button">
+                    <button>Buy now</button>
+                    <button>Wish list</button>
+                </div> -->
             </div>
+           
             <!-- Right side -->
             <div class="product-info">
                 <h3>Farmley Light Broken Walnut Kernels |</h3>
-                
+                <p>500grm</p>  <span class="star-price"><i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i></span>
                 <h5>Price: ₹2200 <del> ₹3000</del></h5>
                 <br>
                 <ul>
@@ -70,36 +77,86 @@
                     <br>
                     <h2> product Information</h2>
                     <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore accusamus natus dolorum.
-                        Quaerat nulla quod doloremque, officia quis provident amet adipisci unde esse iure delectus,
-                        maxime inventore optio fuga nisi?</p>
+                    <li> protein, dietary fiber, Gluten-Free, Non-GMO, zero transfat, zero cholesterol.</li>
+                    <li> Good for an active lifestyle - perfect heart healthy snack.</li>
+                    <li>Low calorie nut, ideal for weight watchers.</li>
+                    <li> Rich source of antioxidants, vitamins, minerals, iron & calcium.</li>
+                    
+                    
                 </ul>
                 <br>
                 <div class="quantity">
-                    <input type="number" value="1" min="1">
+                    <i class="fa-solid fa-minus" style="color: #ff0000;" id="minus"></i>
+                    <input type="text" value="1" min="1" id="quantity-count">
+                    <i class="fa-solid fa-plus" style="color: #46c70f;" id="plus"></i>
+
                     <button>Add to Cart</button>
                     <button>buy now</button>
                 </div>
 
-                <!-- -------Right side product detail---------------------- -->
-                <!-- <section class="related-products">
-                    <div class="related-item">
-                        <img src="photo1.jpg" alt="Related Item 1">
-                        <p>Related Item 1</p>
-                    </div>
-                    <div class="related-item">
-                        <img src="photo2.jpg" alt="Related Item 2">
-                        <p>Related Item 2</p>
-                    </div>
-                    <div class="related-item">
-                        <img src="photo3.jpg" alt="Related Item 3">
-                        <p>Related Item 3</p>
-                    </div>
-                </section> -->
             </div>
-
+            <div class="product-details">
+                <h2>product details<h2>
+                    <br>
+                 <h3>One-time purchase</h3>
+                 <h5>₹2200.00 (₹1560.00 / 1kg)</h5>
+                 <br>
+                 <li>fastest delivery Tomorrow, 23 February. Order within 9 hrs 25 mins.</li> 
+                 <br>
+                 <p>FREE delivery Saturday, 24 February on orders dispatched.</p>
+                 <br>
+                 <label for="Quy">Quantity</label>
+                 <select id="quantity" name="Quy">
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                 </select>
+                 <div class="add_card">
+                 <button>Add to Cart</button>
+                 <button id="buynow">buy now</button>
+                </div>
+            </div> 
         </div>
-            <script src="./JS/product_detail.js"></script>
+    </div>
+    
+
+    <div class="related_items">
+            <div class="related_head">
+               <div class="related_line"></div>
+               <h4>Related item</h4>
+            </div>
+        <div class="related-items-div">
+            <div class="related-item">
+                <img src="Assets/71bLUY1KRRL._SL1500_.jpg" alt="Related Item 1" class="iteam-img">
+                <a href="">Happilo Premium Californian Almonds Roasted & Salted 200 g (Pack of 4)</a>
+                <h3>₹449.00 </h3>
+                <span class="star"><i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i></span>
+
+            </div>
+            <div class="related-item">
+                <img src="Assets/71QBBnJg7QL._SL1500_.jpg" alt="Related Item 2" class="iteam-img">
+               <a href="">Happilo Premium Californian Almonds Roasted & Salted 200 g (Pack of 2)</a>
+               <h3>₹1200.00 </h3>
+               <span class="star"><i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i></span>
+
+            </div>
+            <div class="related-item">
+                <img src="Assets/71K4ZIwDb5L._SL1500_.jpg" alt="Related Item 3" class="iteam-img">
+                <a href="">Happilo Premium Californian Almonds Roasted & Salted 200 g (Pack of 4)</a>
+                <h3>₹1360.00 </h3>
+                <span class="star"><i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i></span>
+
+            </div>
+            <div class="related-item">
+                <img src="Assets/81zltSI1XIL._SL1500_.jpg" alt="Related Item 4"  class="iteam-img">
+                <a href="">Happilo Premium Californian Almonds Roasted & Salted 200 g (Pack of 4)</a>
+                <h3>₹449.00 </h3>
+                <span class="star"><i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i></span>
+
+            </div>
+        </div>
+   </div>
+            <script src="JS/product_detail.js"></script>
 </body>
 
 </html>
