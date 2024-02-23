@@ -17,7 +17,10 @@ img {
   left: 0px;
   z-index: 0;
 }
-
+a{
+  text-decoration: none;
+  color: white;
+}
 .Loginmaincondiner {
   background-color: rgba(255, 255, 255, 0.7);
   width: 457px; 
