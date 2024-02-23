@@ -1,110 +1,77 @@
+/* Major structure of pla and plp  page*/
+
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Caveat+Brush&family=Caveat:wght@400;600&family=Fraunces:opsz,wght@9..144,100&family=Inter&family=Literata:opsz,wght@7..72,200;7..72,600&family=Montserrat:ital,wght@0,100;0,400;0,500;1,300&family=Open+Sans&family=Outfit:wght@400;700&family=Pacifico&family=Raleway:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 0px;
-    cursor: pointer;
-}
-body{
-    width: 99%;
-    margin-top: 2%;
-    line-height: 0%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.plaAgriKart{
-    width: 97%;
-}
-.plaHome{
-    
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
+* { 
+    font-family: "Roboto", sans-serif;  
+    font-weight: 400; 
+    font-style: normal; 
+    line-height: 0px; 
+    cursor: pointer; }
+  
+    body { 
+    max-width: 1440px; 
+    width: 100%; margin: 0; 
+    padding: 0; display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap; }
+
+    .plaAgriKart {  width: 97%; }
+
+.plaHome { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 30px; }
 
 /* 1. Top Navigation bar-------------------- */
-
-.plaTopNavbar{  
-    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+.plaTopNavbar { 
+    box-shadow: 1px 1px 5px;  
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color:#5BD3A0;
-    flex-wrap: wrap;
-    height: 70px;
-    width: 100%;
-    border-radius: 6px;
+    align-items: center; 
+    justify-content: space-around; 
+    background-color:#5BD3A0; 
+    flex-wrap: wrap; 
+    height: 70px; 
+    width: 100%; 
 }
-.plaTopNavbar:hover{
-  cursor: pointer;
-}
-#plaNavLogoImg{
-    width: 15%;
-    height: 60%;
-    border:1px solid #5BD3A0;  
-}
+.plaTopNavbar:hover { cursor: pointer; }
 
+#plaNavLogoImg { 
+    width: 150px; 
+    height: 50px; 
+    border:1px solid #5BD3A0; }
 
-#plaNavLogoImg:hover{
-    width: 14.5%;
-    height: 59.5%;
-}
-
-#plaNavLogoImg:active{
-    border-radius: 6px;
-    box-shadow: 4px 4px 10px rgb(90, 88, 88);
-
-}
-
-.planav_btn{
-    width: 10%;
-    height: 50%;
-    color: white;
-    background-color: black;
-    outline: none;
+    .planav_btn { 
+    width: 10%; 
+    height: 50%; 
+    color: white; 
+    background-color: black; 
+    outline: none; 
     border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+    border-radius: 8px; 
+    font-weight: 600; 
+    box-shadow: 1px 1px 5px;  
 }
-.planav_btn:hover{
-    color:black;
-    background-color:white;
-}
+.planav_btn:hover { color:black; background-color:white; }
 
-.planav_btn:active{
-    box-shadow: none;  
-  }
-#plaSidebarIcon{
-  font-size:xx-large;
-}
-#plaSidebarIcon:hover{
-    color: white;
-  }
-  
-#plaNavIcon{
-  font-size:xx-large;
-}
+.planav_btn:active { box-shadow: none; }
 
-#plaNavIcon:hover{
-    color: white;
-   
-    }
-    
-.plaSearchbar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 42%;
-    height: 28px
-}
-#plaSearchIcon{
-    
-    padding: 3px;
+#plaSidebarIcon{  font-size:xx-large; }
+
+#plaSidebarIcon:hover{  color: white; }
+
+#plaNavIcon{ font-size:xx-large;}
+
+.plaSearchbar{ 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    width: 42%; 
+    height: 28px; }
+
+#plaSearchIcon{ 
+    padding: 3px; 
     width: 10%;
     text-align: center;
     font-size: large;
@@ -112,16 +79,12 @@ body{
     height: 107%;
     background-color: white;
     border-radius: 0px  10px 10px 0px;
-    box-shadow: 4px 4px 10px rgba(73, 72, 72, 0.461);
-
-}
-#pla_search_icon{
-    margin-top: 10px;
+    box-shadow: 1px 1px 5px;  
 }
 
-#plaSearchIcon:active{
-box-shadow: none;
-}
+#pla_search_icon{ margin-top: 10px; }
+
+#plaSearchIcon:active{ box-shadow: none; }
 
 #planav_search_input{
     padding: 4px;
@@ -132,13 +95,9 @@ box-shadow: none;
     outline: none;
     border: none;
     border-radius: 10px  0px 0px 10px;
-    box-shadow: 4px 4px 10px rgba(73, 72, 72, 0.461);;
+    box-shadow: 1px 1px 5px;  
 }
-
-#planav_search_input:active{
-    box-shadow: none;  
-  }
-
+#planav_search_input:active{ box-shadow: none;  }
 
 /* 2. pla Side Navigation bar-------------------- */
 
@@ -148,19 +107,16 @@ box-shadow: none;
     background-color: #fcfcfd71;
     border-radius: 6px;
     height: 660px;
-    width: 96%;
+    width: 100%;
     overflow: hidden;
     cursor: pointer;
 }
-
-
 .plaSideNavMain{
     padding: 0px 0px 15px 15px;
     background-color:rgb(255, 255, 255);
     height: 660px;  
     overflow-y:scroll; 
 }
-
 .plaSideNav{
     display: flex;
     align-items: flex-start;
@@ -186,7 +142,6 @@ box-shadow: none;
     width: 70%;
     border-radius: 8px;
     border-bottom:1px solid #06ffb4;
-
 }
 #plaSideNavList{
     padding: 15px 0px 15px 15px;
@@ -194,22 +149,20 @@ box-shadow: none;
     display: flex;
     align-items: center;
     gap: 20px;
-    border-bottom: 1px solid black;
-}
-a{
-    text-decoration: none;
-}
+    border-bottom: 1px solid black;}
 
-#plaSideClose{
+a { text-decoration: none; color: white;}
+
+a:hover{ color: black; font-weight: bold; }
+
+a:hover { color: black;}
+
+#plaSideClose { 
     position: sticky;
     top: 30px;
     right: 5px;
-    margin-left: 280px;
-}
-
-.plasidebdy{
-    display: flex;
-}
+    margin-left: 280px;}
+.plasidebdy{ display: flex;}
 
 .plasidenavhead{
     max-width: 90%;
@@ -222,11 +175,8 @@ a{
     width: 100%;
     border-radius: 10px;
 }
+.plasidenavhead:hover{   background-color:#03FF86;}
 
-.plasidenavhead:hover{
-    background-color:#03FF86;
-
-}
 .plaSideSignin{
     display: flex;
     align-items: center;
@@ -234,10 +184,8 @@ a{
     width: 100%;
     height: 60px;
 }
-#plaSideBtn:hover{
-    color: black;
-    background-color: white;
-}
+#plaSideBtn:hover{    color: black; background-color: white;}
+
 #plaSideBtn{
     font-size: large; 
     width: 50%;
@@ -248,45 +196,33 @@ a{
     border: none;
     border-radius: 8px;
     font-weight: 600;
-    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+    box-shadow: 1px 1px 5px;  
 }
+#plaSideBtn:active{    box-shadow: none;  }
 
-#plaSideBtn:active{
-    box-shadow: none;  
-  } 
+#plaCategoryList:hover{    background-color: #f79204b8;}
 
-  #plaCategoryList:hover{
-    background-color: #f79204b8;
-  }
-  #plaCategoryList{
-    background-color: #06FFB4;
+#plaCategoryList{ background-color: #06FFB4;
     padding: 0px 0px 15px 15px;
     width: 90%;
     border-bottom: 1px solid black;
   }
-  .plaSidenavhide{
-    display: none;
-  }
-  .plaSideblock{
-    display: block;
-  }
-  
+  .plaSidenavhide{ display: none; }
+
+  .plaSideblock{ display: block; }
 
  /* pla slide show top  -------------------------------*/
-
  .plaSlideShowDiv{
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 250px;
     background-color:#03FF86;
-    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+    box-shadow: 1px 1px 5px;  
     border-radius: 10px;
 }
 
-.plaSlideShowDiv:hover{
-    background-color:#78f5c99c;
-}
 .plaSlideScrollBtn{
     font-size: xx-large;
     font-weight: 600;
@@ -296,15 +232,11 @@ a{
     border: none;
     border-radius: 10%;
     height: 30%;
-    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+    box-shadow: 1px 1px 5px;  
 }
-.plaSlideScrollBtn:hover{
-    color: black;
-    background-color: white;
-}
-.plaSlideScrollBtn:active{
-    box-shadow: none;  
-  }
+.plaSlideScrollBtn:hover{ color: black; background-color: white;}
+
+.plaSlideScrollBtn:active{    box-shadow: none;  }
 
 .plaSlideInner1{
     width: 40%;
@@ -316,9 +248,8 @@ a{
     flex-direction: column;
     gap: 30px;
  }
- .plaSlideInner2{
-   width: 40%;
- }
+ .plaSlideInner2{   width: 40%;}
+
  #plaSlideShopBtn{
     padding: 15px;
     font-size: larger;
@@ -327,40 +258,33 @@ a{
     background-color: black;
     border: none;
     border-radius: 6px;
-    box-shadow: 4px 4px 10px rgb(90, 88, 88);
+    box-shadow: 1px 1px 5px;  
 }
-#plaSlideShopBtn:active{
-    box-shadow: none;
+#plaSlideShopBtn:active{ box-shadow: none;}
 
-}
-#plaSlideShopBtn:hover{
-    color:black;
-    background-color: white;
-}
+#plaSlideShopBtn:hover{ color:black; background-color: white;}
 
  #plaSlideImg1{
     height: 200px;
-    width: 500px;
+    width: 90%;
     border-radius: 20px;
-    box-shadow: 4px 4px 10px rgb(90, 88, 88);
-
+    border: 2px solid #FF8C00;
+    box-shadow: 1px 1px 5px;  
 }
 #plaSlideImg1:hover{
     height: 203px;
-    width: 503px;
+    width: 91%;
+    border: 3px solid #FF8C00;
 }
 #plaSlideImg1:active{
     box-shadow:none;
 }
-
 /* -------------pla scard list  */
-
 .pla4_offer1_products_list{
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-    
    .pla_offer1_header{
     color: black;
     font-size: 19px;
@@ -371,14 +295,11 @@ a{
     background-color: #e0f5b9a4;
     padding: 0px 1px;
     border-radius: 6px;
-    box-shadow: 4px 4px 10px rgb(90, 88, 88);
-
+    box-shadow: 1px 1px 5px;  
    }
     .pla_offer_icon_arrow{
         font-size: 33px;
      } 
-
-
     .pla_offer_card_group{
     margin-top: 20px;
      width: 100%;
@@ -388,10 +309,8 @@ a{
      text-align: center;
      justify-content: space-between;
     }
-
     .plaOffercard{
        background-color:#5DC7A1;
-
        color: black;
        font-weight: 600px;
        height: 200px;
@@ -404,10 +323,6 @@ a{
        justify-content: center;
        gap: 5px;
        font-size: 20px;
-
-    }
-    .plaOffercard:hover{
-        background-color:#03FF86;
     }
     .plaOffercard:active{
         box-shadow: none;
@@ -419,47 +334,181 @@ a{
        height: 200px;
        width: 12%;
        border-radius: 50px 5px;
-       box-shadow: 4px 4px 10px rgb(90, 88, 88);
+       box-shadow: 1px 1px 5px;  
        display: flex;
        flex-direction: column;
        align-items: center;
        justify-content: center;
        gap: 5px;
        font-size: 20px;
-
      }
-     .pla_offer_card:hover{
-        background-color:#5BD3A0;
-     }
-     .pla_offer_card:active{
+      .pla_offer_card:active{
        box-shadow: none;
-
      }
        #pla_card_img{
-           height:60%;
-           width: 80%;
+           height:110px;
+           width: 110px;
            border-radius: 50px 5px;
-           box-shadow: 4px 4px 10px rgb(90, 88, 88);
-           
+           box-shadow: 1px 1px 5px;  
+           border: 2px solid #FF8C00;
+       }
+       #pla_card_img:hover{
+        border: 3px solid #FF8C00;
        }
        #pla_card_img:active{
         box-shadow: none;
+        border: 2px solid black;
        }
+    #pla_card_name{    width: 80%;}
 
-    #pla_card_name{
-        /* height:10%; */
-        width: 80%;
-    }
+  /* plpfruitsandvegetable div---------------------------- */
+  .plpfruitsandveg{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+  }
+/* plptopheading-------------------------------- */
+.plptophead{
+    width: 98%;
+    height: 30px;
+    padding: 1%;
+    font-size: 80%;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px;  
+}
+#plptophtag:hover{
+    text-decoration: underline;
+    font-weight: 450; 
+}
+/* -------------------plp page mini list div content  */
+.plp_mini_list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+    width: 100%;
+}
+#pla_mini_card{
+    width: 13%;
+    height: 140px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#pla_mini_card:active{    box-shadow: none;}
+
+#pla_mini_txt1{    font-size: 80%;}
+
+#pla_mini_img{
+    width:80%;
+    height:60px;
+    border-radius: 30px 10px;
+    box-shadow: 1px 1px 5px;  
+    border: 1px solid #FF8C00;
+}
+
+#pla_mini_img:hover{    border: 2px solid #FF8C00;}
+
+#pla_mini_img:active{    box-shadow: none;  }
+
+.plpfruitsandveg{ margin-top: 30px;}
+
+/* plp dynamic js content------------------------------- */
+#dynamicContentContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+}
+.plpcarthead{
+    width: 98%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+    font-size: 80%;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px;
+}
+.plpcarticon{
+    display: flex;
+    gap: 20px;
+    font-size: xx-large;
+} 
+#plpcarthtag:hover{    font-weight: 450; text-decoration: underline; }
+
+/* plp card list div------------------------- */
+.plpmaincatlistdiv{
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96%;
+    box-shadow: 1px 1px 5px;  
+    border-radius: 10px;
+    background-color:#ffffff;
+    gap: 30px;
+}
+
+/* plp main card--------------------- */
+.plpmaincard{
+    box-shadow: 1px 1px 5px;  
+    width: 150px;
+    height: 250px;
+    border:2px solid white;
+    background-color: white;
+    border-radius: 6px  6px 50% 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+ }
+ #plpcartimg{ width: 80%; height: 40%;}
+
+ #plpcartprice{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+ #plpcartbtn{
+    width: 60%;
+    height: 10%;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 1px 1px 5px;  
+    background-color: black;
+    color: white;
+ }
+ #plpcartname:hover{ color: #161616; font-weight: 500; text-decoration: underline; }
+
+#plpprice{   color: #5BD3A0; font-weight: bold;}
+
+#plpnoprice{    color: rgb(99, 93, 93);  }
+
+ #plpcartbtn:hover{ background-color: rgb(112, 107, 107); }
+
+ #plpcartbtn:active{ box-shadow: none; font-weight: bold;}
 
 /*pla footer------------------- */
-
 .plaFooter {
     margin-top: 30px;
     height: 350px;
     width: 100vw;
     background:black;
   }
-  
 .plaFooterBackTop{
     background:rgb(102, 100, 100);
     height: 60px;
@@ -467,20 +516,16 @@ a{
     justify-content: center;
     align-items: center;
 }  
+#plafootAtag{   color: white; font-size: large;}
 
-#plafootAtag{
-    color: white;
-    font-size: large;
-}
-#plafootAtag:hover{
-    color: black;
-    font-size: larger;
-}
+#plafootAtag:hover{    color: black; font-size: larger;}
+
 .plaFooterMain{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .plafooterlist{
     padding: 40px 0px 0px 70px;
     width: 100%;
@@ -492,15 +537,23 @@ a{
     justify-content:space-around;
     flex-direction: column;
 }
-
-
 .plafooterListitems{
     padding: 0px 3px 8px 3px;
     border-bottom: 2px solid black;
-
 }
-
 .plafooterListitems:hover{
     border-bottom: 2px solid white;
-
 }
+
+/*------------------------------------------------ scroll bar code */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #ffffff00;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #ffffff00;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #0f5111;
+    border-radius: 4px;
+  }

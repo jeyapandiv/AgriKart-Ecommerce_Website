@@ -4,11 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PLP CATEGORY PAGE</title>
-    <link rel="stylesheet" href="CSS/plpcss.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+    <!-- <link rel="stylesheet" href="CSS/plpcss.css"> -->
+     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    
-    <Script src="JS/plpjs.js"></Script>
+    <div class="plaTopNavbar">
+        <i  id="plaSidebarIcon" class="fa-solid fa-bars" ></i>
+        <img id="plaNavLogoImg" src="Assets/plpAssets/plpagri.png" alt="">
+        <div class="plaSearchbar">
+            <input  type="text" id="planav_search_input" placeholder=" search products here... "/>
+            <div id="plaSearchIcon"><i id="pla_search_icon" class="fa-solid fa-magnifying-glass""></i></div>
+        </div>
+        <button class="planav_btn">Login / SignUp</button>
+        <i id="plaNavIcon" class="fa-regular fa-circle-user"></i>
+        <i id="plaNavIcon" class="fa-solid fa-cart-shopping"></i>                    
+    </div>
+    <div class="plaSidediv" id="plaSidediv">
+        <div class="plaSideNavMain" id="plaSideNavMain">
+            <div class="plaSideNavigation" id="plaSideNavigation">
+
+                <div id="plaSideClose">
+                    <h3 id="plaSideExit"><i class="fa-solid fa-circle-xmark"></i></h3>
+                </div>
+                <div class="plaSideNav" id="plaSideNav">
+                        <div class="plasidenavhead">
+                            <h3 id="plaSideStart"> Start Buying! </h3>
+                        </div>
+                        <h4 id="plaSideNavList"> <i class="fa-solid fa-house"> </i> Home </h4>  
+                          <h4 id="plaSideNavList1" > <i class="fa-solid fa-list"> </i>  Shop By Category </h4> 
+                        <div class="plaSideNavcategory plaSidenavhide" id="plaNavcatlog" >
+                           <h4 id="plaCategoryList">Ornamental Crops</h4>
+                           <h4 id="plaCategoryList">Harvesting Crops</h4>
+                           <h4 id="plaCategoryList">Industrial Crops</h4>
+                           <h4 id="plaCategoryList">Fiber Crops</h4>
+                           <h4 id="plaCategoryList">Feed Crops </h>
+                           <h4 id="plaCategoryList">Food crops</h4>
+                           <h4 id="plaCategoryList">Oil Crops</h4>
+                        </div>   
+                        <h3 class="plaSideNavAccount"> My Account </h3>    
+                        <h4 id="plaSideNavList"> <i class="fa-solid fa-box-open"></i> My Orders </h4>    
+                        <h4 id="plaSideNavList"> <i class="fa-solid fa-bag-shopping"></i> My Cart List </h4>    
+                        <h4 id="plaSideNavList"> <i class="fa-solid fa-hand-holding-heart"></i> My Wish List </h4>    
+                        <h4 id="plaSideNavList"> <i class="fa-solid fa-square-phone"></i> Customer support </h4>    
+                        <h4 id="plaSideNavList"> <i class="fa-solid fa-users"></i> About Us </h4>
+                        <h4 id="plaSideNavList"> <i class="fa-solid fa-address-book"></i> connect with Us </h4> 
+                        <div class="plaSideSignin">
+                            <button id="plaSideBtn"> <i class="fa-solid fa-right-to-bracket"></i> SignIn</button>    
+                        </div>   
+                </div>
+            </div>  
+        </div>
+    </div>
+
+
+    <div class="plaAgriKart">
+        
+        <div class="plaMain">
+            <div class="plaHome">
+                    <div class="plpfruitsandveg">
+                    <div class="plptophead"> <h1 id="plptophtag">Fresh Farm Fruits and Vegetables</h1> </div>
+                    <div class="plp_mini_list">
+                        <!-- plp_catogery_mini_list -->
+                        <div class="pla_mini_catlog1" id="pla_mini_card">
+                            <h4 id="pla_mini_txt1">Fresh Vegetables</h4> <img id="pla_mini_img" src="Assets/plpAssets/plpminivegetable.jpeg" alt="">
+                        </div>
+                        <div class="pla_mini_catlog1" id="pla_mini_card">
+                            <h4 id="pla_mini_txt1">Fresh Fruits</h4> <img id="pla_mini_img" src="Assets/plpAssets/plpminifruits.jpeg" alt="">
+                        </div>
+                        <div class="pla_mini_catlog1" id="pla_mini_card">
+                            <h4 id="pla_mini_txt1">Fresh Greens</h4> <img id="pla_mini_img" src="Assets/plpAssets/plpminigreens.jpeg" alt="">
+                        </div>
+                        <div class="pla_mini_catlog2"id="pla_mini_card">
+                            <h4 id="pla_mini_txt1">Season's Special</h4>  <img id="pla_mini_img" src="Assets/plpAssets/plpminiseason.jpeg" alt="">
+                        </div>
+                        <div class="pla_mini_catlog3"id="pla_mini_card">
+                            <h4 id="pla_mini_txt1">Today’s Deal</h4>  <img id="pla_mini_img" src="Assets/plpAssets/plpminitoday.jpeg" alt="">
+                        </div>
+                        <div class="pla_mini_catlog4"id="pla_mini_card">
+                            <h4 id="pla_mini_txt1"> Pooja Essential</h4> <img id="pla_mini_img" src="Assets/plpAssets/plpminipoja.jpeg" alt="">
+                        </div>
+                    </div>
+        <div id="dynamicContentContainer"></div>
+    </div>
+</div>
+</div>
+</div>
+    <div class="plaFooter">
+        <!-- plp footer content -->
+        <div class="plaFooterBackTop"><a id="plafootAtag" href="plphtml.html">Back To Top</a></div>
+  <div class="plaFooterMain">
+   <div class="plafooterlist">
+       <div class="plafooterheading">
+        <h3 class="plafooterhead">ABOUT AGRI CART</h3>
+       </div>
+       <li class="plafooterListitems">Home</li>
+       <li class="plafooterListitems">About</li>   
+       <li class="plafooterListitems">Contact</li>   
+       <li class="plafooterListitems">Terms</li>   
+       <li class="plafooterListitems">Cancellation</li>   
+   </div>
+   <div class="plafooterlist">
+    <div class="plafooterheading">
+      <h3 class="plafooterhead">CATEGORY</h3>
+     </div>   
+    <li class="plafooterListitems">Oil Crops </li>
+    <li class="plafooterListitems">Food Crop </li>   
+    <li class="plafooterListitems">Feed Crop </li>   
+    <li class="plafooterListitems">Fibre Crop</li>   
+    <li class="plafooterListitems">Industrial</li>   
+</div>
+<div class="plafooterlist">
+  <div class="plafooterheading">
+    <h3 class="plafooterhead">OFFERS</h3>
+   </div>     
+  <li class="plafooterListitems">Weekend Offers</li>
+  <li class="plafooterListitems">Big Discounts</li>   
+  <li class="plafooterListitems">User Login</li>   
+  <li class="plafooterListitems">Seller Login</li>   
+  <li class="plafooterListitems">Today’s Deal</li>   
+</div>
+<div class="plafooterlist">
+  <div class="plafooterheading">
+    <h3 class="plafooterhead">CONNECT WITH US</h3>
+   </div>    
+  <li class="plafooterListitems">Instagram</li>
+  <li class="plafooterListitems">FaceBook</li>   
+  <li class="plafooterListitems">Twitter</li>   
+  <li class="plafooterListitems">Email-ID</li>   
+  <li class="plafooterListitems">LinkedIn</li>   
+</div>
+  </div>
+</div>
+    </div>
+    <script src="JS/plpjs.js"></script>
 </body>
 </html>
