@@ -66,7 +66,7 @@ let products_slide_obj=[
     },
     {
         src:"Assets/pinkflowers.jpeg",
-        Name:"Today's Deal|seasonal offers"
+        Name:"Deal of the day"
     },
     {
         src:"Assets/fc.jpeg",
@@ -144,6 +144,7 @@ function plaprevious(x)
                     }
             }
     }   
+
 
 
 
