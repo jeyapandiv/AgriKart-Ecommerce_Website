@@ -58,36 +58,6 @@ VerfyBtn.addEventListener("click",()=>{
 
 
 // -----------------------------------------SIGNUP BUTTON ------------------------------------------------------------
-SignUpBtn.addEventListener("click",(e)=>{
-
-    e.preventDefault()
-
-var EmailInputValue = EmailInput.value 
-var PwordInputValue = PwordInput.value 
- 
-    if(EmailInputValue.length < 1){
-        VerifyEmailSpan.classList.add("verifyemailviewVisible");
-        EmailInput.classList.add("loginBorder")
-    }
-
-    if(PwordInputValue.length < 1){
-        VerifyPwordSpan.classList.add("verifypwordviewVisibble");
-        PwordInput.classList.add("loginBorder");
-    }
-
-
-
-EmailInput.addEventListener("focus",()=>{
-    VerifyEmailSpan.classList.remove("verifyemailviewVisible");
-    EmailInput.classList.remove("loginBorder")
-});
-
-PwordInput.addEventListener("focus",()=>{
-    VerifyPwordSpan.classList.remove("verifypwordviewVisibble");
-    PwordInput.classList.remove("loginBorder");
-});
-})
-
 
 
 // ----------------------------------------------------------CONFORMPASSWORD BUTTON - -----------------------
