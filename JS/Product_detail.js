@@ -8,6 +8,8 @@ smallImages.forEach(smallImg => {
         featuredImage.src = this.src;
     });
 });
+
+
 //---------------------- increment - decrement --------------------------
 
 let plus = document.getElementById("plus");
@@ -29,8 +31,8 @@ minus.addEventListener("click", () => {
 });
 
 
-
 // --------------------------------------
+
 const addcart = document.getElementById('addcart');
 addcart.addEventListener('click', () => {
     const productName = document.querySelector('.product-name').textContent;
@@ -41,8 +43,6 @@ addcart.addEventListener('click', () => {
     // Navigate to cart page and pass product details via query parameters or localStorage
     window.location.href = `cart.html?productName=${productName}&price=${price}&weight=${weight}&imgSrc=${imgSrc}`;
 });
-
-
 
 
 
