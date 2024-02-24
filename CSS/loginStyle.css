@@ -1,0 +1,358 @@
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+#SignupPageNav{
+  text-decoration: none;
+  color: #779341;
+}
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  left: 0px;
+  z-index: 0;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.Loginmaincondiner {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 457px; 
+  height: 510px; 
+  z-index: 1;
+  position: absolute;
+  left: 400px; 
+  top: 8%; 
+  border-radius: 12px;
+  margin-top: 32px; 
+  cursor: pointer;
+  display: none;
+}
+#logonamespan{
+  color: #779341;
+}
+#singnamespan{
+  color: #008000;
+}
+.Welcome {
+  font-size: 28px; 
+  margin: 36.8px 0px 0px 0px;
+  text-align: center;
+  color: black;
+  font-weight: 500;
+}
+
+.Login {
+  font-size: 36px; 
+  color: #008000;
+  margin: 11.2px 0px 0px 0px; 
+  text-align: center;
+  font-weight: 500;
+}
+
+label {
+  font-size: 13px;
+}
+
+#mailDetailes,
+#pwordDetailes {
+  width: 360px; 
+  height: 45px; 
+  border-radius: 7px; 
+  margin-top: 10px; 
+}
+
+.userConform {
+  font-size: 10px; 
+  display: flex;
+  margin: 11px 0px 0px 50.4px; 
+  gap: 200px; 
+  color: black;
+}
+
+#singinBTn {
+  width: 188px; 
+  height: 43px; 
+  border-radius: 12px; 
+  color: white;
+  background-color: #008000;
+  text-align: center;
+  margin-top: 15px; 
+  margin-left: 140px; 
+  border: none;
+}
+
+.User-InputMail,
+.User-InputPassword {
+  margin: 14.4px 0px 0px 50px;
+}
+
+input::placeholder {
+  padding-left: 8px; 
+  font-family: "Poppins", sans-serif;
+}
+
+.lablename {
+  color: black;
+}
+
+/* -----------------------------FORGET PAGE CSS --------------------------------*/
+
+.forgetloginContainer {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 490px; 
+  height: 515px; 
+  z-index: 1;
+  position: absolute;
+  left: 400px;
+  top: 8%;
+  border-radius: 12px; 
+  margin-top: 32px; 
+  display: none;
+}
+
+#forgetText {
+  margin: 96px 0px 0px 145.6px; 
+  font-size: 19px; 
+  color: #008000;
+}
+
+#forgetDescription {
+  margin-top: 25px; 
+  margin-left: 31px;
+  font-size: 16px;
+}
+
+.forgetinputlabels {
+  margin-top: 37.6px; 
+  margin-left: 31px;
+}
+
+#forgetinput {
+  margin-top: 6px; 
+  width: 350px; 
+  height: 48px; 
+  border-radius: 7px; 
+  border: 1px solid grey;
+}
+
+#forgetbackpageLink {
+  margin: 14px 0px 0px 299px; 
+  text-decoration: underline;
+}
+
+#forgetBtn {
+  width: 188px; 
+  height: 43px; 
+  border-radius: 7px; 
+  color: white;
+  background-color: #008000;
+  margin: 32px 0px 0px 122.4px;
+  font-family: "Poppins", sans-serif;
+  border: none;
+}
+
+/* CONFORM PASSWORD PAGE */
+
+.confarmpasswordConntainer {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 431px; 
+  height: 515px;
+  z-index: 1;
+  position: absolute;
+  left: 400px; 
+  top: 8%; 
+  border-radius: 12px; 
+  margin-top: 32px; 
+  display: none;
+}
+
+#resetpasswordText {
+  margin: 96px 0px 0px 145px; 
+  color: #008000;
+  font-size: 19px; 
+}
+
+.passwordinpuetcontainer {
+  margin: 26px 0px 0px 31px; 
+}
+
+.conformNewcondiner {
+  margin: 19px 0px 0px 31px;
+}
+
+#newpasswordinput,
+#conformpwordinput {
+  width: 350px; 
+  height: 48px; 
+  margin-top: 8px; 
+  border-radius: 7px;
+}
+
+#reesertBtn {
+  width: 188px; 
+  height: 43px; 
+  background-color: #008000;
+  color: white;
+  border: none;
+  border-radius: 12px; 
+  font-size: 12px; 
+  margin: 38px 0px 0px 122px; 
+}
+
+#paaswordlable,
+#confarmpasword {
+  font-size: 12px; 
+}
+
+.OTPNav{
+  color: white;
+  text-decoration: none;
+}
+
+.conformFirstPword{
+  border: 1px solid grey;
+}
+
+.conformSecondPword{
+  border: 1px solid grey;
+}
+/* ---------------------------------OTP CONDAINER CSS----------------------------------- */
+
+.OTPmaincondainer {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 431px; 
+  height: 480px; 
+  border-radius: 32px; 
+  left: 400px; 
+  top: 80px;
+  display: none;
+}
+
+#OTPBox {
+  display: flex;
+  gap: 19px; 
+  margin-top: 16px; 
+  margin-left: 30.4px; 
+}
+
+.cercul {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 0.8px solid #4285F4; 
+  width: 45px; 
+  height: 48px; 
+  border-radius: 7px;
+  text-align: center;
+}
+
+#verifytext {
+  font-size: 16x; 
+  margin: 80px 0 24px 152px;
+}
+
+#OTPsapn {
+  color: #779341;
+}
+
+#OTPPara {
+  font-size: 12.8px;
+  margin-top: 40px; 
+  margin-left: 30.4px; 
+}
+
+#yourOTP {
+  font-size: 11px; 
+  margin-top: 19px; 
+  margin-left: 30.4px; 
+}
+
+#resentOTP {
+  font-size: 12.8px; 
+  text-decoration: underline;
+  margin: 32px 0 0 311.2px; 
+}
+
+#verifyBtn {
+  width: 188px; 
+  height: 43px; 
+  border-radius: 8px; 
+  background-color: #008000;
+  color: white;
+  border: none;
+  margin: 32px 0 0 122.4px;
+}
+
+.OTP-TO-LoginNav{
+  color: white;
+
+  text-decoration: none;
+}
+
+/* -------------------ContainerView-------------------- */
+
+
+.ContainerView{
+  display: block;
+  cursor: pointer;
+}
+.ContainerNoView{
+  display: none;
+}
+
+/* ------------------visible ---------------- */
+
+.mailBoredr{
+  border: 1px solid gray;
+}
+
+
+.PwordBorder{
+  border: 1px solid gray;
+}
+
+.verifyemailview{
+  visibility: hidden;
+}
+
+.verifypwordview{
+  visibility: hidden;
+}
+
+.verifyemailviewVisible{
+visibility: visible;
+  color: red;
+}
+.verifypwordviewVisibble{
+visibility: visible;
+  color: red;
+}
+
+.loginBorder{
+
+  border: 1px solid red;
+}
+/* ------------------------------- */
+
+
+/* --------------------------CONFORM CONDAINER-------------------- */
+
+
+.conformPwordAlert{
+  visibility: hidden;
+}
+
+.View{
+  visibility: visible;
+  color: red;
+}
+
+.BorederInputColor{
+  border: 1px solid red;
+}
