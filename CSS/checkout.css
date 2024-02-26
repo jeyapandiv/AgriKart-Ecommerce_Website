@@ -40,10 +40,11 @@
     margin-bottom: 20px;
     border-bottom: 1px solid rgb(235, 235, 235);
     box-shadow: 0px 2px 2px rgb(214, 214, 214);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.navBarCheckout,
-.navSearch #navSearchIcon,
 .selectAddDiv,
 .payment-container,
 .cart-review-container {
@@ -52,13 +53,6 @@
     justify-content: center;
 }
 
-.navCheckoutInner {
-    width: 90%;
-}
-
-.navCheckoutInner,
-.navCheckoutLeft,
-.navCheckoutRight,
 .cartProfileIcon,
 .checkout-payment-container,
 .confirmationInner {
@@ -67,42 +61,6 @@
     justify-content: space-between;
 }
 
-.navCheckoutLeft {
-    width: 17%;
-}
-
-.navCheckoutLeft #navMenuIcon {
-    font-size:28px;
-}
-
-.navCheckoutLeft #mainLogo {
-    width: 150px;
-    height: 40px;
-}
-
-.navCheckoutRight {
-    width: 60%;
-}
-
-.cartProfileIcon {
-    width: 10%;
-}
-
-.navCheckoutRight .navSearch {
-    width: 65%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-.navCheckoutRight .navSearch input {
-    height: 35px;
-    width: 90%;
-    padding: 0px 5px;
-    border-radius: 4px 0px 0px 4px;
-}
-
-.navCheckoutRight .navSearch input,
 .addNoteCreateBtn button,
 .actionsAddress>*,
 .useAddressBtn button,
@@ -111,17 +69,6 @@
 .confirmBtn {
     border: none;
     outline: none;
-}
-
-.navSearch #navSearchIcon {
-    width: 10%;
-    height: 35px; 
-    background-color: var(--secondary-color);
-    border-radius: 0px 4px 4px 0px;
-}
-
-.navCheckoutInner i {
-    font-size: 18px;
 }
 
 .checkoutAddress {
@@ -351,30 +298,6 @@
     padding: 4px 5px;
     margin: 10px 0px;
 }
-/* 
-.confirmationDiv {
-    width: 95%;
-    height: 90%;
-}
-
-.confirmBtn {
-    background-color: #abbeb800;
-    width: 190px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-#confirmBtn1 {
-    position: relative;
-    left: 25px;
-    top: -80px;
-}
-
-#confirmBtn2 {
-    position: relative;
-    left: 630px;
-    top: -380px;
-}*/
 
 
 .disNone {

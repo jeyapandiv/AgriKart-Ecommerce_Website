@@ -7,7 +7,7 @@ fetch('navBar.html')
   });
 
 document.querySelector('.paymentDiv').classList.add('disNone');
-// document.querySelector('.confirmationDiv ').classList.add('disNone');
+// document.querySelector('.paymentReviewDiv ').classList.add('disNone');
 // document.querySelector('.orderList').classList.add('disNone');
 
 let selectAddress = document.querySelector('.selectAddress');
@@ -27,7 +27,7 @@ function navigatePayment(btn) {
     else if (btn.id == "navigateReview") {
         document.querySelector('.selectAddress').classList.add('disNone');
         document.querySelector('.paymentDiv').classList.add('disNone');
-        document.querySelector('.confirmationDiv').classList.remove('disNone');
+        document.querySelector('.paymentReviewDiv').classList.remove('disNone');
         processStatus[2].classList.remove('fontWeight')
         processStatus[4].classList.add('fontWeight')
         
@@ -35,7 +35,7 @@ function navigatePayment(btn) {
     else if ((btn.id == "confirmBtn1") || (btn.id == "confirmBtn2")) {
         document.querySelector('.selectAddress').classList.add('disNone');
         document.querySelector('.paymentDiv').classList.add('disNone');
-        document.querySelector('.confirmationDiv ').classList.add('disNone');
+        document.querySelector('.paymentReviewDiv ').classList.add('disNone');
 
     }
 
