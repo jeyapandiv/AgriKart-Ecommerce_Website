@@ -1,3 +1,46 @@
+// --------------------------FAIREBASE LOGIN SETUP ----------------------
+
+
+
+
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCrsO7wk0lqUfnOlwaeBSDXyicVHgJFF_c",
+    authDomain: "dckap-agricart-2024.firebaseapp.com",
+    projectId: "dckap-agricart-2024",
+    storageBucket: "dckap-agricart-2024.appspot.com",
+    messagingSenderId: "135220583467",
+    appId: "1:135220583467:web:dbaf745d728c6ef1a31e6e"
+  };
+
+  import { getFirestore, doc , getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+  import {getAuth , signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+var auth = getAuth(app);
+var db = getFirestore();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var LoginCondainer = document.getElementById("LoginmaincondinerCall");
 var ForgetPWordCondainer = document.getElementById("forgetloginContainerCall");
 var continueBtn = document.getElementById("forgetBtn");
@@ -10,8 +53,8 @@ var SignUpBtn = document.getElementById("singinBTn");
 
 
 
-var EmailInput = document.getElementById("mailDetailes");
-var PwordInput = document.getElementById("pwordDetailes");
+var RegEmail = document.getElementById("mailDetailes");
+var RegPassword = document.getElementById("pwordDetailes");
 
 
 
@@ -105,3 +148,26 @@ ResertPword.addEventListener("click",()=>{
     console.log("hi")
     })
     
+
+SignUpBtn.addEventListener("click",()=>{
+     
+    signInWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
+
+.then(async (credential)=>{
+ var ref =  doc(db,"user",credential.user.uid)
+ const doSnap = await getDoc(ref)
+
+ if(doSnap.exists()){
+    sessionStorage.setItem("user-info",JSON.stringify({
+        FirstName:doSnap.data().FirstName,
+      LastName:data().LastName
+    }))
+    
+    sessionStorage.setItem("user-creds",JSON.stringify(credential.user))
+ }
+})
+.catch((err)=>{
+    alert("Invalid Password")
+})
+
+})

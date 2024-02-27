@@ -1,3 +1,38 @@
+// ------------------------------FAIRBASE ------------------------------------
+
+
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCrsO7wk0lqUfnOlwaeBSDXyicVHgJFF_c",
+    authDomain: "dckap-agricart-2024.firebaseapp.com",
+    projectId: "dckap-agricart-2024",
+    storageBucket: "dckap-agricart-2024.appspot.com",
+    messagingSenderId: "135220583467",
+    appId: "1:135220583467:web:dbaf745d728c6ef1a31e6e"
+  };
+
+  import { getFirestore, collection, doc, setDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+  import {getAuth , createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+var auth = getAuth(app);
+var db = getFirestore();
+
+
+
+
+
+
+
+
+
 // ------------CONTAINERS --------------------------------------
 
 var     ResgisterContainer = document.getElementById("RegistermaincondainerCall");
@@ -70,7 +105,7 @@ else{
                         var   RegEmailValue = RegEmail.value.trim();
                         var onetimepword = Math.floor(Math.random()*1000000);
                        
-                     EmailBody = `
+                    var emailcont = `
                      <h1> Verification code </h1><br><br>
                           <h3>  Please use the verification code below to sign in.</h3>
                           <h1> OTP : ${onetimepword} </h1> 
@@ -83,7 +118,7 @@ else{
                          To : RegEmailValue,
                          From : "dckapagricart2024@gmail.com",
                          Subject : "This is the subject",
-                         Body : EmailBody
+                         Body : emailcont
                      
                      }).then(
                        message => {        
@@ -138,9 +173,26 @@ function CheckValue(value){
 
 
 
-// ----------------------------------OTP TRICKER SESSION------------------------------------------------------
+// ----------------------------------FAIRBASE TRICKER SESSION------------------------------------------------------
+createUserWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
+.then( async (credentials)=>{    
 
- 
+var ref =  doc(db,"user",credentials.user.uid)
+
+ await setDoc(ref,{
+    FirstName:RegFirstName.value,
+    LastName:RegSecodName.value,
+    contact:RegContNum.value,
+    email:RegEmail.value,
+    password:RegPassword.value
+})
+
+})
+.catch((err)=>{
+    alert(err.message)
+})
+
+
 
 });
 
