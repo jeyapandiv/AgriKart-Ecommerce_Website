@@ -141,7 +141,7 @@ else{
                          var  otbNum5  =  document.getElementById("otbum5").value;
                          var  otbNum6  =  document.getElementById("otbum6").value;
                          
-                         OTPInnerValue = otbNum1 +otbNum2+otbNum3+otbNum4+otbNum5+otbNum6;
+                        var OTPInnerValue = otbNum1 +otbNum2+otbNum3+otbNum4+otbNum5+otbNum6;
                  
                          console.log(OTPInnerValue)
                  

@@ -3,6 +3,7 @@
 
 
 
+
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
   // TODO: Add SDKs for Firebase products that you want to use
@@ -18,16 +19,12 @@
     appId: "1:135220583467:web:dbaf745d728c6ef1a31e6e"
   };
 
-  import { getFirestore, doc , getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+  import { getFirestore, collection, doc, setDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
   import {getAuth , signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-
-var auth = getAuth(app);
-var db = getFirestore();
-
-
+var auth = getAuth(app)
 
 
 
@@ -151,23 +148,13 @@ ResertPword.addEventListener("click",()=>{
 
 SignUpBtn.addEventListener("click",()=>{
      
-    signInWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
-
-.then(async (credential)=>{
- var ref =  doc(db,"user",credential.user.uid)
- const doSnap = await getDoc(ref)
-
- if(doSnap.exists()){
-    sessionStorage.setItem("user-info",JSON.stringify({
-        FirstName:doSnap.data().FirstName,
-      LastName:data().LastName
-    }))
-    
-    sessionStorage.setItem("user-creds",JSON.stringify(credential.user))
- }
+signInWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
+.then((credential)=>{
+    alert("SUCESSFULLY LOGINED")
+    location.href = "index.html"
 })
 .catch((err)=>{
-    alert("Invalid Password")
+    alert("INVALID USER")
 })
 
 })
