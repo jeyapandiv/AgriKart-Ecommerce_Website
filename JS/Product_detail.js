@@ -41,7 +41,8 @@ addcart.addEventListener('click', () => {
     const imgSrc = document.querySelector('.main-img img').src;
     console.log(productName,price,weight,imgSrc)
     // Navigate to cart page and pass product details via query parameters or localStorage
-    window.location.href = `cart.html?productName=${productName}&price=${price}&weight=${weight}&imgSrc=${imgSrc}`;
+    // window.location.href = `cart.html?productName=${productName}&price=${price}&weight=${weight}&imgSrc=${imgSrc}`;
+    window.location.href = "cart.html"
 });
 
 
