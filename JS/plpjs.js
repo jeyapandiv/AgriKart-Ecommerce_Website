@@ -133,7 +133,7 @@ var head=["All Fruits","All Fruits","Seasonal Special","Premium Fruits And Veget
 });
 
 function plptoproductfun() {
-    window.location.href = "product_detail.html"; // Replace "index.html" with your desired destination page
+    window.location.href = "./product_detail.html"; // Replace "index.html" with your desired destination page
 }
         }
         
