@@ -36,6 +36,7 @@
           src="/Assets/logo-full-palli-tamil-color.png"
           alt=""
           style="width: 150px; height: 40px"
+          onclick="navigationMain()"
         />
       </div>
       <div class="navCheckoutRight" style="width: 60%">
@@ -55,11 +56,16 @@
         </div>
         <div class="cartProfileIcon" style="width: 10%">
           <i id="navProfileIcon" class="fa-solid fa-user"></i>
-          <i id="navCrtIcon" class="fa-solid fa-cart-shopping"></i>
+          <i id="navCrtIcon" class="fa-solid fa-cart-shopping" onclick="cartIconPageNavigate()"></i>
         </div>
       </div>
     </div>
 
-    <script src="/JS/checkout.js"></script>
+   <!-- <script src="/JS/checkout.js"></script> -->
+    <!-- <script>
+  function navigationMain() {
+    window.location.href = "index.html";
+  }
+    </script>  -->
   </body>
 </html>

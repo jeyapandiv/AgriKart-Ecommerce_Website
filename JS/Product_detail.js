@@ -2,6 +2,8 @@ var smallImages = document.querySelectorAll('.small-Img');
 
 var featuredImage = document.getElementById('featured-image');
 
+
+
 smallImages.forEach(smallImg => {
     smallImg.addEventListener('click', function() {
       
@@ -9,7 +11,12 @@ smallImages.forEach(smallImg => {
     });
 });
 
-
+function cartIconPageNavigate() {
+    window.location.href = "cart.html"
+  }
+  function navigationMain() {
+    window.location.href = "index.html";
+  }
 //---------------------- increment - decrement --------------------------
 
 let plus = document.getElementById("plus");
@@ -32,7 +39,7 @@ minus.addEventListener("click", () => {
 
 
 // --------------------------------------
-function storeProductDetails() {
+function storeProductDetails(btn) {
     // Extracting product details
     const productName = document.querySelector('.product-name').innerText;
     const productWeight = document.querySelector('.product-weight').innerText;
@@ -59,15 +66,20 @@ function storeProductDetails() {
 
         // Save the updated cart back to local storage
         localStorage.setItem('cart', JSON.stringify(cart));
-        console.log('cart-pushed')
-        console.log(cart);
+        // console.log('cart-pushed')
+        // console.log(cart);
     } else {
         // If the cart does not exist, create a new cart array with the product
         localStorage.setItem('cart', JSON.stringify([productDetails]));
-        console.log('cart-created')
-        console.log(cart)
+        // console.log('cart-created')
+        // console.log(cart)
 
     }
+
+}
+
+function navigateCheckout(btn) {
+    window.location.href = "checkout.html";
 }
 
 // const addcart = document.getElementById('addcart');
