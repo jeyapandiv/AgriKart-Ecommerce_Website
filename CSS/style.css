@@ -19,17 +19,13 @@
     --boxshawdow-color:  #ddd;
     --blur-color:rgba(255, 255, 255, 0.419);
 }
-
 body { 
     max-width: 1440px; 
     width: 100%; 
     margin: 0; 
     padding: 0; 
 }
-
-
  /* top nav bar---------------- */
-
  .AgriKartnavbar {
     width: 100%;
     height: 50px;
@@ -37,17 +33,13 @@ body {
     align-items: center;
     justify-content: space-evenly;
     border-bottom: 1px solid var(--boxshawdow-color) ;
-
 }
-
-
 .navloginIcon{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 80px;
 }
-
 #navloginbtn{
     padding: 5px;
     background-color:var(--secondary-color);
@@ -57,7 +49,6 @@ body {
     border: none;
     border-radius: 4px;
 }
-
 #mainLogo{
     width: 150px;
     height: 50px;
@@ -68,7 +59,6 @@ body {
     justify-content: space-between;
     width: 96%;
 }
-
 #navSearchBox{
     padding: 6px;
     width: 370px;
@@ -77,14 +67,12 @@ body {
     outline: none;
     border-radius: 4px 0px 0px 4px;
 }
-
 #navSearchIcon{
     padding: 4.5px;
     box-shadow: 1px 1px 5px var(--boxshawdow-color);  
     background-color:var(--second-color);
     border-radius: 0px 4px 4px 0px;
 }
-
 .navSearch{   
     display: flex;
     justify-content: center;
@@ -93,15 +81,11 @@ body {
 #navsearchIcon{
     color: var(--rareUse2-color);
 }
-
 #navMenuIcon,#navProfileIcon,#navCrtIcon{
     font-size: larger;
     color: var(--secondary-color);
 }
-
-
 /* 2. pla Side Navigation bar-------------------- */
-
 .plaSidediv{
     position: fixed;
     top:0px;
@@ -152,18 +136,13 @@ body {
     align-items: center;
     gap: 20px;
     border-bottom: 1px solid var(--rareUse1-color);}
-
 a { text-decoration: none; color: var(--rareUse2-color);}
-
-
 #plaSideClose { 
     position: sticky;
     top: 30px;
     right: 5px;
     margin-left: 280px;}
-
 .plasidebdy{ display: flex;}
-
 .plasidenavhead{
     max-width: 90%;
     margin-top: -40px;
@@ -185,7 +164,6 @@ a { text-decoration: none; color: var(--rareUse2-color);}
     height: 60px;
 }
 #plaSideBtn:hover{    color: var(--rareUse1-color); background-color: var(--primary-color);}
-
 #plaSideBtn{
     font-size: large; 
     width: 50%;
@@ -199,23 +177,15 @@ a { text-decoration: none; color: var(--rareUse2-color);}
     box-shadow: 1px 1px 5px var(--boxshawdow-color);  
 }
 #plaSideBtn:active{    box-shadow: none;  }
-
 #plaCategoryList:hover{    background-color: var(--boxshawdow-color);}
-
 #plaCategoryList{ background-color:var(--thirdsade-color);
     padding: 0px 0px 15px 15px;
     width: 90%;
     border-bottom: 1px solid var(--rareUse1-color);
   }
   .plaSidenavhide{ display: none; }
-
   .plaSideblock{ display: block; } 
-
-
-  
-
-  .plaAgriKart,.AgriKartPlp{
-    
+  .plaAgriKart,.AgriKartPlp{   
     background-color: var(--rareUse2-color);
     display: flex;
     justify-content: center;
@@ -226,7 +196,6 @@ a { text-decoration: none; color: var(--rareUse2-color);}
     gap: 30px;
     margin-top: 30px;
 }
-
  /* pla slide show top  -------------------------------*/
  .plaSlideShowDiv{
     display: flex;
@@ -238,7 +207,6 @@ a { text-decoration: none; color: var(--rareUse2-color);}
     box-shadow: 1px 1px 5px var(--boxshawdow-color);  
    border-radius: 4px;
 }
-
 .plaSlideInner1{
     width: 45%;
     text-align: center;
@@ -250,7 +218,6 @@ a { text-decoration: none; color: var(--rareUse2-color);}
     gap: 30px;
  }
  .plaSlideInner2{   width: 45%;}
-
  #plaSlideShopBtn{
     padding: 15px;
     font-size: larger;
@@ -258,22 +225,18 @@ a { text-decoration: none; color: var(--rareUse2-color);}
     color: var(--rareUse2-color);
     background-color:var(--secondary-color);
     border: none;
-    border-radius: 4px;
-      
+    border-radius: 4px;    
 }
  #plaSlideShopBtn:hover{
     box-shadow: 1px 1px 5px var(--boxshawdow-color);  
  }
-
  #plaSlideImg1{
     height: 200px;
     width: 90%;
     border-radius: 4px;
     border: 1px solid var(--secondary-color);
 }
-
 /* ----------------------card main-------- */
-
 .plaProductCardMain,.plpProductCardMain {
     border: 1px solid var(--boxshawdow-color);
     padding: 10px;
@@ -282,7 +245,6 @@ a { text-decoration: none; color: var(--rareUse2-color);}
     box-sizing: border-box;
     background-color: #f5fcf9; 
 }
-
 .plaproductcard-container{
     width: 100%;
     display: flex;
@@ -303,7 +265,6 @@ a { text-decoration: none; color: var(--rareUse2-color);}
 .plpProductHeaing:hover{
 color: var(--second-color);
 text-decoration: underline;
-
 }
 .plaProductHeaing:hover{
 color: var(--second-color);
@@ -315,14 +276,12 @@ text-decoration: underline;
 #plaCardProductName:hover{
     color: var(--second-color);
 }
-
 .placardbtn{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
-
 .placardleftbtn,
 .placardrightbtn {
     font-size: 25px;
@@ -331,7 +290,6 @@ text-decoration: underline;
     cursor: pointer;
     padding: 10px;
 }
-
 .plaproductcard,.plpproductcard {
     border: 1px solid var(--boxshawdow-color);
     padding: 10px;
@@ -349,7 +307,6 @@ text-decoration: underline;
 }
 .plpproductcard:hover{
     border: 1px solid var(--secondary-color);
-
 }
 .plaproductcard:hover{
     border: 1px solid var(--secondary-color);
@@ -359,8 +316,6 @@ text-decoration: underline;
     flex-wrap: wrap;
     width: 100%;
 }
-
-
 /*pla footer------------------- */
 .plaFooter {
     margin-top: 30px;
@@ -377,15 +332,12 @@ text-decoration: underline;
     align-items: center;
 }  
 #plafootAtag{   color: var(--rareUse2-color); font-size: large;}
-
 #plafootAtag:hover{    color: var(--boxshawdow-color); font-size: larger;}
-
 .plaFooterMain{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
 .plafooterlist{
     padding: 40px 0px 0px 70px;
     width: 100%;
@@ -404,7 +356,6 @@ text-decoration: underline;
 .plafooterListitems:hover{
     border-bottom: 2px solid var(--rareUse2-color);
 }
-
 /*------------------------------------------------ scroll bar code */
 ::-webkit-scrollbar {
     width: 8px;
@@ -417,8 +368,6 @@ text-decoration: underline;
     background-color:var(--secondary-color);
     border-radius: 4px;
   }
-
-
 /* plp page--------------- */
   .plpAgriKart{
     width: 94%;
@@ -428,12 +377,7 @@ text-decoration: underline;
     justify-content: space-between;
     gap: 30px;
   }
-
 .plpproductcard {
     line-height: 0px;
     height: 300px;  
 }
-
-/* #plpProductCardMain {
-    margin-top: 20px;
-} */
