@@ -1,6 +1,6 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 
@@ -69,10 +69,11 @@ label {
 }
 
 .userConform {
-  font-size: 10px; 
+  font-size: 12px; 
   display: flex;
-  margin: 11px 0px 0px 50.4px; 
-  gap: 200px; 
+  justify-content: center;
+  margin-top: 20px;
+  gap: 170px; 
   color: black;
 }
 
