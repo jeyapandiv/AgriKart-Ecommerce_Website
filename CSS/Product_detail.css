@@ -230,15 +230,15 @@ justify-content: center;
 margin: 0 auto;
 width: 25%;
 height: 200px;
-background-color:var(--box-shadow2);
+/* background-color:var(--box-shadow2); */
 }
 
 .related-items-div{
-width: 90%;
+/* width: 90%; */
 display: flex;
-margin: 0 auto;
+/* margin: 0 auto;
 gap: 10%;
-margin-top: 5%;
+margin-top: 5%; */
 }
 
 .iteam-img {
