@@ -130,6 +130,7 @@ var head=["All Fruits","All Fruits","Seasonal Special","Premium Fruits And Veget
 
             plptoproduct.forEach(function(element) {
             element.addEventListener('click', plptoproductfun);
+
 });
 
 function plptoproductfun() {
@@ -151,4 +152,3 @@ function plptoproductfun() {
 function getRandomPrice() {
     return Math.floor(Math.random() * 50) + 30; // Random price between 30 and 80
 }
-
