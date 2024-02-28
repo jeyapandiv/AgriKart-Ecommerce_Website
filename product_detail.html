@@ -46,7 +46,7 @@
             <!-- left side -->
             <div class="img-card">
                 <div class="main-img">
-                    <img src="Assets/71Gj0XPTYFL._SL1500_.jpg" alt="" id="featured-image">
+                    <img class="product-img" src="Assets/71Gj0XPTYFL._SL1500_.jpg" alt="" id="featured-image">
                 </div>
                 
                 <!-- small img -->
@@ -64,9 +64,9 @@
            
             <!-- Right side -->
             <div class="product-info">
-                <h3>Farmley Light Broken Walnut Kernels |</h3>
-                <p>500grm</p>  <span class="star-price"><i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i></span>
-                <h5>Price: ₹2200 <del> ₹3000</del></h5>
+                <h3 class="product-name">Farmley Light Broken Walnut Kernels |</h3>
+                <p class="product-weight">500grm</p>  <span class="star-price"><i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i></span>
+                <h5>Price: <span class="product-price">₹2200 </span> <del> ₹3000</del></h5>
                 <br>
                 <ul>
                     <li>Nonpareil Premium California Almonds / Batams</li>
@@ -87,10 +87,10 @@
                 <br>
                 <div class="quantity">
                     <i class="fa-solid fa-minus" style="color: #ff0000;" id="minus"></i>
-                    <input type="text" value="1" min="1" id="quantity-count">
+                    <input class="product-qty" type="text" value="1" min="1" id="quantity-count">
                     <i class="fa-solid fa-plus" style="color: #46c70f;" id="plus"></i>
 
-                    <button>Add to Cart</button>
+                    <button onclick="storeProductDetails()">Add to Cart</button>
                     <button>Buy Now</button>
                 </div>
 
@@ -112,7 +112,7 @@
                    <option value="3">3</option>
                  </select>
                  <div class="add_card">
-                 <button>Add to Cart</button>
+                 <button onclick="storeProductDetails()">Add to Cart</button>
                  <button id="buynow">buy now</button>
                 </div>
             </div> 
@@ -156,7 +156,7 @@
             </div>
         </div>
    </div>
-            <script src="JS/product_detail.js"></script>
+            <script src="JS/Product_detail.js"></script>
 </body>
 
 </html>
