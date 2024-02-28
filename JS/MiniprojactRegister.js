@@ -16,7 +16,7 @@
     appId: "1:135220583467:web:dbaf745d728c6ef1a31e6e"
   };
 
-  import { getFirestore, collection, doc, setDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+  import { getFirestore, collection, doc, setDoc, getDocs, updateDoc, addDoc} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
   import {getAuth , createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
   // Initialize Firebase
@@ -25,7 +25,9 @@
 var auth = getAuth(app);
 var db = getFirestore();
 
-
+var ref = collection(db,"user")
+var getData = await getDocs(ref)
+var id = getData.size
 
 
 
@@ -62,7 +64,7 @@ var RegPwordAlert = document.getElementById("RegPwordAlert");
 // ------------------------------------ALERT Function ---------------------------------
 
 
-RegFormSubmit.addEventListener("submit",(event)=>{
+RegFormSubmit.addEventListener("submit",async(event)=>{
 
     event.preventDefault();
     
@@ -102,6 +104,8 @@ else{
                         CheckValue(RegPassword.name)
                     }
                     else{
+                        
+
                         var   RegEmailValue = RegEmail.value.trim();
                         var onetimepword = Math.floor(Math.random()*1000000);
                        
@@ -152,6 +156,7 @@ else{
                          }
                          else{
                              alert("Invalid OTP")
+                             
                          }
                       })
                  
@@ -174,27 +179,30 @@ function CheckValue(value){
 
 
 // ----------------------------------FAIRBASE TRICKER SESSION------------------------------------------------------
+
 createUserWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
-.then( async (credentials)=>{    
-
-var ref =  doc(db,"user",credentials.user.uid)
-
- await setDoc(ref,{
-    FirstName:RegFirstName.value,
-    LastName:RegSecodName.value,
-    contact:RegContNum.value,
-    email:RegEmail.value,
-    password:RegPassword.value
-})
-
+.then((credentials)=>{    
 })
 .catch((err)=>{
     alert(err.message)
+    
 })
 
-
-
+let ref = doc(db,"user",`${id++}`)
+let datarefernce = await setDoc(ref,{
+       FirstName:RegFirstName.value,
+        LastName:RegSecodName.value,
+        contact:RegContNum.value,
+        email:RegEmail.value,
+        password:RegPassword.value
+})
+.then(()=>{
+})
+.catch((error)=>{
+console.log(error)
+})
 });
+
 
 // ------------------------------------FIRST NAME -----------------------------------------------
 
