@@ -24,7 +24,7 @@ function updateCartItemCount() {
 function updateCart() {
     let itemTotal = 0;
     var items = document.querySelectorAll('.item');
-    // console.log(items)
+
     items.forEach(item => {
         var priceElement = item.querySelector('.product-price');
         var price = parseFloat(priceElement.textContent.replace('₹', ''));
@@ -70,7 +70,7 @@ function emptyCart() {
     // Remove items from local storage
     for (var i = 0; i < localStorage.length; i++) {
         var key = localStorage.key(i);
-        if (key.startsWith('cart')) { // Assuming your items are stored with keys starting with 'cartItem'
+        if (key.startsWith('cart')) { 
             localStorage.removeItem(key);
         }
     }
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-    // Event listener for delete icons
+
     var deleteIcons = document.querySelectorAll('.delete-icon');
     deleteIcons.forEach(icon => {
         icon.addEventListener('click', deleteItem);
@@ -146,7 +146,7 @@ function deleteItem(event) {
     var index = getIndex(itemDiv);
     itemDiv.remove();
 
-    // Remove item from local storage
+
     removeItemFromLocalStorage(index);
 
     updateCartItemCount();
@@ -164,15 +164,14 @@ function getIndex(element) {
 }
 
 // Function to remove item from local storage
-// Function to remove item from local storage
 function removeItemFromLocalStorage(index) {
     var cartData = JSON.parse(localStorage.getItem('cart'));
-    if (index >= 0 && index < cartData.length) { // Ensure the index is within range
+    if (index >= 0 && index < cartData.length) { 
         cartData.splice(index, 1);
         localStorage.setItem('cart', JSON.stringify(cartData));
         console.log(cartData);
         if (cartData.length === 0) {
-            localStorage.removeItem('cart'); // Remove the entire entry from local storage
+            localStorage.removeItem('cart'); 
         }
     } else {
         console.log("Index out of range or invalid.");

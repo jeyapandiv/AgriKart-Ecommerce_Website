@@ -76,21 +76,20 @@ function addToWishlist() {
     var productImage = document.querySelector('.product-img').src;
     var productPrice = document.querySelector('.product-price').textContent;
     
-    // Get existing wishlist from local storage or initialize if it doesn't exist
+   
     var wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
     
-    // Add product to wishlist
+  
     wishlist.push({
         "ProductName": productName,
         "ProductImage": productImage,
         "ProductPrice": productPrice
     });
-    
-    // Store updated wishlist in local storage
+  
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
 }
 
-// Listen for clicks on the heart icon
+
 document.querySelector('.heart').addEventListener('click', addToWishlist);
 
 // let addcart = document.getElementById('addcart');
