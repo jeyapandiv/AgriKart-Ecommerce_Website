@@ -153,6 +153,9 @@ input:focus {
     text-align: center;
     margin-top: 10px;
 }
+.RequiredStar{
+    color: red;
+}
 
 #companyname {
     color: #779341;
@@ -319,7 +322,23 @@ input::placeholder {
 .PWordBorder {
     border: 1px solid grey;
 }
+/* -------------------------------------------- ALERTBOX ------------------------------------------ */
 
+.emailAlretBox{
+    border: 1px solid red;
+    animation: shake .5s;
+    
+}
+
+.pssworAlertBox{
+    border: 1px solid red;
+    animation: shake .5s;
+}
+
+.contAlertBox{
+    border: 1px solid red;
+    animation: shake .5s;
+}
 /* --------------------------------OTP ------------------------------- */
 
 
