@@ -45,8 +45,7 @@
 }
 
 .navBarCheckout,
-.navSearch #navSearchIcon,
-.selectAddDiv {
+.navSearch #navSearchIcon {
     display: flex;
     align-items: center;
     justify-content: center;
