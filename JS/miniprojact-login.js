@@ -33,7 +33,7 @@ var LoginCondainer = document.getElementById("LoginmaincondinerCall");
 var ForgetPWordCondainer = document.getElementById("forgetloginContainerCall");
 var continueBtn = document.getElementById("forgetBtn");
 var SignUpBtn = document.getElementById("singinBTn");
-var GoogleIcon = document.getElementById("GoogleIcon");
+// var GoogleIcon = document.getElementById("GoogleIcon");
 
 var RegEmail = document.getElementById("mailDetailes");
 var RegPassword = document.getElementById("pwordDetailes");
@@ -107,18 +107,19 @@ continueBtn.addEventListener("click",ForgetPword)
 
 
 
-var googleSign = ()=>{
+// var googleSign = ()=>{
 
-    signInWithPopup(auth, provider)
-    .then((result) => {
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const user = result.user;
-      location.href = "index.html"
-    }).catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-    });
+//     signInWithPopup(auth, provider)
+//     .then((result) => {
+//       const credential = GoogleAuthProvider.credentialFromResult(result);
+//       const user = result.user;
+//       location.href = "index.html"
+//     }).catch((error) => {
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//     });
   
 
-}
-GoogleIcon.addEventListener("click",googleSign)
+// }
+// GoogleIcon.addEventListener("click",googleSign)
+

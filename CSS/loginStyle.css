@@ -84,6 +84,14 @@ label {
   font-size: 14px;
   margin-top: 6px;
 }
+
+.NavicationContainer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
 #singinBTn {
   width: 188px; 
   height: 43px; 
@@ -231,6 +239,7 @@ input::placeholder {
 .conformSecondPword{
   border: 1px solid grey;
 }
+
 /* ---------------------------------OTP CONDAINER CSS----------------------------------- */
 
 .OTPmaincondainer {
@@ -364,8 +373,6 @@ visibility: visible;
 .BorederInputColor{
   border: 1px solid red;
 }
-
-
 
 /* ---------------------------------GOOGLE LOGIN BUTTON -------------------------------- */
 
