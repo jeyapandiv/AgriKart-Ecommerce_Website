@@ -6,6 +6,7 @@ let product = document.querySelector(".product-container")
 
 let smallImagess = document.querySelector(".related-items-div")
 
+
 // --------------------------------------
 function storeProductDetails(btn) {
     // Extracting product details
@@ -86,34 +87,50 @@ const pla_obj = {
                 id: 2, imgSrc: './Assets/PlaAssets/plaCabbage.jpeg', productName: 'Cabbage', price: '100', oprice: '190', description: `<li>1 pc pack</li>
             <li>It is a good source of Vitamin K, Dietary Fiber, Calicum, Potassium and Phosphorus</li>
             <li>It is also used in the preparation of dry curries, soups, manchurian or salads </li>`, small: [
-                    './Assets/small_images/Beetroot.jpg',
-                    './Assets/small_images/Beetroot3.jpg',
-                    './Assets/small_images/Beetroot1.jpg']
+                    './Assets/small_images/cabbage.webp',
+                    './Assets/small_images/Cabbage1.jpg.jpg',
+                    './Assets/small_images/cabbage2.jpeg']
             },
             {
-                id: 3, imgSrc: './Assets/PlaAssets/plaCaliflower.jpeg', productName: 'Califlower', price: '60', oprice: '90', description: `1.Cauliflower is low in fat
-            2.Rich in Vitamin C, K, Potassium and Manganese
-            3.Can be used with Potatoes or in soups, manchurian, salad and parathas.
-            4.Store in a cool, dry place away from sunlight
-            ingredients:fresh cauliflower`},
+                id: 3, imgSrc: './Assets/PlaAssets/plaCaliflower.jpeg', productName: 'Califlower', price: '60', oprice: '90', description: `<li>Cauliflower is low in fat</li>
+            <li>Rich in Vitamin C, K, Potassium and Manganese</li>
+            <li>Can be used with Potatoes or in soups, manchurian, salad and parathas.</li>
+            <li>Store in a cool, dry place away from sunlight
+            ingredients:fresh cauliflower </li>`, small: [
+                    './Assets/small_images/Califlower1.jpg',
+                    './Assets/small_images/Califlower3.jpg',
+                    './Assets/small_images/Califlower2.jpg']
+            },
             {
-                id: 4, imgSrc: './Assets/PlaAssets/plaCapsicum.jpeg', productName: 'Capsicum', price: '50', oprice: '80', description: `1.Fresh, hygienic and natural
-            2.Good source of Vitamin A,E,K, Potassium and Lycopene
-            3.Can be used in curries, salad, soups and juices
-            4.Store in cool and dry place, away from direct sunlight.
-            5.item_form:peeled`},
+                id: 4, imgSrc: './Assets/PlaAssets/plaCapsicum.jpeg', productName: 'Capsicum', price: '50', oprice: '80', description: `<li>Fresh, hygienic and natural</li>
+            <li>Good source of Vitamin A,E,K, Potassium and Lycopene</li>
+            <li>Can be used in curries, salad, soups and juices</li>
+            <li>Store in cool and dry place, away from direct sunlight.</li>
+            <li>item_form:peeled</li>`, small: [
+                    './Assets/small_images/Capsicum1.jpeg',
+                    './Assets/small_images/Capsicum3.jpg',
+                    './Assets/small_images/Capsicum2.jpg']
+            },
             {
-                id: 5, imgSrc: './Assets/PlaAssets/plaCarrot.jpeg', productName: 'Carrot', price: '70', oprice: '100', description: `1.Fresh, hygienic and natural
-            2.Good source of Vitamin A,E,K, Potassium and Lycopene
-            3.Can be used in curries, salad, soups and juices
-            4.Store in cool and dry place, away from direct sunlight.
-            5.item_form:peeled`},
+                id: 5, imgSrc: './Assets/PlaAssets/plaCarrot.jpeg', productName: 'Carrot', price: '70', oprice: '100', description: `<li>Fresh, hygienic and natural</li>
+                <li>Good source of Vitamin A,E,K, Potassium and Lycopene</li>
+                <li>Can be used in curries, salad, soups and juices</li>
+                <li>Store in cool and dry place, away from direct sunlight</li>
+                <li>item_form:peeled</li>`, small: [
+                    './Assets/small_images/Carrot1.jpg',
+                    './Assets/small_images/Carrot2.webp',
+                    './Assets/small_images/Carrot3.jpg']
+            },
             {
                 id: 6, imgSrc: './Assets/PlaAssets/plaCoconut.jpeg', productName: 'Coconut', price: '100', oprice: '120', description: `1.Fresh, hygienic and natural
             2.Good source of Vitamin A,E,K, Potassium and Lycopene
             3.Can be used in curries, salad, soups and juices
             4.Store in cool and dry place, away from direct sunlight.
-            5.item_form:peeled`},
+            5.item_form:peeled`, small: [
+                    './Assets/small_images/Coconut1.jpeg',
+                    './Assets/small_images/Coconut2.webp',
+                    './Assets/small_images/Coconut3.webp']
+            },
             // { imgSrc: './Assets/PlaAssets/plaCurry Leaves.jpeg', productName: 'Curry Leaves' },
             // { imgSrc: './Assets/PlaAssets/plaMint Leaves.jpeg', productName: 'Mint Leaves' },
             // { imgSrc: './Assets/PlaAssets/plaOnion.jpeg', productName: 'Onion' },
@@ -125,18 +142,59 @@ const pla_obj = {
     fruits: {
         heading: 'All Fruits',
         data: [
-            { imgSrc: './bharat/PlaAssets/plaApple.jpeg', productName: 'Apple' },
-            { imgSrc: '/bharat/PlaAssets/plaAvocoda.jpeg', productName: 'Avocoda' },
-            { imgSrc: './barath/PlaAssets/plaBanana.jpeg', productName: 'Banana' },
-            { imgSrc: './barath/PlaAssets/plaBlueberry.jpeg', productName: 'Blueberry' },
-            { imgSrc: './barath/PlaAssets/plaGrapes.jpeg', productName: 'Grapes' },
-            { imgSrc: './Assets/PlaAssets/plaGuava.jpeg', productName: 'Guava' },
-            { imgSrc: './Assets/PlaAssets/plaKiwi Fruit.jpeg', productName: 'Kiwi' },
-            { imgSrc: './Assets/PlaAssets/plaMango.jpeg', productName: 'Mango' },
-            { imgSrc: './Assets/PlaAssets/plaOrange.jpeg', productName: 'Orange' },
-            { imgSrc: './Assets/PlaAssets/plaSapota.jpeg', productName: 'Sapota' },
-            { imgSrc: './Assets/PlaAssets/plaStrawberry.jpeg', productName: 'Strawberry' },
-            { imgSrc: './Assets/PlaAssets/plaWatermelon.jpeg', productName: 'Watermelon' }
+            {
+                id: 13, imgSrc: './Assets/PlaAssets/plaApple.jpeg', productName: 'Apple', price: `60`, oprice: `90`, description: `1.Standard good quality specifications (130gm/pc)
+            2.Taste fruity and sweet with light notes of tartness.
+            3.item_form:whole`, small: [
+                    './Assets/small_images/Coconut1.jpeg',
+                    './Assets/small_images/Coconut2.webp',
+                    './Assets/small_images/Coconut3.webp']
+            },
+            {
+                id: 14, imgSrc: '/bharat/PlaAssets/plaAvocoda.jpeg', productName: 'Avocoda', price: `100`, oprice: `190`, description: `1.Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.
+            2.Avocado by-products exert anti-proliferative and anti-inflammatory activities.
+            3.Avocado seeds phytochemical improves carbohydrate and lipid metabolism.`, small: [
+                    './Assets/small_images/Coconut1.jpeg',
+                    './Assets/small_images/Coconut2.webp',
+                    './Assets/small_images/Coconut3.webp']
+            },
+            {
+                id: 15, imgSrc: './barath/PlaAssets/plaBanana.jpeg', productName: 'Banana', price: `100`, oprice: `190`, description: `1.Graded, sorted and premium quality fruits and vegetables
+            2.Fresh, hygienic and natural`, small: [
+                    './Assets/small_images/Coconut1.jpeg',
+                    './Assets/small_images/Coconut2.webp',
+                    './Assets/small_images/Coconut3.webp']
+            },
+            {
+                id: 16, imgSrc: './barath/PlaAssets/plaBlueberry.jpeg', productName: 'Blueberry', price: `100`, oprice: `190`, description: `1.Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.
+            2.Avocado by-products exert anti-proliferative and anti-inflammatory activities.
+            3.Avocado seeds phytochemical improves carbohydrate and lipid metabolism.`, small: [
+                    './Assets/small_images/Coconut1.jpeg',
+                    './Assets/small_images/Coconut2.webp',
+                    './Assets/small_images/Coconut3.webp']
+            },
+            {
+                id: 17, imgSrc: './barath/PlaAssets/plaGrapes.jpeg', productName: 'Grapes', price: `100`, oprice: `190`, description: `1.Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.
+            2.Avocado by-products exert anti-proliferative and anti-inflammatory activities.
+            3.Avocado seeds phytochemical improves carbohydrate and lipid metabolism.`, small: [
+                    './Assets/small_images/Coconut1.jpeg',
+                    './Assets/small_images/Coconut2.webp',
+                    './Assets/small_images/Coconut3.webp']
+            },
+            {
+                id: 18, imgSrc: './Assets/PlaAssets/plaGuava.jpeg', productName: 'Guava', price: `100`, oprice: `190`, description: `1.Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.
+            2.Avocado by-products exert anti-proliferative and anti-inflammatory activities.
+            3.Avocado seeds phytochemical improves carbohydrate and lipid metabolism.`, small: [
+                    './Assets/small_images/Coconut1.jpeg',
+                    './Assets/small_images/Coconut2.webp',
+                    './Assets/small_images/Coconut3.webp']
+            },
+            // { imgSrc: './Assets/PlaAssets/plaKiwi Fruit.jpeg', productName: 'Kiwi' },
+            // { imgSrc: './Assets/PlaAssets/plaMango.jpeg', productName: 'Mango' },
+            // { imgSrc: './Assets/PlaAssets/plaOrange.jpeg', productName: 'Orange' },
+            // { imgSrc: './Assets/PlaAssets/plaSapota.jpeg', productName: 'Sapota' },
+            // { imgSrc: './Assets/PlaAssets/plaStrawberry.jpeg', productName: 'Strawberry' },
+            // { imgSrc: './Assets/PlaAssets/plaWatermelon.jpeg', productName: 'Watermelon' }
         ]
     },
     oil: {
@@ -201,7 +259,12 @@ pla_obj.vegetables.data.map((items, values) => {
         <!-- left side -->
         <div class="img-card">
             <div class="main-img">
+            
                 <img class="product-img" src=${items.imgSrc} alt="" id="featured-image">
+                <div class="heart-container"> 
+                <i class="fa-regular fa-heart heart" style="color: #000000;"></i>
+                </div> 
+                
             </div>
 
             <!-- small img -->
@@ -217,20 +280,18 @@ pla_obj.vegetables.data.map((items, values) => {
         <!-- Right side -->
         <div class="product-info">
             <h3 class="product-name">${items.productName} |</h3>
-            <p class="product-weight">500grm</p> <span class="star-price"><i class="fa-solid fa-star"></i> <i
-                    class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i></span>
+            <p class="product-weight">500grm</p> 
             <h5>Price: <span class="product-price">₹${items.price}</span> <del> ₹${items.oprice}</del></h5>
             <ul>
+            <h2> Product Information</h2>
+            
               ${items.description}
+             
                 <li>Nonpareil Premium California Almonds / Batams</li>
                 <li> Free Shipping on orders above ₹499</li>
                 <li> With Protein, Vitamin E & Fiber</li>
-                <h2> Product Information</h2>
-                <li> Protein, dietary fiber, Gluten-Free, Non-GMO, zero transfat, zero cholesterol.</li>
-                <li> Good for an active lifestyle - perfect heart healthy snack.</li>
-                <li>Low calorie nut, ideal for weight watchers.</li>
-                <li> Rich source of antioxidants, vitamins, minerals, iron & calcium.</li>
+                
+               
             </ul>
             <div class="quantity">
                 <i class="fa-solid fa-minus" style="color: #ff0000;" id="minus"></i>
@@ -264,6 +325,8 @@ pla_obj.vegetables.data.map((items, values) => {
 
         for (let i = 0; i < 4; i++) {
             const smallItem = pla_obj.vegetables.data[i];
+
+            console.log(smallItem, "ok");
 
             if (smallItem) {
                 if (localStorage.getItem("id") != smallItem.id) {

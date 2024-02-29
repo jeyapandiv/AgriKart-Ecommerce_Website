@@ -39,6 +39,7 @@ function plasidecatview() {
 // ------------------------------- plp cart------------------
 
 const plp_obj_vegetable = {
+
     vegetables1: {
         heading: 'All Vegetables',
         data: [
@@ -62,6 +63,7 @@ const plp_obj_vegetable = {
         ]
     }
 };
+
 const pla_obj_fruits = {
     Fruits1: {
         heading: 'Farm Fruits',
@@ -86,6 +88,7 @@ const pla_obj_fruits = {
         ]
     }
 };
+
 const pla_obj_oilcrops = {
     oilcrops1: {
         heading: 'Oil Crops',
@@ -110,6 +113,7 @@ const pla_obj_oilcrops = {
         ]
     }
 };
+
 const pla_obj_Grains = {
     Grains1: {
         heading: 'All Grain Varieties',
@@ -134,6 +138,7 @@ const pla_obj_Grains = {
         ]
     }
 };
+
 const pla_obj_Dryfruits = {
     Dryfruits1: {
         heading: 'All DryFruits and Nuts',
@@ -252,12 +257,30 @@ function createHTMLStructure(pla_obj) {
     });
 
     function platoplpfun(e) {
-        if(e.target.dataset.id != undefined){
-            localStorage.setItem("id",e.target.dataset.id)
+        if (e.target.dataset.id != undefined) {
+            localStorage.setItem("id", e.target.dataset.id)
         }
         window.location.href = "./product_detail.html";
     }
 
 }
 
-createHTMLStructure(plp_obj_vegetable);
+if (localStorage.getItem("category") === "vegetables") {
+    createHTMLStructure(plp_obj_vegetable);
+}
+
+else if (localStorage.getItem("category") === "fruits") {
+    createHTMLStructure(pla_obj_fruits);
+}
+
+else if (localStorage.getItem("category") === "oil") {
+    createHTMLStructure(pla_obj_oilcrops);
+}
+
+else if (localStorage.getItem("category") === "grains") {
+    createHTMLStructure(pla_obj_Grains);
+}
+
+else{
+    createHTMLStructure(pla_obj_Dryfruits);
+}
