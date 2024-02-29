@@ -43,6 +43,7 @@ function updateCart() {
 }
 // -------------------------------------
 
+
 function emptyCart() {
     var cartItems = document.querySelectorAll('.item');
     cartItems.forEach(item => {
