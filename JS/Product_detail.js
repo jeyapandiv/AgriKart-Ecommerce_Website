@@ -394,6 +394,7 @@ minus.addEventListener("click", () => {
     }
 });
 
+
 let allImages = document.querySelectorAll(".small-Img")
 let mainImg = document.querySelector(".product-img")
 for (let i = 0; i < allImages.length; i++) {
