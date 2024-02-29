@@ -1,370 +1,416 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    }
-    body{
-        width: 0px;
-        margin: 0px;
-        padding: 0px;
-        height: 0px;
-        font-family: "Poppins", sans-serif;
-       
-    }
-    #bakgroundImage{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 0;
-    }
-    
-    .Registermaincondainer{
+}
+
+body {
+    max-width: 1440px;
+    width: 100%;
+    width: 0px;
+    margin: 0px;
+    padding: 0px;
+    height: 0px;
+    font-family: "Poppins", sans-serif;
+
+}
+
+#bakgroundImage {
     position: absolute;
-    background-color: rgba(255, 255, 255,0.7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.Registermaincondainer {
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
     height: 595px;
     width: 572px;
     border-radius: 15px;
     left: 370px;
     top: 30px;
     display: none;
-    }
-    #loginNavlink{
-        width: 0px;
-        height: 0px;
-        margin: 0px;
-        padding: 0px;
-        text-decoration: none;
-        color: #779341;
-    }
-    
-    #hi{
-        font-size: 12px;
-    }
-    #ResgisterWelcome{
-    font-size: 25px;
-    margin: 20px 0px 10px 140px;
+}
+
+#loginNavlink {
+    width: 0px;
     height: 0px;
-    }
-    #RegisterText{
-    font-size:35px;
-    margin: 30px 0px 0px 210px;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: #779341;
+}
+
+#hi {
+    font-size: 12px;
+}
+
+#ResgisterWelcome {
+    font-size: 24px;
+}
+
+#RegisterText {
+    font-size: 28px;
+    height: 40px;
     color: #008000;
-    }
-    .nameDetailes{
-        display: flex;
-        gap: 20px;
-        margin-top: 10px;
-    }
-    #fisrstName{
-        width: 200.7px;
-        height: 37px;
-        border-radius: 9px;
-        margin-top: 5px;
-    
-    }
-    input:focus{
-        outline: 1px solid #008000;
-        border: none;
-    }
-    
-    #lastname{
-        width: 200.7px;
-        height: 37px;
-        border-radius: 9px;
-        margin-top: 5px;
-      
-    }
-    #Continfo{
-        width: 430px;
-        height: 37px;
-        border-radius: 9px;
-        margin-top: 8px;
-      
-    }
-    #emailinfo{
-    
-        width: 430px;
-        height: 37px;
-        border-radius: 9px;
-        margin-top: 8px;
-       
-    }
-    #pwordinfo{
-        width: 430px;
-        height: 37px;
-        border-radius: 9px;
-        margin-top: 8px;
-    }
-    #RegisterBtn{
-        width: 236px;
-        height: 47px;
-        border: 15px;
-        background-color: #008000;
-        color: white;
-        border-radius: 15px;
-    }
-    .contactDetailes{
-        margin-top: 0px;
-    }
-    .emailDetailes{
-        margin-top: 0px;
-    }
-    .pworDetailes{
-        margin-top: 22px;
-    }
-    .inputDetailes{
-        margin-left: 60px;
-    }
-    #alredyaccount{
-      
-        height: 0px;
-        margin: 10px 0px 0px 335px;
-    }
-    #RegisterBtn{
-        margin: 35px 0px 0px 175px;
-        width: 190px;
-        height: 40px;
-        border-radius: 15px;
-        text-align: center;
-       
-    }
-    #companyname{
-        color: #779341;
-    }
-    .label{
-    
-        font-size: 16px;
-    }
-    #loginspan{
-        color: #008000;
-    }
-    input::placeholder{
-       padding-left: 10px;
-    }
-    
-    .RegTOLoginNav{
-        text-decoration: none;
-        color:white;
-    }
-    
-    
-    /* -----------------------Pword TOOL TIP ---------------------------------------------- */
-    
-    .tooltipCondainer{
-        position: absolute;
-        width: 270px;
-        height: 120px;
-        background-color: rgba(255, 255, 255,0.7);
-        margin-left: 540px;
-        padding: 10px;
-        border: 3px solid #008000;
-      bottom: 50px;
-      display: none;
-    }
-    .tooltipText{
-        margin-left: 15px;
-    }
-    .fa-user-xmark{
-        color: red;
-    }
-    .fa-user-check{
-        color: #008000;
-    }
-    #rightSimple{
+}
+
+.nameDetailes {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+#fisrstName {
+    width: 200.7px;
+    height: 37px;
+    border-radius: 9px;
+    margin-top: 5px;
+
+}
+
+input:focus {
+    outline: 1px solid #008000;
+    border: none;
+}
+
+#lastname {
+    width: 200.7px;
+    height: 37px;
+    border-radius: 9px;
+    margin-top: 5px;
+
+}
+
+#Continfo {
+    width: 430px;
+    height: 37px;
+    border-radius: 9px;
+    margin-top: 8px;
+
+}
+
+#emailinfo {
+
+    width: 430px;
+    height: 37px;
+    border-radius: 9px;
+    margin-top: 8px;
+
+}
+
+#pwordinfo {
+    width: 430px;
+    height: 37px;
+    border-radius: 9px;
+    margin-top: 8px;
+}
+
+
+
+.contactDetailes {
+    margin-top: 0px;
+}
+
+.emailDetailes {
+    margin-top: 0px;
+}
+
+.pworDetailes {
+    margin-top: 20px;
+}
+
+.inputDetailes {
+    width: 75%;
+
+    margin-left: 64px;
+}
+.Welcomecontainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   margin-top: 20px;
+}
+#alredyaccount {
+    margin-top: 10px;
+}
+#RegisterBtn {
+    width: 236px;
+    height: 45px;
+    border: 15px;
+    background-color: #008000;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#companyname {
+    color: #779341;
+}
+
+.label {
+
+    font-size: 16px;
+}
+
+#loginspan {
+    color: #008000;
+}
+
+input::placeholder {
+    padding-left: 10px;
+}
+
+.RegTOLoginNav {
+    text-decoration: none;
+    color: white;
+}
+.RegiBtnContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* -----------------------Pword TOOL TIP ---------------------------------------------- */
+
+.tooltipCondainer {
+    position: absolute;
+    width: 270px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-left: 540px;
+    padding: 10px;
+    border: 3px solid #008000;
+    bottom: 50px;
+    display: none;
+}
+
+.tooltipText {
+    margin-left: 15px;
+}
+
+.fa-user-xmark {
+    color: red;
+}
+
+.fa-user-check {
+    color: #008000;
+}
+
+#rightSimple {
     position: absolute;
     right: 270px;
     font-size: 20px;
     color: #008000;
-    }
-    
-    .ToolTipView {
-        display: block;
-    }
-    
-    /* -----------------------------------Email ToolTip -------------------------------------- */
-    
-    
-    .EmailToolTip{
-        position: absolute;
-        width: 300px;
-        height: 120px;
-        background-color: rgba(255, 255, 255,0.7);
-        margin-left: 545px;
-        padding: 11px;
-        border: 3px solid #008000;
-      bottom: 170px;
-      display: none;
-    }
-    
-    .EmailtooltipText{
-        margin-left: 15px;
-    }
-    
-    #EmailrightSimple{
-        position: absolute;
+}
+
+.ToolTipView {
+    display: block;
+}
+
+/* -----------------------------------Email ToolTip -------------------------------------- */
+
+
+.EmailToolTip {
+    position: absolute;
+    width: 300px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-left: 545px;
+    padding: 11px;
+    border: 3px solid #008000;
+    bottom: 170px;
+    display: none;
+}
+
+.EmailtooltipText {
+    margin-left: 15px;
+}
+
+#EmailrightSimple {
+    position: absolute;
     right: 300px;
     font-size: 20px;
     color: #008000;
-    }
-    .emilTooltipView{
-        display: block;
-    }
-    /* ------------------FIRSET NAME ALERT CLASSLIST-------------------------------------- */
-    
-    .RegfnamNoView{
+}
+
+.emilTooltipView {
+    display: block;
+}
+
+/* ------------------FIRSET NAME ALERT CLASSLIST-------------------------------------- */
+
+.RegfnamNoView {
     visibility: hidden;
+}
+
+.FirstnameBorder {
+    border: 1px solid gray;
+}
+
+.RegborderAlert {
+    border: 1px solid red;
+    animation: shake .5s;
+}
+
+.RegContainerView {
+    visibility: visible;
+    color: red;
+}
+
+/* --------------------SECOND NAME ALERT MESSAGE  CLASSLIST------------------------------------------------ */
+
+.SecondNameNoView {
+    visibility: hidden;
+}
+
+.LastNameInput {
+    border: 1px solid grey;
+}
+
+.secondnameAlert {
+    border: 1px solid red;
+    animation: shake .5s;
+}
+
+.SecondNameView {
+    visibility: visible;
+    color: red;
+}
+
+.LatRegInput {
+    border: 1px solid gray;
+}
+
+/* --------------------------CONTACT ALERT MESSAGE CLASSLIST------------------------ */
+
+.RegAlertNoView {
+    visibility: hidden;
+}
+
+.contBorder {
+    border: 1px solid grey;
+}
+
+.RegAlertView {
+    visibility: visible;
+    color: red;
+}
+
+.contAlertBorder {
+    border: 1px solid red;
+    animation: shake .5s;
+}
+
+.emailBorder {
+    border: 1px solid grey;
+}
+
+.PWordBorder {
+    border: 1px solid grey;
+}
+
+/* --------------------------------OTP ------------------------------- */
+
+
+.OTPmaincondainer {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 431px;
+    height: 480px;
+    border-radius: 32px;
+    left: 400px;
+    top: 80px;
+    display: none;
+}
+
+#MailsendOTP {
+    display: flex;
+    gap: 19px;
+    margin-top: 16px;
+    margin-left: 30.4px;
+}
+
+.mailsendcercul {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 0.8px solid #4285F4;
+    width: 350px;
+    height: 48px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+#verifytext {
+    font-size: 16x;
+    margin: 80px 0 24px 152px;
+}
+
+#OTPsapn {
+    color: #779341;
+}
+
+#OTPPara {
+    font-size: 12.8px;
+    margin-top: 40px;
+    margin-left: 30.4px;
+}
+
+#yourOTP {
+    font-size: 11px;
+    margin-top: 19px;
+    margin-left: 30.4px;
+}
+
+#resentOTP {
+    font-size: 12.8px;
+    text-decoration: underline;
+    margin: 32px 0 0 311.2px;
+}
+
+#MailverifyBtn {
+    width: 188px;
+    height: 43px;
+    border-radius: 8px;
+    background-color: #008000;
+    color: white;
+    border: none;
+    margin: 32px 0 0 122.4px;
+}
+
+.OTP-TO-LoginNav {
+    color: white;
+
+    text-decoration: none;
+}
+
+/* ---------------------------------------------OTP VIEW --------------- */
+
+
+.ConTainerView {
+    display: block;
+}
+
+.NOTValid {
+    border: 1px solid rebeccapurple;
+}
+
+
+@keyframes shake {
+
+    25% {
+        transform: translateX(4px);
     }
-    .FirstnameBorder{
-        border: 1px solid gray;
+
+    50% {
+        transform: translateX(-4px);
     }
-    .RegborderAlert{
-        border: 1px solid red;
-       animation: shake .5s;
+
+    100% {
+        transform: translateX(-4px);
     }
-    .RegContainerView{
-      visibility: visible;
-      color: red;
-    }
-    
-    /* --------------------SECOND NAME ALERT MESSAGE  CLASSLIST------------------------------------------------ */
-    
-    .SecondNameNoView{
-     visibility: hidden;
-    }
-    .LastNameInput{
-        border: 1px solid  grey;
-    }
-    .secondnameAlert{
-        border: 1px solid red;
-         animation: shake .5s;
-    }
-    .SecondNameView{
-        visibility: visible;
-        color: red;
-    }
-    
-    .LatRegInput{
-        border: 1px solid gray;
-    }
-    
-    /* --------------------------CONTACT ALERT MESSAGE CLASSLIST------------------------ */
-    
-    .RegAlertNoView{
-        visibility: hidden;
-    }
-    .contBorder{
-        border: 1px solid grey;
-    }
-    
-    .RegAlertView{
-        visibility: visible; 
-        color: red;
-    }
-    .contAlertBorder{
-        border: 1px solid red;
-        animation: shake .5s;
-    }
-    
-    .emailBorder{
-        border: 1px solid grey;
-    }
-    
-    .PWordBorder{
-        border: 1px solid grey;
-    }
-    
-    /* --------------------------------OTP ------------------------------- */
-    
-    
-    .OTPmaincondainer {
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0.7);
-        width: 431px; 
-        height: 480px; 
-        border-radius: 32px; 
-        left: 400px; 
-        top: 80px;
-        display: none;
-      }
-      
-      #MailsendOTP {
-        display: flex;
-        gap: 19px; 
-        margin-top: 16px; 
-        margin-left: 30.4px; 
-      }
-      
-      .mailsendcercul {
-        background-color: rgba(255, 255, 255, 0.7);
-        border: 0.8px solid #4285F4; 
-        width: 45px; 
-        height: 48px; 
-        border-radius: 7px;
-        text-align: center;
-      }
-      
-      #verifytext {
-        font-size: 16x; 
-        margin: 80px 0 24px 152px;
-      }
-      
-      #OTPsapn {
-        color: #779341;
-      }
-      
-      #OTPPara {
-        font-size: 12.8px;
-        margin-top: 40px; 
-        margin-left: 30.4px; 
-      }
-      
-      #yourOTP {
-        font-size: 11px; 
-        margin-top: 19px; 
-        margin-left: 30.4px; 
-      }
-      
-      #resentOTP {
-        font-size: 12.8px; 
-        text-decoration: underline;
-        margin: 32px 0 0 311.2px; 
-      }
-      
-      #MailverifyBtn {
-        width: 188px; 
-        height: 43px; 
-        border-radius: 8px; 
-        background-color: #008000;
-        color: white;
-        border: none;
-        margin: 32px 0 0 122.4px;
-      }
-      
-      .OTP-TO-LoginNav{
-        color: white;
-      
-        text-decoration: none;
-      }
-      /* ---------------------------------------------OTP VIEW --------------- */
-    
-    
-      .ConTainerView{
-        display: block;
-      }
-    
-      .NOTValid{
-        border: 1px solid rebeccapurple;
-      }
-    
-    
-    @keyframes shake {
-    
-        25%{transform: translateX(4px);}
-        50%{transform: translateX(-4px);}
-        100%{transform: translateX(-4px);}
-    }
-    
-    
+}
