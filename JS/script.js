@@ -312,8 +312,10 @@ function plasidecatview(){
         
                 if (!productName.includes(input)) {
                     card.style.display = 'none';
+                    card.parentElement.parentElement.display='none';
                 } else {
                     card.style.display = 'block';
+                    card.parentElement.parentElement.display='block';
                 }
             });
         }

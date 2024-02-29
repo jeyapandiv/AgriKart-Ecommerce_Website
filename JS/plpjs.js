@@ -204,11 +204,11 @@ function createHTMLStructure(pla_obj) {
 
             productNameH4.textContent = product.productName;
 
-            // const descriptionH5 = document.createElement('h5');
-            // descriptionH5.id = 'plpdescription';
-            // descriptionH5.dataset.id = product.id
+            const descriptionH5 = document.createElement('h5');
+            descriptionH5.id = 'plpdescription';
+            descriptionH5.dataset.id = product.id
 
-            // descriptionH5.textContent = product.plpdescription;
+            descriptionH5.textContent = product.plpdescription;
 
             const priceDiv = document.createElement('div');
             priceDiv.dataset.id = product.id
@@ -217,7 +217,6 @@ function createHTMLStructure(pla_obj) {
 
             const priceH4 = document.createElement('h4');
             priceH4.dataset.id = product.id
-            priceH4.className='plppriceh4'
 
             const priceSpan = document.createElement('span');
 
@@ -324,3 +323,22 @@ function filterProducts(categoryObj, searchTerm) {
     });
 }
 
+if (localStorage.getItem("category") === "vegetables") {
+    createHTMLStructure(plp_obj_vegetable);
+}
+
+else if (localStorage.getItem("category") === "fruits") {
+    createHTMLStructure(pla_obj_fruits);
+}
+
+else if (localStorage.getItem("category") === "oil") {
+    createHTMLStructure(pla_obj_oilcrops);
+}
+
+else if (localStorage.getItem("category") === "grains") {
+    createHTMLStructure(pla_obj_Grains);
+}
+
+else{
+    createHTMLStructure(pla_obj_Dryfruits);
+}
