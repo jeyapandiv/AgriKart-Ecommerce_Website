@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/checkout.css">
+    <title>AgriKart</title>
+</head>
+
+<body>
+
+    <div class="checkout">
+        <div class="navBarCheckout">
+            
+        </div>
+        <div class="checkoutAddress">
+            <div class="checkoutExistAddress">
+                <div class="checkoutNavigation">
+                    <h1>Checkout</h1>
+                    <div class="processNav">
+                        <p id="addNavActive">Address</p>
+                        <hr>
+                        <p id="paymentNavActive">Payment</p>
+                        <hr>
+                        <p id="reviewNavActive">Review</p>
+                    </div>
+                </div>
+                <div class="selectAddDiv">
+                    <div class="selectAddress">
+                        <div class="addNoteCreateBtn">
+                            <h3>Select delivery address</h3>
+                            <button>Create new Address</button>
+                        </div>
+                        <div class="addressListDiv">
+                            <div class="addressList">
+                                <div class="addressDefault">
+                                    <div class="addressSelection">
+                                        <input type="radio" name="addressSelectRadio">
+                                        <p class="address-name">Name, 111A, Bbbbbb Street, Coc Nagar, Dddd City, Eeee
+                                            State
+                                            - 123 123, India.</p>
+                                    </div>
+                                    <div class="actionsAddress">
+                                        <button class="edit-address">Edit address</button>
+                                        <button class="remove-address">Remove address</button>
+                                    </div>
+                                </div>
+                                <div class="addressDefault">
+                                    <div class="addressSelection">
+                                        <input type="radio" name="addressSelectRadio">
+                                        <p class="address-name">Name, 111A, Bbbbbb Street, Coc Nagar, Dddd City, Eeee
+                                            State
+                                            - 123 123, India.</p>
+                                    </div>
+                                    <div class="actionsAddress">
+                                        <button class="edit-address">Edit address</button>
+                                        <button class="remove-address">Remove address</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="totalCard">
+                                <div class="useAddressBtn">
+                                    <button onclick="navigatePayment(this)">Use this address</button>
+                                    <p>Choose the shipping address and payment</p>
+                                    <p style="margin-bottom: 20px;">method to calculate shipping charges</p>
+                                </div>
+                                <div class="totalCalculation" style="width: 90%;">
+                                    <h3 style="line-height: 50px; margin-top: 20px;">Order Summery</h3>
+                                    <span style="display: flex; justify-content: space-between;">
+                                        <p>Subtotal</p>
+                                        <p>₹xxx</p>
+                                    </span>
+                                    <span style="display: flex; justify-content: space-between;">
+                                        <p>Shipping</p>
+                                        <p style="font-size: 12px; color: grey;">Calculated at the next step</p>
+                                    </span>
+                                </div>
+                                <span
+                                    style="width: 90%; display: flex; justify-content: space-between; margin-top: 10px;">
+                                    <h4>Total</h4>
+                                    <h4>₹xxx</h4>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paymentDiv">
+                        <h3 style="margin-bottom: 10px;">Select Payment Method
+                            <span style="margin-left: 590px;">Your cart</span>
+                        </h3>
+                        <div class="checkout-payment-container ">
+                            <div class="payment-container">
+                                <div class="payment-container-inner">
+                                    <div class="payment-method">
+                                        <input type="radio" id="credit-card" name="payment-method" value="credit-card" disabled>
+                                        <label for="credit-card" style="color: grey;">Credit or Debit card (VISA)</label>
+                                        <img id="cardImage" src="/Assets/Cards.png" alt="">
+                                    </div>
+                                    <div class="payment-method" id="netBanking">
+                                        <input type="radio" id="net-banking" name="payment-method" value="net-banking" disabled>
+                                        <label for="net-banking" style="color: grey;">Net Banking</label>
+                                        <select style="color: grey;">
+                                            <option value="" disabled selected>Select an option</option>
+                                            <option value="SBI">SBI</option>
+                                            <option value="HDFC">HDFC</option>
+                                        </select>
+                                    </div>
+                                    <div class="payment-method">
+                                        <input type="radio" id="upi" name="payment-method" value="upi" disabled>
+                                        <label for="upi" style="color: grey;">Other UPI Apps</label>
+                                    </div>
+                                    <div class="payment-method">
+                                        <input type="radio" id="cod" name="payment-method" value="cod">
+                                        <label for="cod">Cash on delivery (COD) </label>
+                                        <p id="cod-info" style="font-size: 12px;">Cash, UPI accepted</p>
+                                    </div>
+                                    <div class="button-container">
+                                        <button type="submit" id="navigateReview"onclick="navigatePayment(this)">Continue to shipping</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-review-container">
+
+                                <div class="cart-container">
+                                    <div class="prdDetailCheckoutAddDiv" style="width: 100%; height: 200px; margin-bottom: 20px;">
+                                        <div class="prdDetailCheckoutAdd" style="width: 100%; height: 80px; padding: 10px 0px; display: flex; align-items: center; gap: 20px; border-bottom: 2px solid grey;">
+                                            <img src="" alt="" style="width: 60px; height: 60px;">
+                                            <div class="addPrdPrice-name" style="display: flex; flex-direction: column; gap: 10px;">
+                                                <h5 id="addPrdName">Nuts</h5>
+                                                <p id="addPrdQty" style="font-size: 14px;">Quantity:<span style="padding-left: 10px;">1</span></p>
+                                                <p id="addPrdPrice" style="font-size: 14px;">2424<span>Remove</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="prdDetailCheckoutAdd" style="width: 100%; height: 80px; padding: 10px 0px; display: flex; align-items: center; gap: 20px; border-bottom: 2px solid grey;">
+                                            <img src="" alt="" style="width: 60px; height: 60px;">
+                                            <div class="addPrdPrice-name" style="display: flex; flex-direction: column; gap: 10px;">
+                                                <h5 id="addPrdName">Nuts</h5>
+                                                <p id="addPrdQty" style="font-size: 14px;">Quantity:<span style="padding-left: 10px;">1</span></p>
+                                                <p id="addPrdPrice" style="font-size: 14px;">2424<span>Remove</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span style="display: flex; justify-content: space-between; padding-bottom: 10px;">
+                                        <p>Subtotal</p>
+                                        <p>₹xxx</p>
+                                    </span>
+                                    <span
+                                        style="display: flex; justify-content: space-between; border-bottom: 2px solid grey; padding-bottom: 10px;">
+                                        <p>Shipping</p>
+                                        <p style="font-size: 12px; color: grey;">Calculated at the next step</p>
+                                    </span>
+                                    <span style="display: flex; justify-content: space-between; margin-top: 10px;">
+                                        <h4>Total</h4>
+                                        <h4>₹xxx</h4>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paymentReviewDiv">
+ 
+                    </div>
+                </div>
+            </div>
+            <div class="plaSidediv" id="plaSidediv">
+        <div class="plaSideNavMain" id="plaSideNavMain">
+            <div class="plaSideNavigation" id="plaSideNavigation">
+                <div id="plaSideClose">
+                    <h3 id="plaSideExit"><i class="fa-solid fa-circle-xmark"></i></h3>
+                </div>
+                <div class="plaSideNav" id="plaSideNav">
+                        <div class="plasidenavhead">
+                            <h3 id="plaSideStart"> <a href="./plphtml.html">Start Buying!</a> </h3>
+                        </div>
+                        <h4 id="plaSideNavList"><i class="fa-solid fa-house"> </i> Home </h4>
+                        
+                          <h4 id="plaSideNavList1" > <i class="fa-solid fa-list"> </i>  Shop By Category </h4>
+                        <div class="plaSideNavcategory plaSidenavhide" id="plaNavcatlog" >
+                          <h4 id="plaCategoryList">Oil Crops</h4>
+                          <h4 id="plaCategoryList">All Fruits</h4>
+                          <h4 id="plaCategoryList">All vegetables</h4>
+                          <h4 id="plaCategoryList">All Grains</h4>
+                          <h4 id="plaCategoryList">Dry Fruits</h>
+                        </div>   
+
+                        <h5 id="plaSideNavList"> <i class="fa-solid fa-box-open"></i> My Orders </h5>    
+                        <h5 id="plaSideNavList"> <i class="fa-solid fa-bag-shopping"></i> My Cart List </h5>    
+                        <h5 id="plaSideNavList"> <i class="fa-solid fa-hand-holding-heart"></i> My Wish List </h5>    
+                        <h5 id="plaSideNavList"> <i class="fa-solid fa-square-phone"></i> Customer support </h5>    
+                        <h5 id="plaSideNavList"> <i class="fa-solid fa-users"></i> About Us </h5>
+                        <div class="plaSideSignin">
+                        <button id="plaSideBtn"> <i class="fa-solid fa-right-to-bracket"></i> SignOut</button>    
+                        </div>   
+                </div>
+            </div>  
+        </div>
+    </div>
+
+            <script src="/JS/checkout.js"></script>
+</body>
+
+</html>

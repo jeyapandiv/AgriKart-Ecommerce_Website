@@ -1,3 +1,40 @@
+// ------------------------------FAIRBASE ------------------------------------
+
+
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCrsO7wk0lqUfnOlwaeBSDXyicVHgJFF_c",
+    authDomain: "dckap-agricart-2024.firebaseapp.com",
+    projectId: "dckap-agricart-2024",
+    storageBucket: "dckap-agricart-2024.appspot.com",
+    messagingSenderId: "135220583467",
+    appId: "1:135220583467:web:dbaf745d728c6ef1a31e6e"
+  };
+
+  import { getFirestore, collection, doc, setDoc, getDocs, updateDoc, addDoc} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+  import {getAuth , createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+var auth = getAuth(app);
+var db = getFirestore();
+
+var ref = collection(db,"user")
+var getData = await getDocs(ref)
+var id = getData.size
+
+
+
+
+
+
+
 // ------------CONTAINERS --------------------------------------
 
 var     ResgisterContainer = document.getElementById("RegistermaincondainerCall");
@@ -27,7 +64,7 @@ var RegPwordAlert = document.getElementById("RegPwordAlert");
 // ------------------------------------ALERT Function ---------------------------------
 
 
-RegFormSubmit.addEventListener("submit",(event)=>{
+RegFormSubmit.addEventListener("submit",async(event)=>{
 
     event.preventDefault();
     
@@ -37,112 +74,106 @@ var trimCont = RegContNum.value.trim()
 var trimEm = RegEmail.value.trim()
 var trimPwo = RegPassword.value.trim()
 
-function CheckValue(value){
 
-    return alert(`PLEASE FILL ${value} INPUT` )
- } 
+function OTBVALIDPAGE(){
 
-if(trimFn == "" && trimsnmae =="" && trimCont =="" && trimEm =="" && trimPwo ===""){
-    alert("PLEASE FILL THE INPUTES")
-}
-else{
-    if(trimFn == ""){
-        CheckValue(RegFirstName.name)
-    }
-    else{
-        if(trimsnmae =="" ){
-            CheckValue(RegSecodName.name)
-        }
-        else{
-            if(trimCont =="" ){
-                CheckValue(RegContNum.name)
-            }
-            else{
-                if(trimEm =="" ){
-                    CheckValue(RegEmail.name)
-                }
-                else{
-                    if(trimPwo ===""){
-                        
-                        CheckValue(RegPassword.name)
-                    }
-                    else{
-                        var   RegEmailValue = RegEmail.value.trim();
-                        var onetimepword = Math.floor(Math.random()*1000000);
-                       
-                     EmailBody = `
+if(!(trimFn=="" || trimCont=="" || trimEm=="" || trimPwo=="")){
+
+    var RegEmailValue = RegEmail.value.trim();
+    var onetimepword = Math.floor(Math.random() * 1000000);
+
+    var emailcont = `
                      <h1> Verification code </h1><br><br>
                           <h3>  Please use the verification code below to sign in.</h3>
                           <h1> OTP : ${onetimepword} </h1> 
                           <h3>If you didn’t request this, you can ignore this email.</h3>
                      `;
-                     
-                     Email.send({
-                     
-                         SecureToken :"a6aa1f14-cdbb-4150-b0e3-922df97b535e",
-                         To : RegEmailValue,
-                         From : "dckapagricart2024@gmail.com",
-                         Subject : "This is the subject",
-                         Body : EmailBody
-                     
-                     }).then(
-                       message => {        
-                         if(message === "OK"){         
-                             alert("OTP send your email :"+RegEmailValue )
-                             console.log(onetimepword)
-                 
-                             ResgisterContainer.classList.remove("ConTainerView");
-                             OTPConadiner.classList.add("ConTainerView")
-                             
-                        
-                      var MailVerfy = document.getElementById("MailverifyBtn");
-                 
-                      MailVerfy.addEventListener("click",()=>{
-                 
-                         var otbNum1 = document.getElementById("otbum1").value;
-                         var  otbNum2  =  document.getElementById("otbum2").value;
-                         var  otbNum3  =  document.getElementById("otbum3").value;
-                         var  otbNum4  =  document.getElementById("otbum4").value;
-                         var  otbNum5  =  document.getElementById("otbum5").value;
-                         var  otbNum6  =  document.getElementById("otbum6").value;
-                         
-                         OTPInnerValue = otbNum1 +otbNum2+otbNum3+otbNum4+otbNum5+otbNum6;
-                 
-                         console.log(OTPInnerValue)
-                 
-                         if(onetimepword == OTPInnerValue){
 
-                             alert("Email addresss verified")
-                                location.href = "Login.html"
-                         }
-                         else{
-                             alert("Invalid OTP")
-                         }
-                      })
-                 
-                         }
-                       }
-                     );
+    Email.send({
+
+        SecureToken: "a6aa1f14-cdbb-4150-b0e3-922df97b535e",
+        To: RegEmailValue,
+        From: "dckapagricart2024@gmail.com",
+        Subject: "This is the subject",
+        Body: emailcont
+
+    }).then(
+        message => {
+            if (message === "OK") {
+                alert("OTP send your email :" + RegEmailValue)
+                console.log(onetimepword)
+
+                ResgisterContainer.classList.remove("ConTainerView");
+                OTPConadiner.classList.add("ConTainerView")
+
+
+                var MailVerfy = document.getElementById("MailverifyBtn");
+
+                MailVerfy.addEventListener("click", () => {
+
+                    var otbNum1 = document.getElementById("otbum1").value;
+
+                    var OTPInnerValue = otbNum1 ;
+
+                    console.log(OTPInnerValue)
+
+                    if (onetimepword == OTPInnerValue) {
+
+                        alert("Email addresss verified")
+                        location.href = "Login.html"
                     }
-                }
+                    else {
+                        alert("Invalid OTP")
+
+                    }
+                })
+
             }
         }
+    );
+
     }
+
+}
+// --------------------------------REGEXP ----------------------
+
+if(trimFn==""){
+    RegFirstNameAlert.classList.add("RegContainerView");
+    RegFirstName.classList.add("RegborderAlert");
 }
 
-
-function CheckValue(value){
-
-   return alert(`PLEASE FILL ${value} INPUT` )
+if(trimCont==""){
+    RegContactAlert.classList.add("RegAlertView");
+    RegContNum.classList.add("contAlertBorder");
 }
 
+if(trimEm==""){
+    EmailToolTip.classList.add("emilTooltipView")
+}
+if(trimPwo==""){
+    PwordToolTip.classList.add("ToolTipView");
+}
+// ----------------------------------FAIRBASE TRICKER SESSION------------------------------------------------------
 
-
-// ----------------------------------OTP TRICKER SESSION------------------------------------------------------
-
- 
+createUserWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
+.then(async(credentials)=>{   
+    let ref = doc(db,"user",credentials.user.uid)
+       await setDoc(ref,{
+        FirstName:RegFirstName.value,
+        LastName:RegSecodName.value,
+        contact:RegContNum.value,
+        email:RegEmail.value,
+        password:RegPassword.value
+});
+OTBVALIDPAGE();
+})
+.catch((err)=>{
+    alert(err.message)
+    
+});
 
 });
+
 
 // ------------------------------------FIRST NAME -----------------------------------------------
 
@@ -167,27 +198,25 @@ if(RegNumResult){
 
 // --------------------------------------SECOND NAME ------------------------------------------
 
-RegSecodName.addEventListener('change',()=>{
+// RegSecodName.addEventListener('change',()=>{
 
-    var RegSecodNameValue =  RegSecodName.value.trim()
-var Reg2NDNameNumTest = /\d/ig;
-var Reg2NDNameNumResult = Reg2NDNameNumTest.test(RegSecodNameValue);
+//     var RegSecodNameValue =  RegSecodName.value.trim()
+// var Reg2NDNameNumTest = /\d/ig;
+// var Reg2NDNameNumResult = Reg2NDNameNumTest.test(RegSecodNameValue);
 
-if( Reg2NDNameNumResult){
+// if( Reg2NDNameNumResult){
     
-    RegLastNameAlert.classList.add("SecondNameView");
-    RegSecodName.classList.add("secondnameAlert");
-}
-else{
+//     RegLastNameAlert.classList.add("SecondNameView");
+//     RegSecodName.classList.add("secondnameAlert");
+// }
+// else{
 
-    RegLastNameAlert.classList.remove("SecondNameView");
-    RegSecodName.classList.remove("secondnameAlert");
-}
+//     RegLastNameAlert.classList.remove("SecondNameView");
+//     RegSecodName.classList.remove("secondnameAlert");
+// }
+// })
 
-  
-})
-
-// ---------------------------------------------------------CONTACT REGEXP------------------------
+// // ---------------------------------------------------------CONTACT REGEXP------------------------
 
 RegContNum.addEventListener("change", () => {
     var RegContNumValue = RegContNum.value.trim();
