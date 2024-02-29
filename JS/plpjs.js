@@ -1,10 +1,11 @@
-
 // side nav----
+
+
 
 var plaSidenav=document.getElementById('plaSidediv');
 plaSidenav.style.display='none';
 
-var plaSideBar=document.getElementById('navMenuIcon');
+var plaSideBar=document.getElementById('plaSidebarIcon');
 plaSideBar.addEventListener('click',plaSidenavBar);
 
 var plaSidepage=document.getElementById('plaSidediv');
@@ -36,209 +37,118 @@ function plasidecatview(){
         plasidehidecat.style.display='none';
     }
 }
-// ------------------------------- plp cart------------------
 
-const plp_obj_vegetable = {
-    vegetables1: {
-        heading: 'All Vegetables',
-        data: [
-            { imgSrc: './Assets/PlaAssets/plaBeetroot.jpeg', productName: 'Beetroot' , plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaCabbage.jpeg', productName: 'Cabbage' , plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaCaliflower.jpeg', productName: 'Califlower' , plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaCapsicum.jpeg', productName: 'Capsicum' ,plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
-            { imgSrc: './Assets/PlaAssets/plaCarrot.jpeg', productName: 'Carrot' , plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
-            { imgSrc: './Assets/PlaAssets/plaCoconut.jpeg', productName: 'Coconut' , plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
-        ]
-    },
-    vegetables2: {
-        heading: 'Season Special || Top Deals',
-        data: [
-            { imgSrc: './Assets/PlaAssets/plaCurry Leaves.jpeg', productName: 'Curry Leaves' , plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
-            { imgSrc: './Assets/PlaAssets/plaMint Leaves.jpeg', productName: 'Mint Leaves' , plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaOnion.jpeg', productName: 'Onion' , plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
-            { imgSrc: './Assets/PlaAssets/plaPotato.jpeg', productName: 'Potato' , plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaPumpkin.jpeg', productName: 'Pumpkin' , plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' },
-            { imgSrc: './Assets/PlaAssets/plaRadish.jpeg', productName: 'Radish' , plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' }
-        ]
-    }
-};
-const pla_obj_fruits = {
-    Fruits1: {
-        heading: 'Farm Fruits',
-        data: [
-            { imgSrc: './Assets/PlaAssets/plaApple.jpeg', productName: 'Apple', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: '/Assets/PlaAssets/plaAvocoda.jpeg', productName: 'Avocoda' ,plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaBanana.jpeg', productName: 'Banana' , plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaBlueberry.jpeg', productName: 'Blueberry' , plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
-            { imgSrc: './Assets/PlaAssets/plaGrapes.jpeg', productName: 'Grapes', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
-            { imgSrc: './Assets/PlaAssets/plaGuava.jpeg', productName: 'Guava' ,plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
-        ]
-    },
-    Fruits2: {
-        heading: 'Season Special || Top Deals',
-        data: [
-            { imgSrc: './Assets/PlaAssets/plaKiwi Fruit.jpeg', productName: 'Kiwi' , plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
-            { imgSrc: './Assets/PlaAssets/plaMango.jpeg', productName: 'Mango' , plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaOrange.jpeg', productName: 'Orange' , plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
-            { imgSrc: './Assets/PlaAssets/plaSapota.jpeg', productName: 'Sapota' , plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaStrawberry.jpeg', productName: 'Strawberry' , plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' },
-            { imgSrc: './Assets/PlaAssets/plaWatermelon.jpeg', productName: 'Watermelon', plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' }
-        ]
-    }
-};
-const pla_obj_oilcrops = {
-    oilcrops1: {
-        heading: 'Oil Crops',
-        data: [
-            { imgSrc: './Assets/PlaAssets/plaBadam.jpeg', productName: 'Badam', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaCastorSeed.jpeg', productName: 'CastorSeed', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaCornOil.jpeg', productName: 'Corn', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaFlaxSeeds.jpeg', productName: 'FlaxSeeds' , plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
-            { imgSrc: './Assets/PlaAssets/plaMustard Seeds.jpeg', productName: 'Mustard Seeds' , plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
-            { imgSrc: './Assets/PlaAssets/plaHembSeed.jpeg', productName: 'HembSeed', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
-        ]
-    },
-    oilcrops2: {
-        heading: 'Season Special || Top Deals',
-        data: [
-            { imgSrc: './Assets/PlaAssets/plaGroundNut.jpeg', productName: 'GroundNut' , plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
-            { imgSrc: './Assets/PlaAssets/plapumkinSeeds.jpeg', productName: 'pumkinSeeds' , plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaSesameSeeds.jpeg', productName: 'SesameSeeds' , plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
-            { imgSrc: './Assets/PlaAssets/plaSunFlower.jpeg', productName: 'SunFlower' , plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaWalNuts.jpeg', productName: 'WalNuts' , plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' },
-            { imgSrc: './Assets/PlaAssets/plaOliveOil.jpeg', productName: 'Olive', plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' }
-        ]
-    }
-};
-const pla_obj_Grains = {
-    Grains1: {
-        heading: 'All Grain Varieties',
-        data: [
-            { imgSrc: './Assets/PlaAssets/plaBarely.avif', productName: 'Barely' , plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaBasmatiRice.jpeg', productName: 'BasmatiRice', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaBlackRice.jpeg', productName: 'BlackRice' , plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaBrownRice.jpeg', productName: 'BrownRice' , plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
-            { imgSrc: './Assets/PlaAssets/plaRedRice.jpeg', productName: 'Red Rice' , plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
-            { imgSrc: './Assets/PlaAssets/plaFreekeh.jpeg', productName: 'Freekeh' , plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
-        ]
-    },
-    Grains2: {
-        heading: 'Season Special || Top Deals',
-        data: [
-            { imgSrc: './Assets/PlaAssets/plaBulgur.jpeg', productName: 'Bulgur', plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
-            { imgSrc: './Assets/PlaAssets/plaOat.jpeg', productName: 'Oats' , plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaPoniRice.jpeg', productName: 'PoniRice', plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
-            { imgSrc: './Assets/PlaAssets/plaWildRice.jpeg', productName: 'WildRice' , plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaWheat.jpeg', productName: 'Wheat',plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' },
-            { imgSrc: './Assets/PlaAssets/plaSorghum.jpeg', productName: 'Sorghum', plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' }
-        ]
-    }
-};
-const pla_obj_Dryfruits = {
-    Dryfruits1: {
-        heading: 'All DryFruits and Nuts',
-        data: [
-            { imgSrc: './Assets/PlaAssets/plaBetelNuts.jpeg', productName:'BetelNuts', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaCashewnut.jpeg', productName: 'Cashewnut', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaDates.jpeg', productName: 'Dates' , plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaDryBadam.jpeg', productName: 'Badam' , plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
-            { imgSrc: './Assets/PlaAssets/plaDryFig.jpeg', productName: 'DryFig' , plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
-            { imgSrc: './Assets/PlaAssets/plaFoxnuts.jpeg', productName: 'Foxnuts', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
-        ]
-    },
-    Dryfruits2: {
-        heading: 'Season Special || Top Deals',
-        data: [
-            { imgSrc: './Assets/PlaAssets/plaKesar.jpeg', productName: 'Kesar', plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
-            { imgSrc: './Assets/PlaAssets/plaKishmish.jpeg', productName: 'Kishmish', plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaMakhana.jpeg', productName: 'Makhana', plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
-            { imgSrc: './Assets/PlaAssets/plapeanut.jpeg', productName: 'Peanut' , plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaPista.jpeg', productName: 'Pista', plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' },
-            { imgSrc: './Assets/PlaAssets/plaBlackRaisin.jpeg', productName: 'BlackRaisin' , plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' }
-        ]
-    }
-};
+// ---------------------------------Dynamic plp cart------------------
 
-function createHTMLStructure(pla_obj) {
-    Object.keys(pla_obj).forEach(category => {
-        const categoryData = pla_obj[category];
-        const mainDiv = document.createElement('div');
-        mainDiv.className = 'plpProductCardMain';
-        mainDiv.id = 'plpCardVegetable';
 
-        const headingDiv = document.createElement('div');
-        headingDiv.className = 'plpProductHeaing';
-        headingDiv.id = 'plpProductHeaing';
+var products = ["Mint Leaves","Coriander","Spring Onion","Avocoda","Thyme","Dragon Fruit","Lemon Grass","Strawberry","Orange","Papaya","Pomegranate","Sapota","Avocoda","Grapes", "Tomato", "Watermelon", "Apple", "Carrot","Califlower","Banana","Beetroot","Bitter Guard","Blueberry","Onion","Bottle Guard","Cabbage","Curry Leaves","Capsicum","Coconut","Radish","Pumpkin","Potato","Cucumber","Dragon Fruit","Ginger","Green Chili","Kiwi Fruit","Mango","Lemon","Longan Fruit","Pear Fruit","Onion","Ridge Guard","Pumpkin","Snake Guard","Guava","Ridge Guard","Tendil","Snake Guard","Guava","Guava","Guava"];
+var head=["All Fruits","All Fruits","Seasonal Special","Premium Fruits And Vegetables","Deal Of The Day","All Vegetables","Top Offers"];
 
-        const headingH1 = document.createElement('h3');
-        headingH1.id = 'plphtag';
-        headingH1.textContent = categoryData.heading;
-        headingDiv.appendChild(headingH1);
 
-        mainDiv.appendChild(headingDiv);
 
-        const cardGroupDiv = document.createElement('div');
-        cardGroupDiv.className = 'plpcardGroup';
+    document.addEventListener("DOMContentLoaded", function () {
+    var container = document.getElementById("dynamicContentContainer");
 
-        categoryData.data.forEach(product => {
-            const productCardDiv = document.createElement('div');
-            productCardDiv.className = 'plpproductcard';
+    // plp Repeated  6 container creating using for loop
 
-            const productImg = document.createElement('img');
-            productImg.id = 'plpproductimg';
-            productImg.src = product.imgSrc;
+    for (var i = 1; i <= 6; i++) {
+        // Create plpcarthead
+        var cartheadDiv = document.createElement("div");
+        cartheadDiv.className = "plpcarthead";
 
-            const productNameH4 = document.createElement('h4');
-            productNameH4.id = 'plpProductName';
-            productNameH4.textContent = product.productName;
+        var headingDiv = document.createElement("div");
+        headingDiv.className = "plpcartheading";
 
-            const descriptionH5 = document.createElement('h5');
-            descriptionH5.id = 'plpdescription';
-            descriptionH5.textContent = product.plpdescription;
+        var h1Heading = document.createElement("h1");
+        h1Heading.id = "plpcarthtag";
+        h1Heading.textContent = head[i];
 
-            const priceDiv = document.createElement('div');
-            priceDiv.id = 'plpPriceDiv';
+        headingDiv.appendChild(h1Heading);
 
-            const priceH4 = document.createElement('h4');
-            const priceSpan = document.createElement('span');
-            priceSpan.id = 'plpCardPrice';
-            priceSpan.textContent = product.plpprice;
-            const discountPriceS = document.createElement('s');
-            discountPriceS.id = 'plpdiscountPrice';
-            discountPriceS.textContent = product.plporiginalPrice;
+        var iconDiv = document.createElement("div");
+        iconDiv.className = "plpcarticon";
 
-            priceH4.appendChild(priceSpan);
-            priceH4.appendChild(discountPriceS);
-            priceDiv.appendChild(priceH4);
+        // var leftIcon = document.createElement("i");
+        // leftIcon.className = "fa-solid fa-circle-arrow-left";
+        // leftIcon.id = "plpcarticon";
 
-            productCardDiv.appendChild(productImg);
-            productCardDiv.appendChild(productNameH4);
-            productCardDiv.appendChild(descriptionH5);
-            productCardDiv.appendChild(priceDiv);
+        // var rightIcon = document.createElement("i");
+        // rightIcon.className = "fa-solid fa-circle-arrow-right";
+        // rightIcon.id = "plpcarticon";
 
-            cardGroupDiv.appendChild(productCardDiv);
+        // iconDiv.appendChild(leftIcon);
+        // iconDiv.appendChild(rightIcon);
 
+        cartheadDiv.appendChild(headingDiv);
+        // cartheadDiv.appendChild(iconDiv);
+
+        // Create plpmaincatlistdiv
+        var maincatlistDiv = document.createElement("div");
+        maincatlistDiv.className = "plpmaincatlistdiv";
+
+
+        // Repeat the content inside plpmaincatlistdiv 6 times
+       
+        for (var j = 1; j <= 6; j++) {
+            var mainCardDiv = document.createElement("div");
+            mainCardDiv.className = "plpmaincard";
+
+            var img = document.createElement("img");
+            img.id = "plpcartimg";
+            
+                img.src = "Assets/plpAssets/plp" +products[j*i+i+j]+ ".jpeg"; // plp cart image src get from product array
+                img.alt = "Fresh Product " + j;
            
 
-        });
+            var productName = document.createElement("h4");
+            productName.id = "plpcartname";
+            productName.textContent = " "+products[j*i+i+j] +" ";
 
-        mainDiv.appendChild(cardGroupDiv);
-        let plpbdy=document.querySelector('.plpAgriKart')
-        plpbdy.appendChild(mainDiv);
-    });
+            var price = document.createElement("h3");
+            price.id = "plpcartprice";
+            var spanPrice = document.createElement("span");
+            spanPrice.id = "plpprice";
+            spanPrice.textContent = "₹" + getRandomPrice(); // plp cart name get from product array
+            var strikeThroughPrice = document.createElement("s");
+            strikeThroughPrice.id = "plpnoprice";
+            strikeThroughPrice.textContent = "₹" + (parseInt(spanPrice.textContent.slice(1)) + 20); // plp cart random discounted price
 
-    var platoplp = document.querySelectorAll('.plpproductcard');
+            var button = document.createElement("button");
+            button.id = "plpcartbtn";
+            button.textContent = "Add To Cart";
 
-    platoplp.forEach(function(element) 
-        {
-          console.log(1)
-            element.addEventListener('click', platoplpfun);
-        });
+            price.appendChild(spanPrice);
+            price.appendChild(strikeThroughPrice);
+            mainCardDiv.appendChild(img);
+            mainCardDiv.appendChild(productName);
+            mainCardDiv.appendChild(price);
+            mainCardDiv.appendChild(button);
+
+            maincatlistDiv.appendChild(mainCardDiv);
         
-    function platoplpfun() {
-        window.location.href = "./product_detail.html"; 
-    }          
+            var plptoproduct = document.querySelectorAll('.plpmaincard');
 
+            plptoproduct.forEach(function(element) {
+            element.addEventListener('click', plptoproductfun);
+});
+
+function plptoproductfun() {
+    window.location.href = "./product_detail.html"; // Replace "index.html" with your desired destination page
+}
+        }
+        
+        // Append both plpcarthead and plpmaincatlistdiv to the container
+
+        container.appendChild(cartheadDiv);
+        container.appendChild(maincatlistDiv);
+    }
+});
+
+
+
+// Function to get a random price to plp cart 
+
+function getRandomPrice() {
+    return Math.floor(Math.random() * 50) + 30; // Random price between 30 and 80
 }
 
-createHTMLStructure(plp_obj_vegetable);

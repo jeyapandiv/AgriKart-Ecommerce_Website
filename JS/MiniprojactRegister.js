@@ -1,40 +1,3 @@
-// ------------------------------FAIRBASE ------------------------------------
-
-
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyCrsO7wk0lqUfnOlwaeBSDXyicVHgJFF_c",
-    authDomain: "dckap-agricart-2024.firebaseapp.com",
-    projectId: "dckap-agricart-2024",
-    storageBucket: "dckap-agricart-2024.appspot.com",
-    messagingSenderId: "135220583467",
-    appId: "1:135220583467:web:dbaf745d728c6ef1a31e6e"
-  };
-
-  import { getFirestore, collection, doc, setDoc, getDocs, updateDoc, addDoc} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-  import {getAuth , createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-
-var auth = getAuth(app);
-var db = getFirestore();
-
-var ref = collection(db,"user")
-var getData = await getDocs(ref)
-var id = getData.size
-
-
-
-
-
-
-
 // ------------CONTAINERS --------------------------------------
 
 var     ResgisterContainer = document.getElementById("RegistermaincondainerCall");
@@ -64,7 +27,7 @@ var RegPwordAlert = document.getElementById("RegPwordAlert");
 // ------------------------------------ALERT Function ---------------------------------
 
 
-RegFormSubmit.addEventListener("submit",async(event)=>{
+RegFormSubmit.addEventListener("submit",(event)=>{
 
     event.preventDefault();
     
@@ -104,12 +67,10 @@ else{
                         CheckValue(RegPassword.name)
                     }
                     else{
-                        
-
                         var   RegEmailValue = RegEmail.value.trim();
                         var onetimepword = Math.floor(Math.random()*1000000);
                        
-                    var emailcont = `
+                     EmailBody = `
                      <h1> Verification code </h1><br><br>
                           <h3>  Please use the verification code below to sign in.</h3>
                           <h1> OTP : ${onetimepword} </h1> 
@@ -122,7 +83,7 @@ else{
                          To : RegEmailValue,
                          From : "dckapagricart2024@gmail.com",
                          Subject : "This is the subject",
-                         Body : emailcont
+                         Body : EmailBody
                      
                      }).then(
                        message => {        
@@ -145,7 +106,7 @@ else{
                          var  otbNum5  =  document.getElementById("otbum5").value;
                          var  otbNum6  =  document.getElementById("otbum6").value;
                          
-                        var OTPInnerValue = otbNum1 +otbNum2+otbNum3+otbNum4+otbNum5+otbNum6;
+                         OTPInnerValue = otbNum1 +otbNum2+otbNum3+otbNum4+otbNum5+otbNum6;
                  
                          console.log(OTPInnerValue)
                  
@@ -156,7 +117,6 @@ else{
                          }
                          else{
                              alert("Invalid OTP")
-                             
                          }
                       })
                  
@@ -178,31 +138,11 @@ function CheckValue(value){
 
 
 
-// ----------------------------------FAIRBASE TRICKER SESSION------------------------------------------------------
+// ----------------------------------OTP TRICKER SESSION------------------------------------------------------
 
-createUserWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
-.then((credentials)=>{    
-})
-.catch((err)=>{
-    alert(err.message)
-    
-})
+ 
 
-let ref = doc(db,"user",`${id++}`)
-let datarefernce = await setDoc(ref,{
-       FirstName:RegFirstName.value,
-        LastName:RegSecodName.value,
-        contact:RegContNum.value,
-        email:RegEmail.value,
-        password:RegPassword.value
-})
-.then(()=>{
-})
-.catch((error)=>{
-console.log(error)
-})
 });
-
 
 // ------------------------------------FIRST NAME -----------------------------------------------
 
