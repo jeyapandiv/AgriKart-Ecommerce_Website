@@ -1,8 +1,7 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 *{
-    font-family: "Montserrat", sans-serif;
+  font-family: "Lexend", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -18,6 +17,7 @@
     --rareUse2-color: #ffff;
     --boxshawdow-color:  #ddd;
     --blur-color:rgba(255, 255, 255, 0.419);
+    --shade5-color: #f5fcf9;
 }
 body { 
     max-width: 1440px; 
@@ -30,6 +30,7 @@ body {
     width: 100%;
     height: 50px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     border-bottom: 1px solid var(--boxshawdow-color) ;
@@ -39,6 +40,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 80px;
+    flex-wrap: wrap;
 }
 #navloginbtn{
     padding: 5px;
@@ -56,6 +58,7 @@ body {
 .navmain{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 96%;
 }
@@ -75,8 +78,12 @@ body {
 }
 .navSearch{   
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+.planavsearch{
+    display: none;
 }
 #navsearchIcon{
     color: var(--rareUse2-color);
@@ -104,6 +111,7 @@ body {
 }
 .plaSideNav{
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;    
@@ -134,6 +142,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
     border-bottom: 1px solid var(--rareUse1-color);}
 a { text-decoration: none; color: var(--rareUse2-color);}
@@ -219,7 +228,7 @@ a { text-decoration: none; color: var(--rareUse2-color);}
  }
  .plaSlideInner2{   width: 45%;}
  #plaSlideShopBtn{
-    padding: 15px;
+    padding: 3%;
     font-size: larger;
     font-weight: 600;
     color: var(--rareUse2-color);
@@ -228,7 +237,7 @@ a { text-decoration: none; color: var(--rareUse2-color);}
     border-radius: 4px;    
 }
  #plaSlideShopBtn:hover{
-    box-shadow: 1px 1px 5px var(--boxshawdow-color);  
+    box-shadow: 1px 1px 5px var(--boxshawdow-color);
  }
  #plaSlideImg1{
     height: 200px;
@@ -243,7 +252,7 @@ a { text-decoration: none; color: var(--rareUse2-color);}
     width: 96%;
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: #f5fcf9; 
+    background-color:var(--shade5-color); 
 }
 .plaproductcard-container{
     width: 100%;
@@ -304,12 +313,15 @@ text-decoration: underline;
     border-radius: 4px;
     background-color: var(--rareUse2-color);
     color: var(--secondary-color);
+    animation: fadeIn 0.5s ease-in-out;
 }
 .plpproductcard:hover{
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--secondary-color);    
+    animation: fadeIn 0.5s ease-in-out;
 }
 .plaproductcard:hover{
     border: 1px solid var(--secondary-color);
+    animation: fadeIn 0.5s ease-in-out;
 }
 .plaproductcard-container,.plpcardGroup {
     display: flex;
@@ -356,6 +368,34 @@ text-decoration: underline;
 .plafooterListitems:hover{
     border-bottom: 2px solid var(--rareUse2-color);
 }
+
+/* plp page--------------- */
+.plpAgriKart{
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+.plpproductcard {
+    line-height: 0px;
+    height: 300px;  
+}
+.plppriceh4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+#plpCardPrice{
+    color: var(--second-color);
+}
+#plpProductName:hover{
+color: var(--second-color);
+text-decoration: underline;
+}
+
 /*------------------------------------------------ scroll bar code */
 ::-webkit-scrollbar {
     width: 8px;
@@ -368,16 +408,15 @@ text-decoration: underline;
     background-color:var(--secondary-color);
     border-radius: 4px;
   }
-/* plp page--------------- */
-  .plpAgriKart{
-    width: 94%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-  }
-.plpproductcard {
-    line-height: 0px;
-    height: 300px;  
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+ 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
