@@ -74,6 +74,9 @@ var trimCont = RegContNum.value.trim()
 var trimEm = RegEmail.value.trim()
 var trimPwo = RegPassword.value.trim()
 
+
+function OTBVALIDPAGE(){
+
 if(!(trimFn=="" || trimCont=="" || trimEm=="" || trimPwo=="")){
 
     var RegEmailValue = RegEmail.value.trim();
@@ -130,6 +133,8 @@ if(!(trimFn=="" || trimCont=="" || trimEm=="" || trimPwo=="")){
     );
 
     }
+
+}
 // --------------------------------REGEXP ----------------------
 
 if(trimFn==""){
@@ -160,6 +165,7 @@ createUserWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
         email:RegEmail.value,
         password:RegPassword.value
 });
+OTBVALIDPAGE();
 })
 .catch((err)=>{
     alert(err.message)
@@ -208,8 +214,6 @@ if(RegNumResult){
 //     RegLastNameAlert.classList.remove("SecondNameView");
 //     RegSecodName.classList.remove("secondnameAlert");
 // }
-
-  
 // })
 
 // // ---------------------------------------------------------CONTACT REGEXP------------------------

@@ -1,12 +1,17 @@
 
-body {
-  font-family: "Poppins", sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+}
 
 #SignupPageNav{
   text-decoration: none;
   color: #779341;
+  margin-top: 15px;
 }
 img {
   position: absolute;
@@ -24,7 +29,7 @@ a{
 .Loginmaincondiner {
   background-color: rgba(255, 255, 255, 0.7);
   width: 457px; 
-  height: 470px; 
+  height: 460px; 
   z-index: 1;
   position: absolute;
   left: 400px; 
@@ -72,10 +77,12 @@ label {
   text-align: end;
   margin-right: 40px;
   font-size: 14px;
+  margin-top: 10px;
 }
 .NOAccountNavCon{
   text-align: center;
   font-size: 14px;
+  margin-top: 6px;
 }
 #singinBTn {
   width: 188px; 
