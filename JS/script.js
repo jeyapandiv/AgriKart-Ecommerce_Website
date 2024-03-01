@@ -138,7 +138,7 @@ function plasidecatview(){
                     { imgSrc: './Assets/PlaAssets/plaCastorSeed.jpeg', productName: 'CastorSeed' },
                     { imgSrc: './Assets/PlaAssets/plaCornOil.jpeg', productName: 'Corn' },
                     { imgSrc: './Assets/PlaAssets/plaFlaxSeeds.jpeg', productName: 'FlaxSeeds' },
-                    { imgSrc: './Assets/PlaAssets/plaMustard Seeds.jpeg', productName: 'Mustard Seeds' },
+                    { imgSrc: './Assets/PlaAssets/plaMustardSeeds.jpeg', productName: 'Mustard Seeds' },
                     { imgSrc: './Assets/PlaAssets/plaHembSeed.jpeg', productName: 'HembSeed' },
                     { imgSrc: './Assets/PlaAssets/plaGroundNut.jpeg', productName: 'GroundNut' },
                     { imgSrc: './Assets/PlaAssets/plapumkinSeeds.jpeg', productName: 'pumkinSeeds' },
