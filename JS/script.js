@@ -318,3 +318,17 @@ function plasidecatview(){
             });
         }
         
+
+        // login verfication -----------------------------
+
+        // let loginbtn
+
+        // if(localStorage.user)
+        //     {
+
+        //         console.log("hi")
+        //     }
+        // else
+        //     {
+        //         console.log("illa")
+        //     };

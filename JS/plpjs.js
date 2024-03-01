@@ -257,7 +257,7 @@ function createHTMLStructure(pla_obj) {
         element.addEventListener('click', platoplpfun);
     });
 
-    function platoplpfun(e) {
+    function platoplpfun(e) {   
         if (e.target.dataset.id != undefined) {
             localStorage.setItem("id", e.target.dataset.id)
         }
