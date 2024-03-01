@@ -7,11 +7,12 @@
     <title>AgriCart</title>
 </head>
 <body>
-    <div class="navBarCheckout">
+    <header class="pdNav"></header>
+    <!-- <div class="navBarCheckout">
         <div class="navCheckoutInner">
             <div class="navCheckoutLeft">
                 <i id="navMenuIcon" class="fa-solid fa-bars"></i>
-                <img id="mainLogo" src="Assets/logo-full-palli-tamil-color.webp" alt="">
+                <img id="mainLogo" src="Assets/logo-full-palli-tamil-color.png" alt="">
             </div>
             <div class="navCheckoutRight">
                 <div class="navSearch">
@@ -22,13 +23,13 @@
                 </div>
                 <div class="cartProfileIcon">
                     <i id="navProfileIcon" class="fa-solid fa-user"></i>
-                    <!-- <i id="navCrtIcon" class="fa-solid fa-cart-shopping"></i> -->
+                     <i id="navCrtIcon" class="fa-solid fa-cart-shopping"></i> 
                     <i id="navCrtIcon" class="fa-solid fa-cart-shopping"></i>
-                    <!-- <i id="navCrtIcon" class="fa-solid fa-cart-shopping"></i> -->
+                    <i id="navCrtIcon" class="fa-solid fa-cart-shopping"></i> 
                 </div>
             </div>
         </div>
-</div>
+</div> -->
 
 
 <main>
@@ -91,11 +92,11 @@
 <div class="summary">
     <h2>Order Summary</h2>
     <p>Item Total: ₹1371</p>
-    <p>Delivery Charges: <span class="delivery">Calculated in next step</span></p>
+    <p>Delivery Charges: <span class="delivery">Proceed to Checkout</span></p>
     <p>Discount: -</p>
     <h3>Total Bill: ₹0</h3>
     <div class="summary-btn">
-        <button >Proceed to Buy</button>
+        <button id="proceedToBuyBtn">Proceed to Buy</button>
         <button class="empty-cart" onclick="emptyCart()">Empty Cart</button>
     </div>
     
@@ -107,5 +108,12 @@
 
 </footer>
 <script src="JS/cart.js"></script>
+<script>
+    fetch('navBar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('.pdNav').innerHTML += data;
+        });
+</script>
 </body>
 </html>
