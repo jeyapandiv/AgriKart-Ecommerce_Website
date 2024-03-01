@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/checkout.css">
     <title>AgriKart</title>
 </head>
@@ -19,7 +18,7 @@
         <div class="checkoutAddress">
             <div class="checkoutExistAddress">
                 <div class="checkoutNavigation">
-                    <h1>Checkout</h1>
+                    <h2>Checkout</h2>
                     <div class="processNav">
                         <p id="addNavActive">Address</p>
                         <hr>
@@ -29,16 +28,35 @@
                     </div>
                 </div>
                 <div class="selectAddDiv">
-                    <div class="newAddressDiv">
 
-                    </div>
                     <div class="selectAddress">
+
                         <div class="addNoteCreateBtn">
-                            <h3>Select delivery address</h3>
+                            <h4 style="font-weight: 500;">Select delivery address</h4>
                             <button>Create new Address</button>
                         </div>
+
                         <div class="addressListDiv">
-                            <div class="addressList">
+
+                            <!-- <div class="newAddressDiv" style="width: 40%; height: 90%; border: 1px solid rgb(214, 214, 214);
+                             border-radius: 5px; box-shadow: 1px 1px 4px 2px rgb(214, 214, 214);
+                             display: flex; align-items: center; justify-content: center;">
+                                <form action="" name="newAddress" style="height: 95%; width: 92%;">
+                                    <label for="shippingName" style="font-size: 12px;">Full name(First and Last
+                                        name)</label>
+                                    <input type="text" name="shippingName" placeholder="Ex: John Mathiv" style="width: 94%; padding: 5px 10px;
+                                        box-shadow:inset 1px 1px 5px  #dadada; 
+                                        border: 1px solid #9f9e9e; border-radius: 3px;;">
+                                    <label for="houseDetail" style="font-size: 12px;">Flat,House no, Street</label>
+                                    <input type="text" name="houseDetail" style="width: 94%; padding: 5px 10px; box-shadow:inset 1px 1px 5px  #dadada;
+                                        border: 1px solid #9f9e9e; border-radius: 3px;">
+                                    <label for="houseDetail" style="font-size: 12px;">Area, Town/City</label>
+                                    <input type="text" name="houseDetail" style="width: 94%; padding: 5px 10px; box-shadow:inset 1px 1px 5px  #dadada;
+                                            border: 1px solid #9f9e9e; border-radius: 3px;">
+                                </form>
+                            </div> -->
+
+                            <div class="addressList" >
                                 <div class="addressDefault">
                                     <div class="addressSelection">
                                         <input type="radio" name="addressSelectRadio">
@@ -191,9 +209,6 @@
                         <h5 id="plaSideNavList"> <i class="fa-solid fa-hand-holding-heart"></i> My Wish List </h5>
                         <h5 id="plaSideNavList"> <i class="fa-solid fa-square-phone"></i> Customer support </h5>
                         <h5 id="plaSideNavList"> <i class="fa-solid fa-users"></i> About Us </h5>
-                        <div class="plaSideSignin">
-                            <button id="plaSideBtn"> <i class="fa-solid fa-right-to-bracket"></i> SignOut</button>
-                        </div>
                     </div>
                 </div>
             </div>
