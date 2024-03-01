@@ -1,26 +1,4 @@
 
-//   // Import the functions you need from the SDKs you need
-//   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-// //   import{}from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-storge.js'
-
-//   // TODO: Add SDKs for Firebase products that you want to use
-//   // https://firebase.google.com/docs/web/setup#available-libraries
-
-//   // Your web app's Firebase configuration
-//   const firebaseConfig = {
-//     apiKey: "AIzaSyApC0agDQ_7lRaXB_NKZpeuA4DrUiEkAYE",
-//     authDomain: "agricart-17bcb.firebaseapp.com",
-//     projectId: "agricart-17bcb",
-//     storageBucket: "agricart-17bcb.appspot.com",
-//     messagingSenderId: "989569874713",
-//     appId: "1:989569874713:web:39b5981c69427844de2388"
-//   };
-
-//   // Initialize Firebase
-//   const app = initializeApp(firebaseConfig);
-
- 
-
 let valid=1;
 
 let products_slide_obj=[
@@ -30,7 +8,7 @@ let products_slide_obj=[
         Name:"Food Crops Sales"
     },
     {
-        src:"./Assets/cotton.jpeg",
+        src:"./Assets/cotton1.webp",
         Name:"Fibre Crops Sales"
     },
     {
@@ -77,7 +55,6 @@ function pladisplayImages() {
     setTimeout(pladisplayImages, 2000);
 }
 
-
 // side nav----
 
 var plaSidenav=document.getElementById('plaSidediv');
@@ -119,6 +96,7 @@ function plasidecatview(){
       const pla_obj = {
             vegetables: {
                 heading: 'Up to 60% off | Farm Vegetables & more ',
+                category:"vegetables",
                 data: [
                     { imgSrc: './Assets/PlaAssets/plaBeetroot.jpeg', productName: 'Beetroot' },
                     { imgSrc: './Assets/PlaAssets/plaCabbage.jpeg', productName: 'Cabbage' },
@@ -136,6 +114,7 @@ function plasidecatview(){
             },
             fruits: {
                 heading: 'Inspired by your Wish List',
+                category:"fruits",
                 data: [
                     { imgSrc: './Assets/PlaAssets/plaApple.jpeg', productName: 'Apple' },
                     { imgSrc: './Assets/PlaAssets/plaAvocoda.jpeg', productName: 'Avocoda' },
@@ -153,6 +132,7 @@ function plasidecatview(){
             },
             oil: {
                 heading: 'Today’s Deal | Most Selling Products',
+                category:"oil",
                 data: [
                     { imgSrc: './Assets/PlaAssets/plaBadam.jpeg', productName: 'Badam' },
                     { imgSrc: './Assets/PlaAssets/plaCastorSeed.jpeg', productName: 'CastorSeed' },
@@ -171,6 +151,7 @@ function plasidecatview(){
          
             grains: {
                 heading: "Related to items you've viewed",
+                category:"grains",
                 data: [
                     { imgSrc: './Assets/PlaAssets/plaBarely.avif', productName: 'Barely' },
                     { imgSrc: './Assets/PlaAssets/plaBasmatiRice.jpeg', productName: 'BasmatiRice' },
@@ -188,6 +169,7 @@ function plasidecatview(){
             },
             dry_fruits: {
                 heading: 'More items to consider',
+                category:"dry_fruits",
                 data: [
                     { imgSrc: './Assets/PlaAssets/plaBetelNuts.jpeg', productName: 'BetelNuts' },
                     { imgSrc: './Assets/PlaAssets/plaBlackRaisin.jpeg', productName: 'BlackRaisin' },
@@ -227,13 +209,18 @@ function plasidecatview(){
             const maxCards = 6;
 
             for (let i = 0; i < maxCards && i < data.data.length; i++) {
+                 console.log(data.category);
                 const productCard = document.createElement('div');
                 productCard.className = 'plaproductcard';
+                productCard.id = data.category
                 const img = document.createElement('img');
                 img.src = data.data[i].imgSrc;
+                img.id = data.category
                 img.className = 'plaproductcardImg';
                 const productName = document.createElement('h4');
+                productName.className='plaProductName'
                 productName.textContent = data.data[i].productName;
+                productName.id = data.category
                 productName.className="plaCardProductName"
                 productCard.appendChild(img);
                 productCard.appendChild(productName);
@@ -243,11 +230,15 @@ function plasidecatview(){
 
                 platoplp.forEach(function(element) 
                     {
-                      console.log(1)
+                      
+                   
                         element.addEventListener('click', platoplpfun);
                     });
                     
-                function platoplpfun() {
+                function platoplpfun(e) {
+                    // console.log(e.target.id);
+                    // return
+                    localStorage.setItem("category",e.target.id)
                     window.location.href = "./plphtml.html"; 
                 }          
           
@@ -286,6 +277,7 @@ function plasidecatview(){
             
 
             for (let i = currentIndex; i < currentIndex + maxCards && i < products.length; i++) {
+                
                 const productCard = document.createElement('div');
                 productCard.className = 'plaproductcard';
                 const img = document.createElement('img');
@@ -307,4 +299,24 @@ function plasidecatview(){
         createProductCard('grains', pla_obj.grains);
         createProductCard('dry_fruits', pla_obj.dry_fruits);
  
-    
+        let navbarsearch = document.getElementById('navSearchBox');
+        navbarsearch.addEventListener('input', search_Products); // Change 'keyup' to 'input'
+        
+        // searchbar function topnav
+        function search_Products() {
+            let input = document.getElementById('navSearchBox').value.toLowerCase();
+            let productCards = document.querySelectorAll('.plaproductcard');
+        
+            productCards.forEach((card) => {
+                let productName = card.querySelector('.plaCardProductName').textContent.toLowerCase();
+        
+                if (!productName.includes(input)) {
+                    card.style.display = 'none';
+                    card.parentElement.parentElement.display='none';
+                } else {
+                    card.style.display = 'block';
+                    card.parentElement.parentElement.display='block';
+                }
+            });
+        }
+        
