@@ -7,17 +7,17 @@ let product = document.querySelector(".product-container")
 let smallImagess = document.querySelector(".related-items-div")
 
 
-// ----------------------- function to store details in local storage for cart
+// --------------------------------------
 function storeProductDetails(btn) {
     // Extracting product details
-    var productName = document.querySelector('.product-name').innerText;
-    var productWeight = document.querySelector('.product-weight').innerText;
-    var productPrice = document.querySelector('.product-price').innerText;
-    var productQty = document.querySelector('.product-qty').value;
-    var productImg = document.querySelector('.product-img').src; // Assuming you want the src attribute
+    const productName = document.querySelector('.product-name').innerText;
+    const productWeight = document.querySelector('.product-weight').innerText;
+    const productPrice = document.querySelector('.product-price').innerText;
+    const productQty = document.querySelector('.product-qty').value;
+    const productImg = document.querySelector('.product-img').src; // Assuming you want the src attribute
 
     // Creating product detail object
-    var productDetails = {
+    const productDetails = {
         ProductName: productName,
         ProductQty: productQty,
         ProductImage: productImg,
@@ -47,17 +47,16 @@ function storeProductDetails(btn) {
 
 }
 
-
 function navigateCheckout(btn) {
     window.location.href = "checkout.html";
 }
 
-// var addcart = document.getElementById('addcart');
+// const addcart = document.getElementById('addcart');
 // addcart.addEventListener('click', () => {
-//     var productName = document.querySelector('.product-name').textContent;
-//     var price = document.querySelector('.product-price').textContent.split(': ')[1];
-//     var weight = document.querySelector('.product-weight').textContent.split(': ')[1];
-//     var imgSrc = document.querySelector('.main-img img').src;
+//     const productName = document.querySelector('.product-name').textContent;
+//     const price = document.querySelector('.product-price').textContent.split(': ')[1];
+//     const weight = document.querySelector('.product-weight').textContent.split(': ')[1];
+//     const imgSrc = document.querySelector('.main-img img').src;
 //     console.log(productName,price,weight,imgSrc)
 //     // Navigate to cart page and pass product details via query parameters or localStorage
 //     window.location.href = `cart.html?productName=${productName}&price=${price}&weight=${weight}&imgSrc=${imgSrc}`;
@@ -69,7 +68,7 @@ function navigateCheckout(btn) {
 
 
 
-var pla_obj = {
+const pla_obj = {
     vegetables: {
         heading: 'All Vegetables',
         data: [
@@ -254,33 +253,33 @@ var pla_obj = {
             { id:37,imgSrc: './Assets/PlaAssets/plaBarely.avif', productName: 'Barely',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
             <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
             <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
-                './Assets/small_images/Coconut1.jpeg',
-                './Assets/small_images/Coconut2.webp',
-                './Assets/small_images/Coconut3.webp']  },
+                './Assets/small_images/barley6.webp',
+                './Assets/small_images/Barely5.jpg',
+                './Assets/small_images/Barely2.webp']  },
             { id:38,imgSrc: './Assets/PlaAssets/plaBasmatiRice.jpeg', productName: 'BasmatiRice',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
             <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
             <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
-                './Assets/small_images/Coconut1.jpeg',
-                './Assets/small_images/Coconut2.webp',
-                './Assets/small_images/Coconut3.webp']  },
+                './Assets/small_images/BasmatiRice2.jpg',
+                './Assets/small_images/BasmatiRice1.jpg',
+                './Assets/small_images/BasmatiRice3.webp']  },
             { id:39,imgSrc: './Assets/PlaAssets/plaBlackRice.jpeg', productName: 'BlackRice',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
             <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
             <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
-                './Assets/small_images/Coconut1.jpeg',
-                './Assets/small_images/Coconut2.webp',
-                './Assets/small_images/Coconut3.webp']  },
+                './Assets/small_images/BlackRice1.jpg',
+                './Assets/small_images/BlackRice5.jpg',
+                './Assets/small_images/BlackRice3.jpg']  },
             { id:40,imgSrc: './Assets/PlaAssets/plaBrownRice.jpeg', productName: 'BrownRice',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
             <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
             <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
-                './Assets/small_images/Coconut1.jpeg',
-                './Assets/small_images/Coconut2.webp',
-                './Assets/small_images/Coconut3.webp']  },
-            { id:41,imgSrc: './Assets/PlaAssets/plaKaniwa.jpeg', productName: 'Kaniwa' ,price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
+                './Assets/small_images/BrownRice1.webp',
+                './Assets/small_images/BrownRice2.webp',
+                './Assets/small_images/BrownRice3.jpg']  },
+            { id:41,imgSrc: './Assets/PlaAssets/plaKaniwa.jpeg', productName: 'RedRice' ,price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
             <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
             <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
-                './Assets/small_images/Coconut1.jpeg',
-                './Assets/small_images/Coconut2.webp',
-                './Assets/small_images/Coconut3.webp'] },
+                './Assets/small_images/Redrice1.webp',
+                './Assets/small_images/Redrice2.jpeg',
+                './Assets/small_images/Redrice3.png'] },
             { id:42,imgSrc: './Assets/PlaAssets/plaFreekeh.jpeg', productName: 'Freekeh',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
             <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
             <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
@@ -420,12 +419,7 @@ function renderHtml(renderItem) {
             for (let i = 0; i < 4; i++) {
                 const smallItem = renderItem.data[i];
 
-<<<<<<< HEAD
                 console.log(smallItem, "ok");
-=======
-        for (let i = 0; i < 4; i++) {
-            var smallItem = pla_obj.vegetables.data[i];
->>>>>>> Cart_Page
 
                 if (smallItem) {
                     if (localStorage.getItem("id") != smallItem.id) {
@@ -530,28 +524,5 @@ for (let i = 0; i < allImages.length; i++) {
 
 
 
-// function to store details in local storage for wishlist
-function addToWishlist() {
-    // Get product details
-    var productName = document.querySelector('.product-name').textContent;
-    var productImg = document.querySelector('.product-img').src;
-    var productPrice = document.querySelector('.product-price').textContent;
-    var productWeight = document.querySelector('.product-weight').innerText;
-    var productQty = document.querySelector('.product-qty').value;
-    
-    
-    // Get existing wishlist from local storage or initialize if it doesn't exist
-    var wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-    
-    wishlist.push({
-        "ProductName": productName,
-        "ProductImage": productImg,
-        "ProductPrice": productPrice
-    });
-    
-    
-    localStorage.setItem('wishlist', JSON.stringify(wishlist));
-}
-document.querySelector('.heart').addEventListener('click', addToWishlist);
-document.querySelector('.wish-cart').addEventListener('click',storeProductDetails());
+
 
