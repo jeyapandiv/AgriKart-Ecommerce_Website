@@ -420,12 +420,9 @@ function renderHtml(renderItem) {
             for (let i = 0; i < 4; i++) {
                 const smallItem = renderItem.data[i];
 
-<<<<<<< HEAD
                 console.log(smallItem, "ok");
-=======
         for (let i = 0; i < 4; i++) {
             var smallItem = pla_obj.vegetables.data[i];
->>>>>>> Cart_Page
 
                 if (smallItem) {
                     if (localStorage.getItem("id") != smallItem.id) {
@@ -451,6 +448,7 @@ function renderHtml(renderItem) {
 
 
         }
+    }
     });
 }
 
