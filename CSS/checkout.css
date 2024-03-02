@@ -1,461 +1,456 @@
 :root {
-    --primary-color : #5DC7A1;
-    --secondary-color : #C84E2A;
-    --backround-one : #f6fcfa;
-    --button-Backround1 : #5DC7A1;
-    --button-Backround2 : #C84E2A;
-    --button-Backround3 : #215f49;
-    --button-Backround4 : #153c2e;
-    --box-shadow1 : #abbeb8;
-    --box-shadow2 : #a3c0b6;
+  --primary-color: #5dc7a1;
+  --secondary-color: #c84e2a;
+  --backround-one: #f6fcfa;
+  --button-Backround1: #5dc7a1;
+  --button-Backround2: #c84e2a;
+  --button-Backround3: #215f49;
+  --button-Backround4: #153c2e;
+  --box-shadow1: #abbeb8;
+  --box-shadow2: #a3c0b6;
 
-    --black : #000000;
-    --white : #FFFFFF;
+  --black: #000000;
+  --white: #ffffff;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+=======
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+>>>>>>> Home_Page
 
 * {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-family: "Lexend", sans-serif;
+  font-style: normal;
 }
 
 .checkout,
 .addressDefault,
 .checkoutAddress,
 .totalCard {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .checkout {
-    max-width: 1440px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  max-width: 1440px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .navBarCheckout {
-    width: 100%;
-    height: 60px;
-    background-color: var(--white);
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgb(235, 235, 235);
-    box-shadow: 0px 2px 2px rgb(214, 214, 214);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 60px;
+  background-color: var(--white);
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  box-shadow: 0px 2px 2px rgb(214, 214, 214);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .selectAddDiv,
 .payment-container,
 .cart-review-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cartProfileIcon,
 .checkout-payment-container,
 .confirmationInner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .addNoteCreateBtn button,
-.actionsAddress>*,
+.actionsAddress > *,
 .useAddressBtn button,
 .button-container button,
 #netBanking select,
 .confirmBtn {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
 
 .checkoutAddress {
-    width: 90%;
+  width: 90%;
 }
 
 .processNav {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .processNav hr {
-    width: 100px;
-    height: 2px;
-    background-color: black;
-    border: none;
+  width: 100px;
+  height: 2px;
+  background-color: black;
+  border: none;
 }
 
 .selectAddDiv {
-    width: 100%;
-    height: 458px;
-    margin-top: 20px;
-    background-color: var(--backround-one);
+  width: 100%;
+  height: 458px;
+  margin-top: 20px;
+  background-color: var(--backround-one);
 }
 
-.selectAddDiv ,
+.selectAddDiv,
 .addressListDiv,
 .addressDefault,
-.actionsAddress>*,
+.actionsAddress > *,
 .totalCard,
 .useAddressBtn button,
 .payment-container,
 .cart-review-container,
 .button-container button,
 #netBanking select {
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px var(--box-shadow1);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px var(--box-shadow1);
 }
 .selectAddress,
 .paymentDiv {
-    width: 95%;
-    height: 90%;
+  width: 95%;
+  height: 90%;
 }
 
 .addNoteCreateBtn {
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-} 
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
 
 .addNoteCreateBtn button {
-    background-color: var(--button-Backround4);
-    color: var(--white);
-    padding: 0px 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px var(--box-shadow2);
+  background-color: var(--button-Backround4);
+  color: var(--white);
+  padding: 0px 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px var(--box-shadow2);
 }
 
 .addressListDiv {
-    width: 100%;
-    height: 90%;
-    background-color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  width: 100%;
+  height: 90%;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .addressList {
-    width: 60%;
-    height: 90%;
+  width: 60%;
+  height: 90%;
 }
 
 .addressDefault {
-    width: 95%;
-    height: 15%;
-    margin-bottom: 10px;
-    padding: 16px;
-    /* border-radius: 5px; */
+  width: 95%;
+  height: 15%;
+  margin-bottom: 10px;
+  padding: 16px;
+  /* border-radius: 5px; */
 }
 
 .addressDefault,
 .totalCard,
 .payment-container,
 .cart-review-container {
-    border: 1px solid rgb(226, 226, 226);
+  border: 1px solid rgb(226, 226, 226);
 }
 
 .addressSelection {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .actionsAddress {
-    padding-left: 22px;
+  padding-left: 22px;
 }
 
-.actionsAddress>* {
-    width: 130px;
-    height: 26px;
-    color: var(--white);
-    font-weight: 500;
+.actionsAddress > * {
+  width: 130px;
+  height: 26px;
+  color: var(--white);
+  font-weight: 500;
 }
 .useAddressBtn button {
-    background-color: var(--button-Backround3);
+  background-color: var(--button-Backround3);
 }
 .edit-address {
-    background-color: var(--button-Backround1);
+  background-color: var(--button-Backround1);
 }
 .remove-address {
-    background-color: var(--button-Backround2);
+  background-color: var(--button-Backround2);
 }
 
 .totalCard {
-    width: 30%;
-    height: 90%;
-    align-items: center;
+  width: 30%;
+  height: 90%;
+  align-items: center;
 }
 
 .useAddressBtn {
-    width: 90%;
-    margin-top: 20px;
-    text-align: center;
-    border-bottom: 2px solid grey;
+  width: 90%;
+  margin-top: 20px;
+  text-align: center;
+  border-bottom: 2px solid grey;
 }
 
 .useAddressBtn button {
-    color: var(--white);
-    width: 100%;
-    height: 40px;
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 10px;
+  color: var(--white);
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .useAddressBtn p {
-    font-size: 12px;
-    line-height: 16px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 #addPrdPrice span {
-    margin-left: 50px;
-    color: red;
+  margin-left: 50px;
+  color: red;
 }
 
 #addPrdPrice span:hover {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .totalCalculation {
-    border-bottom: 2px solid grey;
+  border-bottom: 2px solid grey;
 }
 
 .totalCalculation span {
-    line-height: 40px;
+  line-height: 40px;
 }
 
 .checkout-payment-container {
-    width: 100%;
-    height: 90%;
+  width: 100%;
+  height: 90%;
 }
 
 .payment-container {
-    width: 35%;
-    height: 100%;
-    background-color: var(--white);
+  width: 35%;
+  height: 100%;
+  background-color: var(--white);
 }
 
 .payment-container .payment-container-inner,
-.payment-container .payment-container-inner>* {
-    width: 90%;
+.payment-container .payment-container-inner > * {
+  width: 90%;
 }
 
 .payment-method {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 #netBanking select {
-    width: 60%;
-    padding: 5px 10px;
-    background-color: var(--white);
+  width: 60%;
+  padding: 5px 10px;
+  background-color: var(--white);
 }
 
-.payment-method input[type=radio] {
-    margin-right: 5px;
+.payment-method input[type="radio"] {
+  margin-right: 5px;
 }
 
 #credit-card,
 #net-banking,
 #cod {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #cardImage,
 #netBanking select,
 #cod-info {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .button-container button {
-    width: 100%;
-    height: 40px;
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: 700;
-    color: white;
-    background-color: var(--button-Backround3);
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background-color: var(--button-Backround3);
 }
 
 .cart-review-container {
-    width: 28%;
-    height: 100%;
-    background-color: var(--white);
+  width: 28%;
+  height: 80%;
+  background-color: var(--white);
 }
 
 .cart-container {
-    width: 90%;
+  width: 90%;
 }
 
 #coupon-code {
-    width: 95%;
-    padding: 4px 5px;
-    margin: 10px 0px;
+  width: 95%;
+  padding: 4px 5px;
+  margin: 10px 0px;
 }
 
-
 .disNone {
-    display: none;
+  display: none;
 }
 
 .fontWeight {
-    font-weight: 700;
-} 
+  font-weight: 700;
+}
 
 .plaSidediv {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    background-color: var(--white);
-    height: 650px;
-    cursor: pointer;
-    border-right: 1px solid grey;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: var(--white);
+  height: 650px;
+  cursor: pointer;
+  border-right: 1px solid grey;
 }
 
 .plaSideNavMain {
-    margin-top: 30px;
-    padding: 0px 15px;
-    /* background-color: var(--rareUse2-color); */
-    height: 620px;
+  margin-top: 30px;
+  padding: 0px 15px;
+  /* background-color: var(--rareUse2-color); */
+  height: 620px;
 }
 
 .plaSideNav {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #plaSideNavList1 {
-    padding: 15px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    /* border-bottom: 1px solid var(--rareUse1-color); */
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* border-bottom: 1px solid var(--rareUse1-color); */
 }
 
 #plaSideNavList1:hover {
-    background-color: var(--secondary-color);
-    color: var(--rareUse2-color);
-    width: 70%;
-    border-radius: 8px;
-    border-bottom: none;
+  background-color: var(--secondary-color);
+  color: var(--rareUse2-color);
+  width: 70%;
+  border-radius: 8px;
+  border-bottom: none;
 }
 
 #plaSideNavList:hover {
-    background-color: var(--thirdsade-color);
-    width: 70%;
-    border-radius: 8px;
-    border-bottom: 1px solid var(--thirdsade-color);
+  background-color: var(--thirdsade-color);
+  width: 70%;
+  border-radius: 8px;
+  border-bottom: 1px solid var(--thirdsade-color);
 }
 
 #plaSideNavList {
-    padding: 15px 0px 15px 15px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    border-bottom: 1px solid var(--rareUse1-color);
+  padding: 15px 0px 15px 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid var(--rareUse1-color);
 }
 
 a {
-    text-decoration: none;
-    color: var(--rareUse2-color);
+  text-decoration: none;
+  color: var(--rareUse2-color);
 }
 
 #plaSideClose {
-    position:relative;
-    top: -10px;
-    right: 5px;
-    margin-left: 235px;
+  position: relative;
+  top: -10px;
+  right: 5px;
+  margin-left: 235px;
 }
 
 .plasidebdy {
-    display: flex;
+  display: flex;
 }
 
 .plasidenavhead {
-    margin-top: -40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    background-color: var(--primary-color);
-    width: 60%;
-    border-radius: 5px;
-}
-/* 
-.plasidenavhead:hover {
-    background-color: var(--thirdsade-color);
-} */
-
-.plaSideSignin {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 60px;
+  margin-top: -40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background-color: var(--primary-color);
+  width: 60%;
+  border-radius: 5px;
 }
 
 #plaSideBtn:hover {
-    color: var(--rareUse1-color);
-    background-color: var(--primary-color);
+  color: var(--rareUse1-color);
+  background-color: var(--primary-color);
 }
 
 #plaSideBtn {
-    font-size: large;
-    width: 50%;
-    word-spacing: 2px;
-    height: 35px;
-    /* color: var(--rareUse2-color); */
-    background-color: var(--secondary-color);
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    box-shadow: 1px 1px 5px var(--boxshawdow-color);
+  font-size: large;
+  width: 50%;
+  word-spacing: 2px;
+  height: 35px;
+  /* color: var(--rareUse2-color); */
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  box-shadow: 1px 1px 5px var(--boxshawdow-color);
 }
 
 #plaSideBtn:active {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 #plaCategoryList:hover {
-    background-color: var(--boxshawdow-color);
+  background-color: var(--boxshawdow-color);
 }
 
 #plaCategoryList {
-    background-color: var(--thirdsade-color);
-    padding: 0px 0px 15px 15px;
-    width: 90%;
-    border-bottom: 1px solid var(--rareUse1-color);
+  background-color: var(--thirdsade-color);
+  padding: 0px 0px 15px 15px;
+  width: 90%;
+  border-bottom: 1px solid var(--rareUse1-color);
 }
 
 .plaSidenavhide {
-    display: none;
+  display: none;
 }
 
 .plaSideblock {
-    display: block;
+  display: block;
 }
 
 .plaAgriKart,
 .AgriKartPlp {
-    background-color: var(--rareUse2-color);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    width: 100%;
-    gap: 30px;
-    margin-top: 30px;
+  background-color: var(--rareUse2-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  gap: 30px;
+  margin-top: 30px;
+}
+.newAddressDiv {
+    display: none;
 }
