@@ -111,9 +111,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Event listener for deleting items
     var deleteIcons = document.querySelectorAll('.delete-icon');
-    deleteIcons.forEach((icon, index) => { // Passing index to the event listener
+    deleteIcons.forEach((icon, index) => {
         icon.addEventListener('click', function(event) {
-            deleteItem(event, index); // Passing index to the deleteItem function
+            deleteItem(event, index); 
         });
     });
 });
@@ -121,10 +121,10 @@ document.addEventListener("DOMContentLoaded", function () {
 // Function to delete an item
 function deleteItem(event, index) {
     var itemDiv = event.target.closest('.item');
-    // Remove the item from DOM
+  
     itemDiv.remove();
     
-    // Remove the item from local storage
+ 
     removeItemFromLocalStorage(index);
 
     updateCartItemCount();

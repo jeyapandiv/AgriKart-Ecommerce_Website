@@ -34,8 +34,8 @@ function displayWishlist() {
 
 function removeFromWishlist(index) {
     var wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-    wishlist.splice(index, 1); // Remove item from wishlist array
-    localStorage.setItem('wishlist', JSON.stringify(wishlist)); // Update localStorage
+    wishlist.splice(index, 1);
+    localStorage.setItem('wishlist', JSON.stringify(wishlist)); 
 }
 
 displayWishlist();
