@@ -298,6 +298,7 @@ a { text-decoration: none; color: var(--rareUse2-color);}
 .plaproductcardImg,#plaproductcardImg,#plpproductimg{
     height: 135px;
     width: 135px;
+    margin-top: 8px;
 }
 .plaProductHeaing,.plpProductHeaing {
     width: 98%;
