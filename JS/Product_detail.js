@@ -219,18 +219,48 @@ var pla_obj = {
     grains: {
         heading: 'All Grains',
         data: [
-            { imgSrc: './Assets/PlaAssets/plaBarely.avif', productName: 'Barely', },
-            { imgSrc: './Assets/PlaAssets/plaBasmatiRice.jpeg', productName: 'BasmatiRice' },
-            { imgSrc: './Assets/PlaAssets/plaBlackRice.jpeg', productName: 'BlackRice' },
-            { imgSrc: './Assets/PlaAssets/plaBrownRice.jpeg', productName: 'BrownRice' },
-            { imgSrc: './Assets/PlaAssets/plaKaniwa.jpeg', productName: 'Kaniwa' },
-            { imgSrc: './Assets/PlaAssets/plaFreekeh.jpeg', productName: 'Freekeh' },
-            { imgSrc: './Assets/PlaAssets/plaBulgur.jpeg', productName: 'Bulgur' },
-            { imgSrc: './Assets/PlaAssets/plaOat.jpeg', productName: 'Oats' },
-            { imgSrc: './Assets/PlaAssets/plaPoniRice.jpeg', productName: 'PoniRice' },
-            { imgSrc: './Assets/PlaAssets/plaWildRice.jpeg', productName: 'WildRice' },
-            { imgSrc: './Assets/PlaAssets/plaWheat.jpeg', productName: 'Wheat' },
-            { imgSrc: './Assets/PlaAssets/plaSorghum.jpeg', productName: 'Sorghum' }
+            { id:37,imgSrc: './Assets/PlaAssets/plaBarely.avif', productName: 'Barely',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
+            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
+            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
+                './Assets/small_images/barley6.webp',
+                './Assets/small_images/Barely5.jpg',
+                './Assets/small_images/Barely2.webp']  },
+            { id:38,imgSrc: './Assets/PlaAssets/plaBasmatiRice.jpeg', productName: 'BasmatiRice',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
+            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
+            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
+                './Assets/small_images/BasmatiRice2.jpg',
+                './Assets/small_images/BasmatiRice1.jpg',
+                './Assets/small_images/BasmatiRice3.webp']  },
+            { id:39,imgSrc: './Assets/PlaAssets/plaBlackRice.jpeg', productName: 'BlackRice',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
+            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
+            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
+                './Assets/small_images/BlackRice1.jpg',
+                './Assets/small_images/BlackRice5.jpg',
+                './Assets/small_images/BlackRice3.jpg']  },
+            { id:40,imgSrc: './Assets/PlaAssets/plaBrownRice.jpeg', productName: 'BrownRice',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
+            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
+            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
+                './Assets/small_images/BrownRice1.webp',
+                './Assets/small_images/BrownRice2.webp',
+                './Assets/small_images/BrownRice3.jpg']  },
+            { id:41,imgSrc: './Assets/PlaAssets/plaKaniwa.jpeg', productName: 'RedRice' ,price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
+            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
+            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
+                './Assets/small_images/Redrice1.webp',
+                './Assets/small_images/Redrice2.jpeg',
+                './Assets/small_images/Redrice3.png'] },
+            { id:42,imgSrc: './Assets/PlaAssets/plaFreekeh.jpeg', productName: 'Freekeh',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
+            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
+            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
+                './Assets/small_images/Coconut1.jpeg',
+                './Assets/small_images/Coconut2.webp',
+                './Assets/small_images/Coconut3.webp']  },
+            // { imgSrc: './Assets/PlaAssets/plaBulgur.jpeg', productName: 'Bulgur' },
+            // { imgSrc: './Assets/PlaAssets/plaOat.jpeg', productName: 'Oats' },
+            // { imgSrc: './Assets/PlaAssets/plaPoniRice.jpeg', productName: 'PoniRice' },
+            // { imgSrc: './Assets/PlaAssets/plaWildRice.jpeg', productName: 'WildRice' },
+            // { imgSrc: './Assets/PlaAssets/plaWheat.jpeg', productName: 'Wheat' },
+            // { imgSrc: './Assets/PlaAssets/plaSorghum.jpeg', productName: 'Sorghum' }
         ]
     },
     dry_fruits: {
@@ -324,6 +354,7 @@ pla_obj.vegetables.data.map((items, values) => {
             </div>
         </div>`
 
+                console.log(smallItem, "ok");
         for (let i = 0; i < 4; i++) {
             var smallItem = pla_obj.vegetables.data[i];
 
@@ -350,10 +381,33 @@ pla_obj.vegetables.data.map((items, values) => {
                 break;
             }
         }
-
-
     }
-});
+    });
+
+
+if (localStorage.getItem("category") == "vegetables") {
+    renderHtml(pla_obj.vegetables)
+}
+
+else if (localStorage.getItem("category") == "fruits") {
+    renderHtml(pla_obj.fruits)
+}
+else if (localStorage.getItem("category") == "oil") {
+    renderHtml(pla_obj.oil)
+}
+else if (localStorage.getItem("category") == "grains") {
+    renderHtml(pla_obj.grains)
+}
+else if (localStorage.getItem("category") == "dry_fruits") {
+    renderHtml(pla_obj.dry_fruits)
+}
+
+
+
+
+
+
+
 
 function showRelated(value) {
     localStorage.setItem("id", value)

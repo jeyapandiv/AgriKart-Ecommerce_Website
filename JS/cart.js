@@ -135,18 +135,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     var deleteIcons = document.querySelectorAll('.delete-icon');
-    deleteIcons.forEach(icon => {
-        icon.addEventListener('click', deleteItem);
+    deleteIcons.forEach((icon, index) => {
+        icon.addEventListener('click', function(event) {
+            deleteItem(event, index); 
+        });
     });
 });
 
 // Function to delete an item
 function deleteItem(event) {
     var itemDiv = event.target.closest('.item');
-    var index = getIndex(itemDiv);
+  
     itemDiv.remove();
-
-
+    
+ 
     removeItemFromLocalStorage(index);
 
     updateCartItemCount();
