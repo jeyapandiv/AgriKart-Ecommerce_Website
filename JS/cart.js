@@ -1,6 +1,6 @@
 "use strict";
 
-// --------------------------------- function to update cart item count on top
+// ---------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
     updateCartItemCount();
@@ -36,13 +36,27 @@ function updateCart() {
         }
     });
     var itemTotalDisplay = document.querySelector('.summary p:nth-of-type(1)');
+    var delivery =document.querySelector('.delivery')
     itemTotalDisplay.textContent = `Item Total: ₹${itemTotal}`;
 
+    var deliveryCharges;
+    if(cartData.length==0){
+        deliveryCharges=0
+    }
+    else if (cartData.length <=2){
+        deliveryCharges =30
+    }
+    else if(cartData.length <=10){
+        deliveryCharges =60
+    }
+   
+    var totalBill = itemTotal + deliveryCharges;
+
     var totalBillDisplay = document.querySelector('.summary h3');
-    totalBillDisplay.textContent = `Total Bill: ₹${itemTotal}`;
+    delivery.textContent =deliveryCharges
+    totalBillDisplay.textContent = `Total Bill: ₹${totalBill}`;
 }
 // -------------------------------------
-
 
 function emptyCart() {
     var cartItems = document.querySelectorAll('.item');
@@ -62,12 +76,12 @@ function emptyCart() {
     }
 }
 
-// -------------------------creating item div dynamically with the count of indexes in array
+// -------------------------
 
 const cartData = JSON.parse(localStorage.getItem('cart'));
 console.log(cartData)
 
-const cartItemsContainer = document.getElementById('cart-things-2');
+const cartItemsContainer = document.getElementById('cart-things');
 
 
 if (Array.isArray(cartData)) {
@@ -107,46 +121,63 @@ document.addEventListener("DOMContentLoaded", function () {
     var quantityInputs = document.querySelectorAll('.item input[type="number"]');
     quantityInputs.forEach(input => {
         input.addEventListener('input', updateCart);
+    }); var quantityInputs = document.querySelectorAll('.item input[type="number"]');
+    quantityInputs.forEach(input => {
+        input.addEventListener('input', function(event) {
+            var quantity = parseInt(event.target.value);
+            if (quantity === 0) {
+                deleteItem(event);
+                updateCart()
+            } else {
+                updateCart();
+            }
+        });
     });
 
-    // Event listener for deleting items
     var deleteIcons = document.querySelectorAll('.delete-icon');
-    deleteIcons.forEach((icon, index) => { // Passing index to the event listener
-        icon.addEventListener('click', function(event) {
-            deleteItem(event, index); // Passing index to the deleteItem function
-        });
+    deleteIcons.forEach(icon => {
+        icon.addEventListener('click', deleteItem);
     });
 });
 
 // Function to delete an item
-function deleteItem(event, index) {
+function deleteItem(event) {
     var itemDiv = event.target.closest('.item');
-    // Remove the item from DOM
+    var index = getIndex(itemDiv);
     itemDiv.remove();
-    
-    // Remove the item from local storage
+
+
     removeItemFromLocalStorage(index);
 
     updateCartItemCount();
     updateCart();
 }
 
-// Function to remove item from local storage
-function removeItemFromLocalStorage(index) {
-    var cartData = JSON.parse(localStorage.getItem('cart')) || [];
-    if (index >= 0 && index < cartData.length) {
-        cartData.splice(index, 1);
-        localStorage.setItem('cart', JSON.stringify(cartData));
+
+// Function to get the index of an element within its container
+function getIndex(element) {
+    var index = 0;
+    while ((element = element.previousElementSibling) != null) {
+        index++;
     }
-    updateCartItemCount();
-    updateCart();
+    return index;
 }
 
-var proceedToBuyBtn = document.getElementById('proceedToBuyBtn');
-proceedToBuyBtn.addEventListener('click', function() {
-  
-    window.location.href = 'checkout.html';
-});
+// Function to remove item from local storage
+function removeItemFromLocalStorage(index) {
+    var cartData = JSON.parse(localStorage.getItem('cart'));
+    if (index >= 0 && index < cartData.length) { 
+        cartData.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cartData));
+        console.log(cartData);
+        if (cartData.length === 0) {
+            localStorage.removeItem('cart'); 
+        }
+    } else {
+        console.log("Index out of range or invalid.");
+    }
+}
+
 
 
 console.log(cartData.length);
