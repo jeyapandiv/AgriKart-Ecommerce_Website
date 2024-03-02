@@ -252,7 +252,7 @@ var pla_obj = {
     }
 };
 
-console.log(pla_obj);
+// console.log(pla_obj);
 
 pla_obj.vegetables.data.map((items, values) => {
     if (localStorage.getItem("id") == items.id) {
@@ -354,6 +354,23 @@ pla_obj.vegetables.data.map((items, values) => {
 
     }
 });
+
+if (localStorage.getItem("category") == "vegetables") {
+    renderHtml(pla_obj.vegetables)
+}
+
+else if (localStorage.getItem("category") == "fruits") {
+    renderHtml(pla_obj.fruits)
+}
+else if (localStorage.getItem("category") == "oil") {
+    renderHtml(pla_obj.oil)
+}
+else if (localStorage.getItem("category") == "grains") {
+    renderHtml(pla_obj.grains)
+}
+else if (localStorage.getItem("category") == "dry_fruits") {
+    renderHtml(pla_obj.dry_fruits)
+}
 
 function showRelated(value) {
     localStorage.setItem("id", value)
