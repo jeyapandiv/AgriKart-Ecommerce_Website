@@ -67,7 +67,7 @@ function emptyCart() {
 const cartData = JSON.parse(localStorage.getItem('cart'));
 console.log(cartData)
 
-const cartItemsContainer = document.getElementById('cart-things');
+const cartItemsContainer = document.getElementById('cart-things-2');
 
 
 if (Array.isArray(cartData)) {
