@@ -14,28 +14,7 @@
     <!-- Custom CSS -->
   </head>
   <body>
-    <div class="navBarCheckout">
-      <div class="navCheckoutInner">
-        <div class="navCheckoutLeft">
-          <i id="navMenuIcon" class="fa-solid fa-bars"></i>
-          <img id="mainLogo" src="Assets/logo-full-palli-tamil-color.webp" alt="" />
-        </div>
-        <div class="navCheckoutRight">
-          <div class="navSearch">
-            <input id="navSearchBox" type="text" />
-            <div id="navSearchIcon">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-          </div>
-          <div class="cartProfileIcon">
-            <i id="navProfileIcon" class="fa-solid fa-user"></i>
-            <!-- <i id="navCrtIcon" class="fa-solid fa-cart-shopping"></i> -->
-            <i id="navCrtIcon" class="fa-solid fa-cart-shopping"></i>
-            <!-- <i id="navCrtIcon" class="fa-solid fa-cart-shopping"></i> -->
-          </div>
-        </div>
-      </div>
-    </div>
+    <header class="pdNav"></header>
     <div class="wishbox">
       <div class="container">
         <div class="wishlist-title">
@@ -51,9 +30,9 @@
               <th></th>
             </tr>
           </thead>
-          <tbody>
-            <!-- Product 1 -->
-            <tr>
+          <tbody id="wishlist-table-body" class="wishlist-table-body">
+        
+            <!-- <tr>
               <td>
                 <div class="prd-img">
                   <img src="Assets/—Pngtree—orange agriculture_6291945.png"alt="Nuts"/>
@@ -79,7 +58,7 @@
                 </div>
               </td>
             </tr>
-            <!-- Product 2 -->
+         
             <tr>
               <td>
                 <div class="prd-img">
@@ -106,7 +85,7 @@
                 </div>
               </td>
             </tr>
-            <!-- Product 3 -->
+         
             <tr>
               <td>
                 <div class="prd-img">
@@ -133,7 +112,7 @@
                 </div>
               </td>
             </tr>
-            <!-- Product 4 -->
+         
             <tr>
               <td>
                 <div class="prd-img">
@@ -160,7 +139,7 @@
                 </div>
               </td>
             </tr>
-            <!-- Product 5 -->
+        
             <tr>
               <td>
                 <div class="prd-img">
@@ -186,10 +165,18 @@
                   <button>Add To Cart</button>
                 </div>
               </td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </div>
     </div>
+    <script>
+      fetch('navBar.html')
+          .then(response => response.text())
+          .then(data => {
+              document.querySelector('.pdNav').innerHTML += data;
+          });
+  </script>
+  <script src="JS/wishlist.js"></script>
   </body>
 </html>

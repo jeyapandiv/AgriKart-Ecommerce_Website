@@ -1,7 +1,11 @@
 {
 <<<<<<< HEAD
+    "liveServer.settings.port": 5501
+=======
+<<<<<<< HEAD
     "liveServer.settings.port": 5504
 =======
     "liveServer.settings.port": 5501
 >>>>>>> Login_Page
+>>>>>>> Cart_Page
 }

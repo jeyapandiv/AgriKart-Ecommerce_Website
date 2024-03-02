@@ -21,14 +21,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.checkout,
-.addressDefault,
-.checkoutAddress,
-.totalCard {
-    display: flex;
-    flex-direction: column;
-}
 
+<<<<<<< HEAD
 .checkout {
     max-width: 1440px;
     width: 100%;
@@ -114,22 +108,51 @@
     border-radius: 0px 4px 4px 0px;
 }
 /* ----------nav-end------- */
+=======
+>>>>>>> Home_Page
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
 }
-
+::-webkit-scrollbar {
+    width: 2px;
+  
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ff000000;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 2.5px;
+  }
 
 header {
-    background-color: #45b949da;
+    background-color: #f8f8f8da;
     color: white;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
+.pdNav {
+    width: 100%;
+    height: 60px;
+    background-color: var(--white);
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    box-shadow: 0px 2px 2px rgb(214, 214, 214);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #navCrtIcon{
+    display: none;
+  }
 header h1 {
     font-size: 24px;
 }
@@ -166,9 +189,14 @@ main {
 }
 .cart-things{
     width: 60%;
+ 
    
 }
-
+.cart-things-2{
+    width: 100%;
+    height: 440px;
+    overflow-y: auto;
+}
 h2 {
     font-size: 20px;
     margin-bottom: 10px;

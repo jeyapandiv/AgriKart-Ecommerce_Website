@@ -4,35 +4,35 @@ let valid=1;
 let products_slide_obj=[
 
     {
-        src:"./Assets/PlaAssets/plaSideDiv1.jpg",
+        src:"./Assets/PlaAssets/platop.jpg",
         Name:"Food Crops Sales"
     },
     {
-        src:"./Assets/cotton1.webp",
-        Name:"Fibre Crops Sales"
+        src:"./Assets/PlaAssets/plapf.jpg",
+        Name:"All Premium Fruits"
     },
     {
-        src:"./Assets/plpAssets/plpminifruits.jpeg",
-        Name:"Farm Fruits and Vegetables"
+        src:"./Assets/PlaAssets/plaveg.jpg",
+        Name:"Fresh Farm Vegetables"
     },
     {
-        src:"Assets/oilc.jpeg",
-        Name:"Oil Crops Sales"
+        src:"./Assets/PlaAssets/pladod.jpg",
+        Name:"Deal of the Day"
     },
     {
-        src:"./Assets/PlaAssets/plaflower.jpg",
+        src:"./Assets/PlaAssets/plat3.jpg",
         Name:"Ornamental Crops Sales"
     },
     {
-        src:"./Assets/PlaAssets/pladryfruits.jpg",
-        Name:"Deal of the day"
+        src:"./Assets/PlaAssets/platop2.jpg",
+        Name:"Seasonal Special"
     },
     {
-        src:"Assets/fc.jpeg",
-        Name:"Food Crops Sales"
+        src:"./Assets/PlaAssets/plat7.jpg",
+        Name:"Dry Fruits And Nuts"
     },
     {
-        src:"Assets/wheat.jpeg",
+        src:"./Assets/PlaAssets/platop6.jpg",
         Name:"Buy Natural Products"
     }
 ]
@@ -138,7 +138,7 @@ function plasidecatview(){
                     { imgSrc: './Assets/PlaAssets/plaCastorSeed.jpeg', productName: 'CastorSeed' },
                     { imgSrc: './Assets/PlaAssets/plaCornOil.jpeg', productName: 'Corn' },
                     { imgSrc: './Assets/PlaAssets/plaFlaxSeeds.jpeg', productName: 'FlaxSeeds' },
-                    { imgSrc: './Assets/PlaAssets/plaMustard Seeds.jpeg', productName: 'Mustard Seeds' },
+                    { imgSrc: './Assets/PlaAssets/plaMustardSeeds.jpeg', productName: 'Mustard Seeds' },
                     { imgSrc: './Assets/PlaAssets/plaHembSeed.jpeg', productName: 'HembSeed' },
                     { imgSrc: './Assets/PlaAssets/plaGroundNut.jpeg', productName: 'GroundNut' },
                     { imgSrc: './Assets/PlaAssets/plapumkinSeeds.jpeg', productName: 'pumkinSeeds' },
@@ -312,11 +312,23 @@ function plasidecatview(){
         
                 if (!productName.includes(input)) {
                     card.style.display = 'none';
-                    card.parentElement.parentElement.display='none';
                 } else {
                     card.style.display = 'block';
-                    card.parentElement.parentElement.display='block';
                 }
             });
         }
         
+
+        // login verfication -----------------------------
+
+        // let loginbtn
+
+        // if(localStorage.user)
+        //     {
+
+        //         console.log("hi")
+        //     }
+        // else
+        //     {
+        //         console.log("illa")
+        //     };
