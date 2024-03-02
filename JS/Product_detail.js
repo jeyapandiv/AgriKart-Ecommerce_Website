@@ -254,33 +254,33 @@ var pla_obj = {
             { id:37,imgSrc: './Assets/PlaAssets/plaBarely.avif', productName: 'Barely',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
             <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
             <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
-                './Assets/small_images/Coconut1.jpeg',
-                './Assets/small_images/Coconut2.webp',
-                './Assets/small_images/Coconut3.webp']  },
+                './Assets/small_images/barley6.webp',
+                './Assets/small_images/Barely5.jpg',
+                './Assets/small_images/Barely2.webp']  },
             { id:38,imgSrc: './Assets/PlaAssets/plaBasmatiRice.jpeg', productName: 'BasmatiRice',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
             <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
             <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
-                './Assets/small_images/Coconut1.jpeg',
-                './Assets/small_images/Coconut2.webp',
-                './Assets/small_images/Coconut3.webp']  },
+                './Assets/small_images/BasmatiRice2.jpg',
+                './Assets/small_images/BasmatiRice1.jpg',
+                './Assets/small_images/BasmatiRice3.webp']  },
             { id:39,imgSrc: './Assets/PlaAssets/plaBlackRice.jpeg', productName: 'BlackRice',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
             <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
             <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
-                './Assets/small_images/Coconut1.jpeg',
-                './Assets/small_images/Coconut2.webp',
-                './Assets/small_images/Coconut3.webp']  },
+                './Assets/small_images/BlackRice1.jpg',
+                './Assets/small_images/BlackRice5.jpg',
+                './Assets/small_images/BlackRice3.jpg']  },
             { id:40,imgSrc: './Assets/PlaAssets/plaBrownRice.jpeg', productName: 'BrownRice',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
             <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
             <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
-                './Assets/small_images/Coconut1.jpeg',
-                './Assets/small_images/Coconut2.webp',
-                './Assets/small_images/Coconut3.webp']  },
-            { id:41,imgSrc: './Assets/PlaAssets/plaKaniwa.jpeg', productName: 'Kaniwa' ,price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
+                './Assets/small_images/BrownRice1.webp',
+                './Assets/small_images/BrownRice2.webp',
+                './Assets/small_images/BrownRice3.jpg']  },
+            { id:41,imgSrc: './Assets/PlaAssets/plaKaniwa.jpeg', productName: 'RedRice' ,price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
             <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
             <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
-                './Assets/small_images/Coconut1.jpeg',
-                './Assets/small_images/Coconut2.webp',
-                './Assets/small_images/Coconut3.webp'] },
+                './Assets/small_images/Redrice1.webp',
+                './Assets/small_images/Redrice2.jpeg',
+                './Assets/small_images/Redrice3.png'] },
             { id:42,imgSrc: './Assets/PlaAssets/plaFreekeh.jpeg', productName: 'Freekeh',price: `100`, oprice: `190`, description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
             <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
             <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`, small: [
