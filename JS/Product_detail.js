@@ -7,17 +7,17 @@ let product = document.querySelector(".product-container")
 let smallImagess = document.querySelector(".related-items-div")
 
 
-// --------------------------------------
+// ----------------------- function to store details in local storage for cart
 function storeProductDetails(btn) {
     // Extracting product details
-    const productName = document.querySelector('.product-name').innerText;
-    const productWeight = document.querySelector('.product-weight').innerText;
-    const productPrice = document.querySelector('.product-price').innerText;
-    const productQty = document.querySelector('.product-qty').value;
-    const productImg = document.querySelector('.product-img').src; // Assuming you want the src attribute
+    var productName = document.querySelector('.product-name').innerText;
+    var productWeight = document.querySelector('.product-weight').innerText;
+    var productPrice = document.querySelector('.product-price').innerText;
+    var productQty = document.querySelector('.product-qty').value;
+    var productImg = document.querySelector('.product-img').src; // Assuming you want the src attribute
 
     // Creating product detail object
-    const productDetails = {
+    var productDetails = {
         ProductName: productName,
         ProductQty: productQty,
         ProductImage: productImg,
@@ -47,16 +47,17 @@ function storeProductDetails(btn) {
 
 }
 
+
 function navigateCheckout(btn) {
     window.location.href = "checkout.html";
 }
 
-// const addcart = document.getElementById('addcart');
+// var addcart = document.getElementById('addcart');
 // addcart.addEventListener('click', () => {
-//     const productName = document.querySelector('.product-name').textContent;
-//     const price = document.querySelector('.product-price').textContent.split(': ')[1];
-//     const weight = document.querySelector('.product-weight').textContent.split(': ')[1];
-//     const imgSrc = document.querySelector('.main-img img').src;
+//     var productName = document.querySelector('.product-name').textContent;
+//     var price = document.querySelector('.product-price').textContent.split(': ')[1];
+//     var weight = document.querySelector('.product-weight').textContent.split(': ')[1];
+//     var imgSrc = document.querySelector('.main-img img').src;
 //     console.log(productName,price,weight,imgSrc)
 //     // Navigate to cart page and pass product details via query parameters or localStorage
 //     window.location.href = `cart.html?productName=${productName}&price=${price}&weight=${weight}&imgSrc=${imgSrc}`;
@@ -68,7 +69,7 @@ function navigateCheckout(btn) {
 
 
 
-const pla_obj = {
+var pla_obj = {
     vegetables: {
         heading: 'All Vegetables',
         data: [
@@ -419,7 +420,12 @@ function renderHtml(renderItem) {
             for (let i = 0; i < 4; i++) {
                 const smallItem = renderItem.data[i];
 
+<<<<<<< HEAD
                 console.log(smallItem, "ok");
+=======
+        for (let i = 0; i < 4; i++) {
+            var smallItem = pla_obj.vegetables.data[i];
+>>>>>>> Cart_Page
 
                 if (smallItem) {
                     if (localStorage.getItem("id") != smallItem.id) {
@@ -524,5 +530,28 @@ for (let i = 0; i < allImages.length; i++) {
 
 
 
-
+// function to store details in local storage for wishlist
+function addToWishlist() {
+    // Get product details
+    var productName = document.querySelector('.product-name').textContent;
+    var productImg = document.querySelector('.product-img').src;
+    var productPrice = document.querySelector('.product-price').textContent;
+    var productWeight = document.querySelector('.product-weight').innerText;
+    var productQty = document.querySelector('.product-qty').value;
+    
+    
+    // Get existing wishlist from local storage or initialize if it doesn't exist
+    var wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    
+    wishlist.push({
+        "ProductName": productName,
+        "ProductImage": productImg,
+        "ProductPrice": productPrice
+    });
+    
+    
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+}
+document.querySelector('.heart').addEventListener('click', addToWishlist);
+document.querySelector('.wish-cart').addEventListener('click',storeProductDetails());
 

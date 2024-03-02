@@ -19,7 +19,7 @@
     appId: "1:135220583467:web:dbaf745d728c6ef1a31e6e"
   };
 
-  import { getFirestore, collection, doc, setDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+  import { getFirestore, collection, doc, setDoc, getDocs ,getDoc} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
   import {getAuth , signInWithEmailAndPassword , sendPasswordResetEmail , GoogleAuthProvider,signInWithPopup} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
   // Initialize Firebase
@@ -76,8 +76,9 @@ continueBtn.addEventListener("click",()=>{
 SignUpBtn.addEventListener("click",()=>{
      
 signInWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
-.then((credential)=>{
+.then(async(credential)=>{
     alert("SUCESSFULLY LOGINED")
+    localStorage.setItem("user",JSON.stringify(credential.user));
     location.href = "index.html"
 })
 .catch((err)=>{
