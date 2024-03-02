@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .plaSidediv {
+            position: fixed;
+            top: 0px;
+            background-color: var(--blur-color);
+            border-radius: 6px;
+            height: 660px;
+            width: 100%;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .plaSideNavMain {
+            padding: 0px 0px 15px 15px;
+            background-color: var(--rareUse2-color);
+            height: 660px;
+            overflow-y: scroll;
+        }
+
+        .plaSideNav {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #plaSideNavList1 {
+            padding: 15px 0px 15px 15px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid var(--rareUse1-color);
+        }
+
+        #plaSideNavList1:hover {
+            background-color: var(--secondary-color);
+            color: var(--rareUse2-color);
+            width: 70%;
+            border-radius: 8px;
+            border-bottom: none;
+        }
+
+        #plaSideNavList:hover {
+            background-color: var(--thirdsade-color);
+            width: 70%;
+            border-radius: 8px;
+            border-bottom: 1px solid var(--thirdsade-color);
+        }
+
+        #plaSideNavList {
+            padding: 15px 0px 15px 15px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid var(--rareUse1-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--rareUse2-color);
+        }
+
+        #plaSideClose {
+            position: sticky;
+            top: 30px;
+            right: 5px;
+            margin-left: 280px;
+        }
+
+        .plasidebdy {
+            display: flex;
+        }
+
+        .plasidenavhead {
+            max-width: 90%;
+            margin-top: -40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            background-color: var(--primary-color);
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .plasidenavhead:hover {
+            background-color: var(--thirdsade-color);
+        }
+
+        .plaSideSignin {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 60px;
+        }
+
+        #plaSideBtn:hover {
+            color: var(--rareUse1-color);
+            background-color: var(--primary-color);
+        }
+
+        #plaSideBtn {
+            font-size: large;
+            width: 50%;
+            word-spacing: 2px;
+            height: 50px;
+            color: var(--rareUse2-color);
+            background-color: var(--secondary-color);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 1px 1px 5px var(--boxshawdow-color);
+        }
+
+        #plaSideBtn:active {
+            box-shadow: none;
+        }
+
+        #plaCategoryList:hover {
+            background-color: var(--boxshawdow-color);
+        }
+
+        #plaCategoryList {
+            background-color: var(--thirdsade-color);
+            padding: 0px 0px 15px 15px;
+            width: 90%;
+            border-bottom: 1px solid var(--rareUse1-color);
+        }
+
+        .plaSidenavhide {
+            display: none;
+        }
+
+        .plaSideblock {
+            display: block;
+        }
+
+        .plaAgriKart,
+        .AgriKartPlp {
+            background-color: var(--rareUse2-color);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            gap: 30px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="plaSidediv" id="plaSidediv">
+        <div class="plaSideNavMain" id="plaSideNavMain">
+            <div class="plaSideNavigation" id="plaSideNavigation">
+                <div id="plaSideClose">
+                    <h3 id="plaSideExit"><i class="fa-solid fa-circle-xmark"></i></h3>
+                </div>
+                <div class="plaSideNav" id="plaSideNav">
+                        <div class="plasidenavhead">
+                            <h3 id="plaSideStart"> <a href="./plphtml.html">Start Buying!</a> </h3>
+                        </div>
+                        <h4 id="plaSideNavList"><i class="fa-solid fa-house"> </i> Home </h4>
+                        
+                          <h4 id="plaSideNavList1" > <i class="fa-solid fa-list"> </i>  Shop By Category </h4>
+                        <div class="plaSideNavcategory plaSidenavhide" id="plaNavcatlog" >
+                          <h4 id="plaCategoryList">Oil Crops</h4>
+                          <h4 id="plaCategoryList">All Fruits</h4>
+                          <h4 id="plaCategoryList">All vegetables</h4>
+                          <h4 id="plaCategoryList">All Grains</h4>
+                          <h4 id="plaCategoryList">Dry Fruits</h>
+                        </div>   
+                        <h3 class="plaSideNavAccount"> My Account </h3>    
+                        <h4 id="plaSideNavList"> <i class="fa-solid fa-box-open"></i> My Orders </h4>    
+                        <h4 id="plaSideNavList"> <i class="fa-solid fa-bag-shopping"></i> My Cart List </h4>    
+                        <h4 id="plaSideNavList"> <i class="fa-solid fa-hand-holding-heart"></i> My Wish List </h4>    
+                        <h4 id="plaSideNavList"> <i class="fa-solid fa-square-phone"></i> Customer support </h4>    
+                        <h4 id="plaSideNavList"> <i class="fa-solid fa-users"></i> About Us </h4>
+                        <h4 id="plaSideNavList"> <i class="fa-solid fa-address-book"></i> connect with Us </h4> 
+                        <div class="plaSideSignin">
+                        <button id="plaSideBtn"><a href="Login.html"> <i class="fa-solid fa-right-to-bracket"></i> SignIn</a></button>    
+                        </div>   
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <script>
+        var plaSidenav = document.getElementById('plaSidediv');
+        plaSidenav.style.display = 'none';
+
+        var plaSideBar = document.getElementById('navMenuIcon');
+        plaSideBar.addEventListener('click', plaSidenavBar);
+
+        var plaSidepage = document.getElementById('plaSidediv');
+
+        function plaSidenavBar() {
+            plaSidenav.style.display = 'flex';
+            plaSidepage.classList.add('plasidebdy');
+        }
+
+
+        var plaSideBarExit = document.getElementById('plaSideExit');
+        plaSideBarExit.addEventListener('click', plaClose);
+
+        function plaClose() {
+            plaSidenav.style.display = 'none';
+            plaSidepage.classList.remove('plasidebdy');
+        }
+
+        var plasidecat = document.getElementById('plaSideNavList1');
+        var plasidehidecat = document.getElementById('plaNavcatlog');
+
+        plasidecat.addEventListener('click', plasidecatview)
+
+        function plasidecatview() {
+            if (plasidehidecat.style.display == 'none') {
+                plasidehidecat.style.display = 'block';
+            }
+            else {
+                plasidehidecat.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

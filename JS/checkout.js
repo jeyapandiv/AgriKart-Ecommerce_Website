@@ -46,3 +46,40 @@ function navigatePayment(btn) {
 // if (!(selectAddress.style.display == "none")) {
 //     processStatus.firstElementChild.classList.add('fontWeight');
 // }
+
+
+var plaSidenav = document.getElementById('plaSidediv');
+plaSidenav.style.display = 'none';
+
+// var plaSideBar = document.getElementById('navMenuIcon');
+// plaSideBar.addEventListener('click', plaSidenavBar);
+
+var plaSidepage = document.getElementById('plaSidediv');
+
+function plaSidenavBar() {
+    plaSidenav.style.display = 'Block';
+    plaSidepage.classList.add('plasidebdy');
+}
+
+
+var plaSideBarExit = document.getElementById('plaSideExit');
+plaSideBarExit.addEventListener('click', plaClose);
+
+function plaClose() {
+    plaSidenav.style.display = 'none';
+    plaSidepage.classList.remove('plasidebdy');
+}
+
+var plasidecat = document.getElementById('plaSideNavList1');
+var plasidehidecat = document.getElementById('plaNavcatlog');
+
+plasidecat.addEventListener('click', plasidecatview)
+
+function plasidecatview() {
+    if (plasidehidecat.style.display == 'none') {
+        plasidehidecat.style.display = 'block';
+    }
+    else {
+        plasidehidecat.style.display = 'none';
+    }
+}
