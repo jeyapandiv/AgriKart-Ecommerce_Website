@@ -10,7 +10,7 @@
 :root {
     --primary-color:  #5DC7A1;
     --second-color:#C84E2A;
-    --secondary-color:#061811;
+    --secondary-color:#153c2e;
     --shade4-color:   #0b281c;
     --thirdsade-color:#53b390;
     --rareUse1-color: #000000;
@@ -20,22 +20,8 @@
     --shade5-color: #f5fcf9;
 }
 
-.navlogin{
-    display: flex;
-    gap: 40px;
-    /* display: none; */
-}
-.cartProfileIcon{
-    display: none;
-}
-
-
-.view{
-    display: block;
-}
-.block{
-    display: none;
-}
+.view{    display: block;}
+.block{ display: none;}
 
 body { 
     max-width: 1440px; 
@@ -44,183 +30,164 @@ body {
     padding: 0; 
 }
  /* top nav bar---------------- */
- .AgriKartnavbar {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: var(--rareUse2-color);
-    border-bottom: 1px solid var(--boxshawdow-color) ;
-    position:sticky;
-    top: 0px;
-}
-.navloginIcon{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 80px;
-    flex-wrap: wrap;
-}
-.navsignbtn{
-    padding: 8px;
-    width: 70px;
-    border: 1px solid var(--secondary-color);
-    font-weight: bold;
-    background-color: var(--rareUse2-color);
-    border-radius: 4px;
-}
-.navsignbtn a{
-color: var(--secondary-color);
 
+
+ .navBarCheckout, .navCheckoutInner, .navCheckoutLeft, .navCheckoutRight ,.navSearch ,#navSearchIcon ,.cartProfileIcon  
+ {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+ .navBarCheckout
+ {
+   width: 100%;
+   height: 60px;
+   background-color: var(--white);
+   margin-bottom: 20px;
+   border-bottom: 1px solid rgb(235, 235, 235);
+   box-shadow: 0px 2px 2px rgb(214, 214, 214);
+   justify-content: center;
+   gap: 10%;
+   position: sticky;
+   top: 0px;
+   background-color: var(--rareUse2-color);
+ }
+
+ /* #plaSideBtn{ display: none;} */
+ .navProfileIcon{ display: none;}
+ .plasignout{ display: none;}
+
+
+ 
+/* side nav bar ---------------------------------------- */
+
+.plaSidediv *{ line-height: 0px;}
+
+#plaSideNavList1:hover{
+color: var(--second-color);
 }
-#mainLogo{
-    width: 150px;
-    height: 50px;
-}
-.navmain{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 96%;
-}
-#navSearchBox{
-    padding: 6px;
-    width: 370px;
-    box-shadow: 1px 1px 5px var(--boxshawdow-color);  
-    border: none;
-    outline: none;
-    border-radius: 10px 0px 0px 10px;
-}
-#navSearchIcon{
-    padding: 4.5px;
-    box-shadow: 1px 1px 5px var(--boxshawdow-color);  
-    background-color:var(--secondary-color);
-    border-radius: 0px 10px 10px 0px;
-}
-.navSearch{   
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.planavsearch{
-    display: none;
-}
-#navsearchIcon{
+
+
+li a{
     color: var(--rareUse2-color);
 }
-#navMenuIcon,#navProfileIcon,#navCrtIcon{
-    font-size: larger;
+h4 a, h4 a i{
     color: var(--secondary-color);
+    font-size: 16px;
 }
-/* 2. pla Side Navigation bar-------------------- */
-.plaSidediv{
+#plaNavcatlog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 0px;
+}
+.plaSidediv {
     position: fixed;
-    top:0px;
-    background-color:var(--blur-color);
+    top: 0px;
+    background-color: var(--blur-color);
     border-radius: 6px;
-    height: 660px;
+    height: 655px;
     width: 100%;
     overflow: hidden;
     cursor: pointer;
 }
-.plaSideNavMain{
-    padding: 0px 0px 15px 15px;
-    background-color:var(--rareUse2-color);
-    height: 660px;  
-    overflow-y:scroll; 
+
+.plaSideNavMain {
+    background-color: var(--rareUse2-color);
+    height: 660px;
+    width: 300px;
+    border-right: 1px solid var(--secondary-color);
+    overflow-x: scroll;
 }
+
 .plaSideNav{
+    
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    flex-direction: column;    
+    flex-direction: column;
+    gap: 10px;
 }
-#plaSideNavList1{
-    padding: 15px 0px 15px 15px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    border-bottom: 1px solid var(--rareUse1-color);
-}
-#plaSideNavList1:hover{
-    background-color:var(--secondary-color);
-    color: var(--rareUse2-color);
-    width: 70%;
-    border-radius: 8px;
-    border-bottom:none;
-}
-#plaSideNavList:hover{
-    background-color:var(--thirdsade-color);
-    width: 70%;
-    border-radius: 8px;
-    border-bottom:1px solid var(--thirdsade-color);
-}
-#plaSideNavList{
-    padding: 15px 0px 15px 15px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    border-bottom: 1px solid var(--rareUse1-color);}
 
-a { text-decoration: none; color: var(--rareUse2-color);}
-#plaSideClose { 
+#plaSideNavList1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#plaSideNavList {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#plaSideNavList a:hover{
+    color: var(--second-color);
+    text-decoration: underline;
+}
+#plaSideClose {
     position: sticky;
     top: 30px;
     right: 5px;
-    margin-left: 280px;}
-.plasidebdy{ display: flex;}
-.plasidenavhead{
-    max-width: 90%;
-    margin-top: -40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    background-color:var(--primary-color);
-    width: 100%;
-    border-radius: 10px;
+    margin-left: 260px;
 }
-.plasidenavhead:hover{   background-color:var(--thirdsade-color);}
 
-.plaSideSignin{
+.plasidebdy { display: flex;}
+
+.plasidenavhead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.plaSideSignin {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 60px;
 }
-#plaSideBtn:hover{    color: var(--rareUse1-color); background-color: var(--primary-color);}
-#plaSideBtn{
-    font-size: large; 
-    width: 50%;
-    word-spacing: 2px;
-    height: 50px;
-    color:var(--rareUse2-color);
+
+ #plasignout:hover{
+    text-decoration: underline;
+ }
+
+ #plasignout, #plaSideBtn {
+    padding: 5px 0px;
+    width: 100px;
+    font-size: 16px;
     background-color:var(--secondary-color);
     border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    box-shadow: 1px 1px 5px var(--boxshawdow-color);  
+    border-radius: 4px; 
+    color: var(--rareUse2-color);
+    box-shadow: 1px 1px 5px var(--boxshawdow-color);   
 }
-#plaSideBtn:active{    box-shadow: none;  }
 
-#plaCategoryList:hover{    background-color: var(--boxshawdow-color);}
+#plaCategoryList{
+    padding: 2px;
+}
 
-#plaCategoryList{ background-color:var(--thirdsade-color);
-    padding: 0px 0px 15px 15px;
-    width: 90%;
-    border-bottom: 1px solid var(--rareUse1-color);
-  }
-  .plaSidenavhide{ display: none; }
-  .plaSideblock{ display: block; } 
+#plaSideBtn a{
+    color: var(--rareUse2-color);
+    text-decoration: none;
+}
+#plaSideBtn:hover{ box-shadow: none;  }
+
+#plaSideBtn a:hover{ text-decoration: underline;}
+ 
+#plaCategoryList { width: 100%;}
+
+.plaSideblock { display: block;}
+
+.plaSidenavhide { display: none; }
+
+#plaNavcatlog{
+    display: none;
+}
+
+ /* pla and plp main------------------- */
+
   .plaAgriKart,.AgriKartPlp{   
     background-color: var(--rareUse2-color);
     display: flex;
@@ -230,7 +197,15 @@ a { text-decoration: none; color: var(--rareUse2-color);}
     width: 100%;
     gap: 30px;
     margin-top: 30px;
+    flex-wrap: wrap;
 }
+
+a i{ color: var(--rareUse2-color); }
+
+a{   text-decoration: none;  color: var(--secondary-color);} 
+
+i{    text-decoration: none;  color: var(--secondary-color); font-size: 24px;}
+
  /* pla slide show top  -------------------------------*/
  .plaSlideShowDiv{
     display: flex;
@@ -253,14 +228,22 @@ a { text-decoration: none; color: var(--rareUse2-color);}
     gap: 30px;
  }
  .plaSlideInner2{   width: 45%;}
+ 
  #plaSlideShopBtn{
-    padding: 3%;
+    padding: 2%;
     font-size: larger;
     font-weight: 600;
-    color: var(--rareUse2-color);
     background-color:var(--secondary-color);
     border: none;
     border-radius: 4px;    
+}
+
+#plaSlideShopBtn a{
+    color: var(--rareUse2-color);
+    text-decoration: none;
+}
+#plaSlideShopBtn a:hover{
+   text-decoration: underline;
 }
  #plaSlideShopBtn:hover{
     box-shadow: 1px 1px 5px var(--boxshawdow-color);
@@ -308,62 +291,42 @@ a { text-decoration: none; color: var(--rareUse2-color);}
     color: var(--secondary-color);
 }
 
-.plaProductHeaing h3,
-.plpProductHeaing h3 {
-    margin: 0;
+.plaProductHeaing h3, .plpProductHeaing h3 { margin: 0;}
+
+.plaProductHeaing:hover, .plpProductHeaing:hover{
+color: var(--second-color);
+text-decoration: underline;
 }
 
-.plpProductHeaing:hover{
-color: var(--second-color);
-text-decoration: underline;
-}
-.plaProductHeaing:hover{
-color: var(--second-color);
-text-decoration: underline;
-}
-.plaCardProductName:hover{
-    color: var(--second-color);
-}
-#plaCardProductName:hover{
-    color: var(--second-color);
-}
+.plaCardProductName:hover, #plaCardProductName:hover{   color: var(--second-color); text-decoration: underline;}
+
 .placardbtn{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
-.placardleftbtn,
-.placardrightbtn {
+.placardleftbtn, .placardrightbtn {
     font-size: 25px;
     color: var(--secondary-color);
     cursor: pointer;
 }
-.plaproductcard,
-.plpproductcard {
-    /* width: 178px; */
+.plaproductcard, .plpproductcard {
     border: 1px solid var(--boxshawdow-color);
-    /* padding: 10px; */
-    /* margin: 5px; */
     height: 200px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
     border-radius: 4px;
     background-color: var(--rareUse2-color);
     color: var(--secondary-color);
     animation: fadeIn 0.5s ease-in-out;
 }
+.plpproductcard  {   padding-bottom: 10px;}
 
-.plpproductcard  {
-    padding-bottom: 10px;
-}
-
-.plpproductcard:hover,
-.plaproductcard:hover{
+.plpproductcard:hover, .plaproductcard:hover{
     border: 1px solid var(--secondary-color);    
     animation: fadeIn 0.5s ease-in-out;
     cursor: pointer;
@@ -372,7 +335,7 @@ text-decoration: underline;
 /*pla footer------------------- */
 .plaFooter {
     margin-top: 30px;
-    height: 280px;
+    /* height: 280px; */
     width: 100%;
     background:var(--secondary-color);
     line-height: 2px;
@@ -383,31 +346,39 @@ text-decoration: underline;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }  
 #plafootAtag{   color: var(--rareUse2-color); font-size: large;}
-#plafootAtag:hover{    color: var(--boxshawdow-color); font-size: larger;}
+#plafootAtag:hover{    color: var(--second-color); text-decoration: underline;}
 .plaFooterMain{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .plafooterlist{
-    padding: 40px 0px 0px 70px;
-    width: 100%;
-    height: 100%;
+    /* padding: 30px 0px 0px 0px; */
+    /* width: 100%; */
+    height: 200px;
     color: var(--rareUse2-color);
     display: flex;
-    gap: 15px;
+    /* gap: 15px; */
     align-items:flex-start;
     justify-content:space-around;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 .plafooterListitems{
     padding: 0px 3px 8px 3px;
-    border-bottom: 2px solid var(--secondary-color);
+    text-decoration: underline var(--secondary-color);
 }
 .plafooterListitems:hover{
-    border-bottom: 2px solid var(--rareUse2-color);
+    color: var(--second-color);
+    text-decoration: underline var(--second-color);
+}
+
+li a:hover{
+color: var(--second-color);
 }
 
 /* plp page--------------- */
@@ -435,6 +406,12 @@ text-decoration: underline;
 }
 #plpPriceDiv h4{
     margin: 0;
+}
+
+.plaSideSignin button {
+    width: 100px;
+    height: 30px;
+    padding: 5px 0px;
 }
 
 /*------------------------------------------------ scroll bar code */

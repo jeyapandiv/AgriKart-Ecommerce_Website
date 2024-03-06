@@ -56,43 +56,41 @@ function pladisplayImages() {
 }
 
 // side nav----
+var plaSidenav = document.getElementById('plaSidediv');
+plaSidenav.style.display = 'none';
 
-var plaSidenav=document.getElementById('plaSidediv');
-plaSidenav.style.display='none';
+var plaSideBar = document.getElementById('navMenuIcon');
+plaSideBar.addEventListener('click', plaSidenavBar);
 
-var plaSideBar=document.getElementById('navMenuIcon');
-plaSideBar.addEventListener('click',plaSidenavBar);
+var plaSidepage = document.getElementById('plaSidediv');
 
-var plaSidepage=document.getElementById('plaSidediv');
-
-function plaSidenavBar(){
-    plaSidenav.style.display='flex';
+function plaSidenavBar() {
+    plaSidenav.style.display = 'flex';
     plaSidepage.classList.add('plasidebdy');
 }
 
 
-var plaSideBarExit=document.getElementById('plaSideExit');
-plaSideBarExit.addEventListener('click',plaClose);
+var plaSideBarExit = document.getElementById('plaSideExit');
+plaSideBarExit.addEventListener('click', plaClose);
 
-function plaClose(){
-    plaSidenav.style.display='none';
+function plaClose() {
+    plaSidenav.style.display = 'none';
     plaSidepage.classList.remove('plasidebdy');
 }
 
-var plasidecat=document.getElementById('plaSideNavList1');
-var plasidehidecat=document.getElementById('plaNavcatlog');
+var plasidecat = document.getElementById('plaSideNavList1');
+var plasidehidecat = document.getElementById('plaNavcatlog');
 
-plasidecat.addEventListener('click',plasidecatview)
+plasidecat.addEventListener('click', plasidecatview)
 
-function plasidecatview(){
-    if( plasidehidecat.style.display =='none'){
-        plasidehidecat.style.display='block';
+function plasidecatview() {
+    if (plasidehidecat.style.display == 'none') {
+        plasidehidecat.style.display = 'block';
     }
     else {
-        plasidehidecat.style.display='none';
+        plasidehidecat.style.display = 'none';
     }
 }
-
       const pla_obj = {
             vegetables: {
                 heading: 'Up to 60% off | Farm Vegetables & more ',
@@ -100,7 +98,7 @@ function plasidecatview(){
                 data: [
                     { imgSrc: './Assets/PlaAssets/plaBeetroot.jpeg', productName: 'Beetroot' },
                     { imgSrc: './Assets/PlaAssets/plaCabbage.jpeg', productName: 'Cabbage' },
-                    { imgSrc: './Assets/PlaAssets/plaCaliflower.jpeg', productName: 'Califlower' },
+                    { imgSrc: './Assets/PlaAssets/plaCaliflower.jpeg', productName: 'Cauliflower' },
                     { imgSrc: './Assets/PlaAssets/plaCapsicum.jpeg', productName: 'Capsicum' },
                     { imgSrc: './Assets/PlaAssets/plaCarrot.jpeg', productName: 'Carrot' },
                     { imgSrc: './Assets/PlaAssets/plaCoconut.jpeg', productName: 'Coconut' },
@@ -205,7 +203,6 @@ function plasidecatview(){
             cardContainer.className = 'plaproductcard-container';
             cardMain.appendChild(cardContainer);
 
-            // Populate initial products
             const maxCards = 6;
 
             for (let i = 0; i < maxCards && i < data.data.length; i++) {
@@ -236,8 +233,6 @@ function plasidecatview(){
                     });
                     
                 function platoplpfun(e) {
-                    // console.log(e.target.id);
-                    // return
                     localStorage.setItem("category",e.target.id)
                     window.location.href = "./plphtml.html"; 
                 }          
@@ -252,23 +247,23 @@ function plasidecatview(){
 
                 const leftBtn = document.createElement('div');
                 leftBtn.className = 'placardleftbtn';
-                leftBtn.innerHTML = '<i class="fa-solid fa-circle-left" style="color: #000000;"></i>';
+                leftBtn.innerHTML = '<i class="fa-solid fa-circle-left" style="color: #153c2e;"></i>';
                 leftBtn.onclick = () => navigateProducts('right', category, data.data, cardContainer);
                 btnDiv.appendChild(leftBtn);
 
                 const rightBtn = document.createElement('div');
                 rightBtn.className = 'placardrightbtn';
-                rightBtn.innerHTML = '<i class="fa-solid fa-circle-right" style="color: #000000;"></i>';
+                rightBtn.innerHTML = '<i class="fa-solid fa-circle-right" style="color: #153c2e;"></i>';
                 rightBtn.onclick = () => navigateProducts('left', category, data.data, cardContainer);
                 btnDiv.appendChild(rightBtn);
             }
         }
 
-        function navigateProducts(direction, category, products, container) {
+        function navigateProducts(direction, category, products, container){
             const cardContainer = container;
             cardContainer.innerHTML = '';
 
-            let currentIndex = 0; // Track the current index for navigation
+            let currentIndex = 0; 
             const maxCards = 6;
 
             if (direction === 'left') {
@@ -292,7 +287,6 @@ function plasidecatview(){
             }
         }
 
-        // Create product cards for each category
         createProductCard('vegetables', pla_obj.vegetables);
         createProductCard('fruits', pla_obj.fruits);
         createProductCard('oil', pla_obj.oil);
@@ -300,8 +294,8 @@ function plasidecatview(){
         createProductCard('dry_fruits', pla_obj.dry_fruits);
  
         let navbarsearch = document.getElementById('navSearchBox');
-        navbarsearch.addEventListener('input', search_Products); // Change 'keyup' to 'input'
-        
+        navbarsearch.addEventListener('input', search_Products); 
+       
         // searchbar function topnav
         function search_Products() {
             let input = document.getElementById('navSearchBox').value.toLowerCase();
@@ -321,14 +315,105 @@ function plasidecatview(){
 
         // login verfication -----------------------------
 
-        // let loginbtn
+        let loginbtn = document.querySelectorAll('#plaSideBtn');
+        let profileicon = document.getElementById('navProfileIcon');
+        let logoutbtn = document.getElementById('plasignout');
+        let wishicon=document.getElementById('navwishIcon');
 
-        // if(localStorage.user)
-        //     {
+        let storedUser = localStorage.getItem("usercollation");
+        let userCollation = storedUser ? JSON.parse(storedUser) : null;
 
-        //         console.log("hi")
-        //     }
-        // else
-        //     {
-        //         console.log("illa")
-        //     };
+        if (userCollation) {
+            loginbtn.forEach(btn => {
+                btn.classList.remove('view');
+                btn.classList.add('block');
+            });
+            profileicon.classList.add('view');
+            logoutbtn.classList.remove('plasignout');
+            wishicon.classList.add('view')
+            console.log("hi");
+        } else {
+            loginbtn.forEach(btn => {
+                btn.classList.remove('block');
+                btn.classList.add('view');
+            });
+            profileicon.classList.remove('view');
+            profileicon.classList.add('block');
+            
+            wishicon.classList.remove('view');
+            wishicon.classList.add('block')
+
+            logoutbtn.classList.remove('view');
+            logoutbtn.classList.add('block');
+            console.log("bye");
+        }
+
+
+// logout function ---------------------------
+
+logoutbtn.addEventListener('click', () => {
+    
+    localStorage.removeItem('usercollation');
+
+    location.href = "./Login.html"; 
+});
+
+
+
+
+// const navSearchBox = document.getElementById('navSearchBox');
+
+
+// navSearchBox.addEventListener('click', showCategoryList);
+
+
+// function showCategoryList() {
+//     console.log('search clicked')
+
+//     const categoryList = ['fruits', 'vegetables', 'oil crops', 'grains', 'dry fruits'];
+
+//     const dropdownMenu = document.createElement('div');
+//     dropdownMenu.className = 'categoryDropdown';
+
+//     categoryList.forEach(category => {
+//         const categoryItem = document.createElement('div');
+//         categoryItem.textContent = category;
+//         categoryItem.className = 'categoryItem';
+
+//         categoryItem.addEventListener('click', () => {
+//             navSearchBox.value = category;
+
+//             dropdownMenu.style.display = 'none';
+//         });
+
+//         dropdownMenu.appendChild(categoryItem);
+//     });
+
+//     dropdownMenu.style.top = `${navSearchBox.offsetTop + navSearchBox.offsetHeight}px`;
+//     dropdownMenu.style.left = `${navSearchBox.offsetLeft}px`;
+
+//     document.body.appendChild(dropdownMenu);
+
+//     document.addEventListener('click', function closeDropdown(e) {
+//         if (!e.target.closest('.categoryDropdown') && e.target !== navSearchBox) {
+//             dropdownMenu.style.display = 'none';
+//             document.removeEventListener('click', closeDropdown);
+//         }
+//     });
+// }
+
+// document.getElementById('navSearchIcon').addEventListener('click', searchProducts);
+
+// function searchProducts() {
+//     const selectedCategory = navSearchBox.value.toLowerCase();
+
+//     const searchData = pla_obj[selectedCategory];
+
+//     if (searchData) {
+//         localStorage.setItem("category", selectedCategory);
+//         window.location.href = "./plphtml.html";
+//     } else {
+//         console.log("Invalid category selected");
+//     }
+// }
+ 
