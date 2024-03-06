@@ -8,78 +8,73 @@
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-
-    <div class="AgriKartnavbar">
-        <div class="navmain">
-            <div class="navsidebaricon">
-                <i id="navMenuIcon" class="fa-solid fa-bars" ></i>
-            </div>
-          
-              <div class="navimglogo">
-                  <a href="./index.html"><img id="mainLogo" src="./Assets/PlaAssets/agrikart.png" alt=""/></a>
+  <div class="navBarCheckout">
+    <div class="navCheckoutInner" style="width: 90%; justify-content: space-between; gap: 100px; ">
+          <div class="navCheckoutLeft"  style="width: 25%; gap: 40px;">
+            <i id="navMenuIcon" class="fa-solid fa-bars" style="font-size: 24px;"></i>
+           <a href="index.html"><img id="mainLogo" src="./Assets/PlaAssets/agrikart.png" alt="" style="width: 170px; height: 60px" /></a> 
+          </div>
+          <div class="navCheckoutRight" style="width: 70%;  ">
+            <div class="navSearch" style="width: 90%;justify-content: center; ">
+              <input id="navSearchBox" type="text" placeholder="search products..." style="box-shadow: 0px 2px 5px rgb(156, 156, 156); border: none; outline: none; height: 35px; width: 85%; padding: 0px 10px; border-radius: 17px 0px 0px 17px;" />
+              <div id="navSearchIcon" style="width: 8%; justify-content: center; height: 36px; text-align: center; background-color: #153c2e; border-radius: 0px 17px 17px 0px; box-shadow: 2px 2px 5px rgb(156, 156, 156);">
+                <i class="fa-solid fa-magnifying-glass" style="color: white; font-size: 16px;"></i>
               </div>
+            </div>
+            
+          </div>
+          <div class="cartProfileIcon" style="width: 30%;justify-content: space-between; gap: 20px;">
+              
+                  <button id="plaSideBtn" class="plaSideBtn"><a href="Login.html">Login</a></button>    
+                 
+              
+            <i id="navProfileIcon" class="fa-solid fa-user" > </i>
+            <a href="./wishlist.html" style="color: #153c2e;"><i id="navwishIcon" class="fa-solid fa-heart" style="color: #153c2e; font-size: 20px;"></i></a> 
+            <a href="./cart.html" style="color: #153c2e;"><i id="navCrtIcon" class="fa-solid fa-cart-shopping" style="color: #153c2e; font-size: 20px;" > </i></a>
           
-                <div class="navSearch">
-                  <div class="navinput">
-                    <input id="navSearchBox" type="text" name="search" placeholder="Search Products.."/>
-                  </div>
-                  <div id="navSearchIcon" >
-                    <i id="navsearchIcon" class="fa-solid fa-magnifying-glass"></i>
-                  </div>
-                </div>
-      
-                <div class="navlogin view">
-                  <button id="navloginbtn"><a href="./Register.html">Login / SignUp</a></button>
-                </div>
+          </div>
+    </div>
+       
+  </div>
+  
 
-                <div class="cartProfileIcon" >
-                    <i id="navProfileIcon" class="fa-solid fa-user"></i>
-                  </div>
-
-                <div class="navloginIcon">
+  <div class="plaSidediv" id="plaSidediv">
+    <div class="plaSideNavMain" id="plaSideNavMain" style="padding-left: 25px;">
+        <div class="plaSideNavigation" id="plaSideNavigation">
+            <div id="plaSideClose">
+                <h3 id="plaSideExit"><i class="fa-solid fa-circle-xmark"></i></h3>
+            </div>
+            <div class="plaSideNav" id="plaSideNav">
+                    <div class="plasidenavhead">
+                        <h3 id="plaSideStart"> <a href="./plphtml.html">Start Buying!</a> </h3>
+                    </div>
+                    <h4 id="plaSideNavList"> <a href="./index.html"><i class="fa-solid fa-house"> </i> Home </a></h4>
                     
-                      <div class="navcarticon">
-                        <a href="./cart.html"><i id="navCrtIcon" class="fa-solid fa-cart-shopping"></i></a>
-                      </div>
-                </div>
-        </div>                      
+                      <h4 id="plaSideNavList1" > <i class="fa-solid fa-list"> </i>  Shop By Category </h4>
+                    <div class="plaSideNavcategory plaSidenavhide" id="plaNavcatlog" >
+                      <h4 id="plaCategoryList"><a href="./plphtml.html">Oil Crops</a></h4>
+                      <h4 id="plaCategoryList"><a href="./plphtml.html">All Fruits</a></h4>
+                      <h4 id="plaCategoryList"><a href="./plphtml.html">All vegetables</a></h4>
+                      <h4 id="plaCategoryList"><a href="./plphtml.html">All Grains</a></h4>
+                      <h4 id="plaCategoryList"><a href="./plphtml.html">Dry Fruits</a></h>
+                    </div>   
+                    <h3 class="plaSideNavAccount"> My Account </h3>    
+                    <h4 id="plaSideNavList"><a href=""><i class="fa-solid fa-box-open"></i> My Orders </a></h4>    
+                    <h4 id="plaSideNavList"> <a href="./cart.html"><i class="fa-solid fa-bag-shopping"></i> My Cart List </a></h4>    
+                    <h4 id="plaSideNavList"> <a href="./wishlist.html"><i class="fa-solid fa-hand-holding-heart"></i> My Wish List </a></h4>    
+                    <h4 id="plaSideNavList"> <a href="https://palli.dckap.com/en/#contact-us"><i class="fa-solid fa-square-phone"></i> Customer support </a></h4>    
+                    <h4 id="plaSideNavList"> <a href="https://palli.dckap.com/en/blog/"><i class="fa-solid fa-users"></i> About Us </a></h4>
+                    <h4 id="plaSideNavList"> <a href="https://www.linkedin.com/company/dckap-palli/mycompany/"><i class="fa-solid fa-address-book"></i> connect with Us </a></h4> 
+                    <div class="plaSideSignin">
+                    <button id="plaSideBtn"><a href="Login.html">SignIn</a></button>    
+                    <button  class="plasignout" id="plasignout">SignOut</button>
+                   </div>   
+            </div>
+        </div>  
     </div>
-      
-    <div class="plaSidediv" id="plaSidediv">
-        <div class="plaSideNavMain" id="plaSideNavMain">
-            <div class="plaSideNavigation" id="plaSideNavigation">
-                <div id="plaSideClose">
-                    <h3 id="plaSideExit"><i class="fa-solid fa-circle-xmark"></i></h3>
-                </div>
-                <div class="plaSideNav" id="plaSideNav">
-                        <div class="plasidenavhead">
-                            <h3 id="plaSideStart"> Start Buying! </h3>
-                        </div>
-                        <h4 id="plaSideNavList"> <i class="fa-solid fa-house"> </i> Home </h4>
-                        
-                          <h4 id="plaSideNavList1" > <i class="fa-solid fa-list"> </i>  Shop By Category </h4>
-                        <div class="plaSideNavcategory plaSidenavhide" id="plaNavcatlog" >
-                            <h4 id="plaCategoryList">Oil Crops</h4>
-                           <h4 id="plaCategoryList">All Fruits</h4>
-                           <h4 id="plaCategoryList">All vegetables</h4>
-                           <h4 id="plaCategoryList">All Grains</h4>
-                           <h4 id="plaCategoryList">Dry Fruits</h>
-                        </div>   
-                        <h3 class="plaSideNavAccount"> My Account </h3>    
-                        <h4 id="plaSideNavList"> <i class="fa-solid fa-box-open"></i> My Orders </h4>    
-                        <h4 id="plaSideNavList"> <i class="fa-solid fa-bag-shopping"></i> My Cart List </h4>    
-                        <h4 id="plaSideNavList"> <i class="fa-solid fa-hand-holding-heart"></i> My Wish List </h4>    
-                        <h4 id="plaSideNavList"> <i class="fa-solid fa-square-phone"></i> Customer support </h4>    
-                        <h4 id="plaSideNavList"> <i class="fa-solid fa-users"></i> About Us </h4>
-                        <h4 id="plaSideNavList"> <i class="fa-solid fa-address-book"></i> connect with Us </h4> 
-                        <div class="plaSideSignin">
-                            <button id="plaSideBtn"><a href="./Login.html"><i class="fa-solid fa-right-to-bracket"></i> SignIn</a> </button>    
-                        </div>   
-                </div>
-            </div>  
-        </div>
-    </div>
-    
+</div>
+
+  
     <div class="AgriKartPlp">
         <div class="plpAgriKart" id="plpAgriKart">
            
@@ -87,46 +82,46 @@
     </div>
 
     <div class="plaFooter">
-        <div class="plaFooterBackTop"><a id="plafootAtag" href="./plphtml.html">Back To Top</a></div>
-        <div class="plaFooterMain">
-         <div class="plafooterlist">
-             <div class="plafooterheading"> <h3 class="plafooterhead">ABOUT AGRI CART</h3> </div>
-             <li class="plafooterListitems">Home</li>
-             <li class="plafooterListitems">About</li>   
-             <li class="plafooterListitems">Contact</li>   
-             <li class="plafooterListitems">Terms</li>   
-             <li class="plafooterListitems">Cancellation</li>   
-         </div>
-         <div class="plafooterlist">
-          <div class="plafooterheading"> <h3 class="plafooterhead">CATEGORY</h3> </div>   
-          <li class="plafooterListitems">Oil Crops </li>
-          <li class="plafooterListitems">Food Crop </li>   
-          <li class="plafooterListitems">Feed Crop </li>   
-          <li class="plafooterListitems">Fibre Crop</li>   
-          <li class="plafooterListitems">Industrial</li>   
+      <div class="plaFooterBackTop"><a id="plafootAtag" href="./index.html">Back To Top</a></div>
+      <div class="plaFooterMain">
+       <div class="plafooterlist">
+           <div class="plafooterheading"> <h3 class="plafooterhead">ABOUT AGRI CART</h3> </div>
+           <li class="plafooterListitems"><a href="./index.html">Home</a></li>
+           <li class="plafooterListitems"><a href="https://palli.dckap.com/en/blog/">About</a></li>   
+           <li class="plafooterListitems"><a href="https://palli.dckap.com/en/#contact-us">Contact</a></li>   
+           <li class="plafooterListitems"><a href="https://www.dckap.com/terms-of-service/">Terms</a></li>   
+           <li class="plafooterListitems"><a href="https://palli.dckap.com/en/#contact-us">Cancellation</a></li>   
+       </div>
+       <div class="plafooterlist">
+        <div class="plafooterheading"> <h3 class="plafooterhead">CATEGORY</h3> </div>   
+        <li class="plafooterListitems"><a href="./plphtml.html">Oil Crops </a></li>
+        <li class="plafooterListitems"><a href="./plphtml.html">Food Crop</a> </li>   
+        <li class="plafooterListitems"><a href="./plphtml.html">Feed Crop</a> </li>   
+        <li class="plafooterListitems"><a href="./plphtml.html">Fibre Crop</a></li>   
+        <li class="plafooterListitems"><a href="./plphtml.html">Industrial</a></li>   
+    </div>
+    <div class="plafooterlist">
+      <div class="plafooterheading">
+        <h3 class="plafooterhead">OFFERS</h3>
+       </div>     
+      <li class="plafooterListitems"><a href="./index.html">Weekend Offers</a></li>
+      <li class="plafooterListitems"><a href="./index.html">Big Discounts</a></li>   
+      <li class="plafooterListitems"><a href="./Login.html">User Login</a></li>   
+      <li class="plafooterListitems"><a href="https://palli.dckap.com/en/#contact-us">Seller Login</a></li>   
+      <li class="plafooterListitems"><a href="./index.html">Today’s Deal</a></li>   
+    </div>
+    <div class="plafooterlist">
+      <div class="plafooterheading">
+        <h3 class="plafooterhead">CONNECT WITH US</h3>
+       </div>    
+      <li class="plafooterListitems"><a href="https://www.instagram.com/dckappalli/">Instagram</a></li>
+      <li class="plafooterListitems"><a href="https://www.facebook.com/dckappalli">FaceBook</a></li>   
+      <li class="plafooterListitems"><a href="https://twitter.com/dckap_palli">Twitter</a></li>   
+      <li class="plafooterListitems"><a href="palli@dckap.com">Email-ID</a></li>   
+      <li class="plafooterListitems"><a href="https://www.linkedin.com/company/dckap-palli/mycompany/">LinkedIn</a></li>   
+    </div>
       </div>
-      <div class="plafooterlist">
-        <div class="plafooterheading">
-          <h3 class="plafooterhead">OFFERS</h3>
-         </div>     
-        <li class="plafooterListitems">Weekend Offers</li>
-        <li class="plafooterListitems">Big Discounts</li>   
-        <li class="plafooterListitems">User Login</li>   
-        <li class="plafooterListitems">Seller Login</li>   
-        <li class="plafooterListitems">Today’s Deal</li>   
-      </div>
-      <div class="plafooterlist">
-        <div class="plafooterheading">
-          <h3 class="plafooterhead">CONNECT WITH US</h3>
-         </div>    
-        <li class="plafooterListitems">Instagram</li>
-        <li class="plafooterListitems">FaceBook</li>   
-        <li class="plafooterListitems">Twitter</li>   
-        <li class="plafooterListitems">Email-ID</li>   
-        <li class="plafooterListitems">LinkedIn</li>   
-      </div>
-        </div>
-      </div>
+    </div>
 
     <script type="module" src="./JS/plpjs.js"></script>
 

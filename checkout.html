@@ -32,31 +32,52 @@
                     <div class="selectAddress">
 
                         <div class="addNoteCreateBtn">
-                            <h4 style="font-weight: 500;">Select delivery address</h4>
-                            <button>Create new Address</button>
+                            <h4 style="font-weight: 500;">Shipment address</h4>
+                            <button onclick="selectCreateNvAddBtn(this)">Select Address</button>
                         </div>
 
                         <div class="addressListDiv">
 
-                            <!-- <div class="newAddressDiv" style="width: 40%; height: 90%; border: 1px solid rgb(214, 214, 214);
-                             border-radius: 5px; box-shadow: 1px 1px 4px 2px rgb(214, 214, 214);
-                             display: flex; align-items: center; justify-content: center;">
-                                <form action="" name="newAddress" style="height: 95%; width: 92%;">
+                            <div class="newAddressDiv" >
+                                <form action="" name="newAddress" id="newAddress">
                                     <label for="shippingName" style="font-size: 12px;">Full name(First and Last
                                         name)</label>
                                     <input type="text" name="shippingName" placeholder="Ex: John Mathiv" style="width: 94%; padding: 5px 10px;
                                         box-shadow:inset 1px 1px 5px  #dadada; 
-                                        border: 1px solid #9f9e9e; border-radius: 3px;;">
+                                        border: 1px solid #9f9e9e; border-radius: 3px;" required>
                                     <label for="houseDetail" style="font-size: 12px;">Flat,House no, Street</label>
                                     <input type="text" name="houseDetail" style="width: 94%; padding: 5px 10px; box-shadow:inset 1px 1px 5px  #dadada;
-                                        border: 1px solid #9f9e9e; border-radius: 3px;">
+                                        border: 1px solid #9f9e9e; border-radius: 3px;" required>
                                     <label for="houseDetail" style="font-size: 12px;">Area, Town/City</label>
                                     <input type="text" name="houseDetail" style="width: 94%; padding: 5px 10px; box-shadow:inset 1px 1px 5px  #dadada;
-                                            border: 1px solid #9f9e9e; border-radius: 3px;">
+                                            border: 1px solid #9f9e9e; border-radius: 3px;" required>
+                                    <label for="zipcode" style="font-size: 12px;">Zip code</label>
+                                    <input type="number" name="zipcode" style="width: 94%; padding: 5px 10px; box-shadow:inset 1px 1px 5px  #dadada;
+                                                    border: 1px solid #9f9e9e; border-radius: 3px;" required>
+                                    <label for="phoneNo" style="font-size: 12px;">Mobile no</label>
+                                    <input type="number" name="phoneNo" style="width: 94%; padding: 5px 10px; box-shadow:inset 1px 1px 5px  #dadada;
+                                                                    border: 1px solid #9f9e9e; border-radius: 3px;"
+                                        required>
+                                    <div style="width: 99.3%; display: flex; justify-content: space-between;">
+                                        <select name="Country" id="" style="width: 48%; height: 28px;
+                                                border: 1px solid #9f9e9e; border-radius: 3px;" required>
+                                            <option value="IND" selected>India</option>
+                                        </select>
+                                        <select name="stateSelect" id="" required
+                                            style="width: 48%; border: 1px solid #9f9e9e; border-radius: 3px;"
+                                            required>
+                                            <option value="note" selected disabled>Select your state</option>
+                                            <option value="TN">Tamil Nadu</option>
+                                            <option value="KL">Kerala</option>
+                                            <option value="KN">Karnataka</option>
+                                            <option value="AP">Andra Pradesh</option>
+                                        </select>
+                                    </div>
+                                    <button id="CreateAddSubBtn"></button>
                                 </form>
-                            </div> -->
+                            </div>
 
-                            <div class="addressList" >
+                            <div class="addressList disNone" >
                                 <div class="addressDefault">
                                     <div class="addressSelection">
                                         <input type="radio" name="addressSelectRadio">
@@ -89,7 +110,7 @@
                                     <p style="margin-bottom: 20px;">method to calculate shipping charges</p>
                                 </div>
                                 <div class="totalCalculation" style="width: 90%;">
-                                    <h3 style="line-height: 50px; margin-top: 20px;">Order Summery</h3>
+                                    <h3 style="line-height: 50px; margin-top: 20px;">Order Summary</h3>
                                     <span style="display: flex; justify-content: space-between;">
                                         <p>Subtotal</p>
                                         <p>₹xxx</p>
@@ -108,7 +129,7 @@
                         </div>
                     </div>
                     <div class="paymentDiv">
-                        <h3 style="margin-bottom: 10px;">Select Payment Method</h3>
+                        <h4 style="margin-bottom: 10px;">Select Payment Method</h4>
                         <div class="checkout-payment-container ">
                             <div class="payment-container">
                                 <div class="payment-container-inner">
@@ -214,7 +235,7 @@
             </div>
         </div>
 
-        <script src="/JS/checkout.js"></script>
+        <script src="./JS/checkout.js"></script>
 </body>
 
 </html>

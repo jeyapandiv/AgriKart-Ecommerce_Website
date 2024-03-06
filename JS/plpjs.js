@@ -45,7 +45,7 @@ const plp_obj_vegetable = {
         data: [
             { id: 1, imgSrc: './Assets/PlaAssets/plaBeetroot.jpeg', productName: 'Beetroot', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
             { id: 2, imgSrc: './Assets/PlaAssets/plaCabbage.jpeg', productName: 'Cabbage', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
-            { id: 3, imgSrc: './Assets/PlaAssets/plaCaliflower.jpeg', productName: 'Califlower', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id: 3, imgSrc: './Assets/PlaAssets/plaCaliflower.jpeg', productName: 'Cauliflower', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
             { id: 4, imgSrc: './Assets/PlaAssets/plaCapsicum.jpeg', productName: 'Capsicum', plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
             { id: 5, imgSrc: './Assets/PlaAssets/plaCarrot.jpeg', productName: 'Carrot', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
             { id: 6, imgSrc: './Assets/PlaAssets/plaCoconut.jpeg', productName: 'Coconut', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
@@ -144,22 +144,21 @@ const pla_obj_Dryfruits = {
         heading: 'All DryFruits and Nuts',
         data: [
             { id:49,imgSrc: './Assets/PlaAssets/plaBetelNuts.jpeg', productName: 'BetelNuts', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id:60,imgSrc: './Assets/PlaAssets/plaBlackRaisin.jpeg', productName: 'BlackRaisin', plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' },
             { id:50,imgSrc: './Assets/PlaAssets/plaCashewnut.jpeg', productName: 'Cashewnut', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
             { id:51,imgSrc: './Assets/PlaAssets/plaDates.jpeg', productName: 'Dates', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
             { id:52,imgSrc: './Assets/PlaAssets/plaDryBadam.jpeg', productName: 'Badam', plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
-            { id:53,imgSrc: './Assets/PlaAssets/plaDryFig.jpeg', productName: 'DryFig', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
-            { id:54,imgSrc: './Assets/PlaAssets/plaFoxnuts.jpeg', productName: 'Foxnuts', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
-        ]
+            { id:53,imgSrc: './Assets/PlaAssets/plaDryFig.jpeg', productName: 'DryFig', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' }        ]
     },
     Dryfruits2: {
         heading: 'Season Special || Top Deals',
         data: [
+            { id:54,imgSrc: './Assets/PlaAssets/plaFoxnuts.jpeg', productName: 'Foxnuts', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
             { id:55,imgSrc: './Assets/PlaAssets/plaKesar.jpeg', productName: 'Kesar', plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
             { id:56,imgSrc: './Assets/PlaAssets/plaKishmish.jpeg', productName: 'Kishmish', plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
             { id:57,imgSrc: './Assets/PlaAssets/plaMakhana.jpeg', productName: 'Makhana', plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
             { id:58,imgSrc: './Assets/PlaAssets/plapeanut.jpeg', productName: 'Peanut', plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
-            { id:59,imgSrc: './Assets/PlaAssets/plaPista.jpeg', productName: 'Pista', plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' },
-            { id:60,imgSrc: './Assets/PlaAssets/plaBlackRaisin.jpeg', productName: 'BlackRaisin', plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' }
+            { id:59,imgSrc: './Assets/PlaAssets/plaPista.jpeg', productName: 'Pista', plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' }
         ]
     }
 };
@@ -204,12 +203,6 @@ function createHTMLStructure(pla_obj) {
 
             productNameH4.textContent = product.productName;
 
-            // const descriptionH5 = document.createElement('h5');
-            // descriptionH5.id = 'plpdescription';
-            // descriptionH5.dataset.id = product.id
-
-            // descriptionH5.textContent = product.plpdescription;
-
             const priceDiv = document.createElement('div');
             priceDiv.dataset.id = product.id
 
@@ -237,7 +230,6 @@ function createHTMLStructure(pla_obj) {
 
             productCardDiv.appendChild(productImg);
             productCardDiv.appendChild(productNameH4);
-            // productCardDiv.appendChild(descriptionH5);
             productCardDiv.appendChild(priceDiv);
 
             cardGroupDiv.appendChild(productCardDiv);
@@ -265,6 +257,7 @@ function createHTMLStructure(pla_obj) {
     }
 
 }
+
 plpdisplay();
 
 function plpdisplay(){
@@ -324,3 +317,47 @@ function filterProducts(categoryObj, searchTerm) {
     });
 }
 
+ // login verfication -----------------------------
+
+ let loginbtn = document.querySelectorAll('#plaSideBtn');
+ let profileicon = document.getElementById('navProfileIcon');
+ let logoutbtn = document.getElementById('plasignout');
+ let wishicon=document.getElementById('navwishIcon');
+
+ let storedUser = localStorage.getItem("usercollation");
+ let userCollation = storedUser ? JSON.parse(storedUser) : null;
+
+ if (userCollation) {
+     loginbtn.forEach(btn => {
+         btn.classList.remove('view');
+         btn.classList.add('block');
+     });
+     profileicon.classList.add('view');
+     logoutbtn.classList.remove('plasignout');
+     wishicon.classList.add('view')
+     console.log("hi");
+ } else {
+     loginbtn.forEach(btn => {
+         btn.classList.remove('block');
+         btn.classList.add('view');
+     });
+     profileicon.classList.remove('view');
+     profileicon.classList.add('block');
+     
+     wishicon.classList.remove('view');
+     wishicon.classList.add('block')
+
+     logoutbtn.classList.remove('view');
+     logoutbtn.classList.add('block');
+     console.log("bye");
+ }
+
+
+// logout function ---------------------------
+
+logoutbtn.addEventListener('click', () => {
+
+localStorage.removeItem('usercollation');
+
+location.href = "./Login.html"; 
+});
