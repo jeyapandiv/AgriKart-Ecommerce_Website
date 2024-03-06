@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 * {
@@ -7,7 +6,13 @@
     box-sizing: border-box;
     font-family: "Lexend", sans-serif;
 }
-
+input{
+  text-indent: 10px;
+}
+input:focus{
+  border: none;
+  outline: 1px solid #008000;
+}
 #SignupPageNav{
   text-decoration: none;
   color: #779341;
@@ -56,7 +61,6 @@ a{
 .Login {
   font-size: 36px; 
   color: #008000;
-  margin: 11.2px 0px 0px 0px; 
   text-align: center;
   font-weight: 500;
 }
@@ -90,8 +94,17 @@ label {
   align-items: center;
   flex-direction: column;
 }
-
-
+.SubmitContainerTag{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#GoogleIcon{
+  color: #008000;
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
 #singinBTn {
   width: 188px; 
   height: 43px; 
@@ -100,7 +113,6 @@ label {
   background-color: #008000;
   text-align: center;
   margin-top: 13px; 
-  margin-left: 130px; 
   border: none;
 }
 
@@ -116,6 +128,7 @@ input::placeholder {
 
 .lablename {
   color: black;
+  font-size: 16px;
 }
 
 /* -----------------------------FORGET PAGE CSS --------------------------------*/
@@ -375,4 +388,3 @@ visibility: visible;
 }
 
 /* ---------------------------------GOOGLE LOGIN BUTTON -------------------------------- */
-

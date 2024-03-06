@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" style="margin: 0; font-family: 'Roboto', sans-serif">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/CSS/checkout.css" />
+  <title>Navbar</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+    * {
+      margin: 0;
+      font-family: "Lexend", sans-serif;
+      font-style: normal;
+    }
+
+    .navBarCheckout,
+    .navSearch #navSearchIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .navCheckoutInner,
+    .navCheckoutLeft,
+    .navCheckoutRight {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navCheckoutInner i {
+      font-size: 18px;
+      color: #153c2e;
+    }
+
+    .navCheckoutLeft img:hover,
+    i:hover,
+    #navSearchIcon:hover {
+      cursor: pointer;
+    }
+
+    #wishlistIcon::before {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navCheckoutInner" style="width: 90%">
+    <div class="navCheckoutLeft" style="width: 17%">
+      <i id="navMenuIcon" class="fa-solid fa-bars" style="font-size: 24px" onclick="plaSidenavBar()"></i>
+      <img id="mainLogo" src="./Assets/logo-full-palli-tamil-color.png" alt="" style="width: 150px; height: 40px"
+        onclick="navigationMain()" />
+    </div>
+    <div class="navCheckoutRight" style="width: 70%">
+      <div class="navSearch" style="width: 65%; display: flex; justify-content: start; align-items: center;">
+        <input id="navSearchBox" type="text" placeholder="search products..." style="box-shadow: 0px 2px 5px rgb(156, 156, 156); border: none; outline: none;
+                   height: 35px; width: 85%; padding: 0px 10px; border-radius: 17px 0px 0px 17px;" />
+        <div id="navSearchIcon"
+          style="width: 7%; height: 36px; background-color: #153c2e; border-radius: 0px 17px 17px 0px; box-shadow: 2px 2px 5px rgb(156, 156, 156);">
+          <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
+        </div>
+      </div>
+      <div class="cartProfileIcon"
+        style="width: 14%; display: flex; justify-content: space-between; align-items: center;">
+        <i id="navProfileIcon" class="fa-solid fa-user"></i>
+        <i id="wishlistIcon" class="fa-solid fa-heart" onclick="wishIconPageNavigate(this)" style="margin: 0;"></i>
+        <i id="navCrtIcon" class="fa-solid fa-cart-shopping" onclick="cartIconPageNavigate(this)"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script>
+    
+function navigateCheckout(btn) {
+  window.location.href = "checkout.html";
+}
+
+function cartIconPageNavigate(icon) {
+  window.location.href = "cart.html";
+}
+
+function wishIconPageNavigate(icon) {
+    window.location.href = "wishlist.html";
+}
+function navigationMain() {
+  window.location.href = "index.html";
+}
+
+  </script> -->
+
+</body>
+
+</html>

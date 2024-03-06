@@ -1,9 +1,6 @@
 // --------------------------FAIREBASE LOGIN SETUP ----------------------
 
 
-
-
-
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
   // TODO: Add SDKs for Firebase products that you want to use
@@ -20,11 +17,13 @@
   };
 
   import { getFirestore, collection, doc, setDoc, getDocs ,getDoc} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-  import {getAuth , signInWithEmailAndPassword , sendPasswordResetEmail , GoogleAuthProvider,signInWithPopup} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+  import {getAuth ,signInWithEmailAndPassword , sendPasswordResetEmail , GoogleAuthProvider,signInWithPopup,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
 var auth = getAuth(app)
+var db = getFirestore();
+var ref = collection(db,"user")
 var provider = new GoogleAuthProvider();
 auth.languageCode = 'en';
 
@@ -33,7 +32,7 @@ var LoginCondainer = document.getElementById("LoginmaincondinerCall");
 var ForgetPWordCondainer = document.getElementById("forgetloginContainerCall");
 var continueBtn = document.getElementById("forgetBtn");
 var SignUpBtn = document.getElementById("singinBTn");
-// var GoogleIcon = document.getElementById("GoogleIcon");
+var GoogleIcon = document.getElementById("GoogleIcon");
 
 var RegEmail = document.getElementById("mailDetailes");
 var RegPassword = document.getElementById("pwordDetailes");
@@ -74,11 +73,12 @@ continueBtn.addEventListener("click",()=>{
     
 
 SignUpBtn.addEventListener("click",()=>{
-     
+console.log("Test")
 signInWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
 .then(async(credential)=>{
     alert("SUCESSFULLY LOGINED")
-    localStorage.setItem("user",JSON.stringify(credential.user));
+    console.log(credential.user);
+    localStorage.setItem("usercollation",JSON.stringify(credential.user));
     location.href = "index.html"
 })
 .catch((err)=>{
@@ -105,21 +105,19 @@ var ForgetPword = () =>{
 continueBtn.addEventListener("click",ForgetPword)
 
 
+var googleSign = ()=>{
 
-
-// var googleSign = ()=>{
-
-//     signInWithPopup(auth, provider)
-//     .then((result) => {
-//       const credential = GoogleAuthProvider.credentialFromResult(result);
-//       const user = result.user;
-//       location.href = "index.html"
-//     }).catch((error) => {
-//       const errorCode = error.code;
-//       const errorMessage = error.message;
-//     });
+    signInWithPopup(auth, provider)
+    .then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const user = result.user;
+      console.log(user.email,user.uid)
+    localStorage.setItem( "usercollation" ,JSON.stringify(user.email,user.uid))
+      location.href = "index.html"
+    }).catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
   
-
-// }
-// GoogleIcon.addEventListener("click",googleSign)
-
+}
+GoogleIcon.addEventListener("click",googleSign);

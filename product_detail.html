@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product detail page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/Product_detail.css">
+</head>
+
+<body>
+    <div class="product page">
+        <header class="pdNav">
+
+        </header>
+
+
+        <!-- product section -->
+        <div class="product-container">
+
+        </div>
+    </div>
+
+
+    <div class="related_items">
+        <div class="related_head">
+            <div class="related_line"></div>
+            <h4>Related item</h4>
+        </div>
+        <div class="related-items-div">
+
+        </div>
+    </div>
+    <script src="JS/Product_detail.js"></script>
+    <script>
+        fetch('navBar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.pdNav').innerHTML += data;
+            });
+    </script>
+</body>
+
+</html>

@@ -66,7 +66,6 @@ var trimEm = RegEmail.value.trim()
 var trimPwo = RegPassword.value.trim()
 
 
-function OTBVALIDPAGE(){
 
 if(!(trimFn=="" || trimCont=="" || trimEm=="" || trimPwo=="")){
 
@@ -111,6 +110,7 @@ if(!(trimFn=="" || trimCont=="" || trimEm=="" || trimPwo=="")){
                     if (onetimepword == OTPInnerValue) {
 
                         alert("Email addresss verified")
+
                         location.href = "Login.html"
                     }
                     else {
@@ -125,7 +125,6 @@ if(!(trimFn=="" || trimCont=="" || trimEm=="" || trimPwo=="")){
 
     }
 
-}
 // --------------------------------REGEXP ----------------------
 
 if(trimFn==""){
@@ -145,10 +144,12 @@ if(trimPwo==""){
 
     RegPassword.classList.add("pssworAlertBox");
 }
-// ----------------------------------FAIRBASE TRICKER SESSION------------------------------------------------------
+// ----------------------------------FAIRBASE TRIGGER SESSION------------------------------------------------------
 
-createUserWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
+
+    createUserWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
 .then(async(credentials)=>{   
+    
     let ref = doc(db,"user",credentials.user.uid)
        await setDoc(ref,{
         FirstName:RegFirstName.value,
@@ -156,13 +157,15 @@ createUserWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
         contact:RegContNum.value,
         email:RegEmail.value,
         password:RegPassword.value
-});
-OTBVALIDPAGE();
+       
+         });
+    
 })
 .catch((err)=>{
     alert(err.message)
     
 });
+
 
 });
 

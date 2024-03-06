@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./CSS/register.css">
 </head>
-
 <body>
     <img src="./Assets/MiniProjactBackground.png" alt="" id="bakgroundImage">
+        <!-- <button  class="navHmoneBtn">Home</button> -->
     <form action="" id="RegisterSingnupForm">
         <div class="Registermaincondainer ConTainerView" id="RegistermaincondainerCall">
             <div class="Welcomecontainer">
@@ -24,10 +23,11 @@
                 <p id="RegisterText">SignUp</p>
             </div>
 
+           
             <div class="inputDetailes">
                 <div class="nameDetailes">
                     <div class="userFirstName ">
-                        <label for="fisrstName" class="label">Fisrst name</label>
+                        <label for="fisrstName" class="label">First name</label>
                         <span class="RequiredStar">*</span>
                         <br>
                         <input type="text" id="fisrstName" placeholder="user name" class="FirstnameBorder"
@@ -61,7 +61,7 @@
                         <div><i class="fa-solid fa-user-xmark" id="emailCharLI"></i><span class="EmailtooltipText"
                                 id="EmailcharCheck">Char @ Requried</span></div>
                         <div><i class="fa-solid fa-user-xmark" id="emailAlphaLI"></i><span class="EmailtooltipText"
-                                id="EmailAlphaCheck">Alpha Letter Required</span></div>
+                                id="EmailformAlphaCheck">Alpha Letter Required</span></div>
                         <div><i class="fa-solid fa-user-xmark" id="emailEndLI"></i><span class="EmailtooltipText"
                                 id="EmailEnd">End With .com Required</span></div>
                         <div><i class="fa-solid fa-user-xmark" id="emailCaptial"></i><span class="EmailtooltipText"
@@ -91,8 +91,9 @@
             <div class="RegiBtnContainer">
                 <p id="alredyaccount">Have an account ? <span id="loginspan"><a id="loginNavlink"
                             href="./Login.html">login</a></span></p>
-                <button id="RegisterBtn" type="submit">SignUp</input>
+                <button id="RegisterBtn" type="submit">SignUp</button>
             </div>
+            <p id="HomeNabBtn">Back to ? <span id="HomeSpan"><a href="index.html">Home</a></span></p>
         </div>
     </form>
     <div class="OTPmaincondainer " id="OTPmaincondainerCall">
@@ -113,5 +114,4 @@
     </script>
     <script src="./JS/MiniprojactRegister.js" type="module"></script>
 </body>
-
 </html>
