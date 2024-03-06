@@ -39,3 +39,13 @@ function removeFromWishlist(index) {
 }
 
 displayWishlist();
+
+
+function navigationMain() {
+    window.location.href = "index.html";
+  }
+
+
+function cartIconPageNavigate(icon) {
+    window.location.href = "cart.html";
+  }
