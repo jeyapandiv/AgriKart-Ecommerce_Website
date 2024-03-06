@@ -47,8 +47,8 @@ function pladisplayImages() {
     if (valid >= products_slide_obj.length) {
         valid = 0;
     }
-
-    img1.src = products_slide_obj[valid].src;
+    img1.style.backgroundImage = `url(${products_slide_obj[valid].src})`;
+    // img1.src = products_slide_obj[valid].src;
     document.getElementById('plaSlideTxt').innerHTML = products_slide_obj[valid].Name;
     valid++;
 

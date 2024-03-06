@@ -144,21 +144,21 @@ const pla_obj_Dryfruits = {
         heading: 'All DryFruits and Nuts',
         data: [
             { id:49,imgSrc: './Assets/PlaAssets/plaBetelNuts.jpeg', productName: 'BetelNuts', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { id:60,imgSrc: './Assets/PlaAssets/plaBlackRaisin.jpeg', productName: 'BlackRaisin', plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' },
-            { id:50,imgSrc: './Assets/PlaAssets/plaCashewnut.jpeg', productName: 'Cashewnut', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
-            { id:51,imgSrc: './Assets/PlaAssets/plaDates.jpeg', productName: 'Dates', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { id:52,imgSrc: './Assets/PlaAssets/plaDryBadam.jpeg', productName: 'Badam', plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
-            { id:53,imgSrc: './Assets/PlaAssets/plaDryFig.jpeg', productName: 'DryFig', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' }        ]
+            { id:50,imgSrc: './Assets/PlaAssets/plaBlackRaisin.jpeg', productName: 'BlackRaisin', plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' },
+            { id:51,imgSrc: './Assets/PlaAssets/plaCashewnut.jpeg', productName: 'Cashewnut', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
+            { id:52,imgSrc: './Assets/PlaAssets/plaDates.jpeg', productName: 'Dates', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id:53,imgSrc: './Assets/PlaAssets/plaDryBadam.jpeg', productName: 'Badam', plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
+            { id:54,imgSrc: './Assets/PlaAssets/plaDryFig.jpeg', productName: 'DryFig', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' }        ]
     },
     Dryfruits2: {
         heading: 'Season Special || Top Deals',
         data: [
-            { id:54,imgSrc: './Assets/PlaAssets/plaFoxnuts.jpeg', productName: 'Foxnuts', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
-            { id:55,imgSrc: './Assets/PlaAssets/plaKesar.jpeg', productName: 'Kesar', plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
-            { id:56,imgSrc: './Assets/PlaAssets/plaKishmish.jpeg', productName: 'Kishmish', plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { id:57,imgSrc: './Assets/PlaAssets/plaMakhana.jpeg', productName: 'Makhana', plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
-            { id:58,imgSrc: './Assets/PlaAssets/plapeanut.jpeg', productName: 'Peanut', plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
-            { id:59,imgSrc: './Assets/PlaAssets/plaPista.jpeg', productName: 'Pista', plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' }
+            { id:55,imgSrc: './Assets/PlaAssets/plaFoxnuts.jpeg', productName: 'Foxnuts', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
+            { id:56,imgSrc: './Assets/PlaAssets/plaKesar.jpeg', productName: 'Kesar', plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
+            { id:57,imgSrc: './Assets/PlaAssets/plaKishmish.jpeg', productName: 'Kishmish', plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id:58,imgSrc: './Assets/PlaAssets/plaMakhana.jpeg', productName: 'Makhana', plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
+            { id:59,imgSrc: './Assets/PlaAssets/plapeanut.jpeg', productName: 'Peanut', plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
+            { id:60,imgSrc: './Assets/PlaAssets/plaPista.jpeg', productName: 'Pista', plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' }
         ]
     }
 };

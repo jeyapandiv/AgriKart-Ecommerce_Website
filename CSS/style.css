@@ -7,6 +7,7 @@
   font-style: normal;
 }
 
+
 :root {
     --primary-color:  #5DC7A1;
     --second-color:#C84E2A;
@@ -218,7 +219,7 @@ i{    text-decoration: none;  color: var(--secondary-color); font-size: 24px;}
    border-radius: 4px;
 }
 .plaSlideInner1{
-    width: 45%;
+    width: 40%;
     text-align: center;
     font-size: large;
     display: flex;
@@ -227,7 +228,17 @@ i{    text-decoration: none;  color: var(--secondary-color); font-size: 24px;}
     flex-direction: column;
     gap: 30px;
  }
- .plaSlideInner2{   width: 45%;}
+
+ .plaSlideInner2{ 
+     height: 200px; 
+     width: 450px;
+     background-position:center;
+     background-size: 450px;
+     background-repeat: no-repeat;
+     object-fit: cover;
+     border-radius: 10px;
+     background-color: var(--rareUse2-color);
+}
  
  #plaSlideShopBtn{
     padding: 2%;
@@ -248,11 +259,7 @@ i{    text-decoration: none;  color: var(--secondary-color); font-size: 24px;}
  #plaSlideShopBtn:hover{
     box-shadow: 1px 1px 5px var(--boxshawdow-color);
  }
- #plaSlideImg1{
-    height: 200px;
-    width: 80%;
-    border-radius: 10px;
-}
+
 /* ----------------------card main-------- */
 .plaProductCardMain,.plpProductCardMain {
     border: 1px solid var(--boxshawdow-color);
@@ -298,7 +305,7 @@ color: var(--second-color);
 text-decoration: underline;
 }
 
-.plaCardProductName:hover, #plaCardProductName:hover{   color: var(--second-color); text-decoration: underline;}
+/* .plaCardProductName:hover, #plaCardProductName:hover{   color: var(--second-color); text-decoration: underline;} */
 
 .placardbtn{
     display: flex;
@@ -326,9 +333,13 @@ text-decoration: underline;
 }
 .plpproductcard  {   padding-bottom: 10px;}
 
-.plpproductcard:hover, .plaproductcard:hover{
+.plpproductcard:hover{
     border: 1px solid var(--secondary-color);    
     animation: fadeIn 0.5s ease-in-out;
+    cursor: pointer;
+}
+.plaProductCardMain:hover{
+    border: 1px solid var(--secondary-color);    
     cursor: pointer;
 }
 
@@ -437,4 +448,10 @@ text-decoration: underline;
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+.plaproductcard:hover{    
+    animation: fadeIn 0.5s ease-in-out;
+    cursor:auto;
 }
