@@ -653,6 +653,7 @@ function renderHtml(renderItem) {
                     <button id="buynow">buy now</button>
                 </div>
             </div>`;
+            
 
       for (let i = 0; i < 5; i++) {
         const smallItem = renderItem.data[i];
