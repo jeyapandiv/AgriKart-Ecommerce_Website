@@ -1,5 +1,21 @@
 "use strict";
 
+
+fetch('navBar.html')
+.then(response => response.text())
+.then(data => {
+    document.querySelector('.pdNav').innerHTML += data;
+});
+
+
+function wishIconPageNavigate(icon) {
+    window.location.href = "wishlist.html";
+  }
+  
+  function navigationMain() {
+    window.location.href = "index.html";
+  }
+
 // --------------------------------- function to update cart item count on top
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -1,3 +1,13 @@
+fetch('navBar.html')
+.then(response => response.text())
+.then(data => {
+    document.querySelector('.pdNav').innerHTML += data;
+});
+
+function navigationMain() {
+    window.location.href = "index.html";
+}
+
 function displayWishlist() {
     var wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
     var tableBody = document.querySelector('#wishlist-table-body');
