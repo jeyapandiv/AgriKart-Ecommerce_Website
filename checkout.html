@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/CSS/checkout.css">
+    <link rel="stylesheet" href="./CSS/checkout.css">
     <title>AgriKart</title>
 </head>
 
@@ -14,12 +13,12 @@
 
     <div class="checkout">
         <div class="navBarCheckout">
-            
+
         </div>
         <div class="checkoutAddress">
             <div class="checkoutExistAddress">
                 <div class="checkoutNavigation">
-                    <h1>Checkout</h1>
+                    <h2>Checkout</h2>
                     <div class="processNav">
                         <p id="addNavActive">Address</p>
                         <hr>
@@ -29,16 +28,59 @@
                     </div>
                 </div>
                 <div class="selectAddDiv">
+
                     <div class="selectAddress">
+
                         <div class="addNoteCreateBtn">
-                            <h3>Select delivery address</h3>
-                            <button>Create new Address</button>
+                            <h4 style="font-weight: 500;">Shipment address</h4>
+                            <button onclick="selectCreateNvAddBtn(this)">Select Address</button>
                         </div>
+
                         <div class="addressListDiv">
-                            <div class="addressList">
+
+                            <div class="newAddressDiv" >
+                                <form action="" name="newAddress" id="newAddress">
+                                    <label for="shippingName" style="font-size: 12px;">Full name(First and Last
+                                        name)</label>
+                                    <input type="text" name="shippingName" placeholder="Ex: John Mathiv" style="width: 94%; padding: 5px 10px;
+                                        box-shadow:inset 1px 1px 5px  #dadada; 
+                                        border: 1px solid #9f9e9e; border-radius: 3px;" required>
+                                    <label for="houseDetail" style="font-size: 12px;">Flat,House no, Street</label>
+                                    <input type="text" name="houseDetail" style="width: 94%; padding: 5px 10px; box-shadow:inset 1px 1px 5px  #dadada;
+                                        border: 1px solid #9f9e9e; border-radius: 3px;" required>
+                                    <label for="houseDetail" style="font-size: 12px;">Area, Town/City</label>
+                                    <input type="text" name="houseDetail" style="width: 94%; padding: 5px 10px; box-shadow:inset 1px 1px 5px  #dadada;
+                                            border: 1px solid #9f9e9e; border-radius: 3px;" required>
+                                    <label for="zipcode" style="font-size: 12px;">Zip code</label>
+                                    <input type="number" name="zipcode" style="width: 94%; padding: 5px 10px; box-shadow:inset 1px 1px 5px  #dadada;
+                                                    border: 1px solid #9f9e9e; border-radius: 3px;" required>
+                                    <label for="phoneNo" style="font-size: 12px;">Mobile no</label>
+                                    <input type="number" name="phoneNo" style="width: 94%; padding: 5px 10px; box-shadow:inset 1px 1px 5px  #dadada;
+                                                                    border: 1px solid #9f9e9e; border-radius: 3px;"
+                                        required>
+                                    <div style="width: 99.3%; display: flex; justify-content: space-between;">
+                                        <select name="Country" id="" style="width: 48%; height: 28px;
+                                                border: 1px solid #9f9e9e; border-radius: 3px;" required>
+                                            <option value="IND" selected>India</option>
+                                        </select>
+                                        <select name="stateSelect" id="" required
+                                            style="width: 48%; border: 1px solid #9f9e9e; border-radius: 3px;"
+                                            required>
+                                            <option value="note" selected disabled>Select your state</option>
+                                            <option value="TN">Tamil Nadu</option>
+                                            <option value="KL">Kerala</option>
+                                            <option value="KN">Karnataka</option>
+                                            <option value="AP">Andra Pradesh</option>
+                                        </select>
+                                    </div>
+                                    <button id="CreateAddSubBtn"></button>
+                                </form>
+                            </div>
+
+                            <div class="addressList disNone" >
                                 <div class="addressDefault">
                                     <div class="addressSelection">
-                                        <input type="radio">
+                                        <input type="radio" name="addressSelectRadio">
                                         <p class="address-name">Name, 111A, Bbbbbb Street, Coc Nagar, Dddd City, Eeee
                                             State
                                             - 123 123, India.</p>
@@ -50,7 +92,7 @@
                                 </div>
                                 <div class="addressDefault">
                                     <div class="addressSelection">
-                                        <input type="radio">
+                                        <input type="radio" name="addressSelectRadio">
                                         <p class="address-name">Name, 111A, Bbbbbb Street, Coc Nagar, Dddd City, Eeee
                                             State
                                             - 123 123, India.</p>
@@ -68,7 +110,7 @@
                                     <p style="margin-bottom: 20px;">method to calculate shipping charges</p>
                                 </div>
                                 <div class="totalCalculation" style="width: 90%;">
-                                    <h3 style="line-height: 50px; margin-top: 20px;">Order Summery</h3>
+                                    <h3 style="line-height: 50px; margin-top: 20px;">Order Summary</h3>
                                     <span style="display: flex; justify-content: space-between;">
                                         <p>Subtotal</p>
                                         <p>₹xxx</p>
@@ -87,19 +129,20 @@
                         </div>
                     </div>
                     <div class="paymentDiv">
-                        <h3 style="margin-bottom: 10px;">Select Payment Method
-                            <span style="margin-left: 590px;">Your cart</span>
-                        </h3>
+                        <h4 style="margin-bottom: 10px;">Select Payment Method</h4>
                         <div class="checkout-payment-container ">
                             <div class="payment-container">
                                 <div class="payment-container-inner">
                                     <div class="payment-method">
-                                        <input type="radio" id="credit-card" name="payment-method" value="credit-card" disabled>
-                                        <label for="credit-card" style="color: grey;">Credit or Debit card (VISA)</label>
+                                        <input type="radio" id="credit-card" name="payment-method" value="credit-card"
+                                            disabled>
+                                        <label for="credit-card" style="color: grey;">Credit or Debit card
+                                            (VISA)</label>
                                         <img id="cardImage" src="/Assets/Cards.png" alt="">
                                     </div>
                                     <div class="payment-method" id="netBanking">
-                                        <input type="radio" id="net-banking" name="payment-method" value="net-banking" disabled>
+                                        <input type="radio" id="net-banking" name="payment-method" value="net-banking"
+                                            disabled>
                                         <label for="net-banking" style="color: grey;">Net Banking</label>
                                         <select style="color: grey;">
                                             <option value="" disabled selected>Select an option</option>
@@ -117,28 +160,24 @@
                                         <p id="cod-info" style="font-size: 12px;">Cash, UPI accepted</p>
                                     </div>
                                     <div class="button-container">
-                                        <button type="submit" id="navigateReview"onclick="navigatePayment(this)">Continue to shipping</button>
+                                        <button type="submit" id="navigateReview"
+                                            onclick="navigatePayment(this)">Continue to shipping</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="cart-review-container">
 
                                 <div class="cart-container">
-                                    <div class="prdDetailCheckoutAddDiv" style="width: 100%; height: 200px; margin-bottom: 20px;">
-                                        <div class="prdDetailCheckoutAdd" style="width: 100%; height: 80px; padding: 10px 0px; display: flex; align-items: center; gap: 20px; border-bottom: 2px solid grey;">
-                                            <img src="" alt="" style="width: 60px; height: 60px;">
-                                            <div class="addPrdPrice-name" style="display: flex; flex-direction: column; gap: 10px;">
+                                    <div class="prdDetailCheckoutAddDiv" style="width: 100%; height: 150px;">
+                                        <div class="prdDetailCheckoutAdd"
+                                            style="width: 100%; height: 90px; padding: 10px 0px; display: flex; align-items: center; gap: 20px; border-bottom: 2px solid grey;">
+                                            <img src="" alt="" style="width: 80px; height: 80px;">
+                                            <div class="addPrdPrice-name"
+                                                style="display: flex; flex-direction: column; gap: 10px;">
                                                 <h5 id="addPrdName">Nuts</h5>
-                                                <p id="addPrdQty" style="font-size: 14px;">Quantity:<span style="padding-left: 10px;">1</span></p>
-                                                <p id="addPrdPrice" style="font-size: 14px;">2424<span>Remove</span></p>
-                                            </div>
-                                        </div>
-                                        <div class="prdDetailCheckoutAdd" style="width: 100%; height: 80px; padding: 10px 0px; display: flex; align-items: center; gap: 20px; border-bottom: 2px solid grey;">
-                                            <img src="" alt="" style="width: 60px; height: 60px;">
-                                            <div class="addPrdPrice-name" style="display: flex; flex-direction: column; gap: 10px;">
-                                                <h5 id="addPrdName">Nuts</h5>
-                                                <p id="addPrdQty" style="font-size: 14px;">Quantity:<span style="padding-left: 10px;">1</span></p>
-                                                <p id="addPrdPrice" style="font-size: 14px;">2424<span>Remove</span></p>
+                                                <p id="addPrdQty" style="font-size: 14px;">Quantity:<span
+                                                        style="padding-left: 10px;">1</span></p>
+                                                <p id="addPrdPrice" style="font-size: 14px;">₹ 2424</p>
                                             </div>
                                         </div>
                                     </div>
@@ -149,7 +188,7 @@
                                     <span
                                         style="display: flex; justify-content: space-between; border-bottom: 2px solid grey; padding-bottom: 10px;">
                                         <p>Shipping</p>
-                                        <p style="font-size: 12px; color: grey;">Calculated at the next step</p>
+                                        <p style="font-size: 12px; color: grey;">₹60</p>
                                     </span>
                                     <span style="display: flex; justify-content: space-between; margin-top: 10px;">
                                         <h4>Total</h4>
@@ -160,45 +199,43 @@
                         </div>
                     </div>
                     <div class="paymentReviewDiv">
- 
+
                     </div>
                 </div>
             </div>
-            <div class="plaSidediv" id="plaSidediv">
-        <div class="plaSideNavMain" id="plaSideNavMain">
-            <div class="plaSideNavigation" id="plaSideNavigation">
-                <div id="plaSideClose">
-                    <h3 id="plaSideExit"><i class="fa-solid fa-circle-xmark"></i></h3>
-                </div>
-                <div class="plaSideNav" id="plaSideNav">
+        </div>
+        <div class="plaSidediv" id="plaSidediv">
+            <div class="plaSideNavMain" id="plaSideNavMain">
+                <div class="plaSideNavigation" id="plaSideNavigation">
+                    <div id="plaSideClose">
+                        <h3 id="plaSideExit"><i class="fa-solid fa-circle-xmark"></i></h3>
+                    </div>
+                    <div class="plaSideNav" id="plaSideNav">
                         <div class="plasidenavhead">
                             <h3 id="plaSideStart"> <a href="./plphtml.html">Start Buying!</a> </h3>
                         </div>
                         <h4 id="plaSideNavList"><i class="fa-solid fa-house"> </i> Home </h4>
-                        
-                          <h4 id="plaSideNavList1" > <i class="fa-solid fa-list"> </i>  Shop By Category </h4>
-                        <div class="plaSideNavcategory plaSidenavhide" id="plaNavcatlog" >
-                          <h4 id="plaCategoryList">Oil Crops</h4>
-                          <h4 id="plaCategoryList">All Fruits</h4>
-                          <h4 id="plaCategoryList">All vegetables</h4>
-                          <h4 id="plaCategoryList">All Grains</h4>
-                          <h4 id="plaCategoryList">Dry Fruits</h>
-                        </div>   
 
-                        <h5 id="plaSideNavList"> <i class="fa-solid fa-box-open"></i> My Orders </h5>    
-                        <h5 id="plaSideNavList"> <i class="fa-solid fa-bag-shopping"></i> My Cart List </h5>    
-                        <h5 id="plaSideNavList"> <i class="fa-solid fa-hand-holding-heart"></i> My Wish List </h5>    
-                        <h5 id="plaSideNavList"> <i class="fa-solid fa-square-phone"></i> Customer support </h5>    
+                        <h4 id="plaSideNavList1"> <i class="fa-solid fa-list"> </i> Shop By Category </h4>
+                        <div class="plaSideNavcategory plaSidenavhide" id="plaNavcatlog">
+                            <h4 id="plaCategoryList">Oil Crops</h4>
+                            <h4 id="plaCategoryList">All Fruits</h4>
+                            <h4 id="plaCategoryList">All vegetables</h4>
+                            <h4 id="plaCategoryList">All Grains</h4>
+                            <h4 id="plaCategoryList">Dry Fruits</h>
+                        </div>
+
+                        <h5 id="plaSideNavList"> <i class="fa-solid fa-box-open"></i> My Orders </h5>
+                        <h5 id="plaSideNavList"> <i class="fa-solid fa-bag-shopping"></i> My Cart List </h5>
+                        <h5 id="plaSideNavList"> <i class="fa-solid fa-hand-holding-heart"></i> My Wish List </h5>
+                        <h5 id="plaSideNavList"> <i class="fa-solid fa-square-phone"></i> Customer support </h5>
                         <h5 id="plaSideNavList"> <i class="fa-solid fa-users"></i> About Us </h5>
-                        <div class="plaSideSignin">
-                        <button id="plaSideBtn"> <i class="fa-solid fa-right-to-bracket"></i> SignOut</button>    
-                        </div>   
+                    </div>
                 </div>
-            </div>  
+            </div>
         </div>
-    </div>
 
-            <script src="/JS/checkout.js"></script>
+        <script src="./JS/checkout.js"></script>
 </body>
 
 </html>

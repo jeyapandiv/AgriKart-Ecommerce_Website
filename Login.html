@@ -11,7 +11,9 @@
 </head>
 <body>
     <img src="./Assets/MiniProjactBackground.png" alt="" id="background">
+
     <div class="Loginmaincondiner ContainerView" id="LoginmaincondinerCall">
+       
         <p class="Welcome">Welcome to <span id="logonamespan">DCKAP Agrikart</span></p>
         <p class="Login">Login</p>
 
@@ -25,12 +27,12 @@
             <input type="text" id="pwordDetailes" placeholder="Enter your Password" class="PwordBorder"><br>
         
         </div>
-        <div class="userConform">
-            <p id="ForgetNav">forget password</p>
-            <p>No Account ?<span id="singnamespan"><a href="Login.html" id="SignupPageNav">Sign up</a></span></p>
-        </div>
-        <button id="singinBTn" type="submit">  Sign in  </button><br>
-        <i class="fa-brands fa-google" id="GoogleIcon"></i>
+            <p id="ForgetNav">forgot password</p>
+            <div class="SubmitContainerTag">
+        <button id="singinBTn" type="submit">  Sign in  </button>
+          <img src="./Assets/Goole1.png" alt="" id="GoogleIcon">
+        <p class="NOAccountNavCon">Don't have an account ?<span id="singnamespan"><a href="./Register.html" id="SignupPageNav">Sign up</a></span></p>
+    </div>
     </div>
 
     <!----------------------------------------------- FORGET PAGE --------------------------------------------------------------->
@@ -49,4 +51,4 @@
     <script src="./JS/miniprojact-login.js" type="module"></script>
 </body>
 
-</htm>
+</html>

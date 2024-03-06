@@ -6,8 +6,12 @@ fetch("navBar.html")
     document.querySelector(".navBarCheckout").innerHTML += data;
   });
 
-function cartIconPageNavigate() {
+function cartIconPageNavigate(icon) {
   window.location.href = "cart.html";
+}
+
+function wishIconPageNavigate(icon) {
+  window.location.href = "wishlist.html";
 }
 
 function navigationMain() {
@@ -15,8 +19,7 @@ function navigationMain() {
 }
 
 document.querySelector(".paymentDiv").classList.add("disNone");
-// document.querySelector('.paymentReviewDiv ').classList.add('disNone');
-// document.querySelector('.orderList').classList.add('disNone');
+// document.querySelector(".paymentReviewDiv").classList.remove("disNone");
 
 let selectAddress = document.querySelector(".selectAddress");
 let paymentSection = document.querySelector(".paymentDiv");
@@ -26,7 +29,7 @@ const processStatus = document.querySelector(".processNav").children;
 processStatus[0].classList.add("fontWeight");
 
 function navigatePayment(btn) {
-  if (btn.innerText == "Use this address") {
+  if (btn.innerText == "Use this address" || btn == "Use this address") {
     selectAddress.classList.add("disNone");
     paymentSection.classList.remove("disNone");
     processStatus[0].classList.remove("fontWeight");
@@ -43,43 +46,53 @@ function navigatePayment(btn) {
     document.querySelector(".paymentReviewDiv ").classList.add("disNone");
   }
 }
-// if (!(selectAddress.style.display == "none")) {
-//     processStatus.firstElementChild.classList.add('fontWeight');
-// }
 
+let selectAddressList = document.querySelector(".addressList");
+let createAddress = document.querySelector(".newAddressDiv");
+let newAddForm = document.forms.newAddress;
 
-var plaSidenav = document.getElementById('plaSidediv');
-plaSidenav.style.display = 'none';
+function selectCreateNvAddBtn(btn) {
+  if (btn.innerText == "Select Address") {
+    btn.innerText = "Create Address";
+    selectAddressList.classList.remove("disNone");
+    createAddress.classList.add("disNone");
+  } else {
+    btn.innerText = "Select Address";
+    selectAddressList.classList.add("disNone");
+    createAddress.classList.remove("disNone");
+  }
+}
 
-// var plaSideBar = document.getElementById('navMenuIcon');
-// plaSideBar.addEventListener('click', plaSidenavBar);
+newAddForm.addEventListener("submit", () => {
+  navigatePayment("Use this address");
+});
 
-var plaSidepage = document.getElementById('plaSidediv');
+var plaSidenav = document.getElementById("plaSidediv");
+plaSidenav.style.display = "none";
+var plaSidepage = document.getElementById("plaSidediv");
 
 function plaSidenavBar() {
-    plaSidenav.style.display = 'Block';
-    plaSidepage.classList.add('plasidebdy');
+  plaSidenav.style.display = "Block";
+  plaSidepage.classList.add("plasidebdy");
 }
 
-
-var plaSideBarExit = document.getElementById('plaSideExit');
-plaSideBarExit.addEventListener('click', plaClose);
+var plaSideBarExit = document.getElementById("plaSideExit");
+plaSideBarExit.addEventListener("click", plaClose);
 
 function plaClose() {
-    plaSidenav.style.display = 'none';
-    plaSidepage.classList.remove('plasidebdy');
+  plaSidenav.style.display = "none";
+  plaSidepage.classList.remove("plasidebdy");
 }
 
-var plasidecat = document.getElementById('plaSideNavList1');
-var plasidehidecat = document.getElementById('plaNavcatlog');
+var plasidecat = document.getElementById("plaSideNavList1");
+var plasidehidecat = document.getElementById("plaNavcatlog");
 
-plasidecat.addEventListener('click', plasidecatview)
+plasidecat.addEventListener("click", plasidecatview);
 
 function plasidecatview() {
-    if (plasidehidecat.style.display == 'none') {
-        plasidehidecat.style.display = 'block';
-    }
-    else {
-        plasidehidecat.style.display = 'none';
-    }
+  if (plasidehidecat.style.display == "none") {
+    plasidehidecat.style.display = "block";
+  } else {
+    plasidehidecat.style.display = "none";
+  }
 }

@@ -7,11 +7,12 @@
     <title>AgriCart</title>
 </head>
 <body>
-    <div class="navBarCheckout">
+    <header class="pdNav"></header>
+    <!-- <div class="navBarCheckout">
         <div class="navCheckoutInner">
             <div class="navCheckoutLeft">
                 <i id="navMenuIcon" class="fa-solid fa-bars"></i>
-                <img id="mainLogo" src="/Assets/logo-full-palli-tamil-color.png" alt="">
+                <img id="mainLogo" src="Assets/logo-full-palli-tamil-color.png" alt="">
             </div>
             <div class="navCheckoutRight">
                 <div class="navSearch">
@@ -22,18 +23,20 @@
                 </div>
                 <div class="cartProfileIcon">
                     <i id="navProfileIcon" class="fa-solid fa-user"></i>
+                     <i id="navCrtIcon" class="fa-solid fa-cart-shopping"></i> 
                     <i id="navCrtIcon" class="fa-solid fa-cart-shopping"></i>
-    
+                    <i id="navCrtIcon" class="fa-solid fa-cart-shopping"></i> 
                 </div>
             </div>
         </div>
-</div>
+</div> -->
 
 
 <main>
-
+   
 <div class="cart-things" id="cart-things">
     <h2>Cart (2 Items)</h2>
+    <div class="cart-things-2" id="cart-things-2"></div>
     <!-- <div class="item">
         <img src="img_almonds.jpg" alt="Farmley Almonds">
         <div class="item-details">
@@ -90,12 +93,12 @@
 <div class="summary">
     <h2>Order Summary</h2>
     <p>Item Total: ₹1371</p>
-    <p>Delivery Charges: ₹30</p>
+    <p>Delivery Charges: <span class="delivery">Proceed to Checkout</span></p>
     <p>Discount: -</p>
-    <h3>Total Bill: ₹1401</h3>
+    <h3>Total Bill: ₹0</h3>
     <div class="summary-btn">
-        <button >Proceed to Pay</button>
-        <button class="empty-cart" onclick=" emptyCart()">Empty Cart</button>
+        <button id="proceedToBuyBtn">Proceed to Buy</button>
+        <button class="empty-cart" onclick="emptyCart()">Empty Cart</button>
     </div>
     
 </div>
@@ -106,5 +109,12 @@
 
 </footer>
 <script src="JS/cart.js"></script>
+<script>
+    fetch('navBar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('.pdNav').innerHTML += data;
+        });
+</script>
 </body>
 </html>

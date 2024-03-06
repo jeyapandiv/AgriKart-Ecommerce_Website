@@ -7,80 +7,111 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./CSS/register.css">
 </head>
 <body>
     <img src="./Assets/MiniProjactBackground.png" alt="" id="bakgroundImage">
+        <!-- <button  class="navHmoneBtn">Home</button> -->
     <form action="" id="RegisterSingnupForm">
-    <div class="Registermaincondainer ConTainerView" id="RegistermaincondainerCall">
-        <p id="ResgisterWelcome">Welcome to <span id="companyname"> DCKAP Agrikart</span></p>
-        <p id="RegisterText">SignUp</p>
-        <div class="inputDetailes">
-        <div class="nameDetailes">  
-            <div class="userFirstName ">
-                <label for="fisrstName"  class="label">Fisrst name</label><br>
-                <input type="text" id="fisrstName" placeholder="user name" class="FirstnameBorder" name="FIRST NAME"><br>
-                <span id="RegNameAlert" class="RegfnamNoView ">Number not allowed</span>
+        <div class="Registermaincondainer ConTainerView" id="RegistermaincondainerCall">
+            <div class="Welcomecontainer">
+                <p id="ResgisterWelcome">Welcome to <span id="companyname"> DCKAP Agrikart</span></p>
+                <p id="RegisterText">SignUp</p>
             </div>
-            <div class="userLastnumer">
-                <label for="othername"  class="label">Last name</label><br>
-                <input type="text" id="lastname"  placeholder="last name" class="LastNameInput" name="SECOND NAME"><br>
-                <span id="RegLastAlert" class="SecondNameNoView">Number not allowed</span>
-            </div>
-        </div>
-        <div class="contactDetailes">
-            <label for="Continfo"  class="label">Contact number</label><br>
-            <input type="text"  id="Continfo" placeholder="contact number" class="contBorder" name="CONTACT NUMBER"><br>
-            <span id="RegContAlert" class="RegAlertNoView">Invalid number</span>
-        </div>
-        <div class="emailDetailes">
-            <label for="emailinfo"   class="label">Enter your email address</label><br>
-            <input type="text" id="emailinfo" placeholder="example@gmail.com" class="emailBorder" name="EMAIL"><br>
-                <div class="EmailToolTip" id="EmailToolTipCall"><i class="fa-solid fa-caret-left" id="EmailrightSimple"></i> 
-                    <div><i class="fa-solid fa-user-xmark" id="emailCharLI"></i><span class="EmailtooltipText" id="EmailcharCheck">char @ Requried</span></div>
-                    <div><i class="fa-solid fa-user-xmark" id="emailAlphaLI"></i><span  class="EmailtooltipText" id="EmailAlphaCheck">Alpha Letter Required</span></div>
-                    <div><i class="fa-solid fa-user-xmark" id="emailEndLI"></i><span  class="EmailtooltipText" id="EmailEnd">End with .com Required</span></div>
-                    <div><i class="fa-solid fa-user-xmark" id="emailCaptial"></i><span  class="EmailtooltipText" id="EmailnotCaptail">Captial Letter not Required</span></div>
+
+           
+            <div class="inputDetailes">
+                <div class="nameDetailes">
+                    <div class="userFirstName ">
+                        <label for="fisrstName" class="label">First name</label>
+                        <span class="RequiredStar">*</span>
+                        <br>
+                        <input type="text" id="fisrstName" placeholder="user name" class="FirstnameBorder"
+                            name="FIRST NAME"><br>
+                        <span id="RegNameAlert" class="RegfnamNoView ">Number not allowed</span>
+                    </div>
+                    <div class="userLastnumer">
+                        <label for="othername" class="label">Last name</label><br>
+                        <input type="text" id="lastname" placeholder="last name" class="LastNameInput"
+                            name="SECOND NAME"><br>
+                        <span id="RegLastAlert" class="SecondNameNoView">Number not allowed</span>
+                    </div>
                 </div>
-        </div>
-       <div class="pworDetailes">
-            <label for="pwordinfo"  class="label">Enter your Password</label><br>
-            <input type="text" id="pwordinfo" placeholder="Enter your Password" class="PWordBorder" name="PASSWORD"><br>
-               <div class="tooltipCondainer" id="PwordToolTip"><i class="fa-solid fa-caret-left" id="rightSimple"></i> 
-              <div><i class="fa-solid fa-user-xmark" id="NumChcekLi"></i><span class="tooltipText" id="NumCheckSpan">Number Required</span></div>
-              <div><i class="fa-solid fa-user-xmark" id="SpacialLi"></i><span  class="tooltipText" id="Spcail">Spacial Char Requried</span></div>
-              <div><i class="fa-solid fa-user-xmark" id="AlphaLi"></i><span  class="tooltipText">Alpha Char Required</span></div>
-              <div><i class="fa-solid fa-user-xmark" id="Length"></i><span  class="tooltipText">Minium 8 charvRequired</span></div>
+                <div class="contactDetailes">
+                    <label for="Continfo" class="label">Contact number</label>
+                    <span class="RequiredStar">*</span>
+                    <br>
+                    <input type="text" id="Continfo" placeholder="contact number" class="contBorder"
+                        name="CONTACT NUMBER"><br>
+                    <span id="RegContAlert" class="RegAlertNoView">Invalid number</span>
+                </div>
+                <div class="emailDetailes">
+                    <label for="emailinfo" class="label">Enter your email address</label>
+                    <span class="RequiredStar">*</span>
+
+                    <br>
+                    <input type="text" id="emailinfo" placeholder="example@gmail.com" class="emailBorder"
+                        name="EMAIL"><br>
+                    <div class="EmailToolTip" id="EmailToolTipCall"><i class="fa-solid fa-caret-left"
+                            id="EmailrightSimple"></i>
+                        <div><i class="fa-solid fa-user-xmark" id="emailCharLI"></i><span class="EmailtooltipText"
+                                id="EmailcharCheck">Char @ Requried</span></div>
+                        <div><i class="fa-solid fa-user-xmark" id="emailAlphaLI"></i><span class="EmailtooltipText"
+                                id="EmailformAlphaCheck">Alpha Letter Required</span></div>
+                        <div><i class="fa-solid fa-user-xmark" id="emailEndLI"></i><span class="EmailtooltipText"
+                                id="EmailEnd">End With .com Required</span></div>
+                        <div><i class="fa-solid fa-user-xmark" id="emailCaptial"></i><span class="EmailtooltipText"
+                                id="EmailnotCaptail">Captial Letter Not Required</span></div>
+                    </div>
+                </div>
+                <div class="pworDetailes">
+                    <label for="pwordinfo" class="label">Enter your Password</label>
+                    <span class="RequiredStar">*</span>
+
+                    <br>
+                    <input type="text" id="pwordinfo" placeholder="Enter your Password" class="PWordBorder"
+                        name="PASSWORD"><br>
+                    <div class="tooltipCondainer" id="PwordToolTip"><i class="fa-solid fa-caret-left"
+                            id="rightSimple"></i>
+                        <div><i class="fa-solid fa-user-xmark" id="NumChcekLi"></i><span class="tooltipText"
+                                id="NumCheckSpan">Number Required</span></div>
+                        <div><i class="fa-solid fa-user-xmark" id="SpacialLi"></i><span class="tooltipText"
+                                id="Spcail">Spacial Char Requried</span></div>
+                        <div><i class="fa-solid fa-user-xmark" id="AlphaLi"></i><span class="tooltipText">Alpha Char
+                                Required</span></div>
+                        <div><i class="fa-solid fa-user-xmark" id="Length"></i><span class="tooltipText">Minium 8
+                                Char Required</span></div>
+                    </div>
+                </div>
             </div>
+            <div class="RegiBtnContainer">
+                <p id="alredyaccount">Have an account ? <span id="loginspan"><a id="loginNavlink"
+                            href="./Login.html">login</a></span></p>
+                <button id="RegisterBtn" type="submit">SignUp</button>
+            </div>
+            <p id="HomeNabBtn">Back to ? <span id="HomeSpan"><a href="index.html">Home</a></span></p>
         </div>
-    </div>
-        <p id="alredyaccount">Have an account ? <span id="loginspan"><a id="loginNavlink" href="./Login.html">login</a></span></p>
-        <button id="RegisterBtn" type="submit">SignUp</input>   
-    </div>
     </form>
     <div class="OTPmaincondainer " id="OTPmaincondainerCall">
         <div id="verifytext">Verify your <span id="OTPsapn">OTP</span></div>
         <div class="OTPdetailes">
-        <p id="OTPPara">please check your email of the One-Time password(OTP) to complete the verification process</p>
-        <div id="yourOTP">Enter your OTP </div>
-        <div id="MailsendOTP">
-           <p><input type="text" class="mailsendcercul" id="otbum1"></p>
-           <p> <input type="text" class="mailsendcercul" id="otbum2"></p>
-            <p><input type="text" class="mailsendcercul" id="otbum3"></p>
-            <p><input type="text" class="mailsendcercul" id="otbum4"></p>
-            <p><input type="text" class="mailsendcercul" id="otbum5"></p>
-            <p><input type="text" class="mailsendcercul" id="otbum6"></p>
+            <p id="OTPPara">please check your email of the One-Time password(OTP) to complete the verification process
+            </p>
+            <div id="yourOTP">Enter your OTP </div>
+            <div id="MailsendOTP">
+                <p><input type="text" class="mailsendcercul" id="otbum1"></p>
+            </div>
         </div>
-    </div>
         <div id="resentOTP">Resent OTP</div>
         <button id="MailverifyBtn">Verifiy</a></button>
     </div>
-</form>
-<script src="https://smtpjs.com/v3/smtp.js">
-</script>
+    </form>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script src="./JS/MiniprojactRegister.js" type="module"></script>
 </body>
-
 </html>
