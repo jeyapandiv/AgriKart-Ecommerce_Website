@@ -75,9 +75,9 @@ const pla_obj = {
             <li>Store in cool and dry place, away from direct sunlight.
             material_features:vegetarian</li>`,
         small: [
-          "./Assets/small_images/Beetroot.jpg",
-          "./Assets/small_images/Beetroot3.jpg",
-          "./Assets/small_images/Beetroot1.jpg",
+          "./Assets/small_images/Beetroot5.jpeg",
+          "./Assets/small_images/Beetroot6.jpg",
+          "./Assets/small_images/Beetroot7.jpeg",
         ],
       },
       {
@@ -90,8 +90,8 @@ const pla_obj = {
             <li>It is a good source of Vitamin K, Dietary Fiber, Calicum, Potassium and Phosphorus</li>
             <li>It is also used in the preparation of dry curries, soups, manchurian or salads </li>`,
         small: [
-          "./Assets/small_images/cabbage.webp",
           "./Assets/small_images/Cabbage1.jpg.jpg",
+          "./Assets/small_images/cabbage5.jpeg",
           "./Assets/small_images/cabbage2.jpeg",
         ],
       },
@@ -107,7 +107,7 @@ const pla_obj = {
             <li>Store in a cool, dry place away from sunlight
             ingredients:fresh cauliflower </li>`,
         small: [
-          "./Assets/small_images/Califlower1.jpg",
+          "./Assets/small_images/Cauliflower7.jpg",
           "./Assets/small_images/Califlower3.jpg",
           "./Assets/small_images/Califlower2.jpg",
         ],
@@ -261,7 +261,7 @@ const pla_obj = {
         small: [
           "./Assets/small_images/Guava1.webp",
           "./Assets/small_images/Guava2.jpg",
-          "./Assets/small_images/Coconut3.webp",
+          "./Assets/small_images/Guava3.webp",
         ],
       },
       // { imgSrc: './Assets/PlaAssets/plaKiwi Fruit.jpeg', productName: 'Kiwi' },
@@ -286,8 +286,8 @@ const pla_obj = {
             <li>Hygienically packed in a pouch, meeting FSSAI food safety standards, that keeps the goodness intact.</li>`,
         small: [
           "./Assets/small_images/Badam1.jpg",
-          "./Assets/small_images/Badam2.jpg",
-          "./Assets/small_images/Badam3.webp",
+          "./Assets/small_images/Badamoil.webp",
+          "./Assets/small_images/Badamoil2.jpg",
         ],
       },
       {
@@ -301,9 +301,9 @@ const pla_obj = {
             <li>Castor seed and oil is commonly used by mouth for constipation and bowel preparation prior to colonoscopy. It is also used orally to start labor in pregnancy.
             </li>`,
         small: [
-          "./Assets/small_images/CastorSeed1.jpg",
+          "./Assets/small_images/CastorSeed4.webp",
           "./Assets/small_images/CastorSeed3.jpg",
-          "./Assets/small_images/CastorSeed2.jpg",
+          "./Assets/small_images/CastorSeed5.webp",
         ],
       },
       {
@@ -319,7 +319,7 @@ const pla_obj = {
         small: [
           "./Assets/small_images/Corn1.webp",
           "./Assets/small_images/Corn2.jpg",
-          "./Assets/small_images/Corn3.jpg",
+          "./Assets/small_images/Corn7.webp",
         ],
       },
       {
@@ -389,9 +389,9 @@ const pla_obj = {
             <li>It is the most common form of barley for human consumption because it cooks faster and is less chewy than other.</li>
             <li>Pearls are high in protein, iron, and natural fiber, and also contain small amounts of calcium & fat. Cooks can be very innovative with pearled barley preparations.</li>`,
         small: [
-          "./Assets/small_images/barley6.webp",
+          "./Assets/small_images/Barely8.jpg",
           "./Assets/small_images/Barely5.jpg",
-          "./Assets/small_images/Barely2.webp",
+          "./Assets/small_images/Barely7.jpg",
         ],
       },
       {
@@ -436,7 +436,7 @@ const pla_obj = {
         small: [
           "./Assets/small_images/BrownRice1.webp",
           "./Assets/small_images/BrownRice2.webp",
-          "./Assets/small_images/BrownRice3.jpg",
+          "./Assets/small_images/BrownRice8.jpeg",
         ],
       },
       {
@@ -483,7 +483,6 @@ const pla_obj = {
       {
         id: 49,
         imgSrc: "./Assets/PlaAssets/plaBetelNuts.jpeg",
-        description: "",
         productName: "BetelNuts",
         price: `100`,
         oprice: `190`,
@@ -569,7 +568,7 @@ const pla_obj = {
         small: [
           "./Assets/small_images/DryFig1.jpeg",
           "./Assets/small_images/DryFig2.jpg",
-          "./Assets/small_images/Coconut3.webp",
+          "./Assets/small_images/DryFig3.png",
         ],
       },
       // { imgSrc: './Assets/PlaAssets/plaFoxnuts.jpeg', productName: 'Foxnuts' },
@@ -615,7 +614,7 @@ function renderHtml(renderItem) {
                 <p class="product-weight">500grm</p> 
                 <h5>Price: <span class="product-price">₹${items.price}</span> <del> ₹${items.oprice}</del></h5>
                 <ul>
-                <h2>Delivery Information</h2>
+                <h2>Product Information</h2>
                 
                   ${items.description}
                  
@@ -636,12 +635,12 @@ function renderHtml(renderItem) {
     
             <!-- Product details -->
             <div class="product-details">
-                <h2>Delivery details</h2>
-                <h3>One-time purchase</h3>
+                <h2>Delivery Details</h2>
+                <h3>One-time Purchase</h3>
                 <h5>₹${items.price} (<del> ₹${items.oprice}</del>)</h5>
                 <ul>
-                    <li>Fastest delivery Tomorrow 4 March, Order within 9 hrs 25 mins.</li>
-                    <li>FREE delivery Saturday, 24 February on orders dispatched.</li>
+                    <li>Fastest delivery Tomorrow 7 March, Order within 24 hrs 25 mins.</li>
+                    <li>FREE delivery Saturday,  8 March on Orders dispatched.</li>
                 </ul>
                 <label for="Quy">Quantity</label>
                 <select id="quantity" name="Quy">
@@ -676,7 +675,9 @@ function renderHtml(renderItem) {
                             </span>
                         </div>`;
           }
-        } else {
+        } 
+    
+        else {
           break;
         }
       }
@@ -736,7 +737,6 @@ for (let i = 0; i < allImages.length; i++) {
 }
 
 // function to store details in local storage for wishlist
-
 function addToWishlist() {
   // Get product details
   var productName = document.querySelector(".product-name").textContent;
@@ -746,7 +746,6 @@ function addToWishlist() {
   var productQty = document.querySelector(".product-qty").value;
 
   // Get existing wishlist from local storage or initialize if it doesn't exist
-
   var wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
   wishlist.push({
@@ -759,5 +758,3 @@ function addToWishlist() {
 }
 document.querySelector(".heart").addEventListener("click", addToWishlist);
 document.querySelector(".wish-cart").addEventListener("click", storeProductDetails());
-
-
