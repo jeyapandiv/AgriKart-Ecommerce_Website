@@ -80,12 +80,12 @@ border-radius: 8px;
   align-items: center;
   object-fit: cover;
   position: relative;
-  left: 2em;
+  left: 1em;
 
 }
 .main-img{
-  width: 400px;
-  height: 400px;
+  width: 445px;
+  height: 445px;
   flex-shrink: 0;
   border-radius: 4px;
   display: flex;
@@ -120,7 +120,9 @@ box-shadow:var(--box-shadow2);
   height: 90px;
   border-radius: 4px;
   cursor: pointer;
+
 }
+
 .button{
   position: relative;
   top: 40px;
@@ -138,7 +140,7 @@ box-shadow:var(--box-shadow2);
 }
 
 .product-info{
-  margin-top: 3%;
+  margin-top: 5%;
   width: 50%;
  
 }
@@ -324,8 +326,9 @@ display: flex;
 }
 
 img.item-img {
-  width: 210px;
+  width: 196px;
   height: 174px;
+  margin-left: 4%;
 }
 
 .related-item >h3{
