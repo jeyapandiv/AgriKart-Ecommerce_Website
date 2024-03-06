@@ -45,7 +45,7 @@ const plp_obj_vegetable = {
         data: [
             { id: 1, imgSrc: './Assets/PlaAssets/plaBeetroot.jpeg', productName: 'Beetroot', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
             { id: 2, imgSrc: './Assets/PlaAssets/plaCabbage.jpeg', productName: 'Cabbage', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
-            { id: 3, imgSrc: './Assets/PlaAssets/plaCaliflower.jpeg', productName: 'Califlower', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id: 3, imgSrc: './Assets/PlaAssets/plaCaliflower.jpeg', productName: 'Cauliflower', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
             { id: 4, imgSrc: './Assets/PlaAssets/plaCapsicum.jpeg', productName: 'Capsicum', plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
             { id: 5, imgSrc: './Assets/PlaAssets/plaCarrot.jpeg', productName: 'Carrot', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
             { id: 6, imgSrc: './Assets/PlaAssets/plaCoconut.jpeg', productName: 'Coconut', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
@@ -93,23 +93,23 @@ const pla_obj_oilcrops = {
     oilcrops1: {
         heading: 'Oil Crops',
         data: [
-            { imgSrc: './Assets/PlaAssets/plaBadam.jpeg', productName: 'Badam', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaCastorSeed.jpeg', productName: 'CastorSeed', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaCornOil.jpeg', productName: 'Corn', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaFlaxSeeds.jpeg', productName: 'FlaxSeeds', plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
-            { imgSrc: './Assets/PlaAssets/plaMustard Seeds.jpeg', productName: 'Mustard Seeds', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
-            { imgSrc: './Assets/PlaAssets/plaHembSeed.jpeg', productName: 'HembSeed', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
+            { id:25,imgSrc: './Assets/PlaAssets/plaBadam.jpeg', productName: 'Badam', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id:26,imgSrc: './Assets/PlaAssets/plaCastorSeed.jpeg', productName: 'CastorSeed', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
+            { id:27,imgSrc: './Assets/PlaAssets/plaCornOil.jpeg', productName: 'Corn', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id:28,imgSrc: './Assets/PlaAssets/plaFlaxSeeds.jpeg', productName: 'FlaxSeeds', plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
+            { id:29,imgSrc: './Assets/PlaAssets/plaMustardSeeds.jpeg', productName: 'Mustard Seeds', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
+            { id:30,imgSrc: './Assets/PlaAssets/plaHembSeed.jpeg', productName: 'HembSeed', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
         ]
     },
     oilcrops2: {
         heading: 'Season Special || Top Deals',
         data: [
-            { imgSrc: './Assets/PlaAssets/plaGroundNut.jpeg', productName: 'GroundNut', plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
-            { imgSrc: './Assets/PlaAssets/plapumkinSeeds.jpeg', productName: 'pumkinSeeds', plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaSesameSeeds.jpeg', productName: 'SesameSeeds', plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
-            { imgSrc: './Assets/PlaAssets/plaSunFlower.jpeg', productName: 'SunFlower', plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaWalNuts.jpeg', productName: 'WalNuts', plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' },
-            { imgSrc: './Assets/PlaAssets/plaOliveOil.jpeg', productName: 'Olive', plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' }
+            { id:31,imgSrc: './Assets/PlaAssets/plaGroundNut.jpeg', productName: 'GroundNut', plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
+            { id:32,imgSrc: './Assets/PlaAssets/plapumkinSeeds.jpeg', productName: 'pumkinSeeds', plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id:33,imgSrc: './Assets/PlaAssets/plaSesameSeeds.jpeg', productName: 'SesameSeeds', plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
+            { id:34,imgSrc: './Assets/PlaAssets/plaSunFlower.jpeg', productName: 'SunFlower', plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
+            { id:35,imgSrc: './Assets/PlaAssets/plaWalNuts.jpeg', productName: 'WalNuts', plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' },
+            { id:36,imgSrc: './Assets/PlaAssets/plaOliveOil.jpeg', productName: 'Olive', plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' }
         ]
     }
 };
@@ -118,23 +118,23 @@ const pla_obj_Grains = {
     Grains1: {
         heading: 'All Grain Varieties',
         data: [
-            { imgSrc: './Assets/PlaAssets/plaBarely.avif', productName: 'Barely', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaBasmatiRice.jpeg', productName: 'BasmatiRice', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaBlackRice.jpeg', productName: 'BlackRice', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaBrownRice.jpeg', productName: 'BrownRice', plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
-            { imgSrc: './Assets/PlaAssets/plaRedRice.jpeg', productName: 'Red Rice', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
-            { imgSrc: './Assets/PlaAssets/plaFreekeh.jpeg', productName: 'Freekeh', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
+            { id:37,imgSrc: './Assets/PlaAssets/plaBarely.avif', productName: 'Barely', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id:38,imgSrc: './Assets/PlaAssets/plaBasmatiRice.jpeg', productName: 'BasmatiRice', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
+            { id:39,imgSrc: './Assets/PlaAssets/plaBlackRice.jpeg', productName: 'BlackRice', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id:40,imgSrc: './Assets/PlaAssets/plaBrownRice.jpeg', productName: 'BrownRice', plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
+            { id:41,imgSrc: './Assets/PlaAssets/plaRedRice.jpeg', productName: 'Red Rice', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
+            { id:42,imgSrc: './Assets/PlaAssets/plaFreekeh.jpeg', productName: 'Freekeh', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
         ]
     },
     Grains2: {
         heading: 'Season Special || Top Deals',
         data: [
-            { imgSrc: './Assets/PlaAssets/plaBulgur.jpeg', productName: 'Bulgur', plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
-            { imgSrc: './Assets/PlaAssets/plaOat.jpeg', productName: 'Oats', plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaPoniRice.jpeg', productName: 'PoniRice', plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
-            { imgSrc: './Assets/PlaAssets/plaWildRice.jpeg', productName: 'WildRice', plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaWheat.jpeg', productName: 'Wheat', plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' },
-            { imgSrc: './Assets/PlaAssets/plaSorghum.jpeg', productName: 'Sorghum', plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' }
+            { id:43,imgSrc: './Assets/PlaAssets/plaBulgur.jpeg', productName: 'Bulgur', plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
+            { id:44,imgSrc: './Assets/PlaAssets/plaOat.jpeg', productName: 'Oats', plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id:45,imgSrc: './Assets/PlaAssets/plaPoniRice.jpeg', productName: 'PoniRice', plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
+            { id:46,imgSrc: './Assets/PlaAssets/plaWildRice.jpeg', productName: 'WildRice', plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
+            { id:47,imgSrc: './Assets/PlaAssets/plaWheat.jpeg', productName: 'Wheat', plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' },
+            { id:48,imgSrc: './Assets/PlaAssets/plaSorghum.jpeg', productName: 'Sorghum', plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' }
         ]
     }
 };
@@ -143,23 +143,22 @@ const pla_obj_Dryfruits = {
     Dryfruits1: {
         heading: 'All DryFruits and Nuts',
         data: [
-            { imgSrc: './Assets/PlaAssets/plaBetelNuts.jpeg', productName: 'BetelNuts', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaCashewnut.jpeg', productName: 'Cashewnut', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaDates.jpeg', productName: 'Dates', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaDryBadam.jpeg', productName: 'Badam', plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
-            { imgSrc: './Assets/PlaAssets/plaDryFig.jpeg', productName: 'DryFig', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
-            { imgSrc: './Assets/PlaAssets/plaFoxnuts.jpeg', productName: 'Foxnuts', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
-        ]
+            { id:49,imgSrc: './Assets/PlaAssets/plaBetelNuts.jpeg', productName: 'BetelNuts', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id:60,imgSrc: './Assets/PlaAssets/plaBlackRaisin.jpeg', productName: 'BlackRaisin', plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' },
+            { id:50,imgSrc: './Assets/PlaAssets/plaCashewnut.jpeg', productName: 'Cashewnut', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
+            { id:51,imgSrc: './Assets/PlaAssets/plaDates.jpeg', productName: 'Dates', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id:52,imgSrc: './Assets/PlaAssets/plaDryBadam.jpeg', productName: 'Badam', plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
+            { id:53,imgSrc: './Assets/PlaAssets/plaDryFig.jpeg', productName: 'DryFig', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' }        ]
     },
     Dryfruits2: {
         heading: 'Season Special || Top Deals',
         data: [
-            { imgSrc: './Assets/PlaAssets/plaKesar.jpeg', productName: 'Kesar', plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
-            { imgSrc: './Assets/PlaAssets/plaKishmish.jpeg', productName: 'Kishmish', plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { imgSrc: './Assets/PlaAssets/plaMakhana.jpeg', productName: 'Makhana', plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
-            { imgSrc: './Assets/PlaAssets/plapeanut.jpeg', productName: 'Peanut', plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
-            { imgSrc: './Assets/PlaAssets/plaPista.jpeg', productName: 'Pista', plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' },
-            { imgSrc: './Assets/PlaAssets/plaBlackRaisin.jpeg', productName: 'BlackRaisin', plpdescription: 'dummytext12', plpprice: '₹70', plporiginalPrice: '₹90' }
+            { id:54,imgSrc: './Assets/PlaAssets/plaFoxnuts.jpeg', productName: 'Foxnuts', plpdescription: 'dummytext6', plpprice: '₹100', plporiginalPrice: '₹120' },
+            { id:55,imgSrc: './Assets/PlaAssets/plaKesar.jpeg', productName: 'Kesar', plpdescription: 'dummytext7', plpprice: '₹50', plporiginalPrice: '₹70' },
+            { id:56,imgSrc: './Assets/PlaAssets/plaKishmish.jpeg', productName: 'Kishmish', plpdescription: 'dummytext8', plpprice: '₹60', plporiginalPrice: '₹90' },
+            { id:57,imgSrc: './Assets/PlaAssets/plaMakhana.jpeg', productName: 'Makhana', plpdescription: 'dummytext9', plpprice: '₹120', plporiginalPrice: '₹140' },
+            { id:58,imgSrc: './Assets/PlaAssets/plapeanut.jpeg', productName: 'Peanut', plpdescription: 'dummytext10', plpprice: '₹160', plporiginalPrice: '₹190' },
+            { id:59,imgSrc: './Assets/PlaAssets/plaPista.jpeg', productName: 'Pista', plpdescription: 'dummytext11', plpprice: '₹65', plporiginalPrice: '₹95' }
         ]
     }
 };
@@ -204,12 +203,6 @@ function createHTMLStructure(pla_obj) {
 
             productNameH4.textContent = product.productName;
 
-            const descriptionH5 = document.createElement('h5');
-            descriptionH5.id = 'plpdescription';
-            descriptionH5.dataset.id = product.id
-
-            descriptionH5.textContent = product.plpdescription;
-
             const priceDiv = document.createElement('div');
             priceDiv.dataset.id = product.id
 
@@ -217,6 +210,7 @@ function createHTMLStructure(pla_obj) {
 
             const priceH4 = document.createElement('h4');
             priceH4.dataset.id = product.id
+            priceH4.className='plppriceh4'
 
             const priceSpan = document.createElement('span');
 
@@ -236,7 +230,6 @@ function createHTMLStructure(pla_obj) {
 
             productCardDiv.appendChild(productImg);
             productCardDiv.appendChild(productNameH4);
-            // productCardDiv.appendChild(descriptionH5);
             productCardDiv.appendChild(priceDiv);
 
             cardGroupDiv.appendChild(productCardDiv);
@@ -256,7 +249,7 @@ function createHTMLStructure(pla_obj) {
         element.addEventListener('click', platoplpfun);
     });
 
-    function platoplpfun(e) {
+    function platoplpfun(e) {   
         if (e.target.dataset.id != undefined) {
             localStorage.setItem("id", e.target.dataset.id)
         }
@@ -264,6 +257,7 @@ function createHTMLStructure(pla_obj) {
     }
 
 }
+
 plpdisplay();
 
 function plpdisplay(){
@@ -323,22 +317,47 @@ function filterProducts(categoryObj, searchTerm) {
     });
 }
 
-if (localStorage.getItem("category") === "vegetables") {
-    createHTMLStructure(plp_obj_vegetable);
-}
+ // login verfication -----------------------------
 
-else if (localStorage.getItem("category") === "fruits") {
-    createHTMLStructure(pla_obj_fruits);
-}
+ let loginbtn = document.querySelectorAll('#plaSideBtn');
+ let profileicon = document.getElementById('navProfileIcon');
+ let logoutbtn = document.getElementById('plasignout');
+ let wishicon=document.getElementById('navwishIcon');
 
-else if (localStorage.getItem("category") === "oil") {
-    createHTMLStructure(pla_obj_oilcrops);
-}
+ let storedUser = localStorage.getItem("usercollation");
+ let userCollation = storedUser ? JSON.parse(storedUser) : null;
 
-else if (localStorage.getItem("category") === "grains") {
-    createHTMLStructure(pla_obj_Grains);
-}
+ if (userCollation) {
+     loginbtn.forEach(btn => {
+         btn.classList.remove('view');
+         btn.classList.add('block');
+     });
+     profileicon.classList.add('view');
+     logoutbtn.classList.remove('plasignout');
+     wishicon.classList.add('view')
+     console.log("hi");
+ } else {
+     loginbtn.forEach(btn => {
+         btn.classList.remove('block');
+         btn.classList.add('view');
+     });
+     profileicon.classList.remove('view');
+     profileicon.classList.add('block');
+     
+     wishicon.classList.remove('view');
+     wishicon.classList.add('block')
 
-else{
-    createHTMLStructure(pla_obj_Dryfruits);
-}
+     logoutbtn.classList.remove('view');
+     logoutbtn.classList.add('block');
+     console.log("bye");
+ }
+
+
+// logout function ---------------------------
+
+logoutbtn.addEventListener('click', () => {
+
+localStorage.removeItem('usercollation');
+
+location.href = "./Login.html"; 
+});

@@ -5,17 +5,17 @@ let product = document.querySelector(".product-container");
 
 let smallImagess = document.querySelector(".related-items-div");
 
-// ----------------------- function to store details in local storage for cart
+// --------------------------------------
 function storeProductDetails(btn) {
   // Extracting product details
-  var productName = document.querySelector(".product-name").innerText;
-  var productWeight = document.querySelector(".product-weight").innerText;
-  var productPrice = document.querySelector(".product-price").innerText;
-  var productQty = document.querySelector(".product-qty").value;
-  var productImg = document.querySelector(".product-img").src; // Assuming you want the src attribute
+  const productName = document.querySelector(".product-name").innerText;
+  const productWeight = document.querySelector(".product-weight").innerText;
+  const productPrice = document.querySelector(".product-price").innerText;
+  const productQty = document.querySelector(".product-qty").value;
+  const productImg = document.querySelector(".product-img").src; // Assuming you want the src attribute
 
   // Creating product detail object
-  var productDetails = {
+  const productDetails = {
     ProductName: productName,
     ProductQty: productQty,
     ProductImage: productImg,
@@ -47,20 +47,20 @@ function navigateCheckout(btn) {
   window.location.href = "checkout.html";
 }
 
-// var addcart = document.getElementById('addcart');
-// addcart.addEventListener('click', () => {
-//     var productName = document.querySelector('.product-name').textContent;
-//     var price = document.querySelector('.product-price').textContent.split(': ')[1];
-//     var weight = document.querySelector('.product-weight').textContent.split(': ')[1];
-//     var imgSrc = document.querySelector('.main-img img').src;
-//     console.log(productName,price,weight,imgSrc)
-//     // Navigate to cart page and pass product details via query parameters or localStorage
-//     window.location.href = `cart.html?productName=${productName}&price=${price}&weight=${weight}&imgSrc=${imgSrc}`;
-// });
+function cartIconPageNavigate(icon) {
+  window.location.href = "cart.html";
+}
+
+function wishIconPageNavigate(icon) {
+    window.location.href = "wishlist.html";
+}
+function navigationMain() {
+  window.location.href = "index.html";
+}
 
 // ----------------------------------object itms
 
-var pla_obj = {
+const pla_obj = {
   vegetables: {
     heading: "All Vegetables",
     data: [
@@ -98,7 +98,7 @@ var pla_obj = {
       {
         id: 3,
         imgSrc: "./Assets/PlaAssets/plaCaliflower.jpeg",
-        productName: "Califlower",
+        productName: "Cauliflower",
         price: "60",
         oprice: "90",
         description: `<li>Cauliflower is low in fat</li>
@@ -227,7 +227,7 @@ var pla_obj = {
         description: `<li>Graded, sorted and quality fruits and vegetables</li>
                 <li>Fresh, hygienic and natural</li>
                 <li>Dried Blueberries contain bone-strengthening minerals Calcium and Vitamin K.</li>
-                <li>The nutritional value of blueberries is so high; they are considered one of the most antioxidant-dense foods in the world. Dried Blueberries from Happilo are rich in vitamins A & C, Iron and Manganese.</li><li></li>`,
+                <li>The nutritional value of blueberries is so high; they are considered one of the most antioxidant-dense foods in the world. Dried Blueberries from Happilo are rich in vitamins A & C, Iron and Manganese.</li>`,
         small: [
           "./Assets/small_images/Blueberry1.jpg",
           "./Assets/small_images/Blueberry2.webp",
@@ -241,8 +241,8 @@ var pla_obj = {
         price: `100`,
         oprice: `190`,
         description: `<li>Fresh, hygienic and natural<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.</li>
+            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.</li>`,
         small: [
           "./Assets/small_images/Grapes1.webp",
           "./Assets/small_images/Grapes2.jpg",
@@ -256,8 +256,8 @@ var pla_obj = {
         price: `100`,
         oprice: `190`,
         description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-                <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-                <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+                <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.</li>
+                <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.</li>`,
         small: [
           "./Assets/small_images/Guava1.webp",
           "./Assets/small_images/Guava2.jpg",
@@ -281,9 +281,9 @@ var pla_obj = {
         productName: "Badam",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>Purely natural, no additives, no preservatives or added flavours.</li>
+            <li>Almond has many nutrients, protein and fibre. Munch a handful on the go or add it to your meal it helps to maintain a healthy balanced diet</li>
+            <li>Hygienically packed in a pouch, meeting FSSAI food safety standards, that keeps the goodness intact.</li>`,
         small: [
           "./Assets/small_images/Badam1.jpg",
           "./Assets/small_images/Badam2.jpg",
@@ -296,9 +296,10 @@ var pla_obj = {
         productName: "CastorSeed",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>Pure and natural.</li>
+            <li>Castor is a plant that produces seeds- beans. Castor oil is produced by pressing ripe seeds that have had their outer covering- hull removed.</li>
+            <li>Castor seed and oil is commonly used by mouth for constipation and bowel preparation prior to colonoscopy. It is also used orally to start labor in pregnancy.
+            </li>`,
         small: [
           "./Assets/small_images/CastorSeed1.jpg",
           "./Assets/small_images/CastorSeed3.jpg",
@@ -311,9 +312,10 @@ var pla_obj = {
         productName: "Corn",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>Corn oil is a feedstock used for biodiesel.
+            </li>
+            <li>It has anticholesterol properties as it lowers LDL blood cholesterol.</li>
+            <li>Corn oil reduces blood pressure post consumption in hypertensive patients.</li>`,
         small: [
           "./Assets/small_images/Corn1.webp",
           "./Assets/small_images/Corn2.jpg",
@@ -326,9 +328,9 @@ var pla_obj = {
         productName: "FlaxSeeds",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>GNC flax seed oil capsules are made with unrefined cold pressed flaxseeds.</li>
+            <li>Perfect vegetarian alternative for fish oil.<li>
+            <li>Provides both omega 3 and omega 6 fatty acids.<li>`,
         small: [
           "./Assets/small_images/FlaxSeeds1.jpg",
           "./Assets/small_images/FlaxSeeds2.webp",
@@ -341,9 +343,9 @@ var pla_obj = {
         productName: "MustardSeeds",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li> This mustard oil is rich in Vitamin E, a natural antioxidant.</li>
+            <li>This cold pressed mustard oil is good for your well-being as it is cholesterol free.</li>
+            <li>Bring home the goodness of pure mustard seed.</li>`,
         small: [
           "./Assets/small_images/MustardSeeds1.jpg",
           "./Assets/small_images/MustardSeeds2.jpg",
@@ -356,9 +358,9 @@ var pla_obj = {
         productName: "HembSeed",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li> Hemp Seed Oil has many medicinal properties that include Dry Skin Moisturization, Anti-Aging Effect, treating Dermatitis & enhance the overall quality & texture of your skin & hair. It makes them healthy again.</li>
+            <li>Hemp Seed Oil has been extracted from Hemp Sativa Seed and is 100% Cold Pressed and delivered to you in its pure & unrefined form. It is a multipurpose oil and can be applied on face, body and hair.</li>
+            <li>This is Pure and Unrefined Hemp Seed Oil.</li>`,
         small: [
           "./Assets/small_images/HembSeed1.webp",
           "./Assets/small_images/HembSeed4.jpg",
@@ -383,9 +385,9 @@ var pla_obj = {
         productName: "Barely",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>Barley is a form of barley that has been processed to remove its fibrous outer hull and polished to remove some or all of the bran layer.</li>
+            <li>It is the most common form of barley for human consumption because it cooks faster and is less chewy than other.</li>
+            <li>Pearls are high in protein, iron, and natural fiber, and also contain small amounts of calcium & fat. Cooks can be very innovative with pearled barley preparations.</li>`,
         small: [
           "./Assets/small_images/barley6.webp",
           "./Assets/small_images/Barely5.jpg",
@@ -398,9 +400,9 @@ var pla_obj = {
         productName: "BasmatiRice",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>PREMIUM QUALITY: Our Daawat Biryani Basmati Rice is known for its exceptional quality and flavours, sourced from the finest basmati rice grains. We pick up the finest grains to serve you the finest basmati. Each pack is prepared after Chunkar, Bachakar, Sambhalkar and Sajaakar to serve you the longest rice grain.</li>
+            <li>Whether you're preparing a festive feast or a special family dinner, Daawat Biryani Rice is the perfect choice to impress your guests with delicious and savoury biryani.</li>
+            <li>These Basmati rice grains are renowned for their impressive length, making them the world's longest rice grain. This unique characteristic adds to the overall appeal of your biryani dish.</li>`,
         small: [
           "./Assets/small_images/BasmatiRice2.jpg",
           "./Assets/small_images/BasmatiRice1.jpg",
@@ -413,9 +415,9 @@ var pla_obj = {
         productName: "BlackRice",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>Rich in Antioxidants: Black rice is packed with antioxidants, particularly anthocyanins. These antioxidants help combat free radicals in the body, reducing oxidative stress and lowering the risk of chronic diseases.</li>
+            <li>Digestive Health: The fiber content in black rice aids in digestion and can help prevent constipation. It promotes regular bowel movements and supports a healthy digestive system.</li>
+            <li>Black rice is naturally gluten-free, making it suitable for individuals with gluten sensitivities or celiac disease.</li>`,
         small: [
           "./Assets/small_images/BlackRice1.jpg",
           "./Assets/small_images/BlackRice5.jpg",
@@ -428,9 +430,9 @@ var pla_obj = {
         productName: "BrownRice",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>Used finest quality basmati.</li>
+            <li>Suitable for all food.</li>
+            <li>Country of Origin: India.</li>`,
         small: [
           "./Assets/small_images/BrownRice1.webp",
           "./Assets/small_images/BrownRice2.webp",
@@ -439,13 +441,13 @@ var pla_obj = {
       },
       {
         id: 41,
-        imgSrc: "./Assets/PlaAssets/plaKaniwa.jpeg",
+        imgSrc: "./Assets/PlaAssets/plaRedRice.jpeg",
         productName: "RedRice",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>Organic Red Rice. Eat Natural Live Healthy and phytochemicals.<li>
+            <li>Much like the brown rice and white rice, red rice also comes with some incredible health benefits.</li>
+            <li>Best Organic Grocery & Gourmet in india. Health Is Wealth So Give It A Try For Healthier Life.</li>`,
         small: [
           "./Assets/small_images/Redrice1.webp",
           "./Assets/small_images/Redrice2.jpeg",
@@ -458,13 +460,13 @@ var pla_obj = {
         productName: "Freekeh",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>good source of essential nutrients, including protein, fiber, vitamins, and minerals. It contains B vitamins, such as niacin, thiamine, and riboflavin, as well as minerals like iron, phosphorus, magnesium, and zinc.</li>
+            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.</li>
+            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.</li>`,
         small: [
-          "./Assets/small_images/Coconut1.jpeg",
-          "./Assets/small_images/Coconut2.webp",
-          "./Assets/small_images/Coconut3.webp",
+          "./Assets/small_images/Freekeh1.jpg",
+          "./Assets/small_images/Freekeh2.jpg",
+          "./Assets/small_images/Freekeh3.jpeg",
         ],
       },
       // { imgSrc: './Assets/PlaAssets/plaBulgur.jpeg', productName: 'Bulgur' },
@@ -485,13 +487,14 @@ var pla_obj = {
         productName: "BetelNuts",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>
+            Last longs, Preserved Flavor & Freshness with Nitrogen Packing.</li>
+            <li>Packed & Processed under Fully Hygienic Environment.</li>
+            <li>100% Vegetarian.</li>`,
         small: [
-          "./Assets/small_images/Coconut1.jpeg",
-          "./Assets/small_images/Coconut2.webp",
-          "./Assets/small_images/Coconut3.webp",
+          "./Assets/small_images/BetelNuts1.jpg",
+          "./Assets/small_images/BetelNuts2.jpeg",
+          "./Assets/small_images/BetelNuts3.png",
         ],
       },
       {
@@ -500,13 +503,13 @@ var pla_obj = {
         productName: "BlackRaisin",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>Premium seedless Afghani Black Raisins that are famous for their sweetness as a ready to go snack. Imported from Afghanistan, these raisins are plump, luscious and flavoursome. You are going to relish each and every bite of it.</li>
+            <li>Black raisins are high in antioxidants, fiber, iron, potassium and are a natural energy booster. They are rich in vitamins, minerals and a good source of energy producing carbohydrates.</li>
+            <li>Black raisins are one of the most nutritious dried fruits in the world. It can support digestion, improve iron levels and also helps keep the blood free from impurities.</li>`,
         small: [
-          "./Assets/small_images/Coconut1.jpeg",
-          "./Assets/small_images/Coconut2.webp",
-          "./Assets/small_images/Coconut3.webp",
+          "./Assets/small_images/BlackRaisin1.jpeg",
+          "./Assets/small_images/BlackRaisin2.jpeg",
+          "./Assets/small_images/BlackRaisin3.jpeg",
         ],
       },
       {
@@ -515,13 +518,13 @@ var pla_obj = {
         productName: "Cashewnut",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>Rich, buttery and delicious and perfect for making raw cashew milk or snacking. Excellent source of protein, fiber and minerals. Suitable for vegetarians.</li>
+            <li>Cashews are an incredible nutritional powerhouse with Iron, Copper, Zinc, Phosphorus, Magnesium, Selenium. Rice sources of antioxidants, minerals and vitamins .</li>
+            <li>Cashew nuts are rich in fibre, heart-healthy fats, and plant protein. Good for an active life style, perfect for snacking.</li>`,
         small: [
-          "./Assets/small_images/Coconut1.jpeg",
-          "./Assets/small_images/Coconut2.webp",
-          "./Assets/small_images/Coconut3.webp",
+          "./Assets/small_images/Cashewnut1.jpeg",
+          "./Assets/small_images/Cashewnut2.webp",
+          "./Assets/small_images/Cashewnut3.webp",
         ],
       },
       {
@@ -530,13 +533,13 @@ var pla_obj = {
         productName: "Dates",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>Dates are well known instant energy boosters. Dates contain several nutrients that give various health benefits from helping reduce cholesterol to healthy bones.</li>
+            <li>Dates have all the goodness that one needs, be it their sweet rich taste or their health benefits. Rich in dietary fibre it not only supports the digestive system but also helps improve the immune system.</li>
+            <li>100% Naturally Dried and free from any Preservatives and Additives, it is a healthy substitute for sugar in any dessert, smoothies or sweet treats.</li>`,
         small: [
-          "./Assets/small_images/Coconut1.jpeg",
-          "./Assets/small_images/Coconut2.webp",
-          "./Assets/small_images/Coconut3.webp",
+          "./Assets/small_images/Dates1.webp",
+          "./Assets/small_images/Dates2.png",
+          "./Assets/small_images/Dates3.webp",
         ],
       },
       {
@@ -545,13 +548,13 @@ var pla_obj = {
         productName: "Badam",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>Uniformly roasted crunchy nuts.</li>
+            <li>Nitrogen flushed packs for extra freshness.</li>
+            <li>Resealable zip lock stand up pouches.</li>`,
         small: [
-          "./Assets/small_images/Coconut1.jpeg",
-          "./Assets/small_images/Coconut2.webp",
-          "./Assets/small_images/Coconut3.webp",
+          "./Assets/small_images/Badam4.jpeg",
+          "./Assets/small_images/Badam5.png",
+          "./Assets/small_images/Badam7.webp",
         ],
       },
       {
@@ -560,12 +563,12 @@ var pla_obj = {
         productName: "DryFig",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.<li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.<li>`,
+        description: `<li>They are highly nutritious and rich in healthy fats antioxidants vitamins and minerals.</li>
+            <li>Naturally dried and free from any additives or preservatives.</li>
+            <li>Bone Health: Premium Anjeer is a good source of calcium, which is essential for maintaining strong bones and preventing conditions like osteoporosis.</li>`,
         small: [
-          "./Assets/small_images/Coconut1.jpeg",
-          "./Assets/small_images/Coconut2.webp",
+          "./Assets/small_images/DryFig1.jpeg",
+          "./Assets/small_images/DryFig2.jpg",
           "./Assets/small_images/Coconut3.webp",
         ],
       },
@@ -608,36 +611,36 @@ function renderHtml(renderItem) {
     
             <!-- Right side -->
             <div class="product-info">
-                <h3 class="product-name">${items.productName} |</h3>
+                <h3 class="product-name">${items.productName} </h3>
                 <p class="product-weight">500grm</p> 
                 <h5>Price: <span class="product-price">₹${items.price}</span> <del> ₹${items.oprice}</del></h5>
                 <ul>
-                <h2> Product Information</h2>
+                <h2>Delivery Information</h2>
                 
                   ${items.description}
                  
-                    <li>Nonpareil Premium California Almonds / Batams</li>
-                    <li> Free Shipping on orders above ₹499</li>
-                    <li> With Protein, Vitamin E & Fiber</li>
-                    
                    
                 </ul>
                 <div class="quantity">
+                    <div class="quantityIcon">
                     <i class="fa-solid fa-minus" style="color: #ff0000;" id="minus"></i>
                     <input class="product-qty" type="text" value="1" min="1" id="quantity-count">
                     <i class="fa-solid fa-plus" style="color: #46c70f;" id="plus"></i>
+                    </div>
+                    <div class="add_card">
                     <button onclick="storeProductDetails()">Add to Cart</button>
                     <button onclick="navigateCheckout(this)">Buy Now</button>
+                    </div>
                 </div>
             </div>
     
             <!-- Product details -->
             <div class="product-details">
-                <h2>Product details</h2>
+                <h2>Delivery details</h2>
                 <h3>One-time purchase</h3>
-                <h5>₹2200.00 (₹1560.00 / 1kg)</h5>
+                <h5>₹${items.price} (<del> ₹${items.oprice}</del>)</h5>
                 <ul>
-                    <li>Fastest delivery Tomorrow, 23 February. Order within 9 hrs 25 mins.</li>
+                    <li>Fastest delivery Tomorrow 4 March, Order within 9 hrs 25 mins.</li>
                     <li>FREE delivery Saturday, 24 February on orders dispatched.</li>
                 </ul>
                 <label for="Quy">Quantity</label>
@@ -652,16 +655,14 @@ function renderHtml(renderItem) {
                 </div>
             </div>`;
 
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 5; i++) {
         const smallItem = renderItem.data[i];
 
         console.log(smallItem, "ok");
-        for (let i = 0; i < 4; i++) {
-          var smallItem = pla_obj.vegetables.data[i];
 
-          if (smallItem) {
-            if (localStorage.getItem("id") != smallItem.id) {
-              smallImagess.innerHTML += `
+        if (smallItem) {
+          if (localStorage.getItem("id") != smallItem.id) {
+            smallImagess.innerHTML += `
                         <div class="related-item " style="cursor:pointer" onclick=showRelated(${smallItem.id}) id=${smallItem.id}>
                             <img src="${smallItem.imgSrc}" alt="Related Item" class="item-img">
                             <a href="">${smallItem.productName}</a>
@@ -674,10 +675,9 @@ function renderHtml(renderItem) {
                                 <i class="fa-solid fa-star"></i>
                             </span>
                         </div>`;
-            }
-          } else {
-            break;
           }
+        } else {
+          break;
         }
       }
     }
@@ -707,12 +707,6 @@ smallImages.forEach((smallImg) => {
   });
 });
 
-function cartIconPageNavigate() {
-  window.location.href = "cart.html";
-}
-function navigationMain() {
-  window.location.href = "index.html";
-}
 //---------------------- increment - decrement --------------------------
 
 let plus = document.getElementById("plus");
@@ -742,6 +736,7 @@ for (let i = 0; i < allImages.length; i++) {
 }
 
 // function to store details in local storage for wishlist
+
 function addToWishlist() {
   // Get product details
   var productName = document.querySelector(".product-name").textContent;
@@ -751,6 +746,7 @@ function addToWishlist() {
   var productQty = document.querySelector(".product-qty").value;
 
   // Get existing wishlist from local storage or initialize if it doesn't exist
+
   var wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
   wishlist.push({
@@ -762,6 +758,6 @@ function addToWishlist() {
   localStorage.setItem("wishlist", JSON.stringify(wishlist));
 }
 document.querySelector(".heart").addEventListener("click", addToWishlist);
-document
-  .querySelector(".wish-cart")
-  .addEventListener("click", storeProductDetails());
+document.querySelector(".wish-cart").addEventListener("click", storeProductDetails());
+
+

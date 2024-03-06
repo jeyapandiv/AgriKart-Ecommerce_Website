@@ -1,6 +1,4 @@
 // ------------------------------FAIRBASE ------------------------------------
-
-
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
   // TODO: Add SDKs for Firebase products that you want to use
@@ -29,12 +27,6 @@ var ref = collection(db,"user")
 var getData = await getDocs(ref)
 var id = getData.size
 
-
-
-
-
-
-
 // ------------CONTAINERS --------------------------------------
 
 var     ResgisterContainer = document.getElementById("RegistermaincondainerCall");
@@ -49,7 +41,6 @@ var RegEmail = document.getElementById("emailinfo");
 var RegPassword = document.getElementById("pwordinfo");
 var RegBtn = document.getElementById("RegisterBtn");
 var InputTag = document.querySelectorAll("input");
-
 var RegFormSubmit = document.getElementById("RegisterSingnupForm");
 
 
@@ -75,7 +66,6 @@ var trimEm = RegEmail.value.trim()
 var trimPwo = RegPassword.value.trim()
 
 
-function OTBVALIDPAGE(){
 
 if(!(trimFn=="" || trimCont=="" || trimEm=="" || trimPwo=="")){
 
@@ -120,6 +110,7 @@ if(!(trimFn=="" || trimCont=="" || trimEm=="" || trimPwo=="")){
                     if (onetimepword == OTPInnerValue) {
 
                         alert("Email addresss verified")
+
                         location.href = "Login.html"
                     }
                     else {
@@ -134,29 +125,31 @@ if(!(trimFn=="" || trimCont=="" || trimEm=="" || trimPwo=="")){
 
     }
 
-}
 // --------------------------------REGEXP ----------------------
 
 if(trimFn==""){
-    RegFirstNameAlert.classList.add("RegContainerView");
+
     RegFirstName.classList.add("RegborderAlert");
 }
 
 if(trimCont==""){
-    RegContactAlert.classList.add("RegAlertView");
-    RegContNum.classList.add("contAlertBorder");
+    RegContNum.classList.add("contAlertBox");
 }
 
 if(trimEm==""){
-    EmailToolTip.classList.add("emilTooltipView")
+    RegEmail.classList.add("emailAlretBox"); 
 }
-if(trimPwo==""){
-    PwordToolTip.classList.add("ToolTipView");
-}
-// ----------------------------------FAIRBASE TRICKER SESSION------------------------------------------------------
 
-createUserWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
+if(trimPwo==""){
+
+    RegPassword.classList.add("pssworAlertBox");
+}
+// ----------------------------------FAIRBASE TRIGGER SESSION------------------------------------------------------
+
+
+    createUserWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
 .then(async(credentials)=>{   
+    
     let ref = doc(db,"user",credentials.user.uid)
        await setDoc(ref,{
         FirstName:RegFirstName.value,
@@ -164,13 +157,15 @@ createUserWithEmailAndPassword(auth,RegEmail.value,RegPassword.value)
         contact:RegContNum.value,
         email:RegEmail.value,
         password:RegPassword.value
-});
-OTBVALIDPAGE();
+       
+         });
+    
 })
 .catch((err)=>{
     alert(err.message)
     
 });
+
 
 });
 
@@ -193,8 +188,6 @@ if(RegNumResult){
 }
 
 })
-
-
 
 // --------------------------------------SECOND NAME ------------------------------------------
 
@@ -219,6 +212,8 @@ if(RegNumResult){
 // // ---------------------------------------------------------CONTACT REGEXP------------------------
 
 RegContNum.addEventListener("change", () => {
+
+    RegContNum.classList.remove("contAlertBox");
     var RegContNumValue = RegContNum.value.trim();
     var Contact = /\d/ig;
     var MustContact = RegContNumValue.length;
@@ -238,7 +233,7 @@ RegContNum.addEventListener("change", () => {
 var EmailToolTip = document.getElementById("EmailToolTipCall");
 
 RegEmail.addEventListener("keyup", () => {
-
+    RegEmail.classList.remove("emailAlretBox"); 
     EmailToolTip.classList.add("emilTooltipView")
     var RegEmailValue = RegEmail.value.trim();
     var SpicalCharacter = /@+\w/gi;
@@ -250,8 +245,6 @@ RegEmail.addEventListener("keyup", () => {
     var SpicalCharacterResult = SpicalCharacter.test(RegEmailValue);
     var LetterMustResult = LetterMust.test(RegEmailValue);
     var comResult = COM.test(RegEmailValue);
-    
-
 
     var spcialchar = document.getElementById("emailCharLI");
     var EmailAlpha = document.getElementById("emailAlphaLI");
@@ -295,7 +288,6 @@ else{
     EmailCaptial.classList.remove("fa-user-check"); 
 }
 
-
 if(spcialchar.classList.contains("fa-user-check") &&EmailAlpha.classList.contains("fa-user-check")  &&  
 EndCondition.classList.contains("fa-user-check") && EmailCaptial.classList.contains("fa-user-check")){
 console.log("hi")
@@ -303,23 +295,15 @@ console.log("hi")
     EmailToolTip.classList.remove("emilTooltipView")
 }
 
-
 });
 
-
-
-// ---------------------------------PASSWORD----------------------------------------------
-
 // ------------------------------Tool Tip------------------------------------
-
 
 var PwordToolTip = document.getElementById("PwordToolTip");
 
 RegPassword.addEventListener("keyup",()=>{
-  
+    RegPassword.classList.remove("pssworAlertBox");
     PwordToolTip.classList.add("ToolTipView");
-
-
     var RegPassWordValue = RegPassword.value.trim()
     
     var PwordNumMust = /[0-9]/gi;
