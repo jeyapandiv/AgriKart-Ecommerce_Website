@@ -226,9 +226,7 @@ function plasidecatview() {
                 var platoplp = document.querySelectorAll('.plaproductcard');
 
                 platoplp.forEach(function(element) 
-                    {
-                      
-                   
+                    {       
                         element.addEventListener('click', platoplpfun);
                     });
                     
@@ -286,6 +284,7 @@ function plasidecatview() {
                 cardContainer.appendChild(productCard);
             }
         }
+        
 
         createProductCard('vegetables', pla_obj.vegetables);
         createProductCard('fruits', pla_obj.fruits);

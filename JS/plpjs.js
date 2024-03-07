@@ -258,12 +258,14 @@ function createHTMLStructure(pla_obj) {
 
 }
 
+
+
 plpdisplay();
 
 function plpdisplay(){
     if (localStorage.getItem("category") === "vegetables") {
         createHTMLStructure(plp_obj_vegetable);
-        console.log(plp_obj_vegetable)
+        console.log(plp_obj_vegetable);
     }
     else if (localStorage.getItem("category") === "fruits") {
         createHTMLStructure(pla_obj_fruits);
