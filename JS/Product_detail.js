@@ -1,3 +1,5 @@
+"use strict"
+
 var smallImages = document.querySelectorAll(".small-Img");
 var featuredImage = document.getElementById("featured-image");
 
@@ -152,11 +154,11 @@ const pla_obj = {
         productName: "Coconut",
         price: "100",
         oprice: "120",
-        description: `1.Fresh, hygienic and natural
-            2.Good source of Vitamin A,E,K, Potassium and Lycopene
-            3.Can be used in curries, salad, soups and juices
-            4.Store in cool and dry place, away from direct sunlight.
-            5.item_form:peeled`,
+        description: `<li>Fresh, hygienic and natural</li>
+        <li>Good source of Vitamin A,E,K, Potassium and Lycopene</li>
+        <li>Can be used in curries, salad, soups and juices</li>
+        <li>Store in cool and dry place, away from direct sunlight.</li>
+        <li>item_form:peeled</li>`,
         small: [
           "./Assets/small_images/Coconut1.jpeg",
           "./Assets/small_images/Coconut2.webp",
@@ -240,9 +242,9 @@ const pla_obj = {
         productName: "Grapes",
         price: `100`,
         oprice: `190`,
-        description: `<li>Fresh, hygienic and natural<li>
-            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.</li>
-            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.</li>`,
+        description: `<li>Fresh hygienic and natural</li>
+            <li>Rich in Vitamin C, B6, Riboflavin(B2), Phosphorous and Potassium.</li>
+            <li>Store at cool and dry place.</li>`,
         small: [
           "./Assets/small_images/Grapes1.webp",
           "./Assets/small_images/Grapes2.jpg",
@@ -255,9 +257,9 @@ const pla_obj = {
         productName: "Guava",
         price: `100`,
         oprice: `190`,
-        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
-                <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.</li>
-                <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.</li>`,
+        description: `<li>Fresh, hygienic and natural.</li>
+                <li>Guava is very popular fruit as it boosts energy in the body.</li>
+                <li>Rich in Vitamins A,C, folate, fiber and lycopene.</li>`,
         small: [
           "./Assets/small_images/Guava1.webp",
           "./Assets/small_images/Guava2.jpg",
@@ -312,8 +314,8 @@ const pla_obj = {
         productName: "Corn",
         price: `100`,
         oprice: `190`,
-        description: `<li>Corn oil is a feedstock used for biodiesel.
-            </li>
+        description: `<li>Corn oil is a feedstock used for biodiesel.</li>
+            
             <li>It has anticholesterol properties as it lowers LDL blood cholesterol.</li>
             <li>Corn oil reduces blood pressure post consumption in hypertensive patients.</li>`,
         small: [
@@ -329,8 +331,8 @@ const pla_obj = {
         price: `100`,
         oprice: `190`,
         description: `<li>GNC flax seed oil capsules are made with unrefined cold pressed flaxseeds.</li>
-            <li>Perfect vegetarian alternative for fish oil.<li>
-            <li>Provides both omega 3 and omega 6 fatty acids.<li>`,
+            <li>Perfect vegetarian alternative for fish oil.</li>
+            <li>Provides both omega 3 and omega 6 fatty acids.</li>`,
         small: [
           "./Assets/small_images/FlaxSeeds1.jpg",
           "./Assets/small_images/FlaxSeeds2.webp",
@@ -486,8 +488,8 @@ const pla_obj = {
         productName: "BetelNuts",
         price: `100`,
         oprice: `190`,
-        description: `<li>
-            Last longs, Preserved Flavor & Freshness with Nitrogen Packing.</li>
+        description:
+        `<li>Last longs, Preserved Flavor & Freshness with Nitrogen Packing.</li>
             <li>Packed & Processed under Fully Hygienic Environment.</li>
             <li>100% Vegetarian.</li>`,
         small: [
@@ -589,11 +591,13 @@ function renderHtml(renderItem) {
       product.innerHTML = `
             <!-- left side -->
             <div class="img-card">
+            
+               
                 <div class="main-img">
-                
+                      
                     <img class="product-img" src=${items.imgSrc} alt="" id="featured-image">
                     <div class="heart-container"> 
-                    <i class="fa-regular fa-heart heart" style="color: #000000;"></i>
+                    <i id="hertIcon" class="fa-regular fa-heart heart" style="color: #C84E2A;" onclick="addToWishlist(this)"></i>
                     </div> 
                     
                 </div>
@@ -649,8 +653,9 @@ function renderHtml(renderItem) {
                     <option value="3">3</option>
                 </select>
                 <div class="add_card">
+            
                     <button onclick="storeProductDetails()">Add to Cart</button>
-                    <button id="buynow">buy now</button>
+                    <button onclick="navigateCheckout(this)" id="buynow">Buy now</button>
                 </div>
             </div>`;
             
@@ -738,7 +743,19 @@ for (let i = 0; i < allImages.length; i++) {
 }
 
 // function to store details in local storage for wishlist
-function addToWishlist() {
+
+let heartIconWishlist = document.querySelector(".heart");
+// if (heartIconWishlist.clicked == true) {
+//   console.log(heartIconWishlist.className);
+// };
+
+function addToWishlist(btn) {
+  // console.log(event);
+
+    btn.style.color = "black";
+    btn.style.fontWeight = "bold";
+
+
   // Get product details
   var productName = document.querySelector(".product-name").textContent;
   var productImg = document.querySelector(".product-img").src;
@@ -756,6 +773,8 @@ function addToWishlist() {
   });
 
   localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
 }
-document.querySelector(".heart").addEventListener("click", addToWishlist);
+
+// document.querySelector(".heart").addEventListener("click", addToWishlist(this));
 document.querySelector(".wish-cart").addEventListener("click", storeProductDetails());
