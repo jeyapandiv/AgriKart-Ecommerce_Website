@@ -77,7 +77,31 @@
                                 </form>
                             </div>
 
-                            <div class="addressList disNone" >
+                            <div class="totalCard1">
+                                <div class="useAddressBtn">
+                                    <button onclick="navigatePayment(this)">Use this address</button>
+                                    <p>Choose the shipping address and payment</p>
+                                    <p style="margin-bottom: 20px;">method to calculate shipping charges</p>
+                                </div>
+                                <div class="totalCalculation" style="width: 90%;">
+                                    <h3 style="line-height: 50px; margin-top: 20px;">Order Summary</h3>
+                                    <span style="display: flex; justify-content: space-between;">
+                                        <p>Subtotal</p>
+                                        <p>₹xxx</p>
+                                    </span>
+                                    <span style="display: flex; justify-content: space-between;">
+                                        <p>Shipping</p>
+                                        <p style="font-size: 12px; color: grey;">Calculated at the next step</p>
+                                    </span>
+                                </div>
+                                <span
+                                    style="width: 90%; display: flex; justify-content: space-between; margin-top: 10px;">
+                                    <h4>Total</h4>
+                                    <h4>₹xxx</h4>
+                                </span>
+                            </div>
+
+                            <div class="addressList" >
                                 <div class="addressDefault">
                                     <div class="addressSelection">
                                         <input type="radio" name="addressSelectRadio">
@@ -103,7 +127,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="totalCard">
+                            <div class="totalCard2">
                                 <div class="useAddressBtn">
                                     <button onclick="navigatePayment(this)">Use this address</button>
                                     <p>Choose the shipping address and payment</p>

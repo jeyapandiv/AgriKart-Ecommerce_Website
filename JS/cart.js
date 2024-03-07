@@ -81,7 +81,7 @@ function emptyCart() {
 // -------------------------creating item div dynamically with the count of indexes in array
 
 const cartData = JSON.parse(localStorage.getItem('cart'));
-console.log(cartData)
+// console.log(cartData)
 
 const cartItemsContainer = document.getElementById('cart-things-2');
 
