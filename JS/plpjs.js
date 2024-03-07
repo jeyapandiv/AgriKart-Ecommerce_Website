@@ -69,7 +69,7 @@ const pla_obj_fruits = {
         heading: 'Farm Fruits',
         data: [
             { id: 13, imgSrc: './Assets/PlaAssets/plaApple.jpeg', productName: 'Apple', plpdescription: 'dummytext1', plpprice: '₹60', plporiginalPrice: '₹90' },
-            { id: 14, imgSrc: '/Assets/PlaAssets/plaAvocoda.jpeg', productName: 'Avocoda', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
+            { id: 14, imgSrc: './Assets/PlaAssets/plaAvocoda.jpeg', productName: 'Avocoda', plpdescription: 'dummytext2', plpprice: '₹100', plporiginalPrice: '₹190' },
             { id: 15, imgSrc: './Assets/PlaAssets/plaBanana.jpeg', productName: 'Banana', plpdescription: 'dummytext3', plpprice: '₹60', plporiginalPrice: '₹90' },
             { id: 16, imgSrc: './Assets/PlaAssets/plaBlueberry.jpeg', productName: 'Blueberry', plpdescription: 'dummytext4', plpprice: '₹50', plporiginalPrice: '₹80' },
             { id: 17, imgSrc: './Assets/PlaAssets/plaGrapes.jpeg', productName: 'Grapes', plpdescription: 'dummytext5', plpprice: '₹70', plporiginalPrice: '₹100' },
