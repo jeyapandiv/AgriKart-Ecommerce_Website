@@ -1,5 +1,3 @@
-"use strict"
-
 var smallImages = document.querySelectorAll(".small-Img");
 var featuredImage = document.getElementById("featured-image");
 
@@ -9,55 +7,53 @@ let smallImagess = document.querySelector(".related-items-div");
 
 // --------------------------------------
 function storeProductDetails(btn) {
-  // Extracting product details
-  const productName = document.querySelector(".product-name").innerText;
-  const productWeight = document.querySelector(".product-weight").innerText;
-  const productPrice = document.querySelector(".product-price").innerText;
-  const productQty = document.querySelector(".product-qty").value;
-  const productImg = document.querySelector(".product-img").src; // Assuming you want the src attribute
+  let storedUser = localStorage.getItem("usercollation");
+  let userCollation = storedUser ? JSON.parse(storedUser) : null;
 
-  // Creating product detail object
-  const productDetails = {
-    ProductName: productName,
-    ProductQty: productQty,
-    ProductImage: productImg,
-    ProductPrice: productPrice,
-    ProductWeight: productWeight,
-  };
+  if (userCollation) {
+    // Extracting product details
+    const productName = document.querySelector(".product-name").innerText;
+    const productWeight = document.querySelector(".product-weight").innerText;
+    const productPrice = document.querySelector(".product-price").innerText;
+    const productQty = document.querySelector(".product-qty").value;
+    const productImg = document.querySelector(".product-img").src; // Assuming you want the src attribute
 
-  // Check if "cart" exists in local storage
-  if (localStorage.getItem("cart")) {
-    // Parse the existing cart from local storage
-    let cart = JSON.parse(localStorage.getItem("cart"));
+    // Creating product detail object
+    const productDetails = {
+      ProductName: productName,
+      ProductQty: productQty,
+      ProductImage: productImg,
+      ProductPrice: productPrice,
+      ProductWeight: productWeight,
+    };
 
-    // Add the new product details to the cart array
-    cart.push(productDetails);
+    // Check if "cart" exists in local storage
+    if (localStorage.getItem("cart")) {
+      // Parse the existing cart from local storage
+      let cart = JSON.parse(localStorage.getItem("cart"));
 
-    // Save the updated cart back to local storage
-    localStorage.setItem("cart", JSON.stringify(cart));
-    // console.log('cart-pushed')
-    // console.log(cart);
-  } else {
-    // If the cart does not exist, create a new cart array with the product
-    localStorage.setItem("cart", JSON.stringify([productDetails]));
-    // console.log('cart-created')
-    // console.log(cart)
-  }
+      // Add the new product details to the cart array
+      cart.push(productDetails);
+
+      // Save the updated cart back to local storage
+      localStorage.setItem("cart", JSON.stringify(cart));
+      // console.log('cart-pushed')
+      // console.log(cart);
+    } else {
+      // If the cart does not exist, create a new cart array with the product
+      localStorage.setItem("cart", JSON.stringify([productDetails]));
+      // console.log('cart-created')
+      // console.log(cart)
+    }
+  } else window.location.href = "Login.html";
 }
 
-function navigateCheckout(btn) {
-  window.location.href = "checkout.html";
+function navigationMain() {
+  window.location.href = "index.html";
 }
 
 function cartIconPageNavigate(icon) {
   window.location.href = "cart.html";
-}
-
-function wishIconPageNavigate(icon) {
-    window.location.href = "wishlist.html";
-}
-function navigationMain() {
-  window.location.href = "index.html";
 }
 
 // ----------------------------------object itms
@@ -154,11 +150,11 @@ const pla_obj = {
         productName: "Coconut",
         price: "100",
         oprice: "120",
-        description: `<li>Fresh, hygienic and natural</li>
-        <li>Good source of Vitamin A,E,K, Potassium and Lycopene</li>
-        <li>Can be used in curries, salad, soups and juices</li>
-        <li>Store in cool and dry place, away from direct sunlight.</li>
-        <li>item_form:peeled</li>`,
+        description: `1.Fresh, hygienic and natural
+            2.Good source of Vitamin A,E,K, Potassium and Lycopene
+            3.Can be used in curries, salad, soups and juices
+            4.Store in cool and dry place, away from direct sunlight.
+            5.item_form:peeled`,
         small: [
           "./Assets/small_images/Coconut1.jpeg",
           "./Assets/small_images/Coconut2.webp",
@@ -242,9 +238,9 @@ const pla_obj = {
         productName: "Grapes",
         price: `100`,
         oprice: `190`,
-        description: `<li>Fresh hygienic and natural</li>
-            <li>Rich in Vitamin C, B6, Riboflavin(B2), Phosphorous and Potassium.</li>
-            <li>Store at cool and dry place.</li>`,
+        description: `<li>Fresh, hygienic and natural<li>
+            <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.</li>
+            <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.</li>`,
         small: [
           "./Assets/small_images/Grapes1.webp",
           "./Assets/small_images/Grapes2.jpg",
@@ -257,9 +253,9 @@ const pla_obj = {
         productName: "Guava",
         price: `100`,
         oprice: `190`,
-        description: `<li>Fresh, hygienic and natural.</li>
-                <li>Guava is very popular fruit as it boosts energy in the body.</li>
-                <li>Rich in Vitamins A,C, folate, fiber and lycopene.</li>`,
+        description: `<li>Avocado fruit and its by-products are rich sources of nutrients and phytochemicals.<li>
+                <li>Avocado by-products exert anti-proliferative and anti-inflammatory activities.</li>
+                <li>Avocado seeds phytochemical improves carbohydrate and lipid metabolism.</li>`,
         small: [
           "./Assets/small_images/Guava1.webp",
           "./Assets/small_images/Guava2.jpg",
@@ -314,8 +310,8 @@ const pla_obj = {
         productName: "Corn",
         price: `100`,
         oprice: `190`,
-        description: `<li>Corn oil is a feedstock used for biodiesel.</li>
-            
+        description: `<li>Corn oil is a feedstock used for biodiesel.
+            </li>
             <li>It has anticholesterol properties as it lowers LDL blood cholesterol.</li>
             <li>Corn oil reduces blood pressure post consumption in hypertensive patients.</li>`,
         small: [
@@ -331,8 +327,8 @@ const pla_obj = {
         price: `100`,
         oprice: `190`,
         description: `<li>GNC flax seed oil capsules are made with unrefined cold pressed flaxseeds.</li>
-            <li>Perfect vegetarian alternative for fish oil.</li>
-            <li>Provides both omega 3 and omega 6 fatty acids.</li>`,
+            <li>Perfect vegetarian alternative for fish oil.<li>
+            <li>Provides both omega 3 and omega 6 fatty acids.<li>`,
         small: [
           "./Assets/small_images/FlaxSeeds1.jpg",
           "./Assets/small_images/FlaxSeeds2.webp",
@@ -488,8 +484,8 @@ const pla_obj = {
         productName: "BetelNuts",
         price: `100`,
         oprice: `190`,
-        description:
-        `<li>Last longs, Preserved Flavor & Freshness with Nitrogen Packing.</li>
+        description: `<li>
+            Last longs, Preserved Flavor & Freshness with Nitrogen Packing.</li>
             <li>Packed & Processed under Fully Hygienic Environment.</li>
             <li>100% Vegetarian.</li>`,
         small: [
@@ -591,13 +587,11 @@ function renderHtml(renderItem) {
       product.innerHTML = `
             <!-- left side -->
             <div class="img-card">
-            
-               
                 <div class="main-img">
-                      
+                
                     <img class="product-img" src=${items.imgSrc} alt="" id="featured-image">
                     <div class="heart-container"> 
-                    <i id="hertIcon" class="fa-regular fa-heart heart" style="color: #C84E2A;" onclick="addToWishlist(this)"></i>
+                    <i class="fa-regular fa-heart heart" style="color: #000000;"></i>
                     </div> 
                     
                 </div>
@@ -632,7 +626,7 @@ function renderHtml(renderItem) {
                     </div>
                     <div class="add_card">
                     <button onclick="storeProductDetails()">Add to Cart</button>
-                    <button onclick="navigateCheckout(this)">Buy Now</button>
+                    <button id="navCheckBtn" onclick="navigateCheckout(this)">Buy Now</button>
                     </div>
                 </div>
             </div>
@@ -653,12 +647,10 @@ function renderHtml(renderItem) {
                     <option value="3">3</option>
                 </select>
                 <div class="add_card">
-            
                     <button onclick="storeProductDetails()">Add to Cart</button>
-                    <button onclick="navigateCheckout(this)" id="buynow">Buy now</button>
+                    <button id="buynow">buy now</button>
                 </div>
             </div>`;
-            
 
       for (let i = 0; i < 5; i++) {
         const smallItem = renderItem.data[i];
@@ -681,9 +673,7 @@ function renderHtml(renderItem) {
                             </span>
                         </div>`;
           }
-        } 
-    
-        else {
+        } else {
           break;
         }
       }
@@ -743,19 +733,7 @@ for (let i = 0; i < allImages.length; i++) {
 }
 
 // function to store details in local storage for wishlist
-
-let heartIconWishlist = document.querySelector(".heart");
-// if (heartIconWishlist.clicked == true) {
-//   console.log(heartIconWishlist.className);
-// };
-
-function addToWishlist(btn) {
-  // console.log(event);
-
-    btn.style.color = "black";
-    btn.style.fontWeight = "bold";
-
-
+function addToWishlist() {
   // Get product details
   var productName = document.querySelector(".product-name").textContent;
   var productImg = document.querySelector(".product-img").src;
@@ -773,8 +751,50 @@ function addToWishlist(btn) {
   });
 
   localStorage.setItem("wishlist", JSON.stringify(wishlist));
+}
+document.querySelector(".heart").addEventListener("click", addToWishlist);
+document
+  .querySelector(".wish-cart")
+  .addEventListener("click", storeProductDetails());
 
+// --------checking the login status -----------
+function navigateCheckout(btn) {
+  let storedUser = localStorage.getItem("usercollation");
+  let userCollation = storedUser ? JSON.parse(storedUser) : null;
+
+  if (userCollation) {
+    if (btn.id == "navCheckBtn") {
+      // Extracting product details
+      const productName = document.querySelector(".product-name").innerText;
+      const productWeight = document.querySelector(".product-weight").innerText;
+      const productPrice = document.querySelector(".product-price").innerText;
+      const productQty = document.querySelector(".product-qty").value;
+      const productImg = document.querySelector(".product-img").src; // Assuming you want the src attribute
+
+      // Creating product detail object
+      const productDetails = {
+        ProductName: productName,
+        ProductQty: productQty,
+        ProductImage: productImg,
+        ProductPrice: productPrice,
+        ProductWeight: productWeight,
+      };
+
+      // If the cart does not exist, create a new cart array with the product
+      localStorage.setItem("checkout", JSON.stringify([productDetails]));
+      // console.log('cart-created')
+      // console.log(cart)
+
+      window.location.href = "checkout.html";
+    }
+  } else window.location.href = "Login.html";
 }
 
-// document.querySelector(".heart").addEventListener("click", addToWishlist(this));
-document.querySelector(".wish-cart").addEventListener("click", storeProductDetails());
+function wishIconPageNavigate(icon) {
+  let storedUser = localStorage.getItem("usercollation");
+  let userCollation = storedUser ? JSON.parse(storedUser) : null;
+
+  if (userCollation) {
+    window.location.href = "wishlist.html";
+  } else window.location.href = "Login.html";
+}
