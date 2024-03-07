@@ -28,7 +28,8 @@
 .checkout,
 .addressDefault,
 .checkoutAddress,
-.totalCard {
+.totalCard1,
+.totalCard2 {
   display: flex;
   flex-direction: column;
 }
@@ -133,7 +134,8 @@
 .selectAddDiv,
 .addressDefault,
 .actionsAddress > *,
-.totalCard,
+.totalCard1,
+.totalCard2,
 .useAddressBtn button,
 .payment-container,
 .cart-review-container,
@@ -187,7 +189,8 @@
 }
 
 .addressDefault,
-.totalCard,
+.totalCard1,
+.totalCard2,
 .payment-container,
 .cart-review-container {
   border: 1px solid rgb(226, 226, 226);
@@ -219,7 +222,13 @@
   background-color: var(--button-Backround2);
 }
 
-.totalCard {
+.totalCard1 {
+  background-color: var(--white);
+  width: 30%;
+  height: 90%;
+  align-items: center;
+}
+.totalCard2 {
   background-color: var(--white);
   width: 30%;
   height: 90%;
