@@ -47,8 +47,8 @@ function pladisplayImages() {
     if (valid >= products_slide_obj.length) {
         valid = 0;
     }
-
-    img1.src = products_slide_obj[valid].src;
+    img1.style.backgroundImage = `url(${products_slide_obj[valid].src})`;
+    // img1.src = products_slide_obj[valid].src;
     document.getElementById('plaSlideTxt').innerHTML = products_slide_obj[valid].Name;
     valid++;
 
@@ -226,9 +226,7 @@ function plasidecatview() {
                 var platoplp = document.querySelectorAll('.plaproductcard');
 
                 platoplp.forEach(function(element) 
-                    {
-                      
-                   
+                    {       
                         element.addEventListener('click', platoplpfun);
                     });
                     
@@ -286,6 +284,7 @@ function plasidecatview() {
                 cardContainer.appendChild(productCard);
             }
         }
+        
 
         createProductCard('vegetables', pla_obj.vegetables);
         createProductCard('fruits', pla_obj.fruits);

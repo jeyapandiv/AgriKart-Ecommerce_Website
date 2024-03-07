@@ -15,7 +15,7 @@
   --box-shadow2 : #a3c0b6;
   --border-colour:  darkred  ;
 
-  /* --star:#ffff00; */
+  --star:#ffe234;
   
   --black : #000000;
   --white : #FFFFFF;
@@ -180,7 +180,7 @@ margin-bottom: 3%;
 .quantity{
   /* margin-top: 5%; */
   width: 320px;
-  margin-top: 8px;
+  margin-top: 26px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -236,6 +236,7 @@ margin-bottom: 3%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 5%;
 }
 
 
