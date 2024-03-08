@@ -127,7 +127,11 @@
 }
 
 #newAddress {
-  height: 95%; width: 92%; display: flex; flex-direction: column; gap: 7px;
+  height: 95%;
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 
 .selectAddDiv,
@@ -341,8 +345,6 @@
   padding: 4px 5px;
   margin: 10px 0px;
 }
-
-
 
 .fontWeight {
   font-weight: 700;

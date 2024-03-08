@@ -1,6 +1,8 @@
 "use strict";
 
 // -------------- fetching navbar-------------
+
+
 fetch("navBar.html")
   .then((response) => response.text())
   .then((data) => {
@@ -20,9 +22,8 @@ function navigationMain() {
 }
 
 
-
-
 // ------------- creating order product details using local storage --------------
+
 
 const checkoutData = JSON.parse(localStorage.getItem("checkout"));
 console.log(checkoutData);
@@ -37,10 +38,9 @@ let toatlPricePayment = document.querySelectorAll("#toatlPricePayment");
 
 let qtyPr = parseInt(checkoutData[0].ProductQty);
 let totalValuepr = parseInt(checkoutData[0].ProductPrice.slice(1));
-// console.log(totalValuepr);
+
 let totalValue = 0;
 totalValue += qtyPr * totalValuepr;
-// console.log(totalValue);
 
 subTotalPriceAdd[0].innerText = `₹ ${totalValue}`;
 toatlPriceAdd[0].innerText = `₹ ${totalValue}`;
@@ -59,8 +59,12 @@ toatlPricePayment[0].innerText = `₹ ${totalValue+60}`;
 toatlPricePayment[1].innerText = `₹ ${totalValue+60}`;
 
 
+
+// ---------------checkout process navigations-----------------
+
+
+
 document.querySelector(".paymentDiv").classList.add("disNone");
-// document.querySelector(".paymentReviewDiv").classList.remove("disNone");
 
 let selectAddress = document.querySelector(".selectAddress");
 let paymentSection = document.querySelector(".paymentDiv");
@@ -85,11 +89,8 @@ function navigatePayment(btn) {
     document.querySelector(".selectAddress").classList.add("disNone");
     document.querySelector(".paymentDiv").classList.add("disNone");
     document.querySelector(".paymentReviewDiv ").classList.add("disNone");
-
-
-
   }
-}
+};
 
 
 
@@ -111,7 +112,7 @@ function selectCreateNvAddBtn(btn) {
     totalCard1.style.display = "none";
     createAddress.style.display = "none";
 
-    addressListEl.innerHTML +=     `<div class="addressDefault">
+    addressListEl.innerHTML =     `<div class="addressDefault">
                                       <div class="addressSelection">
                                         <input type="radio" name="addressSelectRadio">
                                         <p class="address-name">Name, 111A, Bbbbbb Street, Coc Nagar, Dddd City, Eeee
